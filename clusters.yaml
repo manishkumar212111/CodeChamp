@@ -1,0 +1,7 @@
+- alias: hasura
+  config:
+    configmap: controller-conf
+    namespace: despairing12-hasura
+  data: null
+  kubeContext: despairing12
+  name: despairing12
