@@ -1,0 +1,4 @@
+- args:
+    role: user
+    table: Aadhar
+  type: drop_select_permission

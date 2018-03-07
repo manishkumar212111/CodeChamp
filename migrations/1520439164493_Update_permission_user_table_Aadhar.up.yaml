@@ -1,0 +1,11 @@
+- args:
+    permission:
+      columns:
+      - aadhar_no
+      - name
+      - mobile
+      - email
+      filter: {}
+    role: user
+    table: Aadhar
+  type: create_select_permission

@@ -1,0 +1,7 @@
+- args:
+    sql: CREATE TABLE "Aadhar"("aadhar_no" text NOT NULL, "name" text NOT NULL, "mobile"
+      numeric , "email" text , PRIMARY KEY ("aadhar_no") )
+  type: run_sql
+- args:
+    name: Aadhar
+  type: add_existing_table_or_view
