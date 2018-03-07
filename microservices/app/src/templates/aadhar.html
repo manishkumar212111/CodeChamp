@@ -72,7 +72,7 @@ input[type=submit]:hover {
 <h2>Aadhar Data Entry</h2>
 
 <div class="container">
-  <form action="https://app.despairing12.hasura-app.io/aadhr" >
+  <form action="https://app.despairing12.hasura-app.io/aadhar" method="post">
     <center><font color="red" size="5">{% if message %}
       {{message}}
       {%endif%}</font>
@@ -99,7 +99,7 @@ input[type=submit]:hover {
         <label for="country">Mobile</label>
       </div>
       <div class="col-75">
-       <input type="number" id="country" name="mobile" value={{mobile}} default=0 maxlength="10" minlength="10">
+       <input type="number" id="country" name="mobile" value={{mobile}} maxlength="10" minlength="10">
 
       </div>
     </div>
