@@ -20,8 +20,7 @@ def aadhar():
         if len(aadhar) != 12:
             return render_template('aadhar.html',message="aadhar Number must be of 12 digit",aadhar=aadhar,name=name,mobile=mobile,email=email)
 
-        if len(mobile) != 10 and mobile!=None:
-            return render_template('aadhar.html',message="Mobile Number must be of 10 digit",aadhar=aadhar,name=name,mobile=mobile,email=email)
+
         url = "https://data.despairing12.hasura-app.io/v1/query"
 
         # This is the json payload for the query
