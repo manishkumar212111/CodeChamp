@@ -19,7 +19,8 @@ def aadhar():
         email = request.form['email']
         if len(aadhar) != 12:
             return render_template('aadhar.html',message="aadhar Number must be of 12 digit",aadhar=aadhar,name=name,mobile=mobile,email=email)
-
+        if mobile==None or mobile== "NULL":
+            mobile=0
 
         url = "https://data.despairing12.hasura-app.io/v1/query"
 
