@@ -54,7 +54,7 @@ def aadhar():
 
                 return render_template('aadhar.html', message="Duplicate Aadhar",aadhar=aadhar,mobile=mobile,email=email,name=name)
             else:
-                return render_template('aadhar.html', message="Error Plzz contact MANISH",aadhar=aadhar,mobile=mobile,email=email,name=name)
+                return render_template('aadhar.html', message=resp.json()['error'],aadhar=aadhar,mobile=mobile,email=email,name=name)
         else:
             return render_template('aadhar.html', message="cluster is sleeping wait")
 
