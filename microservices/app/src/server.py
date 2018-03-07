@@ -20,8 +20,8 @@ def aadhar():
         if len(aadhar) != 12:
             return render_template('aadhar.html',message="aadhar Number must be of 12 digit",aadhar=aadhar,name=name,mobile=mobile,email=email)
 
-        if len(mobile) != 10 and mobile!="NULL":
-            return render_template('aadhar.html',message="Mobile Number must be of 12 digit",aadhar=aadhar,name=name,mobile=mobile,email=email)
+        if len(mobile) != 10 and mobile!="0":
+            return render_template('aadhar.html',message="Mobile Number must be of 10 digit",aadhar=aadhar,name=name,mobile=mobile,email=email)
         url = "https://data.despairing12.hasura-app.io/v1/query"
 
         # This is the json payload for the query
@@ -57,7 +57,7 @@ def aadhar():
             else:
                 return render_template('aadhar.html', message="Error Plzz contact MANISH",aadhar=aadhar,mobile=mobile,email=email,name=name)
         else:
-            return render_template('aadhar.html', message="luster is sleeping wait")
+            return render_template('aadhar.html', message="cluster is sleeping wait")
 
     return render_template('aadhar.html', message="successfull entry Done")
 @app.route('/template2')
