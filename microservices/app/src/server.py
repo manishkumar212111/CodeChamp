@@ -50,10 +50,14 @@ def aadhar():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         if 'affected_rows' in resp.json()==1:
             return redirect(url_for('aadhar'))
-        elif resp.json()['code'] == 'postgres-error':
-            return render_template('aadhar.html', message="Error plzz contact MANISH(7297899599)",aadhar=aadhar,mobile=mobile,email=email,name=name)
+        elif 'code' in resp.json():
+            if resp.json()['code']== 'postgres-error':
+
+                return render_template('aadhar.html', message="Error plzz contact MANISH(7297899599)",aadhar=aadhar,mobile=mobile,email=email,name=name)
+            else:
+                return render_template('aadhar.html', message="Duplicate aadhar",aadhar=aadhar,mobile=mobile,email=email,name=name)
         else:
-            return render_template('aadhar.html', message="Duplicate aadhar",aadhar=aadhar,mobile=mobile,email=email,name=name)
+            return render_template('aadhar.html', message="luster is sleeping wait")
 
     return render_template('aadhar.html', message="successfull entry Done")
 @app.route('/template2')
