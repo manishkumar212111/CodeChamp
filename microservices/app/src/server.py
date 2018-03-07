@@ -13,10 +13,10 @@ def aadhar_entry():
 @app.route('/aadhar', methods=['POST','GET'])
 def aadhar():
     if request.method == 'POST':
-        aadhar=request.Form['aadhar']
-        name = request.Form['name']
-        mobile = request.Form['mobile']
-        email = request.Form['email']
+        aadhar=request.form['aadhar']
+        name = request.form['name']
+        mobile = request.form['mobile']
+        email = request.form['email']
         if len(aadhar) != 12:
             return render_template('aadhar.html',message="aadhar Number must be of 12 digit",aadhar=aadhar,name=name,mobile=mobile,email=email)
 
