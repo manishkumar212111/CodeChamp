@@ -7,11 +7,11 @@ def home():
     return render_template('index.html')
 
 @app.route('/template1')
-def home():
+def template1():
     return render_template('template1.html')
 
 @app.route('/template2')
-def home():
+def template2():
     return render_template('template2.html')
 
 # Uncomment to add a new URL at /new
