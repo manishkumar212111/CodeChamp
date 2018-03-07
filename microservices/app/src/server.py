@@ -6,6 +6,9 @@ app=Flask(__name__)
 @app.route('/')
 def home():
     return render_template('index.html')
+@app.route('/aadhar_entry')
+def aadhar_entry():
+    return render_template('aadhar.html')
 
 @app.route('/aadhar', methods=['POST','GET'])
 def aadhar():
