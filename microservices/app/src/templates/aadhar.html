@@ -79,7 +79,7 @@ input[type=submit]:hover {
     </center>
     <div class="row">
       <div class="col-25">
-        <label for="fname">Aadhar Number::(12 digit)</label>
+        <label for="fname">Aadhar Number::(12 digit)<font color="red">*</font></label>
       </div>
       <div class="col-75">
         <input type="number" id="fname" name="aadhar" value={{aadhar}} placeholder="12 digit aadhar" required>
@@ -88,7 +88,7 @@ input[type=submit]:hover {
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="lname">Name</label>
+        <label for="lname">Name<font color="red">*</font></label>
       </div>
       <div class="col-75">
         <input type="text" id="lname" name="name" value="{{name}}" required>
@@ -99,7 +99,7 @@ input[type=submit]:hover {
         <label for="country">Mobile</label>
       </div>
       <div class="col-75">
-       <input type="number" id="country" name="mobile" value={{mobile}} placeholder="10 digit mob no" maxlength="10">
+       <input type="number" id="country" name="mobile" value={{mobile}}>
 
       </div>
     </div>
@@ -108,7 +108,7 @@ input[type=submit]:hover {
         <label for="count">Email</label>
       </div>
       <div class="col-75">
-       <input type="email" id="count" name="email" value={{email}} placeholder="email id(optional)">
+       <input type="email" id="count" name="email" value={{email}}>
 
       </div>
     </div>
