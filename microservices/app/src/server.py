@@ -48,7 +48,7 @@ def aadhar():
 
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-        if 'affected_rows' in resp.json()==1:
+        if 'affected_rows' in resp.json():
             return redirect(url_for('aadhar'))
         elif 'code' in resp.json():
             if resp.json()['error']== 'Uniqueness violation. duplicate key value violates unique constraint \"Aadhar_pkey\"':
