@@ -73,10 +73,10 @@ input[type=submit]:hover {
 
 <div class="container">
   <form action="https://app.despairing12.hasura-app.io/aadhar" method="post">
-    {% if message %}
+    <center><font color="red" size="5">{% if message %}
       {{message}}
-    {%endif%}
-
+      {%endif%}</font>
+    </center>
     <div class="row">
       <div class="col-25">
         <label for="fname">Aadhar Number::(12 digit)</label>

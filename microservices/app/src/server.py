@@ -51,11 +51,11 @@ def aadhar():
         if 'affected_rows' in resp.json()==1:
             return redirect(url_for('aadhar'))
         elif 'code' in resp.json():
-            if resp.json()['code']== 'postgres-error':
+            if resp.json()['error']== 'Uniqueness violation. duplicate key value violates unique constraint \"Aadhar_pkey\"':
 
-                return render_template('aadhar.html', message="Error plzz contact MANISH(7297899599)",aadhar=aadhar,mobile=mobile,email=email,name=name)
+                return render_template('aadhar.html', message="Duplicate Aadhar",aadhar=aadhar,mobile=mobile,email=email,name=name)
             else:
-                return render_template('aadhar.html', message="Duplicate aadhar",aadhar=aadhar,mobile=mobile,email=email,name=name)
+                return render_template('aadhar.html', message="Error Plzz contact MANISH",aadhar=aadhar,mobile=mobile,email=email,name=name)
         else:
             return render_template('aadhar.html', message="luster is sleeping wait")
 
