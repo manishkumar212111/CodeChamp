@@ -69,7 +69,7 @@ def TSP0():
 def Airtel():
     if request.method=='POST':
         sim_no=request.form['sim_no']
-        mob_no=request.form['mob_no']
+        mob_no=request.form['mobile']
         region=request.form['region']
         aadhar=request.form['aadhar']
 
