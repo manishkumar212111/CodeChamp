@@ -29,4 +29,4 @@ for i in range(0,10):
     print resp.json()[i]['aadhar_no']
     '''
 
-print datetime.now().date()
+print datetime.now()
