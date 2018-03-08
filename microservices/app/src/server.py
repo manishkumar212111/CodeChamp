@@ -1,6 +1,6 @@
 
 from flask import render_template,Flask,request,url_for,redirect
-import requests,json
+import requests,json,time,datetime
 # from flask import jsonify
 app=Flask(__name__)
 @app.route('/')
@@ -61,12 +61,62 @@ def aadhar():
             return render_template('aadhar.html', message="cluster is sleeping wait")
 
     return render_template('aadhar.html', message="successfull entry Done")
-@app.route('/template2')
-def template2():
-    return render_template('template2.html')
+@app.route('/TSP0')
+def TSP0():
+    return render_template('TSP0.html')
 
-# Uncomment to add a new URL at /new
+@app.route('/Airtel',methods=['POST','GET'])
+def Airtel():
+    if request.method=='POST':
+        sim_no=request.form['sim_no']
+        mob_no=request.form['mob_no']
+        region=request.form['region']
+        aadhar=request.form['aadhar']
 
-# @app.route("/json")
-# def json_message():
-#     return jsonify(message="Hello World")
+        if len(str(sim_no)) !=16:
+            return render_template('TSP0.html',message="Sim_no must be of 16 digit")
+        if len(str(mob_no)) != 10:
+            return render_template('TSP0.html', message="Mob_no must be of 10 digit")
+        if len(str(aadhar)) != 16:
+            return render_template('TSP0.html', message="aadhar_no must be of 12 digit")
+
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "insert",
+            "args": {
+                "table": "TSP0",
+                "objects": [
+                    {
+                        "comp_reg_no": 1000,
+                        " time_stamp ":time.time(),
+                        "DOI":json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
+                        "company_name": "Airtel",
+                        "sim_no": sim_no,
+                        "mob_no": mob_no,
+
+                        "region": region,
+                        "status": "Active"
+                    }
+                ]
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        if 'affected_rows' in resp.json():
+            return redirect(url_for('Airtel'))
+        elif 'code' in resp.json():
+            return render_template('TSP0.html', message=resp.json()['error'])
+        else:
+
+            return render_template('TSP0.html', message="cluster is sleeping wait")
+
+    return render_template('TSP0.html', message="successfull entry Done")
