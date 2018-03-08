@@ -102,7 +102,7 @@ def Airtel():
                 "objects": [
                     {
                         "comp_reg_no": 1000,
-                        "time_stamp":time.time(),
+                        "time_stamp":datetime.now(),
                         "DOI":json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
                         "company_name": "Airtel",
                         "sim_no": sim_no,
