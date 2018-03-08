@@ -73,6 +73,11 @@ input[type=submit]:hover {
 <h2>TSP data Entry</h2>
 
 <div class="container">
+    {% if message%}
+    <font color="red">{{message}}</font>
+    {% endif%}
+
+
   <form action="https://app.despairing12.hasura-app.io/Airtel" method="post">
     <div class="row">
       <div class="col-25">
