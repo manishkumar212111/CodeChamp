@@ -108,7 +108,7 @@ def Airtel():
                         "company_name": "Airtel",
                         "sim_no": sim_no,
                         "mob_no": mob_no,
-
+                        "aadhar":aadhar,
                         "region": region,
                         "status": "Active"
                     }
@@ -162,7 +162,7 @@ def Jio():
         requestPayload = {
             "type": "insert",
             "args": {
-                "table": "TSP0",
+                "table": "TSP1",
                 "objects": [
                     {
                         "comp_reg_no": 1001,
@@ -171,7 +171,7 @@ def Jio():
                         "company_name": "Jio",
                         "sim_no": sim_no,
                         "mob_no": mob_no,
-
+                        "aadhar": aadhar,
                         "region": region,
                         "status": "Active"
                     }
@@ -225,7 +225,7 @@ def Vodafone():
         requestPayload = {
             "type": "insert",
             "args": {
-                "table": "TSP0",
+                "table": "TSP2",
                 "objects": [
                     {
                         "comp_reg_no": 1002,
@@ -234,7 +234,7 @@ def Vodafone():
                         "company_name": "Vodafone",
                         "sim_no": sim_no,
                         "mob_no": mob_no,
-
+                        "aadhar": aadhar,
                         "region": region,
                         "status": "Active"
                     }
@@ -288,7 +288,7 @@ def Idea():
         requestPayload = {
             "type": "insert",
             "args": {
-                "table": "TSP0",
+                "table": "TSP3",
                 "objects": [
                     {
                         "comp_reg_no": 1003,
@@ -297,7 +297,7 @@ def Idea():
                         "company_name": "Idea",
                         "sim_no": sim_no,
                         "mob_no": mob_no,
-
+                        "aadhar": aadhar,
                         "region": region,
                         "status": "Active"
                     }
