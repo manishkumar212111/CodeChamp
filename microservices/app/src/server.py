@@ -1,6 +1,6 @@
 
 from flask import render_template,Flask,request,url_for,redirect
-import requests,json,datetime
+import requests,json
 from datetime import datetime
 # from flask import jsonify
 app=Flask(__name__)
@@ -104,7 +104,7 @@ def Airtel():
                     {
                         "comp_reg_no": 1000,
                         "time_stamp":datetime.now(),
-                        "DOI":json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
+                        "DOI":json.dumps(datetime.now().date(), indent=4, sort_keys=True, default=str),
                         "company_name": "Airtel",
                         "sim_no": sim_no,
                         "mob_no": mob_no,
