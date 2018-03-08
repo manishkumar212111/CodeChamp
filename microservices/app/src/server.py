@@ -79,16 +79,16 @@ def Airtel():
             return render_template('TSP0.html', message="Mob_no must be of 10 digit")
         if len(str(aadhar)) != 12:
             return render_template('TSP0.html', message="aadhar_no must be of 12 digit")
-        list=[657894032172,
-        869520329845,
-        476894302178,
-        647389586310,
-        998327908476,
-        895605685890,
-        878779800986,
-        764238947865,
-        789807654324,
-        574375889123]
+        list=['657894032172',
+        '869520329845',
+        '476894302178',
+        '647389586310',
+        '998327908476',
+        '895605685890',
+        '878779800986',
+        '764238947865',
+        '789807654324',
+        '574375889123']
         if aadhar not in list:
             return render_template('TSP0.html', message="aadhar_no must be from below list")
 
