@@ -1,7 +1,7 @@
 import requests
 import json
 from datetime import datetime
-'''# This is the url to which the query is made
+# This is the url to which the query is made
 url = "https://data.despairing12.hasura-app.io/v1/query"
 
 # This is the json payload for the query
@@ -23,10 +23,12 @@ headers = {
 
 # Make the query and store response in resp
 resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
+list=[]
 # resp.content contains the json response.
-for i in range(0,10):
+for i in range(60,70):
     print resp.json()[i]['aadhar_no']
-    '''
+    list.append(resp.json()[i]['aadhar_no'])
+
+print list
 
 print datetime.now()

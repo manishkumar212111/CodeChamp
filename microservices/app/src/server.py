@@ -133,3 +133,192 @@ def Airtel():
             return render_template('TSP0.html', message="cluster is sleeping wait")
 
     return render_template('TSP0.html', message="successfull entry Done")
+
+@app.route('/TSP1')
+def TSP1():
+    return render_template('TSP1.html')
+
+@app.route('/Jio',methods=['POST','GET'])
+def Jio():
+    if request.method=='POST':
+        sim_no=request.form['sim_no']
+        mob_no=request.form['mobile']
+        region=request.form['region']
+        aadhar=request.form['aadhar']
+
+        if len(str(sim_no)) !=16:
+            return render_template('TSP1.html',message="Sim_no must be of 16 digit")
+        if len(str(mob_no)) != 10:
+            return render_template('TSP1.html', message="Mob_no must be of 10 digit")
+        if len(str(aadhar)) != 12:
+            return render_template('TSP1.html', message="aadhar_no must be of 12 digit")
+        list=['234516171215', '789456123451', '234567856789', '254678954624', '123546869545', '345686957612', '543128730487', '856452132512', '789213542167']
+        if aadhar not in list:
+            return render_template('TSP1.html', message="aadhar_no must be from below list")
+
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "insert",
+            "args": {
+                "table": "TSP0",
+                "objects": [
+                    {
+                        "comp_reg_no": 1001,
+                        "time_stamp":json.dumps(datetime.now(), indent=4, sort_keys=True, default=str),
+                        "DOI":json.dumps(datetime.now().date(), indent=4, sort_keys=True, default=str),
+                        "company_name": "Jio",
+                        "sim_no": sim_no,
+                        "mob_no": mob_no,
+
+                        "region": region,
+                        "status": "Active"
+                    }
+                ]
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        if 'affected_rows' in resp.json():
+            return redirect(url_for('Jio'))
+        elif 'code' in resp.json():
+            return render_template('TSP1.html', message=resp.json()['error'])
+        else:
+
+            return render_template('TSP1.html', message="cluster is sleeping wait")
+
+    return render_template('TSP1.html', message="successfull entry Done")
+
+@app.route('/TSP2')
+def TSP2():
+    return render_template('TSP2.html')
+
+@app.route('/Vodafone',methods=['POST','GET'])
+def Vodafone():
+    if request.method=='POST':
+        sim_no=request.form['sim_no']
+        mob_no=request.form['mobile']
+        region=request.form['region']
+        aadhar=request.form['aadhar']
+
+        if len(str(sim_no)) !=16:
+            return render_template('TSP2.html',message="Sim_no must be of 16 digit")
+        if len(str(mob_no)) != 10:
+            return render_template('TSP2.html', message="Mob_no must be of 10 digit")
+        if len(str(aadhar)) != 12:
+            return render_template('TSP2.html', message="aadhar_no must be of 12 digit")
+        list=['601809204314', '154645236966', '475689003887', '745216359562', '789546215689', '349374082347', '456241535623', '098675437568', '789546235689', '456325896144']
+        if aadhar not in list:
+            return render_template('TSP2.html', message="aadhar_no must be from below list")
+
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "insert",
+            "args": {
+                "table": "TSP0",
+                "objects": [
+                    {
+                        "comp_reg_no": 1002,
+                        "time_stamp":json.dumps(datetime.now(), indent=4, sort_keys=True, default=str),
+                        "DOI":json.dumps(datetime.now().date(), indent=4, sort_keys=True, default=str),
+                        "company_name": "Vodafone",
+                        "sim_no": sim_no,
+                        "mob_no": mob_no,
+
+                        "region": region,
+                        "status": "Active"
+                    }
+                ]
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        if 'affected_rows' in resp.json():
+            return redirect(url_for('Vodafone'))
+        elif 'code' in resp.json():
+            return render_template('TSP2.html', message=resp.json()['error'])
+        else:
+
+            return render_template('TSP2.html', message="cluster is sleeping wait")
+
+    return render_template('TSP2.html', message="successfull entry Done")
+
+@app.route('/TSP3')
+def TSP3():
+    return render_template('TSP3.html')
+
+@app.route('/Idea',methods=['POST','GET'])
+def Idea():
+    if request.method=='POST':
+        sim_no=request.form['sim_no']
+        mob_no=request.form['mobile']
+        region=request.form['region']
+        aadhar=request.form['aadhar']
+
+        if len(str(sim_no)) !=16:
+            return render_template('TSP3.html',message="Sim_no must be of 16 digit")
+        if len(str(mob_no)) != 10:
+            return render_template('TSP3.html', message="Mob_no must be of 10 digit")
+        if len(str(aadhar)) != 12:
+            return render_template('TSP3.html', message="aadhar_no must be of 12 digit")
+        list=['102030405007', '102030405008', '102030405009', '102030405010', '102030405011', '102030405012', '102030405013', '102030405014', '102030405015', '102030405016']
+        if aadhar not in list:
+            return render_template('TSP3.html', message="aadhar_no must be from below list")
+
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "insert",
+            "args": {
+                "table": "TSP0",
+                "objects": [
+                    {
+                        "comp_reg_no": 1003,
+                        "time_stamp":json.dumps(datetime.now(), indent=4, sort_keys=True, default=str),
+                        "DOI":json.dumps(datetime.now().date(), indent=4, sort_keys=True, default=str),
+                        "company_name": "Idea",
+                        "sim_no": sim_no,
+                        "mob_no": mob_no,
+
+                        "region": region,
+                        "status": "Active"
+                    }
+                ]
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        if 'affected_rows' in resp.json():
+            return redirect(url_for('Idea'))
+        elif 'code' in resp.json():
+            return render_template('TSP3.html', message=resp.json()['error'])
+        else:
+
+            return render_template('TSP3.html', message="cluster is sleeping wait")
+
+    return render_template('TSP3.html', message="successfull entry Done")
