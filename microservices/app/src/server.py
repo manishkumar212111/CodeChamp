@@ -77,7 +77,7 @@ def Airtel():
             return render_template('TSP0.html',message="Sim_no must be of 16 digit")
         if len(str(mob_no)) != 10:
             return render_template('TSP0.html', message="Mob_no must be of 10 digit")
-        if len(str(aadhar)) != 16:
+        if len(str(aadhar)) != 12:
             return render_template('TSP0.html', message="aadhar_no must be of 12 digit")
         list=[657894032172,
         869520329845,
