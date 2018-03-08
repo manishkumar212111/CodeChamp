@@ -1,0 +1,9 @@
+- args:
+    sql: CREATE TABLE "TSP3"("comp_reg_no" numeric NOT NULL, "company_name" text NOT
+      NULL, "sim_no" numeric NOT NULL, "mob_no" numeric NOT NULL, "DOA" date NOT NULL,
+      "region" text NOT NULL, "status" text NOT NULL, PRIMARY KEY ("sim_no","mob_no")
+      )
+  type: run_sql
+- args:
+    name: TSP3
+  type: add_existing_table_or_view

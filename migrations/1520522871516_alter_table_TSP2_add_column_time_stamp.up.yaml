@@ -1,0 +1,3 @@
+- args:
+    sql: ALTER TABLE "TSP2" ADD COLUMN "time_stamp" timestamptz NOT NULL
+  type: run_sql
