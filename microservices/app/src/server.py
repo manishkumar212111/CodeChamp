@@ -352,8 +352,8 @@ def consumer():
 
 @app.route('/consumer/login_otp',methods= ['POST','GET'])
 def consumer_login():
-    random = randint(100000, 999999)
     if request.method=='POST':
+        random = randint(100000, 999999)
         aadhar=request.form['aadhar']
         if len(aadhar) !=12:
             return render_template('consumer.html',message="Aadhar number must be of 12 digit")
@@ -404,15 +404,15 @@ def consumer_login():
             resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
             if 'id' in resp.json():
-                return redirect(url_for('consumer_login'))
+                return render_template('consumer_otp.html', random=random)
             else:
                 return render_template('consumer.html',message="cluster is sleeping or OTP send limit exceeded"+str(resp.content))
 
         except IndexError:
-            a=0
+            None
         return render_template('consumer.html', message="error occurs")
 
-    return render_template('consumer_otp.html', random=random)
+
 
 @app.route('/consumer/otp/verify',methods=['POST','GET'])
 def consumer_otp_verify():
