@@ -343,3 +343,18 @@ def Idea():
             return render_template('TSP3.html', message="cluster is sleeping wait")
 
     return render_template('TSP3.html', message="successfull entry Done")
+
+@app.route('/consumer')
+def consumer():
+    return render_template('consumer.html')
+
+@app.route('/consumer/login_otp',methods= ['POST'])
+def consumer_login():
+    if request.method:
+        aadhar=request.form['aadhar']
+        if aadhar is not int:
+            return render_template('consumer.html',message="Aadhar number Must be numeric")
+        if len(aadhar) !=12:
+            return render_template('consumer.html',message="Aadhar number must be of 12 digit")
+
+        
