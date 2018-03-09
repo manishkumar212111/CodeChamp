@@ -406,7 +406,7 @@ def consumer_login():
             if 'id' in resp.json():
                 return redirect('consumer_login')
             else:
-                return render_template('consumer.html',message="cluster is sleeping or OTP send limit exceeded"+resp.content)
+                return render_template('consumer.html',message="cluster is sleeping or OTP send limit exceeded"+str(resp.content))
 
         except IndexError:
             a=0
