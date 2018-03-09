@@ -350,10 +350,10 @@ def Idea():
 def consumer():
     return render_template('consumer.html')
 
-@app.route('/consumer/login_otp',methods= ['POST'])
+@app.route('/consumer/login_otp',methods= ['POST','GET'])
 def consumer_login():
     random = randint(100000, 999999)
-    if request.method:
+    if request.method=='POST':
         aadhar=request.form['aadhar']
         if len(aadhar) !=12:
             return render_template('consumer.html',message="Aadhar number must be of 12 digit")
