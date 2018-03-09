@@ -389,7 +389,7 @@ def consumer_login():
 
             # This is the json payload for the query
             requestPayload = {
-                "to": resp.json()[0]['mobile'],
+                "to": str(resp.json()[0]['mobile']),
                 "countryCode": "91",
                 "message": "OTP For Aadhar verification at Shark@JNU is  " +str(random)
             }
