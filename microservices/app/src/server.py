@@ -1,6 +1,8 @@
 
 from flask import render_template,Flask,request,url_for,redirect
 import requests,json
+from random import randint
+
 from datetime import datetime
 # from flask import jsonify
 app=Flask(__name__)
@@ -350,6 +352,7 @@ def consumer():
 
 @app.route('/consumer/login_otp',methods= ['POST'])
 def consumer_login():
+    random = randint(100000, 999999)
     if request.method:
         aadhar=request.form['aadhar']
         if len(aadhar) !=12:
@@ -362,10 +365,10 @@ def consumer_login():
             "type": "select",
             "args": {
                 "table": "Aadhar",
-                "columns": [],
+                "columns": ["mobile"],
                 "where": {
                     "aadhar_no": {
-                        "$eq": "12"
+                        "$eq": aadhar
                     }
                 }
             }
@@ -379,4 +382,49 @@ def consumer_login():
 
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        if len(resp.json()) == 0:
+            return render_template('consumer.html',message="Not Found")
+        try:
+            url = "https://notify.despairing12.hasura-app.io/v1/send/sms"
 
+            # This is the json payload for the query
+            requestPayload = {
+                "to": resp.json()[0]['mobile'],
+                "countryCode": "91",
+                "message": "OTP For Aadhar verification at Shark@JNU is  " +random
+            }
+
+            # Setting headers
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+            }
+
+            # Make the query and store response in resp
+            resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+            if 'id' in resp.json():
+                return redirect('consumer_login')
+            else:
+                return render_template('consumer.html',message="cluster is sleeping or OTP send limit exceeded")
+
+        except IndexError:
+            a=0
+        return render_template('consumer.html', message="error occurs")
+
+    return render_template('consumer_otp.html', random=random)
+
+@app.route('/consumer/otp/verify',methods=['POST','GET'])
+def consumer_otp_verify():
+    if request.method=='POST':
+        random=request.form['random']
+        otp=request.form['otp']
+
+        if len(otp) !=6:
+            return render_template('consumer_otp.html',message="OTP MUST BE OF 6 digit")
+        if otp == random:
+            return redirect('consumer_otp_verify')
+        else:
+            return render_template('consumer_otp.html', message="Plzz enter correct otp",random=random)
+
+    return render_template('consumer_otp.html', message="Great Your are now verified")

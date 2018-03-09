@@ -1,6 +1,7 @@
 import json,requests
-
-aadhar='476894302171'
+from random import randint
+print randint(100000, 999999)
+aadhar='476894302178'
 if len(aadhar) != 12:
     print "2"
 url = "https://data.despairing12.hasura-app.io/v1/query"
@@ -30,5 +31,8 @@ resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=he
 
 if len(resp.json())==0:
     print "no"
-else:
-    print resp.json()
+try:
+    print resp.json()[0]['mobile']
+except IndexError:
+    print ""
+
