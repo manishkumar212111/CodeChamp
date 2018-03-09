@@ -25,7 +25,7 @@ headers = {
 resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 list=[]
 # resp.content contains the json response.
-for i in range(60,70):
+for i in range(45,50):
     print resp.json()[i]['aadhar_no']
     list.append(resp.json()[i]['aadhar_no'])
 

@@ -89,7 +89,13 @@ def Airtel():
         '878779800986',
         '764238947865',
         '789807654324',
-        '574375889123']
+        '574375889123'
+              '349374082347',
+              '456241535623',
+              '098675437568',
+              '789546235689',
+              '456325896144'
+              ]
         if aadhar not in list:
             return render_template('TSP0.html', message="aadhar_no must be from below list")
 
@@ -152,7 +158,12 @@ def Jio():
             return render_template('TSP1.html', message="Mob_no must be of 10 digit")
         if len(str(aadhar)) != 12:
             return render_template('TSP1.html', message="aadhar_no must be of 12 digit")
-        list=['234516171215', '789456123451', '234567856789', '254678954624', '123546869545', '345686957612', '543128730487', '856452132512', '789213542167']
+        list=[
+              '349374082347',
+              '456241535623',
+              '098675437568',
+              '789546235689',
+              '456325896144','234516171215', '789456123451', '234567856789', '254678954624', '123546869545', '345686957612', '543128730487', '856452132512', '789213542167']
         if aadhar not in list:
             return render_template('TSP1.html', message="aadhar_no must be from below list")
 
@@ -215,7 +226,12 @@ def Vodafone():
             return render_template('TSP2.html', message="Mob_no must be of 10 digit")
         if len(str(aadhar)) != 12:
             return render_template('TSP2.html', message="aadhar_no must be of 12 digit")
-        list=['601809204314', '154645236966', '475689003887', '745216359562', '789546215689', '349374082347', '456241535623', '098675437568', '789546235689', '456325896144']
+        list=[
+              '349374082347',
+              '456241535623',
+              '098675437568',
+              '789546235689',
+              '456325896144','601809204314', '154645236966', '475689003887', '745216359562', '789546215689', '349374082347', '456241535623', '098675437568', '789546235689', '456325896144']
         if aadhar not in list:
             return render_template('TSP2.html', message="aadhar_no must be from below list")
 
@@ -278,7 +294,12 @@ def Idea():
             return render_template('TSP3.html', message="Mob_no must be of 10 digit")
         if len(str(aadhar)) != 12:
             return render_template('TSP3.html', message="aadhar_no must be of 12 digit")
-        list=['102030405007', '102030405008', '102030405009', '102030405010', '102030405011', '102030405012', '102030405013', '102030405014', '102030405015', '102030405016']
+        list=[
+              '349374082347',
+              '456241535623',
+              '098675437568',
+              '789546235689',
+              '456325896144','102030405007', '102030405008', '102030405009', '102030405010', '102030405011', '102030405012', '102030405013', '102030405014', '102030405015', '102030405016']
         if aadhar not in list:
             return render_template('TSP3.html', message="aadhar_no must be from below list")
 
