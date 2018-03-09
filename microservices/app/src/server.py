@@ -352,8 +352,6 @@ def consumer():
 def consumer_login():
     if request.method:
         aadhar=request.form['aadhar']
-        if aadhar is not int:
-            return render_template('consumer.html',message="Aadhar number Must be numeric")
         if len(aadhar) !=12:
             return render_template('consumer.html',message="Aadhar number must be of 12 digit")
 

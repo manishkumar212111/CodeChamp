@@ -1,7 +1,8 @@
-import requests
-import json
-from datetime import datetime
-# This is the url to which the query is made
+import json,requests
+
+aadhar='476894302171'
+if len(aadhar) != 12:
+    print "2"
 url = "https://data.despairing12.hasura-app.io/v1/query"
 
 # This is the json payload for the query
@@ -9,9 +10,12 @@ requestPayload = {
     "type": "select",
     "args": {
         "table": "Aadhar",
-        "columns": [
-            "aadhar_no"
-        ]
+        "columns": ["mobile"],
+        "where": {
+            "aadhar_no": {
+                "$eq": aadhar
+            }
+        }
     }
 }
 
@@ -23,12 +27,8 @@ headers = {
 
 # Make the query and store response in resp
 resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-list=[]
-# resp.content contains the json response.
-for i in range(45,50):
-    print resp.json()[i]['aadhar_no']
-    list.append(resp.json()[i]['aadhar_no'])
 
-print list
-
-print datetime.now()
+if len(resp.json())==0:
+    print "no"
+else:
+    print resp.json()
