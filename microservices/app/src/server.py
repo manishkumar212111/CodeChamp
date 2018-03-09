@@ -404,7 +404,7 @@ def consumer_login():
             resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
             if 'id' in resp.json():
-                return redirect('consumer_login')
+                return redirect(url_for('consumer_login'))
             else:
                 return render_template('consumer.html',message="cluster is sleeping or OTP send limit exceeded"+str(resp.content))
 
@@ -423,7 +423,7 @@ def consumer_otp_verify():
         if len(otp) !=6:
             return render_template('consumer_otp.html',message="OTP MUST BE OF 6 digit")
         if otp == random:
-            return redirect('consumer_otp_verify')
+            return redirect(url_for('consumer_otp_verify'))
         else:
             return render_template('consumer_otp.html', message="Plzz enter correct otp",random=random)
 
