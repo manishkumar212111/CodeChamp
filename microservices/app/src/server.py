@@ -423,8 +423,8 @@ def consumer_otp_verify():
         if len(otp) !=6:
             return render_template('consumer_otp.html',message="OTP MUST BE OF 6 digit")
         if otp == random:
-            return redirect(url_for('consumer_otp_verify'))
+            return render_template('consumer_otp.html', message="Great Your are now verified",random=random)
         else:
             return render_template('consumer_otp.html', message="Plzz enter correct otp"+str(random)+str(otp),random=random)
 
-    return render_template('consumer_otp.html', message="Great Your are now verified")
+    return render_template('consumer_otp.html', message="Great Your are now verified",random=random)

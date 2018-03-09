@@ -32,8 +32,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="406" column="74" lean-forward="false" selection-start-line="406" selection-start-column="74" selection-end-line="406" selection-end-column="74" />
+            <state relative-caret-position="210">
+              <caret line="425" column="12" lean-forward="false" selection-start-line="425" selection-start-column="12" selection-end-line="425" selection-end-column="12" />
               <folding>
                 <element signature="e#1#65#0" expanded="true" />
                 <element signature="e#225#261#0" expanded="false" />
@@ -85,8 +85,8 @@
       <file leaf-file-name="consumer_otp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer_otp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="89" column="55" lean-forward="true" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
+            <state relative-caret-position="68">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -628,14 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer_otp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="89" column="55" lean-forward="true" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -644,10 +636,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer_otp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="406" column="74" lean-forward="false" selection-start-line="406" selection-start-column="74" selection-end-line="406" selection-end-column="74" />
+        <state relative-caret-position="210">
+          <caret line="425" column="12" lean-forward="false" selection-start-line="425" selection-start-column="12" selection-end-line="425" selection-end-column="12" />
           <folding>
             <element signature="e#1#65#0" expanded="true" />
             <element signature="e#225#261#0" expanded="false" />
