@@ -425,6 +425,6 @@ def consumer_otp_verify():
         if otp == random:
             return redirect(url_for('consumer_otp_verify'))
         else:
-            return render_template('consumer_otp.html', message="Plzz enter correct otp",random=random)
+            return render_template('consumer_otp.html', message="Plzz enter correct otp"+str(random)+str(otp),random=random)
 
     return render_template('consumer_otp.html', message="Great Your are now verified")
