@@ -1,11 +1,15 @@
 
-from flask import render_template,Flask,request,url_for,redirect
+from flask import render_template,Flask,request,url_for,redirect,session
 import requests,json
+
 from random import randint
 
 from datetime import datetime
+
 # from flask import jsonify
 app=Flask(__name__)
+
+app.secret_key = "287tdw8d7wegdweyt26etedgdge45"
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -348,7 +352,7 @@ def Idea():
 
 @app.route('/consumer')
 def consumer():
-    return render_template('consumer.html')
+    return render_template('consumer/consumer.html')
 
 @app.route('/consumer/login_otp',methods= ['POST','GET'])
 def consumer_login():
@@ -356,7 +360,7 @@ def consumer_login():
         random = randint(100000, 999999)
         aadhar=request.form['aadhar']
         if len(aadhar) !=12:
-            return render_template('consumer.html',message="Aadhar number must be of 12 digit")
+            return render_template('consumer/consumer.html',message="Aadhar number must be of 12 digit")
 
         url = "https://data.despairing12.hasura-app.io/v1/query"
 
@@ -383,7 +387,7 @@ def consumer_login():
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         if len(resp.json()) == 0:
-            return render_template('consumer.html',message="Not Found")
+            return render_template('consumer/consumer.html',message="Not Found")
         try:
             url = "https://notify.despairing12.hasura-app.io/v1/send/sms"
 
@@ -404,13 +408,14 @@ def consumer_login():
             resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
             if 'id' in resp.json():
-                return render_template('consumer_otp.html', random=random)
+                session['aadhar']=aadhar
+                return render_template('consumer/consumer_otp.html', random=random)
             else:
-                return render_template('consumer.html',message="cluster is sleeping or OTP send limit exceeded"+str(resp.content))
+                return render_template('consumer/consumer.html',message="cluster is sleeping or OTP send limit exceeded"+str(resp.content))
 
         except IndexError:
             None
-        return render_template('consumer.html', message="error occurs")
+        return render_template('consumer/consumer.html', message="error occurs")
 
 
 
@@ -421,10 +426,43 @@ def consumer_otp_verify():
         otp=request.form['otp']
 
         if len(otp) !=6:
-            return render_template('consumer_otp.html',message="OTP MUST BE OF 6 digit")
+            return render_template('consumer/consumer_otp.html',message="OTP MUST BE OF 6 digit")
         if otp == random:
-            return render_template('consumer_otp.html', message="Great Your are now verified",random=random)
-        else:
-            return render_template('consumer_otp.html', message="Plzz enter correct otp"+str(random)+str(otp),random=random)
+            if 'aadhar' in session:
+                url = "https://data.despairing12.hasura-app.io/v1/query"
 
-    return render_template('consumer_otp.html', message="Great Your are now verified",random=random)
+                # This is the json payload for the query
+                requestPayload = {
+                    "type": "select",
+                    "args": {
+                        "table": "central",
+                        "columns": [
+                            "mobile",
+                            "comp_name",
+                            "LSA"
+                        ],
+                        "where": {
+                            "aadhar_no": {
+                                "$eq": session['aadhar']
+                            }
+                        }
+                    }
+                }
+
+                # Setting headers
+                headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+                }
+
+                # Make the query and store response in resp
+                resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+                if len(resp.json()) == 0:
+                    return render_template('consumer/consumer_success.html',empty="No record found")
+                else:
+                    return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
+        else:
+            return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp"+str(random)+str(otp),random=random)
+
+    return render_template('consumer/consumer_otp.html', message="Error")

@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "central"("aadhar_no" numeric NOT NULL, "mobile" numeric NOT
+      NULL, "comp_name" text NOT NULL, "LSA" text NOT NULL, PRIMARY KEY ("mobile")
+      )
+  type: run_sql
+- args:
+    name: central
+  type: add_existing_table_or_view

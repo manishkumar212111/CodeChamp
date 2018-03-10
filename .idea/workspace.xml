@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microservices/app/src/static/Images/DOT.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/index.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/test.py" afterPath="$PROJECT_DIR$/microservices/app/src/test.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/microservices/app/src/templates/consumer.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/microservices/app/src/templates/consumer_otp.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_otp.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,54 +25,32 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#20#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="329">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1972">
-              <caret line="425" column="12" lean-forward="false" selection-start-line="425" selection-start-column="12" selection-end-line="425" selection-end-column="12" />
+            <state relative-caret-position="315">
+              <caret line="467" column="71" lean-forward="false" selection-start-line="467" selection-start-column="71" selection-end-line="467" selection-end-column="71" />
               <folding>
-                <element signature="e#1#65#0" expanded="true" />
-                <element signature="e#225#261#0" expanded="false" />
-                <element signature="e#314#351#0" expanded="false" />
-                <element signature="e#417#2389#0" expanded="false" />
-                <element signature="e#2426#2461#0" expanded="false" />
-                <element signature="e#2526#5177#0" expanded="false" />
-                <element signature="e#5215#5250#0" expanded="false" />
-                <element signature="e#5309#7853#0" expanded="false" />
-                <element signature="e#7891#7926#0" expanded="false" />
-                <element signature="e#7995#10565#0" expanded="false" />
-                <element signature="e#10603#10638#0" expanded="false" />
-                <element signature="e#10699#13261#0" expanded="false" />
+                <element signature="e#1#73#0" expanded="true" />
+                <element signature="e#285#321#0" expanded="false" />
+                <element signature="e#374#411#0" expanded="false" />
+                <element signature="e#477#2449#0" expanded="false" />
+                <element signature="e#2486#2521#0" expanded="false" />
+                <element signature="e#2586#5237#0" expanded="false" />
+                <element signature="e#5275#5310#0" expanded="false" />
+                <element signature="e#5369#7913#0" expanded="false" />
+                <element signature="e#7951#7986#0" expanded="false" />
+                <element signature="e#8055#10625#0" expanded="false" />
+                <element signature="e#10663#10698#0" expanded="false" />
+                <element signature="e#10759#13321#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="notify.yaml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/notify.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TSP0.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/TSP0.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2329">
-              <caret line="137" column="4" lean-forward="false" selection-start-line="137" selection-start-column="4" selection-end-line="137" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -87,33 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="117" column="114" lean-forward="false" selection-start-line="117" selection-start-column="114" selection-end-line="117" selection-end-column="114" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="credit.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/credit.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="consumer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer.html">
+        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1496">
+            <state relative-caret-position="520">
               <caret line="88" column="10" lean-forward="false" selection-start-line="88" selection-start-column="10" selection-end-line="88" selection-end-column="10" />
               <folding />
             </state>
@@ -121,20 +79,20 @@
         </entry>
       </file>
       <file leaf-file-name="consumer_otp.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer_otp.html">
+        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_otp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
+            <state relative-caret-position="362">
               <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TSP3.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/TSP3.html">
+      <file leaf-file-name="consumer_success.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2312">
-              <caret line="136" column="4" lean-forward="false" selection-start-line="136" selection-start-column="4" selection-end-line="136" selection-end-column="4" />
+            <state relative-caret-position="68">
+              <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -161,10 +119,12 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/TSP3.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer_otp.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer.html" />
-        <option value="$PROJECT_DIR$/microservices/app/src/test.py" />
-        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/test.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer_success.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/test.py" />
+        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
       </list>
     </option>
   </component>
@@ -303,6 +263,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consumer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-python-flask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-python-flask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="microservices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -323,6 +313,9 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\software\Git\hello-python-flask\microservices\app\src\templates\consumer" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src\static\Images" />
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src\static" />
@@ -535,6 +528,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24743025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -543,15 +537,14 @@
       <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -571,9 +564,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -582,18 +573,18 @@
         <state relative-caret-position="7225">
           <caret line="425" column="12" lean-forward="false" selection-start-line="425" selection-start-column="12" selection-end-line="425" selection-end-column="12" />
           <folding>
-            <element signature="e#1#65#0" expanded="true" />
-            <element signature="e#225#261#0" expanded="false" />
-            <element signature="e#314#351#0" expanded="false" />
-            <element signature="e#417#2389#0" expanded="false" />
-            <element signature="e#2426#2461#0" expanded="false" />
-            <element signature="e#2526#5177#0" expanded="false" />
-            <element signature="e#5215#5250#0" expanded="false" />
-            <element signature="e#5309#7853#0" expanded="false" />
-            <element signature="e#7891#7926#0" expanded="false" />
-            <element signature="e#7995#10565#0" expanded="false" />
-            <element signature="e#10603#10638#0" expanded="false" />
-            <element signature="e#10699#13261#0" expanded="false" />
+            <element signature="e#1#73#0" expanded="true" />
+            <element signature="e#285#321#0" expanded="false" />
+            <element signature="e#374#411#0" expanded="false" />
+            <element signature="e#477#2449#0" expanded="false" />
+            <element signature="e#2486#2521#0" expanded="false" />
+            <element signature="e#2586#5237#0" expanded="false" />
+            <element signature="e#5275#5310#0" expanded="false" />
+            <element signature="e#5369#7913#0" expanded="false" />
+            <element signature="e#7951#7986#0" expanded="false" />
+            <element signature="e#8055#10625#0" expanded="false" />
+            <element signature="e#10663#10698#0" expanded="false" />
+            <element signature="e#10759#13321#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -633,7 +624,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer.html">
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1496">
           <caret line="88" column="10" lean-forward="false" selection-start-line="88" selection-start-column="10" selection-end-line="88" selection-end-column="10" />
@@ -641,7 +632,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer_otp.html">
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_otp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
@@ -669,9 +660,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -680,18 +669,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1#65#0" expanded="true" />
-            <element signature="e#225#261#0" expanded="false" />
-            <element signature="e#314#351#0" expanded="false" />
-            <element signature="e#417#2389#0" expanded="false" />
-            <element signature="e#2426#2461#0" expanded="false" />
-            <element signature="e#2526#5177#0" expanded="false" />
-            <element signature="e#5215#5250#0" expanded="false" />
-            <element signature="e#5309#7853#0" expanded="false" />
-            <element signature="e#7891#7926#0" expanded="false" />
-            <element signature="e#7995#10565#0" expanded="false" />
-            <element signature="e#10603#10638#0" expanded="false" />
-            <element signature="e#10699#13261#0" expanded="false" />
+            <element signature="e#1#73#0" expanded="true" />
+            <element signature="e#285#321#0" expanded="false" />
+            <element signature="e#374#411#0" expanded="false" />
+            <element signature="e#477#2449#0" expanded="false" />
+            <element signature="e#2486#2521#0" expanded="false" />
+            <element signature="e#2586#5237#0" expanded="false" />
+            <element signature="e#5275#5310#0" expanded="false" />
+            <element signature="e#5369#7913#0" expanded="false" />
+            <element signature="e#7951#7986#0" expanded="false" />
+            <element signature="e#8055#10625#0" expanded="false" />
+            <element signature="e#10663#10698#0" expanded="false" />
+            <element signature="e#10759#13321#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -712,7 +701,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer.html">
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1496">
           <caret line="88" column="10" lean-forward="true" selection-start-line="88" selection-start-column="10" selection-end-line="88" selection-end-column="10" />
@@ -720,7 +709,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer_otp.html">
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_otp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
           <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
@@ -755,9 +744,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -766,18 +753,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1#65#0" expanded="true" />
-            <element signature="e#225#261#0" expanded="false" />
-            <element signature="e#314#351#0" expanded="false" />
-            <element signature="e#417#2389#0" expanded="false" />
-            <element signature="e#2426#2461#0" expanded="false" />
-            <element signature="e#2526#5177#0" expanded="false" />
-            <element signature="e#5215#5250#0" expanded="false" />
-            <element signature="e#5309#7853#0" expanded="false" />
-            <element signature="e#7891#7926#0" expanded="false" />
-            <element signature="e#7995#10565#0" expanded="false" />
-            <element signature="e#10603#10638#0" expanded="false" />
-            <element signature="e#10699#13261#0" expanded="false" />
+            <element signature="e#1#73#0" expanded="true" />
+            <element signature="e#285#321#0" expanded="false" />
+            <element signature="e#374#411#0" expanded="false" />
+            <element signature="e#477#2449#0" expanded="false" />
+            <element signature="e#2486#2521#0" expanded="false" />
+            <element signature="e#2586#5237#0" expanded="false" />
+            <element signature="e#5275#5310#0" expanded="false" />
+            <element signature="e#5369#7913#0" expanded="false" />
+            <element signature="e#7951#7986#0" expanded="false" />
+            <element signature="e#8055#10625#0" expanded="false" />
+            <element signature="e#10663#10698#0" expanded="false" />
+            <element signature="e#10759#13321#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -843,53 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="88" column="10" lean-forward="false" selection-start-line="88" selection-start-column="10" selection-end-line="88" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer_otp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1972">
-          <caret line="425" column="12" lean-forward="false" selection-start-line="425" selection-start-column="12" selection-end-line="425" selection-end-column="12" />
-          <folding>
-            <element signature="e#1#65#0" expanded="true" />
-            <element signature="e#225#261#0" expanded="false" />
-            <element signature="e#314#351#0" expanded="false" />
-            <element signature="e#417#2389#0" expanded="false" />
-            <element signature="e#2426#2461#0" expanded="false" />
-            <element signature="e#2526#5177#0" expanded="false" />
-            <element signature="e#5215#5250#0" expanded="false" />
-            <element signature="e#5309#7853#0" expanded="false" />
-            <element signature="e#7891#7926#0" expanded="false" />
-            <element signature="e#7995#10565#0" expanded="false" />
-            <element signature="e#10603#10638#0" expanded="false" />
-            <element signature="e#10699#13261#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/notify.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -932,6 +872,59 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_otp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="88" column="10" lean-forward="false" selection-start-line="88" selection-start-column="10" selection-end-line="88" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="467" column="71" lean-forward="false" selection-start-line="467" selection-start-column="71" selection-end-line="467" selection-end-column="71" />
+          <folding>
+            <element signature="e#1#73#0" expanded="true" />
+            <element signature="e#285#321#0" expanded="false" />
+            <element signature="e#374#411#0" expanded="false" />
+            <element signature="e#477#2449#0" expanded="false" />
+            <element signature="e#2486#2521#0" expanded="false" />
+            <element signature="e#2586#5237#0" expanded="false" />
+            <element signature="e#5275#5310#0" expanded="false" />
+            <element signature="e#5369#7913#0" expanded="false" />
+            <element signature="e#7951#7986#0" expanded="false" />
+            <element signature="e#8055#10625#0" expanded="false" />
+            <element signature="e#10663#10698#0" expanded="false" />
+            <element signature="e#10759#13321#0" expanded="false" />
           </folding>
         </state>
       </provider>
