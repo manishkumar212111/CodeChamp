@@ -21,7 +21,7 @@ defaultProviders:
     enabled: "false"
     defaultRoles: []
   mobile:
-    enabled: "false"
+    enabled: "true"
     defaultRoles: []
   mobile-password:
     enabled: "true"
