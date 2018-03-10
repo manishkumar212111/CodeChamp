@@ -9,11 +9,16 @@
 <table>
 <tr><th>MOBILE Number</th><th>Comp_name</th><th>Service Area</th></tr>
 {% for i in result%}
+<td>i{{['mobile']}}</td>
+<td>i{{['comp_name']}}</td>
+<td>i{{['LSA']}}</td>
 
-
-<tr><td>MOBILE Number</td><td>Comp_name</td><td>Service Area</td></tr>
 
 {% endfor  %}
+    <br>
+    {% if count %}
+    No of issued sim on your aadhar card::{{count}}
+    {% endif %}
 {% endif  %}
 </table>
 

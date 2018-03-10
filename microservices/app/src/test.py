@@ -28,9 +28,9 @@ headers = {
 
 # Make the query and store response in resp
 resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-if len(resp.json()) == 0:
-    print "empty"
 
+for i in resp.json():
+    print i['mobile']
 
 
 
