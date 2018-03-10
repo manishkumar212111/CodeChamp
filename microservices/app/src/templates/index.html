@@ -1,18 +1,130 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .navbar {
+        background-color: #0f3f6a;
+
+        margin-top: 0;
+    }
+
+    a {
+        color: white;
+    }
+
+    #img2 {
+        margin-top: 10px;
+    }
+
+    #leftnav {
+        float: left !important;
+    }
+
+    .footer-copyright {
+        background-color: black;
+        font-size: 20px;
+    }
+    #banner{
+        border-bottom-style: solid;
+        border-bottom-color: red;
+        border-width: 10px;
+    }
+</style>
+
 <body>
-<br><font size="5">
-<a href="https://app.despairing12.hasura-app.io/aadhar_entry">Aadhar DataEntry</a><br><br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="static/Images/JNU1.png" class="pull-left img-responsive" alt="dddd">
+            </div>
+            <div class="col-lg-6" id="img2">
+                <img src="static/Images/logo.jpg" class="pull-right img-responsive" alt="hgjjk">
+            </div>
+        </div>
+    </div>
 
-<a href="https://app.despairing12.hasura-app.io/TSP0">TSP0</a>(Aryan)(12)<br><br>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About UIDAI
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About DOT
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">FAQs
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us
+                        </a>
 
-    <a href="https://app.despairing12.hasura-app.io/TSP1">TSP1</a>(Ajay)(13)<br><br>
-    <a href="https://app.despairing12.hasura-app.io/TSP2">TSP2</a>(Sneha)(14)<br><br>
-    <a href="https://app.despairing12.hasura-app.io/TSP3">TSP3</a>(Subhash)(15)<br>
-</font>
-<p>
-    each one must enter almost 30 entries from provided aadhar number
-
-
-</p>
+                    </li>
+                    <li class="dropdown" id="leftnav">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Consumer</a>
+                            </li>
+                            <li>
+                                <a href="#">DOT</a>
+                            </li>
+                            <li>
+                                <a href="#">TSP</a>
+                            </li>
+                            <li>
+                                <a href="#">Support</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" id="banner">
+        <img src="static/Images/55.jpeg" alt="1234" class="img-responsive" width="100%" height="auto">
+    </div>
+    <div class="containerer-fluid">
+        <div class="row">
+            <div class="col-sm-10" style="background-color:lavender;">.col-sm-4</div>
+            <div class="col-sm-2" style="background-color:lavenderblush;">.col-sm-8</div>
+        </div>
+    </div>
+    <footer class="page-footer font-small unique-color-dark pt-0">
+        <div class="footer-copyright py-3 text-center">
+            © 2018 Copyright:
+            <a href="#"><strong> JNU@shark.com</strong>
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
