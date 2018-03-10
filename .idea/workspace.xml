@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microservices/app/src/static/Images/DOT.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/index.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -88,8 +90,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="49" column="104" lean-forward="false" selection-start-line="49" selection-start-column="104" selection-end-line="49" selection-end-column="104" />
+            <state relative-caret-position="354">
+              <caret line="117" column="114" lean-forward="false" selection-start-line="117" selection-start-column="114" selection-end-line="117" selection-end-column="114" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -322,6 +324,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\software\Git\hello-python-flask\microservices\app\src\static\Images" />
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src\static" />
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src\templates" />
     </key>
@@ -924,8 +927,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="49" column="104" lean-forward="false" selection-start-line="49" selection-start-column="104" selection-end-line="49" selection-end-column="104" />
+        <state relative-caret-position="354">
+          <caret line="117" column="114" lean-forward="false" selection-start-line="117" selection-start-column="114" selection-end-line="117" selection-end-column="114" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
