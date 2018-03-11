@@ -651,13 +651,44 @@ def login_TSP():
             elif 'cluster' in resp.json():
                 return "cluster is sleeping"
             elif 'username' in resp.json()[0]:
-                return "SuccessFully logged in "+ username
+                return render_template('TSP/home.html',username=username)
             else:
                 return resp.content
         except:
             return "exception occurs"
     return "some_error"
 
+@app.route('/TSP/aadhar_search',methods=['POST','GET'])
+def tsp_aadhar_search():
+    if request.method=='POST':
+        aadhar=request.form['aadhar']
+        if len(aadhar) !=12:
+            return render_template('TSP/home.html',message="Aadhar number must be of 12 digits")
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "count",
+            "args": {
+                "table": "central",
+                "where": {
+                    "aadhar_no": {
+                        "$eq": aadhar
+                    }
+                }
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+        return resp.content
 
 
 
