@@ -28,4 +28,6 @@ for i in range(1,len(resp.json()['result'])):
 list=[]
 for i in range(1, len(resp.json()['result'])):
    list.append([resp.json()['result'][i]])
-print list
+for i in list:
+   print i[0][0]
+

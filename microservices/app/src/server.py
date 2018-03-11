@@ -632,7 +632,7 @@ def DOT_home():
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
     list=[]
     for i in range(1, len(resp.json()['result'])):
-        list.append([resp.json()['result'][i]])
+        list.append({[resp.json()['result'][i]]})
     return render_template('DOT/home.html',result=jsonify(list),username=username)
 
 
