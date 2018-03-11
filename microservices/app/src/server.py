@@ -513,6 +513,7 @@ def DOTTSP():
         username=request.form['username']
         email=request.form['email']
         p=id_generator()
+        pa=p
         p1=str.encode(p)
         pas=b64encode(p1)
         if pas is False:
@@ -545,8 +546,8 @@ def DOTTSP():
         if 'affected_rows' in resp.json():
             to=email
             sub="SHARK@JNU LOGIN CEREDENTIAL "
-            body="your login ceredential ::  USERNAME:: "+username+ "    Password:: "+p
-            email(to,sub,body)
+            body="your login ceredential ::  USERNAME:: "+username+ "    Password:: "+pa
+            b=email(to,sub,body)
             return "success"
         else:
             return resp.content
