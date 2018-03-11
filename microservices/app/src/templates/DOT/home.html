@@ -6,9 +6,11 @@
 <br>
 <p>
 {% for i in result %}
-<p>AAdhar :: {{i[0]}}  Count::{{i[1]}}
+{% for j in i %}
+<p>AAdhar :: {{j['aadhar']}}  Count::{{j['count']}}
 <br>
 {% endfor %}
+    {% endfor %}
 </p>
 
 
