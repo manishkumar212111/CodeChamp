@@ -26,9 +26,8 @@ def b64decode(s, altchars=None):
       s = (s, {altchars[0]: '+', altchars[1]: '/'})
    try:
       return binascii.a2b_base64(s)
-   except binascii.Error, msg:
-
-      raise TypeError(msg)
+   except:
+       return False
 
 def id_generator(size=11, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
@@ -514,6 +513,9 @@ def DOTTSP():
         username=request.form['username']
         email=request.form['email']
         p=id_generator()
+        pas=b64encode(p)
+        if pas is False:
+            return "error occurs"
         url = "https://data.despairing12.hasura-app.io/v1/query"
 
         # This is the json payload for the query
@@ -524,7 +526,7 @@ def DOTTSP():
                 "objects": [
                     {
                         "username": username,
-                        "password": b64encode(p)
+                        "password": pas
                     }
                 ]
             }
