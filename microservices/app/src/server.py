@@ -513,7 +513,8 @@ def DOTTSP():
         username=request.form['username']
         email=request.form['email']
         p=id_generator()
-        pas=b64encode(p)
+        p1=str.encode(p)
+        pas=b64encode(p1)
         if pas is False:
             return "error occurs"
         url = "https://data.despairing12.hasura-app.io/v1/query"
