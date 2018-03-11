@@ -1,0 +1,4 @@
+- args:
+    sql: "SELECT aadhar_no, COUNT(*)\r\n    FROM central\r\n    GROUP BY aadhar_no\r\n
+      \   ORDER BY aadhar_no"
+  type: run_sql

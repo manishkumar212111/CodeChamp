@@ -1,23 +1,27 @@
-import base64
-import binascii
-import struct
+import requests
+import json
 
+# This is the url to which the query is made
+url = "https://data.despairing12.hasura-app.io/v1/query"
 
-def b64encode(s, altchars=None):
-   encoded = binascii.b2a_base64(s)[:-1]
-   if altchars is not None:
-      return (encoded, {'+': altchars[0], '/': altchars[1]})
-   return encoded
+# This is the json payload for the query
+requestPayload={
+    "type": "run_sql",
+    "args": {
+        "sql": "SELECT aadhar_no, COUNT(*) FROM central GROUP BY aadhar_no ORDER BY aadhar_no"
+    }
+}
 
-def b64decode(s, altchars=None):
-   if altchars is not None:
-      s = (s, {altchars[0]: '+', altchars[1]: '/'})
-   try:
-      return binascii.a2b_base64(s)
-   except binascii.Error, msg:
-      # Transform this exception for consistency
-      raise TypeError(msg)
+# Setting headers
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+}
 
-print b64encode("GlCOtXdGUaz")
-print b64decode("R2xDT3RYZEdVYXo=")
+# Make the query and store response in resp
+resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
+# resp.content contains the json response.
+print len(resp.json()['result'])
+for i in range(1,len(resp.json()['result'])):
+   print resp.json()['result'][i]
