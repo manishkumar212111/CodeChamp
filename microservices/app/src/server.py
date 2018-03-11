@@ -687,8 +687,10 @@ def tsp_aadhar_search():
 
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
-        return resp.content
+        if 'count' in resp.json():
+            return render_template('/TSP/search.html',aadhar=aadhar,count=resp.json())
+        else:
+            return render_template('/TSP/home.html',message="Something wrong")
 
 
 
