@@ -527,7 +527,7 @@ def DOTTSP():
                 "objects": [
                     {
                         "username": username,
-                        "password": json.dumps(pas.decode('ascii'))
+                        "password": json.dumps(pas.decode('utf-8'))
                     }
                 ]
             }
