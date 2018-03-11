@@ -18,6 +18,6 @@ def b64decode(s, altchars=None):
       # Transform this exception for consistency
       raise TypeError(msg)
 
-print b64encode("man12345")
-print b64decode(b64encode("man12345"))
+print b64encode("GlCOtXdGUaz")
+print b64decode("R2xDT3RYZEdVYXo=")
 
