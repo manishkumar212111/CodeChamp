@@ -1,5 +1,5 @@
 
-from flask import render_template,Flask,request,url_for,redirect,session
+from flask import render_template,Flask,request,url_for,redirect,session,jsonify
 import requests,json
 import base64
 import binascii
@@ -599,7 +599,7 @@ def login_DOT():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
             if len(resp.json())==0:
-                return "Password username does not matched"
+                return "Password username does not matched "+json.dumps(pas.decode('utf-8'))
             elif 'username' in resp.json()[0]:
                 session['username']=username
                 return redirect(url_for('DOT_home'))
@@ -631,7 +631,7 @@ def DOT_home():
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
-    return render_template('DOT/home.html',result=resp.json()['result'],username=username)
+    return render_template('DOT/home.html',result=jsonify(resp.json()['result']),username=username)
 
 
 
