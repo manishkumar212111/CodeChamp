@@ -546,7 +546,8 @@ def DOTTSP():
         if 'affected_rows' in resp.json():
             to=email
             sub="SHARK@JNU LOGIN CEREDENTIAL "
-            body="your login ceredential ::  USERNAME:: "+str(username)+ "    Password:: "+str(pa)
+            #body="your login ceredential ::  USERNAME:: "+str(username)+ "    Password:: "+str(pa)
+            body="manish"
             b=email(to,sub,body)
             return "success"
         else:
