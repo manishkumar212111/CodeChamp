@@ -581,7 +581,7 @@ def login_DOT():
                         },
                         {
                             "password": {
-                                "$eq": json.dumps(pas.decode('utf-8'))
+                                "$eq": "/""+json.dumps(pas.decode('utf-8'))+"/""
                             }
                         }
                     ]
@@ -598,8 +598,8 @@ def login_DOT():
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
-            if len(resp.json()):
-                return "Password username doesnot matched"
+            if len(resp.json())==0:
+                return "Password username does not matched"
             elif 'username' in resp.json()[0]:
                 session['username']=username
                 return redirect(url_for('DOT_home'))
