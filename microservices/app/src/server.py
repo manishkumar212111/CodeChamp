@@ -606,7 +606,7 @@ def login_DOT():
             else:
                 return resp.content
         except:
-            a=0
+            return resp.content
     return "Error"
 
 @app.route('/DOT/home')
