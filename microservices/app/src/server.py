@@ -600,7 +600,7 @@ def login_DOT():
         try:
             if len(resp.json()):
                 return "Password username doesnot matched"
-            elif 'username' in resp.json():
+            elif 'username' in resp.json()[0]:
                 session['username']=username
                 return redirect(url_for('DOT_home'))
         except:
