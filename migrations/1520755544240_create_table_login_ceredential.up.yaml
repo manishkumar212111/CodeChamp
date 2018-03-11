@@ -1,0 +1,7 @@
+- args:
+    sql: CREATE TABLE "login_ceredential"("username" text NOT NULL, "password" text
+      NOT NULL, PRIMARY KEY ("username") )
+  type: run_sql
+- args:
+    name: login_ceredential
+  type: add_existing_table_or_view

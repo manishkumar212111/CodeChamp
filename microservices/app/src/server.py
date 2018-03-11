@@ -1,6 +1,7 @@
 
 from flask import render_template,Flask,request,url_for,redirect,session
 import requests,json
+import base64
 
 from random import randint
 
@@ -10,6 +11,24 @@ from datetime import datetime
 app=Flask(__name__)
 
 app.secret_key = "287tdw8d7wegdweyt26etedgdge45"
+#********************************FUNCTION***********************************
+def encode(key, clear):
+    enc = []
+    for i in range(len(clear)):
+        key_c = key[i % len(key)]
+        enc_c = chr((ord(clear[i]) + ord(key_c)) % 256)
+        enc.append(enc_c)
+    return base64.urlsafe_b64encode("".join(enc))
+
+def decode(key, enc):
+    dec = []
+    enc = base64.urlsafe_b64decode(enc)
+    for i in range(len(enc)):
+        key_c = key[i % len(key)]
+        dec_c = chr((256 + ord(enc[i]) - ord(key_c)) % 256)
+        dec.append(dec_c)
+    return "".join(dec)
+#****************************************************************************
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -417,8 +436,6 @@ def consumer_login():
             None
         return render_template('consumer/consumer.html', message="error occurs")
 
-
-
 @app.route('/consumer/otp/verify',methods=['POST','GET'])
 def consumer_otp_verify():
     if request.method=='POST':
@@ -466,3 +483,42 @@ def consumer_otp_verify():
             return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp"+str(random)+str(otp),random=random)
 
     return render_template('consumer/consumer_otp.html', message="Error")
+
+
+@app.route('/register/DOTTSP',methods=['POST','GET'])
+def DOTTSP():
+    if request.method=='POST':
+        username=request.form['username']
+        password=request.form['password']
+        if len(password) < 11:
+            return "length of passord must be 11 digit"
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "insert",
+            "args": {
+                "table": "login_ceredential",
+                "objects": [
+                    {
+                        "username": username,
+                        "password": encode(app.secret_key,password)
+                    }
+                ]
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+        if 'affected_rows' in resp.json():
+            return "success"
+        else:
+            resp.content
+
