@@ -632,8 +632,11 @@ def DOT_home():
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
     list=[]
     for i in resp.json()['result']:
-        if i[1]>1:
-            list.append([i[0],i[1]])
+        if int(i[1])=="aadhar":
+            None
+        else:
+            if i[1]>1:
+                list.append([i[0],i[1]])
 
 
 
