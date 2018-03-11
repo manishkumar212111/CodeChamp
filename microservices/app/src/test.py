@@ -6,4 +6,4 @@ def b64encode(s, altchars=None):
    return encoded
 print b64encode("GlCOtXdGUaz")
 
-print "\""
+print ""
