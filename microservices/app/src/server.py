@@ -581,7 +581,7 @@ def login_DOT():
                         },
                         {
                             "password": {
-                                "$eq": "\""+json.dumps(pas.decode('utf-8'))+"\""
+                                "$eq": json.dumps(pas.decode('utf-8'))
                             }
                         }
                     ]
