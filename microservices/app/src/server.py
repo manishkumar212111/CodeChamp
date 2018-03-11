@@ -21,9 +21,9 @@ def encode(key, clear):
         key_c = key[i % len(key)]
         enc_c = chr((ord(clear[i]) + ord(key_c)) % 256)
         enc.append(enc_c)
-    return bytes(base64.urlsafe_b64encode("".join(enc)))
+    return (base64.urlsafe_b64encode("".join(enc)))
 def id_generator(size=11, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
-   return ''.join(random.choice(chars) for _ in range(size))
+   return bytes(''.join(random.choice(chars) for _ in range(size)))
 def email(toaddr, sub, body):
         fromaddr = "t68pf1@gmail.com"
         # toaddr = "manish.kumar212111@gmail.com"
