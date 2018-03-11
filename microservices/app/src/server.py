@@ -630,10 +630,14 @@ def DOT_home():
 
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-    list={}
+    list=[]
     for i in range(1, len(resp.json()['result'])):
-        list.add([resp.json()['result'][i]])
-    return render_template('DOT/home.html',result=jsonify(list),username=username)
+        list.append(resp.json()['result'][i])
+
+    data={
+         "list": list
+     }
+    return render_template('DOT/home.html',result=data,username=username)
 
 
 
