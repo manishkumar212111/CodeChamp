@@ -634,10 +634,8 @@ def DOT_home():
     for i in range(1, len(resp.json()['result'])):
         list.append(resp.json()['result'][i])
 
-    data={
-         "list": list
-     }
-    return render_template('DOT/home.html',result=resp.json(),username=username)
+
+    return render_template('DOT/home.html',result=resp.json()['result'],username=username)
 
 
 
