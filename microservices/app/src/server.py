@@ -12,7 +12,6 @@ from datetime import datetime
 
 # from flask import jsonify
 app=Flask(__name__)
-key="267d7wdw7dt7et63te76t6dtfdwtfd623et6et"
 app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
 #********************************FUNCTION***********************************
 def encode(key, clear):
@@ -513,7 +512,8 @@ def DOTTSP():
     if request.method=='POST':
         username=request.form['username']
         email=request.form['email']
-        p=id_generator()
+        #p=id_generator()
+        p="hr83h8347ry"
         url = "https://data.despairing12.hasura-app.io/v1/query"
 
         # This is the json payload for the query
