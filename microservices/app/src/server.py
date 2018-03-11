@@ -19,9 +19,10 @@ def encode(key, clear):
     for i in range(len(clear)):
         key_c = key[i % len(key)]
         enc_c = chr((ord(clear[i]) + ord(key_c)) % 256)
-        data_bytes = enc_c.encode("utf-8")
-        enc.append(data_bytes)
-    return (base64.urlsafe_b64encode("".join(enc)))
+
+        enc.append(enc_c)
+        data_bytes = enc.encode("utf-8")
+    return (base64.b64encode("".join(data_bytes)))
 def id_generator(size=11, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
 def email(toaddr, sub, body):
