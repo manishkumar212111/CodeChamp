@@ -603,6 +603,8 @@ def login_DOT():
             elif 'username' in resp.json()[0]:
                 session['username']=username
                 return redirect(url_for('DOT_home'))
+            else:
+                return resp.content
         except:
             a=0
     return "Error"
