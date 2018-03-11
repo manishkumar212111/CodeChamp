@@ -1,7 +1,7 @@
 
 from flask import render_template,Flask,request,url_for,redirect,session
 import requests,json
-import base64
+import bz2
 import smtplib
 import string
 from email.mime.text import MIMEText
@@ -14,15 +14,7 @@ from datetime import datetime
 app=Flask(__name__)
 app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
 #********************************FUNCTION***********************************
-def encode(key, clear):
-    enc = []
-    for i in range(len(clear)):
-        key_c = key[i % len(key)]
-        enc_c = bytes((ord(clear[i]) + ord(key_c)) % 256)
 
-        enc.append(enc_c)
-
-    return (base64.b64encode("".join(enc)))
 def id_generator(size=11, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
 def email(toaddr, sub, body):
@@ -44,14 +36,6 @@ def email(toaddr, sub, body):
         server.quit()
         return True
 
-def decode(key, enc):
-    dec = []
-    enc = base64.urlsafe_b64decode(enc)
-    for i in range(len(enc)):
-        key_c = key[i % len(key)]
-        dec_c = chr((256 + ord(enc[i]) - ord(key_c)) % 256)
-        dec.append(dec_c)
-    return "".join(dec)
 #****************************************************************************
 @app.route('/')
 def home():
@@ -525,7 +509,7 @@ def DOTTSP():
                 "objects": [
                     {
                         "username": username,
-                        "password": encode(app.secret_key , p)
+                        "password": bz2.compress(p)
                     }
                 ]
             }
