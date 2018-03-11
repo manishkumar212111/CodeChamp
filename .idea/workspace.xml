@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/test.py" afterPath="$PROJECT_DIR$/microservices/app/src/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,18 +42,20 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-              <folding />
+            <state relative-caret-position="428">
+              <caret line="29" column="42" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -77,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="636" column="63" lean-forward="true" selection-start-line="636" selection-start-column="63" selection-end-line="636" selection-end-column="63" />
+            <state relative-caret-position="334">
+              <caret line="635" column="63" lean-forward="true" selection-start-line="635" selection-start-column="63" selection-end-line="635" selection-end-column="63" />
               <folding>
                 <element signature="e#1#81#0" expanded="true" />
                 <element signature="e#550#694#0" expanded="false" />
@@ -103,8 +107,8 @@
                 <element signature="e#14941#17246#0" expanded="false" />
                 <element signature="e#17337#19210#0" expanded="false" />
                 <element signature="e#17596#18987#0" expanded="false" />
-                <element signature="e#23481#25342#0" expanded="false" />
-                <element signature="e#25429#26567#0" expanded="false" />
+                <element signature="e#23437#25298#0" expanded="false" />
+                <element signature="e#25385#26523#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -140,8 +144,8 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/TSP/search.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/test.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/test.py" />
-        <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
       </list>
     </option>
   </component>
@@ -564,7 +568,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="18" lean-forward="true" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -593,8 +599,8 @@
             <element signature="e#14941#17246#0" expanded="false" />
             <element signature="e#17337#19210#0" expanded="false" />
             <element signature="e#17596#18987#0" expanded="false" />
-            <element signature="e#23481#25342#0" expanded="false" />
-            <element signature="e#25429#26567#0" expanded="false" />
+            <element signature="e#23437#25298#0" expanded="false" />
+            <element signature="e#25385#26523#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -651,7 +657,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -680,8 +688,8 @@
             <element signature="e#14941#17246#0" expanded="false" />
             <element signature="e#17337#19210#0" expanded="false" />
             <element signature="e#17596#18987#0" expanded="false" />
-            <element signature="e#23481#25342#0" expanded="false" />
-            <element signature="e#25429#26567#0" expanded="false" />
+            <element signature="e#23437#25298#0" expanded="false" />
+            <element signature="e#25385#26523#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -750,7 +758,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="14" lean-forward="true" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -779,8 +789,8 @@
             <element signature="e#14941#17246#0" expanded="false" />
             <element signature="e#17337#19210#0" expanded="false" />
             <element signature="e#17596#18987#0" expanded="false" />
-            <element signature="e#23481#25342#0" expanded="false" />
-            <element signature="e#25429#26567#0" expanded="false" />
+            <element signature="e#23437#25298#0" expanded="false" />
+            <element signature="e#25385#26523#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -841,7 +851,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -870,8 +882,8 @@
             <element signature="e#14941#17246#0" expanded="false" />
             <element signature="e#17337#19210#0" expanded="false" />
             <element signature="e#17596#18987#0" expanded="false" />
-            <element signature="e#23481#25342#0" expanded="false" />
-            <element signature="e#25429#26567#0" expanded="false" />
+            <element signature="e#23437#25298#0" expanded="false" />
+            <element signature="e#25385#26523#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1011,32 +1023,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/TSP/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="428">
+          <caret line="29" column="42" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="636" column="63" lean-forward="true" selection-start-line="636" selection-start-column="63" selection-end-line="636" selection-end-column="63" />
+        <state relative-caret-position="334">
+          <caret line="635" column="63" lean-forward="true" selection-start-line="635" selection-start-column="63" selection-end-line="635" selection-end-column="63" />
           <folding>
             <element signature="e#1#81#0" expanded="true" />
             <element signature="e#550#694#0" expanded="false" />
@@ -1058,9 +1056,25 @@
             <element signature="e#14941#17246#0" expanded="false" />
             <element signature="e#17337#19210#0" expanded="false" />
             <element signature="e#17596#18987#0" expanded="false" />
-            <element signature="e#23481#25342#0" expanded="false" />
-            <element signature="e#25429#26567#0" expanded="false" />
+            <element signature="e#23437#25298#0" expanded="false" />
+            <element signature="e#25385#26523#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/TSP/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
