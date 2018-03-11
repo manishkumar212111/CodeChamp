@@ -2,15 +2,18 @@
 from flask import render_template,Flask,request,url_for,redirect,session
 import requests,json
 import base64
-
+import smtplib
+import string
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from random import randint
-
+import random
 from datetime import datetime
 
 # from flask import jsonify
 app=Flask(__name__)
 
-app.secret_key = "287tdw8d7wegdweyt26etedgdge45"
+app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
 #********************************FUNCTION***********************************
 def encode(key, clear):
     enc = []
@@ -19,6 +22,26 @@ def encode(key, clear):
         enc_c = chr((ord(clear[i]) + ord(key_c)) % 256)
         enc.append(enc_c)
     return base64.urlsafe_b64encode("".join(enc))
+def id_generator(size=11, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
+   return ''.join(random.choice(chars) for _ in range(size))
+def email(toaddr, sub, body):
+        fromaddr = "t68pf1@gmail.com"
+        # toaddr = "manish.kumar212111@gmail.com"
+        msg = MIMEMultipart()
+        msg[ 'From' ] = fromaddr
+        msg[ 'To' ] = toaddr
+        msg[ 'Subject' ] = sub
+
+        # body = "Manish here"
+        msg.attach(MIMEText(body, 'plain'))
+
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(fromaddr, "man12345")
+        text = msg.as_string()
+        resp = server.sendmail(fromaddr, toaddr, text)
+        server.quit()
+        return True
 
 def decode(key, enc):
     dec = []
@@ -489,9 +512,8 @@ def consumer_otp_verify():
 def DOTTSP():
     if request.method=='POST':
         username=request.form['username']
-        password=request.form['password']
-        if len(password) < 11:
-            return "length of passord must be 11 digit"
+        email=request.form['email']
+        p=id_generator()
         url = "https://data.despairing12.hasura-app.io/v1/query"
 
         # This is the json payload for the query
@@ -502,7 +524,7 @@ def DOTTSP():
                 "objects": [
                     {
                         "username": username,
-                        "password": encode(app.secret_key,password)
+                        "password": encode(app.secret_key,p)
                     }
                 ]
             }
@@ -518,6 +540,10 @@ def DOTTSP():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
         if 'affected_rows' in resp.json():
+            to=email
+            sub="SHARK@JNU LOGIN CEREDENTIAL "
+            body="your login ceredential ::  USERNAME:: "+username+ "    Password:: "+p
+            email(to,sub,body)
             return "success"
         else:
             resp.content
