@@ -8,7 +8,7 @@
     {{result}}
 {% for i in result %}
 {% for j in i %}
-<p>AAdhar :: {{j['aadhar']}}  Count::{{j['count']}}
+<p>AAdhar :: {{j[0]}}  Count::{{j[1]}}
 <br>
 {% endfor %}
     {% endfor %}
