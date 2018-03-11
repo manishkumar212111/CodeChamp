@@ -637,7 +637,7 @@ def DOT_home():
     data={
          "list": list
      }
-    return render_template('DOT/home.html',result=data,username=username)
+    return render_template('DOT/home.html',result=resp.json(),username=username)
 
 
 
