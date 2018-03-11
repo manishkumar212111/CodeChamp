@@ -645,14 +645,17 @@ def login_TSP():
 
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-        if len(resp.json())==0:
-            return "Password and username does not match"
-        elif 'cluster' in resp.json():
-            return "cluster is sleeping"
-        elif 'username' in resp.json():
-            return "SuccessFully logged in "+ username
-        else:
-            return resp.content
+        try:
+            if len(resp.json())==0:
+                return "Password and username does not match"
+            elif 'cluster' in resp.json():
+                return "cluster is sleeping"
+            elif 'username' in resp.json()[0]:
+                return "SuccessFully logged in "+ username
+            else:
+                return resp.content
+        except:
+            return "exception occurs"
     return "some_error"
 
 
