@@ -19,7 +19,8 @@ def encode(key, clear):
     for i in range(len(clear)):
         key_c = key[i % len(key)]
         enc_c = chr((ord(clear[i]) + ord(key_c)) % 256)
-        enc.append(enc_c)
+        data_bytes = enc_c.encode("utf-8")
+        enc.append(data_bytes)
     return (base64.urlsafe_b64encode("".join(enc)))
 def id_generator(size=11, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
@@ -512,8 +513,7 @@ def DOTTSP():
     if request.method=='POST':
         username=request.form['username']
         email=request.form['email']
-        #p=id_generator()
-        p="hr83h8347ry"
+        p=id_generator()
         url = "https://data.despairing12.hasura-app.io/v1/query"
 
         # This is the json payload for the query
