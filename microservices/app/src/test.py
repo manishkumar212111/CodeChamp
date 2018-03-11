@@ -6,8 +6,9 @@ def encode(key, clear):
     enc = []
     for i in range(len(clear)):
         key_c = key[i % len(key)]
-        enc_c = chr((ord(clear[i]) + ord(key_c)) % 256)
+        enc_c = bytes(chr((ord(clear[i]) + ord(key_c)) % 256))
         enc.append(enc_c)
+
     return bytes(base64.b64encode("".join(enc)))
 
 def decode(key, enc):
