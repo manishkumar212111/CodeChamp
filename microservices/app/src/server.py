@@ -31,7 +31,7 @@ def b64decode(s, altchars=None):
 
 def id_generator(size=11, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
-def email(toaddr, sub, body):
+def email_send(toaddr, sub, body):
         fromaddr = "t68pf1@gmail.com"
         # toaddr = "manish.kumar212111@gmail.com"
         msg = MIMEMultipart()
@@ -545,10 +545,9 @@ def DOTTSP():
 
         if 'affected_rows' in resp.json():
             to=email
-            sub='SHARK@JNU LOGIN CEREDENTIAL '
-            #body="your login ceredential ::  USERNAME:: "+str(username)+ "    Password:: "+str(pa)
-            body='manish'
-            b=email(to,sub,body)
+            sub="SHARK@JNU LOGIN CEREDENTIAL "
+            body="your login ceredential ::  USERNAME:: "+str(username)+ "    Password:: "+str(pa)
+            b=email_send(to,sub,body)
             return resp.content
         else:
             return resp.content
