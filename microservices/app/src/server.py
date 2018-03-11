@@ -527,7 +527,7 @@ def DOTTSP():
                 "objects": [
                     {
                         "username": username,
-                        "password": pas
+                        "password": json.dumps(pas)
                     }
                 ]
             }
