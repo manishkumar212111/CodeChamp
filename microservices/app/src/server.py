@@ -21,7 +21,7 @@ def encode(key, clear):
         key_c = key[i % len(key)]
         enc_c = chr((ord(clear[i]) + ord(key_c)) % 256)
         enc.append(enc_c)
-    return base64.urlsafe_b64encode("".join(enc))
+    return bytes(base64.urlsafe_b64encode("".join(enc)))
 def id_generator(size=11, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
 def email(toaddr, sub, body):
@@ -524,7 +524,7 @@ def DOTTSP():
                 "objects": [
                     {
                         "username": username,
-                        "password": encode(app.secret_key,p)
+                        "password": encode(app.secret_key , p)
                     }
                 ]
             }
