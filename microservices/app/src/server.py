@@ -549,7 +549,7 @@ def DOTTSP():
             #body="your login ceredential ::  USERNAME:: "+str(username)+ "    Password:: "+str(pa)
             body='manish'
             b=email(to,sub,body)
-            return "success"
+            return resp.content
         else:
             return resp.content
     return "okay"
