@@ -8,8 +8,10 @@
     {{result}}
 {% for i in result %}
 
-<p>AAdhar :: {{i[0]}}  Count::{{i[1]}}
-<br>
+{% if i[1] >1 %}
+
+<br>{{i[0]}}  {{i[1]}}
+    {%endif%}
     {% endfor %}
 </p>
 
