@@ -499,6 +499,7 @@ def DOTTSP():
         username=request.form['username']
         email=request.form['email']
         p=id_generator()
+        p=str.encode(p)
         url = "https://data.despairing12.hasura-app.io/v1/query"
 
         # This is the json payload for the query
