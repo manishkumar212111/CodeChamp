@@ -21,8 +21,8 @@ def encode(key, clear):
         enc_c = chr((ord(clear[i]) + ord(key_c)) % 256)
 
         enc.append(enc_c)
-        data_bytes = enc.encode("utf-8")
-    return (base64.b64encode("".join(data_bytes)))
+
+    return (base64.b64encode("".join(enc)))
 def id_generator(size=11, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
 def email(toaddr, sub, body):

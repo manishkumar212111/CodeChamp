@@ -8,7 +8,7 @@ def encode(key, clear):
         key_c = key[i % len(key)]
         enc_c = chr((ord(clear[i]) + ord(key_c)) % 256)
         enc.append(enc_c)
-    return bytes(base64.urlsafe_b64encode("".join(enc)))
+    return bytes(base64.b64encode("".join(enc)))
 
 def decode(key, enc):
     dec = []
@@ -19,6 +19,8 @@ def decode(key, enc):
         dec.append(dec_c)
     return "".join(dec)
 p=id_generator()
+key='fsf'
+print encode(key,"bfjbsdj")
 key="huheuhr3u4h3urieurw"
 url = "https://data.despairing12.hasura-app.io/v1/query"
 
@@ -43,10 +45,10 @@ headers = {
 }
 
 # Make the query and store response in resp
-resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+#resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
 # resp.content contains the json response.
-print resp.content
+#print resp.content
 
 
 
