@@ -510,7 +510,7 @@ def DOTTSP():
                 "objects": [
                     {
                         "username": username,
-                        "password": json.dumps(bz2.compress(p))
+                        "password": json.dumps(bz2.compress(p).decode('utf-8'))
                     }
                 ]
             }
