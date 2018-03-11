@@ -12,7 +12,7 @@ from datetime import datetime
 
 # from flask import jsonify
 app=Flask(__name__)
-
+key="267d7wdw7dt7et63te76t6dtfdwtfd623et6et"
 app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
 #********************************FUNCTION***********************************
 def encode(key, clear):
@@ -524,7 +524,7 @@ def DOTTSP():
                 "objects": [
                     {
                         "username": username,
-                        "password": encode(app.secret_key , p)
+                        "password": encode(key , p)
                     }
                 ]
             }
