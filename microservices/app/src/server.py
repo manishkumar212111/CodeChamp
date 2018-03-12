@@ -397,9 +397,11 @@ def consumer():
 
 @app.route('/consumer/login_otp',methods= ['POST','GET'])
 def consumer_login():
-    if 'aadhar' in session():
-        return redirect(url_for('consumer_home'))
-
+    try:
+        if session['aadhar']:
+            return redirect(url_for('consumer_home'))
+    except:
+        a=0
     if request.method=='POST':
         random = randint(100000, 999999)
         aadhar=request.form['aadhar']
