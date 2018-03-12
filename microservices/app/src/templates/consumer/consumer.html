@@ -124,7 +124,7 @@
     <div class="container-fluid" id="banner">
         <img src="static/Images/55.jpeg" alt="1234" class="img-responsive" width="100%" height="auto">
     </div>
-    <marquee height="10%" bgcolor="red" width="50%">Shark@JNU welcomes You</marquee>
+    <marquee height="10%" bgcolor="red" width="100%">Shark@JNU welcomes You</marquee>
     <div class="containerer-fluid">
         <div class="row">
             <div class="col-sm-10" style="background-color:lavender;">
@@ -133,14 +133,14 @@
           <div class="box">
             <center><form>
           <h1>Enter Your Aadhaar Number:</h1>
-            <input type="text" name="aadhar" class="credit" required/>
+              <input type="text" name="aadhar" class="credit" required/>{%if message %}<font color="red">{{message}}</font>{%endif%}
             <br>
              <input type="submit" value="Get OTP">
           </form>
               <br>
               <font color="red">NOTE:</font> An OTP will be sent to Registered Mobile number with Aadhar card for verification.<br>
-              If not registered mobile no. with aadhar <a href="https://uidai.gov.in/" target="_blank">click here</a>
-
+              If not registered mobile no. with aadhar <a href="https://uidai.gov.in/" style="text-decoration:none;color=blue; text-color:blue;"target="_blank">click here</a>
+              <br><br><br>
             </center>
           </div>
     </div>
