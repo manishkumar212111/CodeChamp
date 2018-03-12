@@ -1,3 +1,9 @@
+/**
+ * Credit.js
+ * Version: 1.0.0
+ * Author: Ron Masas
+ */
+
 (function( $ ){
 
     $.fn.extend({
@@ -26,12 +32,12 @@
         	});
 
         	// Add credit cell inputs to the holder
-        	for ( i = 0; i < 1; i++ ) {
+        	for ( i = 0; i < 3; i++ ) {
             	credit_control.append(
             			$("<input />",{
             				class: "credit-cell",
-            				placeholder: "XXXXXX",
-            				maxlength: 6
+            				placeholder: "XXXX",
+            				maxlength: 4
             			})
             		);
         	}
@@ -134,7 +140,7 @@
 			}
 
 			});
-
+            	
         }
     });
 
