@@ -106,6 +106,17 @@
             <div class="col-sm-10" style="background-color:lavender;">
 
             <br><h2>Welcome To Shark@JNU Portal</h2><br><br>
+
+
+            {% if aadhar %}
+                Aadhar Number::  {{aadhar }}
+
+                {%endif%}
+
+                {% if result %}
+                No. Of issued SIM::  {{result }}
+                <br><br><br><mark>Search Another</mark>
+                {%endif%}
                  <div class="container-fluid">
           <div class="box">
             <center><form action="https://app.despairing12.hasura-app.io/TSP/search" method="post">
@@ -115,15 +126,7 @@
              <input type="submit" value="Show Detail">
           </form>
 
-                {% if aadhar %}
-                Aadhar Number::  {{aadhar }}
 
-                {%endif%}
-
-                {% if result %}
-                No. Of issued SIM::  {{result }}
-
-                {%endif%}
               <br>
               <br><br><br>
             </center>
