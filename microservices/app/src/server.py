@@ -560,6 +560,9 @@ def consumer_logout():
 
 #*****************************************XXXXXXXXXXXXX*********************************
 #****************************************TELECOM SERVICE PROVIDER **********************
+@app.route('/login_TSP')
+def login_TSP():
+    return render_template('TSP/login.html')
 @app.route('/login/TSP',methods=['POST','GET'])
 def login_TSP():
     if request.method=='POST':
