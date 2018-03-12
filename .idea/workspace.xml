@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/index.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/microservices/app/src/static/Images/faq.jpg" afterPath="$PROJECT_DIR$/microservices/app/src/static/Images/faqs.jpg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -119,8 +118,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="118" column="114" lean-forward="false" selection-start-line="118" selection-start-column="114" selection-end-line="118" selection-end-column="114" />
+            <state relative-caret-position="435">
+              <caret line="116" column="63" lean-forward="false" selection-start-line="116" selection-start-column="63" selection-end-line="116" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -1157,8 +1156,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="118" column="114" lean-forward="false" selection-start-line="118" selection-start-column="114" selection-end-line="118" selection-end-column="114" />
+        <state relative-caret-position="435">
+          <caret line="116" column="63" lean-forward="false" selection-start-line="116" selection-start-column="63" selection-end-line="116" selection-end-column="63" />
           <folding />
         </state>
       </provider>
