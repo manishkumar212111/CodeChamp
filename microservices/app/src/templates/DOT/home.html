@@ -5,11 +5,12 @@
 <br>
 <br>
 <p>
-{{result}}
+
 
     {% for i in result['data']['list'] %}
 
-    {{i}}
+    {{i[0]}}<br>
+    {{i[1]}}
 
     {% endfor%}
 </p>
