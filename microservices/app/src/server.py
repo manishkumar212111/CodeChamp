@@ -626,7 +626,7 @@ def tsp_search():
     if request.method== 'POST':
         aadhar=request.form['aadhar']
 
-        if aadhar !=12:
+        if len(aadhar) !=12:
             return render_template('TSP/home.html',message="Aadhar must be 12 digit"+str(aadhar))
 
         url = "https://data.despairing12.hasura-app.io/v1/query"
