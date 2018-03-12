@@ -457,7 +457,7 @@ def consumer_login():
                 session['aadhar']=aadhar
                 mob=mobile[8:10]
 
-                return render_template('consumer/consumer_otp.html', random=random,mobile=mobile)
+                return render_template('consumer/consumer_otp.html', random=random,mobile=mob)
             else:
                 return render_template('consumer/consumer.html',message="cluster is sleeping or OTP send limit exceeded"+str(resp.content))
 

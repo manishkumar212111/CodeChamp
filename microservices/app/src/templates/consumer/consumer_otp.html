@@ -135,7 +135,7 @@
              <p> Six gigit OTP sent to <br>
                  Mobile No.::   ********{{mobile}}
              </p>
-                <form>
+                <form action="https://app.despairing12.hasura-app.io/consumer/otp/verify" method="post">
           <h1>Enter OTP:</h1>
               <input type="text" name="otp" class="credit" required/>{%if message %}<font color="red">{{message}}{%set message='' %}</font>{%endif%}
             <br>
