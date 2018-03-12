@@ -608,19 +608,23 @@ def login_TSP():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
             if len(resp.json())==0:
-                return "Password and username does not match"
+                return render_template('TSP/login.html',message="Username password didn't match")
             elif 'cluster' in resp.json():
-                return "cluster is sleeping"
+                return render_template('TSP/login.html',message="Username password didn't match")
             elif 'username' in resp.json()[0]:
+                session['tsp_username']=username
                 return render_template('TSP/home.html',username=username)
             else:
-                return resp.content
+                return render_template('TSP/login.html',message="Unknown error")
         except:
-            return "exception occurs"
-    return "some_error"
+            return render_template('TSP/login.html',message="Exception occured")
+    return render_template('TSP/login.html',message="error")
 
 
 
+
+
+#********************************END*****************************************************
 
 @app.route('/register/DOTTSP',methods=['POST','GET'])
 def DOTTSP():
