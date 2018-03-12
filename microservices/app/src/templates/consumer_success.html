@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -47,7 +47,7 @@
                 <img src="static/Images/JNU1.png" class="pull-left img-responsive" alt="NO image">
             </div>
             <div class="col-lg-6" id="img2">
-                <img src="static/Images/DOT.jpg" class="pull-right img-responsive" alt="NO image">
+                <img src="/static/Images/DOT.jpg" class="pull-right img-responsive" alt="NO image">
             </div>
         </div>
     </div>
@@ -72,6 +72,7 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">DOT
                         </a>
                     </li>
+
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">FAQs
                         </a>
@@ -87,25 +88,8 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="https://app.despairing12.hasura-app.io/consumer">Consumer</a>
-                            </li>
-                            <li>
-                                <a href="#">DOT</a>
-                            </li>
-                            <li>
-                                <a href="#">TSP</a>
-                            </li>
-                            <li>
-                                <a href="#">Support</a>
-                            </li>
-                        </ul>
-                    </li>
+                    <a href="https://app.despairing12.hasura-app.io/consumer/logout">logout
+                    </a>
                 </ul>
             </div>
         </div>
@@ -114,12 +98,31 @@
         <img src="static/Images/55.jpeg" alt="1234" class="img-responsive" width="100%" height="auto">
     </div>
     <div>
-    <marquee height="10%" bgcolor="red" width="100%">Shark@JNU welcomes You</marquee>Total Visit:: 10023
+    <marquee height="10%" bgcolor="red" width="100%">Shark@JNU welcomes You</marquee>
 
     </div>
         <div class="containerer-fluid">
         <div class="row">
-            <div class="col-sm-10" style="background-color:lavender;"><br><br><br><br>BODY<br><br><br><br><br><br></div>
+            <div class="col-sm-10" style="background-color:lavender;"><br><br>AAdhar Number:: {{session['aadhar']}}
+            <br>
+            {% if result %}
+<table border="1">
+<tr><th>MOBILE Number</th><th>Comp_name</th><th>Service Area</th></tr>
+{% for i in result%}
+<tr><td>{{i['mobile']}}</td>
+<td>{{i['comp_name']}}</td>
+<td>{{i['LSA']}}</td>
+</tr>
+
+{% endfor  %}
+    <br>
+    {% if count %}
+    No of issued sim on your aadhar card::{{count}}
+    {% endif %}
+{% endif  %}
+</table>
+
+            </div>
             <div class="col-sm-2" style="background-color:lavenderblush;"><a href="#"><img src="static/Images/faqs.jpg" alt="1234" class="img-responsive" width="100%" height="auto"></a></div>
         </div>
     </div>
@@ -130,14 +133,5 @@
             </a>
         </div>
     </footer>
-
-  <script type="text/javascript">
-        {% if logout %}
-        alert("{{logout}}");
-            {% set logout=None %}
-               {% endif %}
-
-
-</script>
 </body>
 </html>
