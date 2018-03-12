@@ -431,7 +431,7 @@ def consumer_login():
             return render_template('consumer/consumer.html',message="Not Found")
         try:
             url = "https://notify.despairing12.hasura-app.io/v1/send/sms"
-            mobile=resp.json()[0]['mobile']
+            mobile=str(resp.json()[0]['mobile'])
             # This is the json payload for the query
             requestPayload = {
                 "to": str(resp.json()[0]['mobile']),
