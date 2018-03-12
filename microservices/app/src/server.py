@@ -465,6 +465,7 @@ def consumer_login():
             None
         return render_template('consumer/consumer.html', message="error occurs")
 
+
 @app.route('/consumer/otp/verify',methods=['POST','GET'])
 def consumer_otp_verify():
     if request.method=='POST':
@@ -514,6 +515,7 @@ def consumer_otp_verify():
     return render_template('consumer/consumer_otp.html', message="Error")
 
 
+
 def consumer_home():
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
@@ -549,6 +551,12 @@ def consumer_home():
     else:
           return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
 
+@app.route('/consumer/logout')
+def consumer_logout():
+    if 'aadhar' in session:
+        session.pop('aadhar',None)
+        return render_template('index.html',logout="successfully logout")
+    return render_template('consumer.html')
 
 
 @app.route('/register/DOTTSP',methods=['POST','GET'])
