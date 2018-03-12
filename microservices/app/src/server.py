@@ -636,7 +636,7 @@ def DOT_home():
             list.append([resp.json()['result'][i][0], resp.json()['result'][i][1]])
 
 
-    return render_template('DOT/home.html',jsonify(result=list),username=username)
+    return render_template('DOT/home.html',result=jsonify(result=list),username=username)
 
 
 
