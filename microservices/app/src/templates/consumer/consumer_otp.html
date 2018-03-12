@@ -137,7 +137,9 @@
              </p>
                 <form action="https://app.despairing12.hasura-app.io/consumer/otp/verify" method="post">
           <h1>Enter OTP:</h1>
-              <input type="text" name="otp" class="credit" required/>{%if message %}<font color="red">{{message}}{%set message='' %}</font>{%endif%}
+              <input type="text" name="otp" class="credit" required/>
+               <input type="text" name="random" value={{random}} class="credit" hidden/>
+                    {%if message %}<font color="red">{{message}}{%set message='' %}</font>{%endif%}
             <br>
              <input type="submit" value="Submit">
           </form>
