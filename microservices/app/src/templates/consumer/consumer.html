@@ -133,7 +133,7 @@
           <div class="box">
             <center><form>
           <h1>Enter Your Aadhaar Number:</h1>
-              <input type="text" name="aadhar" class="credit" required/>{%if message %}<font color="red">{{message}}{%set message=None%}</font>{%endif%}
+              <input type="text" name="aadhar" class="credit" required/>{%if message %}<font color="red">{{message}}{%set message='' %}</font>{%endif%}
             <br>
              <input type="submit" value="Get OTP">
           </form>
