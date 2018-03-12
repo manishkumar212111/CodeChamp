@@ -397,6 +397,9 @@ def consumer():
 
 @app.route('/consumer/login_otp',methods= ['POST','GET'])
 def consumer_login():
+    if 'aadhar' in session():
+        return redirect(url_for('consumer_home'))
+
     if request.method=='POST':
         random = randint(100000, 999999)
         aadhar=request.form['aadhar']
@@ -507,6 +510,43 @@ def consumer_otp_verify():
             return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp"+str(random)+str(otp),random=random)
 
     return render_template('consumer/consumer_otp.html', message="Error")
+
+
+def consumer_home():
+    url = "https://data.despairing12.hasura-app.io/v1/query"
+
+    # This is the json payload for the query
+    requestPayload = {
+        "type": "select",
+        "args": {
+                        "table": "central",
+                        "columns": [
+                            "mobile",
+                            "comp_name",
+                            "LSA"
+                        ],
+                        "where": {
+                            "aadhar_no": {
+                                "$eq": session['aadhar']
+                            }
+                        }
+                    }
+         }
+
+
+    headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+    if len(resp.json()) == 0:
+            return render_template('consumer/consumer_success.html',empty="No record found")
+    else:
+          return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
+
 
 
 @app.route('/register/DOTTSP',methods=['POST','GET'])
