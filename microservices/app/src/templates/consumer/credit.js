@@ -32,11 +32,11 @@
         	});
 
         	// Add credit cell inputs to the holder
-        	for ( i = 0; i < 4; i++ ) {
+        	for ( i = 0; i < 3; i++ ) {
             	credit_control.append(
             			$("<input />",{
             				class: "credit-cell",
-            				placeholder: "0000",
+            				placeholder: "XXXX",
             				maxlength: 4
             			})
             		);

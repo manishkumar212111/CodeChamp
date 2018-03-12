@@ -9,9 +9,9 @@
 }
 
 .credit-cell{
-	width: 24%;
-	height: 34px;
-	padding: 6px 12px;
+	width: 28%;
+	height: 20px;
+	padding: 0px 12px;
 	font-size: 18px;
 	line-height: 1.42857143;
 	color: #555;
@@ -24,7 +24,7 @@
 
 .credit-input {
 	display: block;
-	width: 93%;
+	width: 100%;
 	max-width: 400px;
 	height: 34px;
 	padding: 6px 12px;
