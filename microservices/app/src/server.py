@@ -635,9 +635,9 @@ def DOT_home():
         if int(resp.json()['result'][i][1]) > 1:
             list.append([resp.json()['result'][i][0], resp.json()['result'][i][1]])
     data={
-        "data":{
+
         "list":list
-        }
+
     }
 
     return render_template('DOT/home.html',result=data,username=username)
