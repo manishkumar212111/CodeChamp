@@ -621,8 +621,45 @@ def login_TSP():
     return render_template('TSP/login.html',message="error")
 
 
+@app.route('/TSP/search',methods=['POST','GET'])
+def tsp_search():
+    if request.method== 'POST':
+        aadhar=request.form['aadhar']
 
+        if aadhar !=12:
+            return render_template('TSP/home.html',message="Aadhar must be 12 digit")
 
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "count",
+            "args": {
+                "table": "central",
+                "where": {
+                    "aadhar_no": {
+                        "$eq": str(aadhar)
+                    }
+                }
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        try:
+            if resp.json()['count']==0:
+                return render_template('TSP/home.html',aadhar=aadhar,result="Not found any detail")
+            else:
+                return render_template('TSP/home.html',aadhar=aadhar,result=resp.json()['count'])
+        except:
+            return render_template('TSP/home.html',aadhar=aadhar,result="Server busy")
+    return render_template('TSP/home.html',result="Unknown error")
 
 #********************************END*****************************************************
 
