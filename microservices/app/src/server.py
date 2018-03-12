@@ -431,7 +431,7 @@ def consumer_login():
             return render_template('consumer/consumer.html',message="Not Found")
         try:
             url = "https://notify.despairing12.hasura-app.io/v1/send/sms"
-
+            mobile=resp.json()[0]['mobile']
             # This is the json payload for the query
             requestPayload = {
                 "to": str(resp.json()[0]['mobile']),
@@ -450,7 +450,9 @@ def consumer_login():
 
             if 'id' in resp.json():
                 session['aadhar']=aadhar
-                return render_template('consumer/consumer_otp.html', random=random)
+                mob=mobile[8:10]
+
+                return render_template('consumer/consumer_otp.html', random=random,mobile=mobile)
             else:
                 return render_template('consumer/consumer.html',message="cluster is sleeping or OTP send limit exceeded"+str(resp.content))
 
