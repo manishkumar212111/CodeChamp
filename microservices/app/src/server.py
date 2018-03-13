@@ -667,7 +667,7 @@ def tsp_search():
 
 @app.route('/login_DOT')
 def DOT_login():
-    return render_template('DOT/login/html')
+    return render_template('DOT/login.html')
 
 @app.route('/login/DOT',methods=['POST','GET'])
 def login_DOT():
