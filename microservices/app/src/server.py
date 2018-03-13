@@ -759,7 +759,7 @@ def DOT_home():
     list=[]
     try:
         if len(resp.json()['result'])==1:
-            return render_template('DOT/home.html', message="currently no user is using more than 1 SIM")
+            return render_template('DOT/home.html', message="Data not found")
 
         for i in range(1, len(resp.json()['result'])):
             if int(resp.json()['result'][i][1]) > 1:
@@ -769,6 +769,8 @@ def DOT_home():
         "list":list
 
         }
+        if len(list) ==0:
+            return render_template('DOT/home.html', message="Currently no user is using more than 1 sim")
 
         return render_template('DOT/home.html',result=data)
     except:
