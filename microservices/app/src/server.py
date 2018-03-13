@@ -748,6 +748,9 @@ def DOT_home():
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
     list=[]
+    if len(resp.json()['result'])==1:
+        return render_template('DOT/home.html', message="currently no user is using more than 1 SIM")
+
     for i in range(1, len(resp.json()['result'])):
         if int(resp.json()['result'][i][1]) > 1:
             list.append([resp.json()['result'][i][0], resp.json()['result'][i][1]])
@@ -757,7 +760,7 @@ def DOT_home():
 
     }
 
-    return render_template('DOT/home.html',result=data,username=username)
+    return render_template('DOT/home.html',result=data)
 
 
 #*******************************END*******************************************************
