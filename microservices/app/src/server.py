@@ -737,7 +737,7 @@ def login_DOT():
 
 @app.route('/DOT/home')
 def DOT_home():
-    username=session['dot_username']
+    username=session['DOT_username']
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
     # This is the json payload for the query
