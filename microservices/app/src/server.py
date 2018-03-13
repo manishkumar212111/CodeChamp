@@ -612,7 +612,7 @@ def login_TSP():
             elif 'cluster' in resp.json():
                 return render_template('TSP/login.html',message="Username password didn't match")
             elif 'username' in resp.json()[0]:
-                session['tsp_username']=username
+                session['TSP_username']=username
                 return render_template('TSP/home.html',username=username)
             else:
                 return render_template('TSP/login.html',message="Unknown error")
@@ -660,6 +660,14 @@ def tsp_search():
         except:
             return render_template('TSP/home.html',aadhar=aadhar,result="Server busy")
     return render_template('TSP/home.html',result="Unknown error")
+
+
+@app.route('/TSP/logout')
+def TSp_logout():
+    if 'TSP_username' in session:
+        session.pop('TSP_username',None)
+        return render_template('index.html',logout="successfully logout")
+    return render_template('TSP/login.html')
 
 #********************************END*****************************************************
 
@@ -717,7 +725,7 @@ def login_DOT():
             if len(resp.json())==0:
                 return render_template('DOT/login/html',message="UserId and password does not match")
             elif 'username' in resp.json()[0]:
-                session['dot_username']=username
+                session['DOT_username']=username
                 return redirect(url_for('DOT_home'))
             else:
                 return render_template('DOT/login/html',message=resp.json())
@@ -808,6 +816,14 @@ def DOT_search():
         except:
             return render_template('DOT/home.html',aadhar=aadhar,count="Server busy")
     return render_template('DOT/home.html',result="Unknown error")
+
+@app.route('/DOT/logout')
+def dot_logout():
+    if 'DOT_username' in session:
+        session.pop('DOT_username',None)
+        return render_template('index.html',logout="successfully logout")
+    return render_template('DOT/login.html')
+
 
 
 #*******************************END*******************************************************
