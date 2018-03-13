@@ -663,51 +663,11 @@ def tsp_search():
 
 #********************************END*****************************************************
 
-@app.route('/register/DOTTSP',methods=['POST','GET'])
-def DOTTSP():
-    if request.method=='POST':
-        username=request.form['username']
-        email=request.form['email']
-        p=id_generator()
-        pa=p
-        p1=str.encode(p)
-        pas=b64encode(p1)
-        if pas is False:
-            return "error occurs"
-        url = "https://data.despairing12.hasura-app.io/v1/query"
+#*********************************DOT****************************************************
 
-        # This is the json payload for the query
-        requestPayload = {
-            "type": "insert",
-            "args": {
-                "table": "login_ceredential",
-                "objects": [
-                    {
-                        "username": username,
-                        "password": json.dumps(pas.decode('utf-8'))
-                    }
-                ]
-            }
-        }
-
-        # Setting headers
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-        }
-
-        # Make the query and store response in resp
-        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
-        if 'affected_rows' in resp.json():
-            to=email
-            sub="SHARK@JNU LOGIN CEREDENTIAL "
-            body="your login ceredential ::  USERNAME:: "+str(username)+ "    Password:: "+str(pa)
-            b=email_send(to,sub,body)
-            return resp.content
-        else:
-            return resp.content
-    return "okay"
+@app.route('/login_DOT')
+def DOT_login():
+    return render_template('DOT/login/html')
 
 @app.route('/login/DOT',methods=['POST','GET'])
 def login_DOT():
@@ -798,6 +758,54 @@ def DOT_home():
     }
 
     return render_template('DOT/home.html',result=data,username=username)
+
+
+#*******************************END*******************************************************
+@app.route('/register/DOTTSP',methods=['POST','GET'])
+def DOTTSP():
+    if request.method=='POST':
+        username=request.form['username']
+        email=request.form['email']
+        p=id_generator()
+        pa=p
+        p1=str.encode(p)
+        pas=b64encode(p1)
+        if pas is False:
+            return "error occurs"
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "insert",
+            "args": {
+                "table": "login_ceredential",
+                "objects": [
+                    {
+                        "username": username,
+                        "password": json.dumps(pas.decode('utf-8'))
+                    }
+                ]
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+        if 'affected_rows' in resp.json():
+            to=email
+            sub="SHARK@JNU LOGIN CEREDENTIAL "
+            body="your login ceredential ::  USERNAME:: "+str(username)+ "    Password:: "+str(pa)
+            b=email_send(to,sub,body)
+            return resp.content
+        else:
+            return resp.content
+    return "okay"
 
 
 
