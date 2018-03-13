@@ -150,25 +150,7 @@ input[type=submit]:hover {
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="https://app.despairing12.hasura-app.io/consumer">Consumer</a>
-                            </li>
-                            <li>
-                                <a href="https://app.despairing12.hasura-app.io/login_DOT">DOT</a>
-                            </li>
-                            <li>
-                                <a href="https://app.despairing12.hasura-app.io/login_TSP">TSP</a>
-                            </li>
-                            <li>
-                                <a href="#">Support</a>
-                            </li>
-                        </ul>
-                    </li>
+                    {{session['dot_username']}} &nbsp&nbsp|| <a href="https://app.despairing12.hasura-app.io/DOT/logout">LOGOUT</a>
                 </ul>
             </div>
         </div>
@@ -179,17 +161,43 @@ input[type=submit]:hover {
 
                 <h2>DEPARTMENT OF TELECOMMUNICATION</h2>
                 <br>
+                {% if search %}
+                <p>Aadhar number::{{aadhar}}</p>
+                <p>Registered SIM::{{count}}</p>
+                {% set search=''%}
+                {%endif%}
+
+
+                {% if result %}
                 <mark>Detail of consumer having more than 1 registered SIM</mark>
-                {% if message %}
+               <br> {% if message %}
                 <p>{{message}}</p>
                 {%endif%}
-                <table><tr><th>Aadhar Number</th></tr><tr><th>No of sim</th></tr>
+                <table border="1"><tr><th>Aadhar Number</th><th>No of sim</th></tr>
                 {% for i in result['list'] %}
                 <td>{{i[0]}}</td>
                     <td>{{i[1]}}</td>
 
                 {% endfor%}
+                 {% set result=''%}
                 </table>
+                {%endif%}
+                <br>
+                <hr>
+
+                <h1>
+                    Search For Aadhar Number
+                </h1>
+                <div class="container-fluid">
+          <div class="box">
+            <center><form action="https://app.despairing12.hasura-app.io/DOT/search" method="post">
+          <h1>Enter Your Aadhaar Number:</h1>
+              <input type="text" name="aadhar" class="credit" required>{%if error %}<font color="red">{{error}}{%set error='' %}</font>{%endif%}
+            <br>
+             <input type="submit" value="Show Detail">
+          </form>
+
+            </center>
 
 
                 <br><br><br><br><br><br></div>

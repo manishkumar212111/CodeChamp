@@ -715,9 +715,9 @@ def login_DOT():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
             if len(resp.json())==0:
-                return "Password username does not matched "+json.dumps(pas.decode('utf-8'))
+                return "Password username does not matched "
             elif 'username' in resp.json()[0]:
-                session['username']=username
+                session['dot_username']=username
                 return redirect(url_for('DOT_home'))
             else:
                 return resp.content
@@ -728,7 +728,7 @@ def login_DOT():
 
 @app.route('/DOT/home')
 def DOT_home():
-    username=session['username']
+    username=session['dot_username']
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
     # This is the json payload for the query
@@ -766,12 +766,56 @@ def DOT_home():
         return render_template('DOT/home.html', Message="Error retrieving data")
     return render_template('DOT/home.html', result="error")
 
+
+
+@app.route('/DOT/search',methods=['POST','GET'])
+def DOT_search():
+    if request.method== 'POST':
+        aadhar=request.form['aadhar']
+
+        if len(aadhar) !=12:
+            return render_template('DOT/home.html',error="Aadhar must be 12 digit"+str(aadhar))
+
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "count",
+            "args": {
+                "table": "central",
+                "where": {
+                    "aadhar_no": {
+                        "$eq": str(aadhar)
+                    }
+                }
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        try:
+            if resp.json()['count']==0:
+                return render_template('DOT/home.html',aadhar=aadhar,search="Not found",count="not found")
+            else:
+                return render_template('DOT/home.html',aadhar=aadhar,count=resp.json()['count'],search="found")
+        except:
+            return render_template('DOT/home.html',aadhar=aadhar,count="Server busy")
+    return render_template('DOT/home.html',result="Unknown error")
+
+
 #*******************************END*******************************************************
 @app.route('/register/DOTTSP',methods=['POST','GET'])
 def DOTTSP():
     if request.method=='POST':
         username=request.form['username']
         email=request.form['email']
+
         p=id_generator()
         pa=p
         p1=str.encode(p)
