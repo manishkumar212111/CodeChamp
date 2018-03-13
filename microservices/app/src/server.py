@@ -715,15 +715,16 @@ def login_DOT():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
             if len(resp.json())==0:
-                return "Password username does not matched "
+                return render_template('DOT/login/html',message="UserId and password does not match")
             elif 'username' in resp.json()[0]:
                 session['dot_username']=username
                 return redirect(url_for('DOT_home'))
             else:
-                return resp.content
+                return render_template('DOT/login/html',message=resp.json())
         except:
-            return resp.content
-    return "Error"
+            return render_template('DOT/login/html',message=resp.json())
+
+    return render_template('DOT/login/html',message="error")
 
 
 @app.route('/DOT/home')
