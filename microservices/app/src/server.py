@@ -58,8 +58,8 @@ def home():
 def aadhar_entry():
     return render_template('aadhar.html')
 
-@app.route('/aadhar', methods=['POST','GET'])
-def aadhar():
+#@app.route('/aadhar', methods=['POST','GET'])
+def aadhar1():
     if request.method == 'POST':
         aadhar=request.form['aadhar']
         name = request.form['name']
@@ -877,11 +877,6 @@ def DOTTSP():
             return resp.content
     return "okay"
 
-
-
-
-
-
 @app.route('/TSP/aadhar_search',methods=['POST','GET'])
 def tsp_aadhar_search():
     if request.method=='POST':
@@ -917,5 +912,108 @@ def tsp_aadhar_search():
             return render_template('/TSP/home.html',message="Something wrong")
 
 
+#************************************************ANDROID API *********************************
 
+@app.route('/aadhar',methods=['POST','GET'])
+def aadhar():
+    if request.method=='POST':
+        content = request.get_json(force=True)
+        js = json.loads(json.dumps(content))
+
+        # This is the url to which the query is made
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "select",
+            "args": {
+                "table": "Aadhar",
+                "columns": [
+                    "aadhar_no",
+                    "email"
+
+                ],
+                "where": {
+                    "aadhar_no": {
+                        "$eq": (js['data']['aadhar'])
+                    }
+                }
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+        if len(resp.json())==0:
+            data={
+                "message":"fail"
+            }
+            return jsonify(data=data)
+        try:
+            if resp.json()[0]['email']:
+                otp=randint(100000,999999)
+                em=resp.json()[0]['email']
+                mes="SHARK@JNU CONSUMER LOGIN OTP::"+str(otp)
+                sub="SHAR@JNU"
+                a=email_send(em,sub,mes)
+                if a==True:
+                    url = "https://data.despairing12.hasura-app.io/v1/query"
+
+                    # This is the json payload for the query
+                    requestPayload = {
+                        "type": "insert",
+                        "args": {
+                            "table": "temp_otp",
+                            "objects": [
+                                {
+                                    "OTP": otp
+                                }
+                            ],
+                            "returning": [
+                                "ID"
+                            ]
+                        }
+                    }
+
+                    # Setting headers
+                    headers = {
+                        "Content-Type": "application/json",
+                        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+                    }
+
+                    # Make the query and store response in resp
+                    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+                    try:
+                        if resp.json()['returning'][0]['ID']:
+                            data={
+                            "ID":resp.json()['returning'][0]['ID']
+                            }
+                            return jsonify(data=data)
+                        else:
+                            data={
+                                "message":"fail"
+                            }
+                            return jsonify(data=data)
+                    except:
+                        data = {
+                            "message": "cluster"
+                        }
+                        return jsonify(data=data)
+
+
+
+        except IndexError:
+            return "ok"
+    data= {
+        "message":"GET METHOD"
+    }
+
+    return jsonify(data=data)
+#*********************************************************************************************************************
 
