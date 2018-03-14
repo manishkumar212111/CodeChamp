@@ -914,8 +914,8 @@ def tsp_aadhar_search():
 
 #************************************************ANDROID API *********************************
 
-@app.route('/aadhar',methods=['POST','GET'])
-def aadhar():
+@app.route('/api/aadhar',methods=['POST','GET'])
+def api_aadhar():
     if request.method=='POST':
         content = request.get_json(force=True)
         js = json.loads(json.dumps(content))
@@ -976,7 +976,8 @@ def aadhar():
                             "table": "temp_otp",
                             "objects": [
                                 {
-                                    "OTP": otp
+                                    "OTP": otp,
+                                    "aadhar":(js['data']['aadhar'])
                                 }
                             ],
                             "returning": [
@@ -998,7 +999,7 @@ def aadhar():
                             id=resp.json()['returning'][0]['ID']
                             data=[
                                 {"ID":id },
-                            {"email": em}
+                               {"email": em}
                             ]
 
 
@@ -1017,12 +1018,106 @@ def aadhar():
 
 
         except IndexError:
-            return "ok"
+            data = {
+                "message": "Uknown error"
+            }
+            return jsonify(data=data)
     data= {
         "message":"GET METHOD"
     }
 
     return jsonify(data=data)
+
+@app.route('/api/consumer_otp',methods=['POST','GET'])
+def api_consumer_otp():
+    if request.method=='POST':
+        content = request.get_json(force=True)
+        js = json.loads(json.dumps(content))
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+    # This is the json payload for the query
+        requestPayload = {
+        "type": "select",
+        "args": {
+            "table": "temp_otp",
+            "columns": [
+                "aadhar"
+            ],
+            "where": {
+                "$and": [
+                    {
+                        "ID": {
+                            "$eq": js['data']['ID']
+                        }
+                    },
+                    {
+                        "OTP": {
+                            "$eq": js['data']['OTP']
+                        }
+                    }
+                ]
+            }
+        }
+        }
+
+        # Setting headers
+        headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        try:
+            if len(resp.json()[0]):
+                data={
+                    "message":"invalid OTP"
+                }
+                return jsonify(data=data)
+            if resp.json()[0]['aadhar']:
+                url = "https://data.despairing12.hasura-app.io/v1/query"
+                requestPayload = {
+                    "type": "select",
+                    "args": {
+                        "table": "central",
+                        "columns": [
+                            "mobile",
+                            "comp_name",
+                            "LSA",
+                            "aadhar_no"
+                        ],
+                        "where": {
+                            "aadhar_no": {
+                                "$eq":resp.json()[0]['aadhar']
+                            }
+                        }
+                    }
+                }
+
+                # Setting headers
+                headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+                }
+
+                # Make the query and store response in resp
+                resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+                if len(resp.json())==0:
+                    data={
+                        "success":"Not Found detail"
+                    }
+                    return jsonify(data=data)
+                else:
+                    return resp.content
+
+
+
+
+        except IndexError:
+            data = {
+                "message": "Exception occured"
+            }
+
 #*********************************************************************************************************************
 
 if  __name__ == '__main__':

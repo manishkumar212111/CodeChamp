@@ -44,8 +44,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="999" column="43" lean-forward="false" selection-start-line="999" selection-start-column="43" selection-end-line="999" selection-end-column="43" />
+            <state relative-caret-position="204">
+              <caret line="1054" column="52" lean-forward="false" selection-start-line="1054" selection-start-column="52" selection-end-line="1054" selection-end-column="52" />
               <folding>
                 <element signature="e#1#81#0" expanded="true" />
                 <element signature="e#550#694#0" expanded="false" />
@@ -79,7 +79,7 @@
                 <element signature="e#28718#30107#0" expanded="false" />
                 <element signature="e#30157#30346#0" expanded="false" />
                 <element signature="e#30513#31920#0" expanded="false" />
-                <marker date="1521043136296" expanded="false" signature="32002:33145" ph="..." />
+                <marker date="1521044789191" expanded="false" signature="32002:33145" ph="..." />
               </folding>
             </state>
           </provider>
@@ -98,8 +98,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="3" column="58" lean-forward="false" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -762,7 +762,7 @@
             <element signature="e#28718#30107#0" expanded="false" />
             <element signature="e#30157#30346#0" expanded="false" />
             <element signature="e#30513#31920#0" expanded="false" />
-            <marker date="1521043136296" expanded="false" signature="32002:33145" ph="..." />
+            <marker date="1521044789191" expanded="false" signature="32002:33145" ph="..." />
           </folding>
         </state>
       </provider>
@@ -877,7 +877,7 @@
             <element signature="e#28718#30107#0" expanded="false" />
             <element signature="e#30157#30346#0" expanded="false" />
             <element signature="e#30513#31920#0" expanded="false" />
-            <marker date="1521043136296" expanded="false" signature="32002:33145" ph="..." />
+            <marker date="1521044789191" expanded="false" signature="32002:33145" ph="..." />
           </folding>
         </state>
       </provider>
@@ -985,7 +985,7 @@
             <element signature="e#28718#30107#0" expanded="false" />
             <element signature="e#30157#30346#0" expanded="false" />
             <element signature="e#30513#31920#0" expanded="false" />
-            <marker date="1521043136296" expanded="false" signature="32002:33145" ph="..." />
+            <marker date="1521044789191" expanded="false" signature="32002:33145" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1173,10 +1173,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="999" column="43" lean-forward="false" selection-start-line="999" selection-start-column="43" selection-end-line="999" selection-end-column="43" />
+        <state relative-caret-position="204">
+          <caret line="1054" column="52" lean-forward="false" selection-start-line="1054" selection-start-column="52" selection-end-line="1054" selection-end-column="52" />
           <folding>
             <element signature="e#1#81#0" expanded="true" />
             <element signature="e#550#694#0" expanded="false" />
@@ -1210,23 +1218,15 @@
             <element signature="e#28718#30107#0" expanded="false" />
             <element signature="e#30157#30346#0" expanded="false" />
             <element signature="e#30513#31920#0" expanded="false" />
-            <marker date="1521043136296" expanded="false" signature="32002:33145" ph="..." />
+            <marker date="1521044789191" expanded="false" signature="32002:33145" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="3" column="58" lean-forward="false" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
           <folding />
         </state>
       </provider>
