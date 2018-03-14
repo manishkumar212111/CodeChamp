@@ -1001,7 +1001,7 @@ def aadhar():
                                 "email":em
 
                             }
-                            return jsonify(data=data)
+                            return jsonify(data)
                         else:
                             data={
                                 "message":"fail"
