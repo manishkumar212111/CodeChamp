@@ -1069,7 +1069,7 @@ def api_consumer_otp():
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
-            if len(resp.json()[0]['aadhar']):
+            if len(resp.json()[0])==0:
                 data={
                     "message":"invalid OTP"
                 }
