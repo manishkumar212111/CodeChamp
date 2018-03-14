@@ -995,12 +995,13 @@ def aadhar():
                     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
                     try:
                         if resp.json()['returning'][0]['ID']:
-                            data={
-                            "ID":resp.json()['returning'][0]['ID'],
-                            "aadhar":aadhar,
-                            "email":em
+                            id=resp.json()['returning'][0]['ID']
+                            data=[
+                                {"ID":id },
+                            {"email": em}
+                            ]
 
-                            }
+
                             return jsonify(data=data)
                         else:
                             data={
@@ -1024,3 +1025,5 @@ def aadhar():
     return jsonify(data=data)
 #*********************************************************************************************************************
 
+if  __name__ == '__main__':
+    app.run(debug=True)
