@@ -43,8 +43,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="993" column="54" lean-forward="true" selection-start-line="993" selection-start-column="54" selection-end-line="993" selection-end-column="54" />
+            <state relative-caret-position="358">
+              <caret line="1026" column="0" lean-forward="true" selection-start-line="1026" selection-start-column="0" selection-end-line="1026" selection-end-column="0" />
               <folding>
                 <element signature="e#1#81#0" expanded="true" />
                 <element signature="e#550#694#0" expanded="false" />
@@ -78,7 +78,7 @@
                 <element signature="e#28718#30107#0" expanded="false" />
                 <element signature="e#30157#30346#0" expanded="false" />
                 <element signature="e#30513#31920#0" expanded="false" />
-                <marker date="1521041099626" expanded="false" signature="32002:33145" ph="..." />
+                <marker date="1521041292674" expanded="false" signature="32002:33145" ph="..." />
               </folding>
             </state>
           </provider>
@@ -761,7 +761,7 @@
             <element signature="e#28718#30107#0" expanded="false" />
             <element signature="e#30157#30346#0" expanded="false" />
             <element signature="e#30513#31920#0" expanded="false" />
-            <marker date="1521041099626" expanded="false" signature="32002:33145" ph="..." />
+            <marker date="1521041292674" expanded="false" signature="32002:33145" ph="..." />
           </folding>
         </state>
       </provider>
@@ -876,7 +876,7 @@
             <element signature="e#28718#30107#0" expanded="false" />
             <element signature="e#30157#30346#0" expanded="false" />
             <element signature="e#30513#31920#0" expanded="false" />
-            <marker date="1521041099626" expanded="false" signature="32002:33145" ph="..." />
+            <marker date="1521041292674" expanded="false" signature="32002:33145" ph="..." />
           </folding>
         </state>
       </provider>
@@ -984,7 +984,7 @@
             <element signature="e#28718#30107#0" expanded="false" />
             <element signature="e#30157#30346#0" expanded="false" />
             <element signature="e#30513#31920#0" expanded="false" />
-            <marker date="1521041099626" expanded="false" signature="32002:33145" ph="..." />
+            <marker date="1521041292674" expanded="false" signature="32002:33145" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1172,14 +1172,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1188,10 +1180,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="993" column="54" lean-forward="true" selection-start-line="993" selection-start-column="54" selection-end-line="993" selection-end-column="54" />
+        <state relative-caret-position="358">
+          <caret line="1026" column="0" lean-forward="true" selection-start-line="1026" selection-start-column="0" selection-end-line="1026" selection-end-column="0" />
           <folding>
             <element signature="e#1#81#0" expanded="true" />
             <element signature="e#550#694#0" expanded="false" />
@@ -1225,7 +1225,7 @@
             <element signature="e#28718#30107#0" expanded="false" />
             <element signature="e#30157#30346#0" expanded="false" />
             <element signature="e#30513#31920#0" expanded="false" />
-            <marker date="1521041099626" expanded="false" signature="32002:33145" ph="..." />
+            <marker date="1521041292674" expanded="false" signature="32002:33145" ph="..." />
           </folding>
         </state>
       </provider>
