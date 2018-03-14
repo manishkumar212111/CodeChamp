@@ -1,11 +1,12 @@
 import requests,json
 
-#url = "http://127.0.0.1:5000/aadhar"
-url="https://app.despairing12.hasura-app.io/api/aadhar_otp"
+url = "http://127.0.0.1:5000/api/consumer_otp"
+#url="https://app.despairing12.hasura-app.io/api/consumer_otp"
 # This is the json payload for the query
 requestPayload = {
     "data":{
-        "aadhar":"875643238312"
+        "OTP":698287,
+        "ID":29
     }
  }
 
