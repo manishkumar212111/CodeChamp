@@ -1117,6 +1117,11 @@ def api_consumer_otp():
             data = {
                 "message": "Exception occured"
             }
+            return jsonify(data=data)
+    data ={
+    "message": "Get method expected"
+        }
+    return jsonify(data=data)
 
 #*********************************************************************************************************************
 
