@@ -949,7 +949,11 @@ def aadhar():
 
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
+        if 'cluster' in resp.json():
+            data = {
+                "message": "fail"
+            }
+            return jsonify(data=data)
         if len(resp.json())==0:
             data={
                 "message":"fail"
@@ -992,7 +996,10 @@ def aadhar():
                     try:
                         if resp.json()['returning'][0]['ID']:
                             data={
-                            "ID":resp.json()['returning'][0]['ID']
+                            "ID":resp.json()['returning'][0]['ID'],
+                            "aadhar":aadhar,
+                                "email":em
+
                             }
                             return jsonify(data=data)
                         else:
