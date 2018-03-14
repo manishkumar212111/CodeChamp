@@ -960,11 +960,11 @@ def aadhar():
             }
             return jsonify(data=data)
         try:
-            if resp.json()[0]['email']:
+            if len(resp.json()[0]['email']):
                 otp=randint(100000,999999)
                 em=resp.json()[0]['email']
                 mes="SHARK@JNU CONSUMER LOGIN OTP::"+str(otp)
-                sub="SHAR@JNU"
+                sub="SHARK@JNU"
                 a=email_send(em,sub,mes)
                 if a==True:
                     url = "https://data.despairing12.hasura-app.io/v1/query"
