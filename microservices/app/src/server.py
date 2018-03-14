@@ -998,7 +998,7 @@ def aadhar():
                             data={
                             "ID":resp.json()['returning'][0]['ID'],
                             "aadhar":aadhar,
-                                "email":em
+                            "email":em
 
                             }
                             return jsonify(data=data)
