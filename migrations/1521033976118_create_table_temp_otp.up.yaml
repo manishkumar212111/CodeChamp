@@ -1,0 +1,7 @@
+- args:
+    sql: CREATE TABLE "temp_otp"("ID" bigserial NOT NULL, "OTP" numeric NOT NULL,
+      PRIMARY KEY ("ID") )
+  type: run_sql
+- args:
+    name: temp_otp
+  type: add_existing_table_or_view

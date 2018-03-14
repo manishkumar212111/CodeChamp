@@ -441,6 +441,7 @@ def consumer_login():
             requestPayload = {
                 "to": str(resp.json()[0]['mobile']),
                 "countryCode": "91",
+
                 "message": "OTP For Aadhar verification at Shark@JNU is  " +str(random)
             }
 
