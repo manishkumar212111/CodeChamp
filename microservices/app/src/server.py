@@ -1004,10 +1004,10 @@ def aadhar():
                             return jsonify(data=data)
                         else:
                             data={
-                                "message":"sorry unable to response"
+                                "message":resp.json()
                             }
                             return jsonify(data=data)
-                    except:
+                    except IndexError :
                         data = {
                             "message": "No email found"
                         }
