@@ -1009,7 +1009,7 @@ def aadhar():
                             return jsonify(data=data)
                     except:
                         data = {
-                            "message": "cluster"
+                            "message": "error"
                         }
                         return jsonify(data=data)
 
