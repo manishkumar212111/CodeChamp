@@ -951,12 +951,12 @@ def aadhar():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         if 'cluster' in resp.json():
             data = {
-                "message": "fail"
+                "message": "cluster is sleeping wait for a minute"
             }
             return jsonify(data=data)
         if len(resp.json())==0:
             data={
-                "message":"fail"
+                "message":"No result found"
             }
             return jsonify(data=data)
         try:
@@ -1001,15 +1001,15 @@ def aadhar():
                                 "email":em
 
                             }
-                            return jsonify(data)
+                            return jsonify(data=data)
                         else:
                             data={
-                                "message":"fail"
+                                "message":"sorry unable to response"
                             }
                             return jsonify(data=data)
                     except:
                         data = {
-                            "message": "error"
+                            "message": "No email found"
                         }
                         return jsonify(data=data)
 
