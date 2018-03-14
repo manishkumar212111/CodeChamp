@@ -1004,7 +1004,7 @@ def aadhar():
                             return jsonify(data=data)
                         else:
                             data={
-                                "message":resp.json()
+                                "message":resp.content
                             }
                             return jsonify(data=data)
                     except IndexError :
@@ -1024,3 +1024,4 @@ def aadhar():
     return jsonify(data=data)
 #*********************************************************************************************************************
 
+app.run(debug=True)
