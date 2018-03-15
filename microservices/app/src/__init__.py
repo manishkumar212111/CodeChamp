@@ -6,9 +6,9 @@ app = Flask(__name__)
 # Delete these two lines, and delete the file to remove them from your project
 # from .hasura import hasura_example
 # app.register_blueprint(hasura_examples)
+from tsp import *
 
 from .server import *
 from .data import *
 from .auth import *
 from .filestore import *
-#from tsp import *
