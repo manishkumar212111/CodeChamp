@@ -5,7 +5,7 @@ url = "http://127.0.0.1:5000/api/consumer_otp"
 # This is the json payload for the query
 requestPayload = {
     "data":{
-        "OTP":6598287,
+        "OTP":698287,
         "ID":29
     }
  }
