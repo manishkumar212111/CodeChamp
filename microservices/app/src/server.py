@@ -1070,7 +1070,7 @@ def api_consumer_otp():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
         try:
-            if len(resp.json()[0])==0:
+            if len(resp.json())==0:
                 data={
                     "message":"invalid OTP"
                 }
@@ -1116,7 +1116,7 @@ def api_consumer_otp():
 
         except IndexError:
             data = {
-                "message": "No number found"
+                "message": "Invalid OTP"
             }
             return jsonify(data=data)
     data ={
