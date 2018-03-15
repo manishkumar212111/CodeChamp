@@ -3,6 +3,7 @@ import json
 import random
 import smtplib
 import string
+import TSP
 from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -11,7 +12,7 @@ from random import randint
 import requests
 from flask import render_template,Flask,request,url_for,redirect,session,jsonify
 #import TSP
-execfile("hello-python-flask/microservices/app/src/TSP.py",)
+
 
 # from flask import jsonify
 app=Flask(__name__)
