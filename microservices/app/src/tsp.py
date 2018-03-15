@@ -70,9 +70,10 @@ def login(username,password):
 
 
 def search(aadhar):
+    # if aadhar is not 12 digit
     if len(aadhar) != 12:
         return render_template('TSP/home.html', message="Aadhar must be 12 digit" + str(aadhar))
-
+    #call data API
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
     # This is the json payload for the query
@@ -97,8 +98,10 @@ def search(aadhar):
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
     try:
+        #if no detail found
         if resp.json()['count'] == 0:
             return render_template('TSP/home.html', aadhar=aadhar, result="Not found any detail")
+        # detail found
         else:
             return render_template('TSP/home.html', aadhar=aadhar, result=resp.json()['count'])
     except:

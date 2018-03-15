@@ -566,10 +566,12 @@ def consumer_logout():
 
 #*****************************************XXXXXXXXXXXXX*********************************
 #****************************************TELECOM SERVICE PROVIDER **********************
+# show login Page of TSP
 @app.route('/login_TSP')
 def TSP_LOGIN():
     return render_template('TSP/login.html')
 
+# Login Logic
 @app.route('/login/TSP',methods=['POST','GET'])
 def login_TSP():
     if request.method=='POST':
@@ -587,51 +589,16 @@ def login_TSP():
 
     return render_template('TSP/login.html',message="error")
 
-
+#search result
 @app.route('/TSP/search',methods=['POST','GET'])
 def tsp_search():
     if request.method== 'POST':
         aadhar=request.form['aadhar']
         return tsp.search(aadhar)
 
-        '''
-        if len(aadhar) !=12:
-            return render_template('TSP/home.html',message="Aadhar must be 12 digit"+str(aadhar))
-
-        url = "https://data.despairing12.hasura-app.io/v1/query"
-
-        # This is the json payload for the query
-        requestPayload = {
-            "type": "count",
-            "args": {
-                "table": "central",
-                "where": {
-                    "aadhar_no": {
-                        "$eq": str(aadhar)
-                    }
-                }
-            }
-        }
-
-        # Setting headers
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-        }
-
-        # Make the query and store response in resp
-        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-        try:
-            if resp.json()['count']==0:
-                return render_template('TSP/home.html',aadhar=aadhar,result="Not found any detail")
-            else:
-                return render_template('TSP/home.html',aadhar=aadhar,result=resp.json()['count'])
-        except:
-            return render_template('TSP/home.html',aadhar=aadhar,result="Server busy")
-            '''
     return render_template('TSP/home.html',result="Unknown error")
 
-
+#logout
 @app.route('/TSP/logout')
 def TSp_logout():
     if 'TSP_username' in session:
@@ -643,112 +610,43 @@ def TSp_logout():
 
 #*********************************DOT****************************************************
 
+# login Page render
 @app.route('/login_DOT')
 def DOT_login():
     return render_template('DOT/login.html')
 
+
+# login Logic for DOT
 @app.route('/login/DOT',methods=['POST','GET'])
 def login_DOT():
     if request.method=='POST':
         username=request.form['username']
         passowrd=request.form['password']
-        p1 = str.encode(passowrd)
-        pas = b64encode(p1)
-
-
-        url = "https://data.despairing12.hasura-app.io/v1/query"
-
-        # This is the json payload for the query
-        requestPayload = {
-            "type": "select",
-            "args": {
-                "table": "login_ceredential",
-                "columns": [
-                    "username"
-                ],
-                "where": {
-                    "$and": [
-                        {
-                            "username": {
-                                "$eq": username
-                            }
-                        },
-                        {
-                            "password": {
-                                "$eq": json.dumps(pas.decode('utf-8'))
-                            }
-                        }
-                    ]
-                }
-            }
-        }
-
-        # Setting headers
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-        }
-
-        # Make the query and store response in resp
-        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        resp=DOT.login(username,passowrd)
         try:
-            if len(resp.json())==0:
+            if resp==False:
                 return render_template('DOT/login/html',message="UserId and password does not match")
-            elif 'username' in resp.json()[0]:
+            elif resp==True:
                 session['DOT_username']=username
                 return redirect(url_for('DOT_home'))
             else:
-                return render_template('DOT/login/html',message=resp.json())
+                return render_template('DOT/login/html',"unknown error")
         except:
             return render_template('DOT/login/html',message=resp.json())
 
     return render_template('DOT/login/html',message="error")
 
-
+# DOT HOME WITH SIM more than 9 and search bar
 @app.route('/DOT/home')
 def DOT_home():
-    username=session['DOT_username']
-    url = "https://data.despairing12.hasura-app.io/v1/query"
-
-    # This is the json payload for the query
-    requestPayload = {
-        "type": "run_sql",
-        "args": {
-            "sql": "SELECT aadhar_no, COUNT(*) FROM central GROUP BY aadhar_no ORDER BY aadhar_no"
-        }
-    }
-
-    # Setting headers
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-    }
-
-    # Make the query and store response in resp
-    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-    list=[]
     try:
-        if len(resp.json()['result'])==1:
-            return render_template('DOT/home.html', message="Data not found")
-
-        for i in range(1, len(resp.json()['result'])):
-            if int(resp.json()['result'][i][1]) > 1:
-                list.append([resp.json()['result'][i][0], resp.json()['result'][i][1]])
-        data={
-
-        "list":list
-
-        }
-        if len(list) ==0:
-            return render_template('DOT/home.html', message="Currently no user is using more than 1 sim")
-
-        return render_template('DOT/home.html',result=data)
+        username=session['DOT_username']
+        return DOT.home(username)
     except:
-        return render_template('DOT/home.html', Message="Error retrieving data")
-    return render_template('DOT/home.html', result="error")
+        return render_template('DOT/login.html', message="Login First")
 
 
-
+# dot can search
 @app.route('/DOT/search',methods=['POST','GET'])
 def DOT_search():
     if request.method== 'POST':
@@ -789,6 +687,7 @@ def DOT_search():
             return render_template('DOT/home.html',aadhar=aadhar,count="Server busy")
     return render_template('DOT/home.html',result="Unknown error")
 
+#logout DOT
 @app.route('/DOT/logout')
 def dot_logout():
     if 'DOT_username' in session:
