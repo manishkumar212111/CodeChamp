@@ -643,7 +643,7 @@ def DOT_home():
         username=session['DOT_username']
         return DOT.home(username)
     except:
-        return render_template('DOT/login.html', message="error")
+        return render_template('DOT/login.html', result="error")
 
 
 # dot can search
@@ -651,42 +651,8 @@ def DOT_home():
 def DOT_search():
     if request.method== 'POST':
         aadhar=request.form['aadhar']
-
-        if len(aadhar) !=12:
-            return render_template('DOT/home.html',error="Aadhar must be 12 digit"+str(aadhar))
-
-        url = "https://data.despairing12.hasura-app.io/v1/query"
-
-        # This is the json payload for the query
-        requestPayload = {
-            "type": "count",
-            "args": {
-                "table": "central",
-                "where": {
-                    "aadhar_no": {
-                        "$eq": str(aadhar)
-                    }
-                }
-            }
-        }
-
-        # Setting headers
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-        }
-
-        # Make the query and store response in resp
-        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-        try:
-            if resp.json()['count']==0:
-                return render_template('DOT/home.html',aadhar=aadhar,search="Not found",count="not found")
-            else:
-                return render_template('DOT/home.html',aadhar=aadhar,count=resp.json()['count'],search="found")
-        except:
-            return render_template('DOT/home.html',aadhar=aadhar,count="Server busy")
-    return render_template('DOT/home.html',result="Unknown error")
-
+        return DOT.search(aadhar)
+    return render_template('DOT/home.html',result="unknown error")
 #logout DOT
 @app.route('/DOT/logout')
 def dot_logout():
