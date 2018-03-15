@@ -1047,12 +1047,12 @@ def api_consumer_otp():
                 "$and": [
                     {
                         "ID": {
-                            "$eq": int(js['data']['ID'])
+                            "$eq": (js['data']['ID'])
                         }
                     },
                     {
                         "OTP": {
-                            "$eq": int(js['data']['OTP'])
+                            "$eq": (js['data']['OTP'])
                         }
                     }
                 ]
