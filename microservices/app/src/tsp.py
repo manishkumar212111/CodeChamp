@@ -1,6 +1,6 @@
 import json,requests
 import binascii,base64
-
+from flask import jsonify
 def b64encode(s, altchars=None):
    encoded = binascii.b2a_base64(s)[:-1]
    if altchars is not None:
@@ -54,4 +54,4 @@ def login(username,password):
 
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-    return resp.content
+    return jsonify(resp.content)

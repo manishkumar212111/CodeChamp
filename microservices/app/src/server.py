@@ -574,7 +574,7 @@ def login_TSP():
         username = request.form['username']
         passowrd = request.form['password']
         #LOGIN TSP BY CALLING LOGIN FUNCTION IN TSP.py
-        resp=  tsp.login(username, passowrd)
+        resp= tsp.login(username, passowrd)
         try:
             if len(resp.json())==0:
                 return render_template('TSP/login.html',message="Username password didn't match")
