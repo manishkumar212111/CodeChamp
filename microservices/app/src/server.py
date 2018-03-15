@@ -639,10 +639,11 @@ def login_DOT():
 # DOT HOME WITH SIM more than 9 and search bar
 @app.route('/DOT/home')
 def DOT_home():
-    username=session['DOT_username']
-    return DOT.home(username)
-
-    return render_template('DOT/login.html', message="Login First")
+    try:
+        username=session['DOT_username']
+        return DOT.home(username)
+    except:
+        return render_template('DOT/login.html', message="Login First")
 
 
 # dot can search

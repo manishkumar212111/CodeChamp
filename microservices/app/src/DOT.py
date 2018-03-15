@@ -68,7 +68,7 @@ def login(username,password):
 
 
 
-def home():
+def home(username):
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
     # This is the json payload for the query
