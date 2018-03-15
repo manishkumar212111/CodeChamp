@@ -12,8 +12,9 @@ import requests
 from flask import render_template,Flask,request,url_for,redirect,session,jsonify
 
 from . import tsp
+from . import DOT
+from . import consumer
 
-#import TSP
 
 
 # from flask import jsonify
@@ -575,6 +576,7 @@ def login_TSP():
         username = request.form['username']
         passowrd = request.form['password']
         #LOGIN TSP BY CALLING LOGIN FUNCTION IN TSP.py
+
         resp= tsp.login(username, passowrd)
 
         if resp==False:
@@ -590,7 +592,8 @@ def login_TSP():
 def tsp_search():
     if request.method== 'POST':
         aadhar=request.form['aadhar']
-
+        tsp.search(aadhar)
+        '''
         if len(aadhar) !=12:
             return render_template('TSP/home.html',message="Aadhar must be 12 digit"+str(aadhar))
 
@@ -624,6 +627,7 @@ def tsp_search():
                 return render_template('TSP/home.html',aadhar=aadhar,result=resp.json()['count'])
         except:
             return render_template('TSP/home.html',aadhar=aadhar,result="Server busy")
+            '''
     return render_template('TSP/home.html',result="Unknown error")
 
 
