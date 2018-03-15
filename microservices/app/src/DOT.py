@@ -141,6 +141,6 @@ def search(aadhar):
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
     if len(resp.json()) == 0:
-        return render_template('DOT/home.html', empty="No record found",aadhar=aadhar,count="Not found",)
+        return render_template('DOT/home.html', search="not found",empty="No record found",aadhar=aadhar,count="Not found")
     else:
         return render_template('DOT/home.html',aadhar=aadhar, search="found", count=len(resp.json()),result1=resp.json())
