@@ -3,8 +3,6 @@ import json
 import random
 import smtplib
 import string
-
-from microservices import tsp
 from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -12,6 +10,9 @@ from random import randint
 
 import requests
 from flask import render_template,Flask,request,url_for,redirect,session,jsonify
+
+from microservices.app.src import tsp
+
 #import TSP
 
 
