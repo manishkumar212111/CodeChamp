@@ -546,7 +546,7 @@ def consumer_otp_verify():
             return render_template('consumer/consumer_otp.html', message="Internal error")
         try:
             if otp == resp.json()[0]['OTP']:
-                if 'aadhar' in session:
+
                     url = "https://data.despairing12.hasura-app.io/v1/query"
 
                     # This is the json payload for the query
@@ -581,7 +581,7 @@ def consumer_otp_verify():
                     else:
                         return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
             else:
-                return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp")
+                return render_template('consumer/consumer_otp.html', message=resp.json()[0]['OTP'])
         except:
             return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp")
 
