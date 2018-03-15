@@ -173,10 +173,10 @@ input[type=submit]:hover {
                 <p>Registered SIM::{{count}}</p>
 
 
-                 {% if result1 %}
+                 {% if res %}
                 <table border="1">
                 <tr><th>MOBILE Number</th><th>Comp_name</th><th>Service Area</th></tr>
-                {% for i in result1 %}
+                {% for i in res %}
                 <tr><td>{{i['mobile']}}</td>
                 <td>{{i['comp_name']}}</td>
                 <td>{{i['LSA']}}</td>

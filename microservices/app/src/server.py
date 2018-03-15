@@ -516,7 +516,7 @@ def consumer_otp_verify():
                 else:
                     return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
         else:
-            return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp"+str(random)+str(otp),random=random)
+            return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp",random=random)
 
     return render_template('consumer/consumer_otp.html', message="Error")
 
