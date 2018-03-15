@@ -1052,7 +1052,7 @@ def api_consumer_otp():
                     },
                     {
                         "OTP": {
-                            "$eq": js['data']['OTP']
+                            "$eq": int(js['data']['OTP'])
                         }
                     }
                 ]
