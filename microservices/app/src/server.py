@@ -1,18 +1,17 @@
-
-from flask import render_template,Flask,request,url_for,redirect,session,jsonify
-import requests,json
-import base64
 import binascii
-import struct
+import random
 import smtplib
 import string
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from random import randint
-import random
 from datetime import datetime
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from random import randint
 
-import TSP
+import json
+import requests
+from flask import render_template,Flask,request,url_for,redirect,session,jsonify
+
+from microservices.app import TSP
 
 # from flask import jsonify
 app=Flask(__name__)
@@ -572,7 +571,7 @@ def login_TSP():
         username = request.form['username']
         passowrd = request.form['password']
         #LOGIN TSP BY CALLING LOGIN FUNCTION IN TSP.py
-        resp=TSP.login(username,passowrd)
+        resp= TSP.login(username, passowrd)
         try:
             if len(resp.json())==0:
                 return render_template('TSP/login.html',message="Username password didn't match")
