@@ -1047,7 +1047,7 @@ def api_consumer_otp():
                 "$and": [
                     {
                         "ID": {
-                            "$eq": js['data']['ID']
+                            "$eq": int(js['data']['ID'])
                         }
                     },
                     {
@@ -1101,14 +1101,14 @@ def api_consumer_otp():
                 }
 
                 # Make the query and store response in resp
-                resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-                if len(resp.json())==0:
+                resp1 = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+                if len(resp1.json())==0:
                     data={
                         "success":"Not Found detail"
                     }
                     return jsonify(data=data)
                 else:
-                    return resp.content
+                    return resp1.content
 
 
 
@@ -1117,7 +1117,7 @@ def api_consumer_otp():
             data = {
                 "message": "Exception occured"
             }
-            return jsonify(data=data)
+            return resp.content
     data ={
     "message": "Get method expected"
         }

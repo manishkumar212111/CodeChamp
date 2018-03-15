@@ -1,4 +1,4 @@
-import requests,json
+'''import requests,json
 
 url = "http://127.0.0.1:5000/api/consumer_otp"
 #url="https://app.despairing12.hasura-app.io/api/consumer_otp"
@@ -37,7 +37,6 @@ result={
   ]
 }
 
+print type(result['data'][0])
 
 
-
-'''
