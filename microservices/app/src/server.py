@@ -95,7 +95,7 @@ if __name__ == '__main__':
 #****************************************************************************
 @app.route('/')
 def home():
-    schedule()
+
     return render_template('index.html')
 @app.route('/aadhar_entry')
 def aadhar_entry():
