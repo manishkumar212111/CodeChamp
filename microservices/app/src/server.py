@@ -545,7 +545,7 @@ def consumer_otp_verify():
         if len(resp.json())==0:
             return render_template('consumer/consumer_otp.html', message="Internal error")
         try:
-            if otp == resp.json()[0]['OTP']:
+            if str(otp) == str(resp.json()[0]['OTP']):
 
                     url = "https://data.despairing12.hasura-app.io/v1/query"
 
