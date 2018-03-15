@@ -592,7 +592,8 @@ def login_TSP():
 def tsp_search():
     if request.method== 'POST':
         aadhar=request.form['aadhar']
-        tsp.search(aadhar)
+        return tsp.search(aadhar)
+
         '''
         if len(aadhar) !=12:
             return render_template('TSP/home.html',message="Aadhar must be 12 digit"+str(aadhar))
