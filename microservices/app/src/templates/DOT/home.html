@@ -171,7 +171,7 @@ input[type=submit]:hover {
                 {% if search %}
                 <p>Aadhar number::{{aadhar}}</p>
                 <p>Registered SIM::{{count}}</p>
-                {%endif%}
+
 
                  {% if result1 %}
                 <table border="1">
@@ -183,6 +183,7 @@ input[type=submit]:hover {
                 </tr>
 
                 {% endfor  %}
+                  {%endif%}
                     {% endif%}
                     <!-- for search result END-->
 
@@ -205,7 +206,7 @@ input[type=submit]:hover {
                 <hr>
 
                 <h1>
-                    Search For Aadhar Number
+                   <mark> Search For Aadhar Number</mark>
                 </h1>
                 <div class="container-fluid">
           <div class="box">
