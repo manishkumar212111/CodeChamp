@@ -1068,7 +1068,7 @@ def api_consumer_otp():
 
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-        return resp.content
+
         try:
             if len(resp.json()[0])==0:
                 data={
@@ -1116,9 +1116,9 @@ def api_consumer_otp():
 
         except IndexError:
             data = {
-                "message": "Exception occured"
+                "message": "No number found"
             }
-            return resp.content
+            return jsonify(data=data)
     data ={
     "message": "Get method expected"
         }
