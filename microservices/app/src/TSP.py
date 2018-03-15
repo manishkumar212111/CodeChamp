@@ -1,6 +1,6 @@
 import json,requests
 import binascii,base64
-from app import app
+
 def b64encode(s, altchars=None):
    encoded = binascii.b2a_base64(s)[:-1]
    if altchars is not None:
