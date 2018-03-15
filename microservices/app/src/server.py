@@ -463,7 +463,7 @@ def consumer_login():
 
             if 'id' in resp.json():
                 session['aadhar']=aadhar
-                session['id']=resp.json()['id']
+
                 url = "https://data.despairing12.hasura-app.io/v1/query"
 
                 # This is the json payload for the query
@@ -473,10 +473,13 @@ def consumer_login():
                         "table": "temp_otp",
                         "objects": [
                             {
-                                "ID":resp.json()['id'],
+
                                 "aadhar": aadhar,
                                 "OTP": random
                             }
+                        ],
+                        "returning": [
+                            "ID"
                         ]
                     }
                 }
@@ -489,11 +492,14 @@ def consumer_login():
 
                 # Make the query and store response in resp
                 resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+                try:
+                    if resp.json()['returning'][0]['ID']:
+                        session['id'] = resp.json()['returning'][0]['ID']
+                        mob=mobile[8:10]
+                        return render_template('consumer/consumer_otp.html',mobile=mob)
+                except:
+                    return render_template('consumer/consumer.html', message="please try agin after some time")
 
-                mob=mobile[8:10]
-
-
-                return render_template('consumer/consumer_otp.html',mobile=mob)
             else:
                 return render_template('consumer/consumer.html',message="cluster is sleeping or OTP send limit exceeded"+str(resp.content))
 
