@@ -54,4 +54,16 @@ def login(username,password):
 
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-    return jsonify(resp.content)
+
+    try:
+        if len(resp.json()) == 0:
+            return False
+        elif 'cluster' in resp.json():
+            return "cluster"
+        elif 'username' in resp.json()[0]:
+
+            return True
+        else:
+            return False
+    except:
+        return False

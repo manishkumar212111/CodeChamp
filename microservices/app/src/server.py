@@ -568,6 +568,7 @@ def consumer_logout():
 @app.route('/login_TSP')
 def TSP_LOGIN():
     return render_template('TSP/login.html')
+
 @app.route('/login/TSP',methods=['POST','GET'])
 def login_TSP():
     if request.method=='POST':
@@ -575,18 +576,13 @@ def login_TSP():
         passowrd = request.form['password']
         #LOGIN TSP BY CALLING LOGIN FUNCTION IN TSP.py
         resp= tsp.login(username, passowrd)
-        try:
-            if len(resp.json())==0:
-                return render_template('TSP/login.html',message="Username password didn't match")
-            elif 'cluster' in resp.json():
-                return render_template('TSP/login.html',message="Username password didn't match")
-            elif 'username' in resp.json()[0]:
-                session['TSP_username']=username
-                return render_template('TSP/home.html',username=username)
-            else:
-                return render_template('TSP/login.html',message="Unknown error")
-        except:
-            return render_template('TSP/login.html',message="Exception occured")
+
+        if resp==False:
+            return render_template('TSP/login.html', message="Username password didn't match")
+        else:
+            session['TSP_username']=username
+            return render_template('TSP/home.html',username=username)
+
     return render_template('TSP/login.html',message="error")
 
 
