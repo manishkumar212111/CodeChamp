@@ -10,7 +10,7 @@ from random import randint
 
 import requests
 from flask import render_template,Flask,request,url_for,redirect,session,jsonify
-
+import TSP
 
 
 # from flask import jsonify
@@ -571,7 +571,7 @@ def login_TSP():
         username = request.form['username']
         passowrd = request.form['password']
         #LOGIN TSP BY CALLING LOGIN FUNCTION IN TSP.py
-        resp= app#login(username, passowrd)
+        resp= login(username, passowrd)
         try:
             if len(resp.json())==0:
                 return render_template('TSP/login.html',message="Username password didn't match")
