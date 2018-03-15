@@ -11,4 +11,4 @@ from .server import *
 from .data import *
 from .auth import *
 from .filestore import *
-from .tsp import *
+#from tsp import *
