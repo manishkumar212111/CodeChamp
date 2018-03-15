@@ -7,13 +7,16 @@ from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from random import randint
-
+from apscheduler.schedulers.background import BackgroundScheduler
+import time
+import os
 import requests
 from flask import render_template,Flask,request,url_for,redirect,session,jsonify
 
 from . import tsp
 from . import DOT
 from . import consumer
+
 
 
 
@@ -54,10 +57,45 @@ def email_send(toaddr, sub, body):
         resp = server.sendmail(fromaddr, toaddr, text)
         server.quit()
         return True
+def schedule():
+    url = "https://data.despairing12.hasura-app.io/v1/query"
 
+    # This is the json payload for the query
+    requestPayload = {
+        "type": "delete",
+        "args": {
+            "table": "temp_otp",
+            "where": {}
+        }
+    }
+
+    # Setting headers
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+    print resp.content
+
+
+if __name__ == '__main__':
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(schedule, 'interval', hours=24)
+    scheduler.start()
+
+    try:
+        # This is here to simulate application activity (which keeps the main thread alive).
+        while True:
+            time.sleep(2)
+    except (KeyboardInterrupt, SystemExit):
+        # Not strictly necessary if daemonic mode is enabled but should be done if possible
+        scheduler.shutdown()
 #****************************************************************************
 @app.route('/')
 def home():
+    schedule()
     return render_template('index.html')
 @app.route('/aadhar_entry')
 def aadhar_entry():
@@ -581,7 +619,7 @@ def consumer_otp_verify():
                     else:
                         return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
             else:
-                return render_template('consumer/consumer_otp.html', message=resp.json()[0]['OTP'])
+                return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp")
         except:
             return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp")
 
