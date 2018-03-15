@@ -77,7 +77,7 @@ def schedule():
 
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-    print resp.content
+    
 
 
 if __name__ == '__main__':
