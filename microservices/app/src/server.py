@@ -11,7 +11,7 @@ from random import randint
 import requests
 from flask import render_template,Flask,request,url_for,redirect,session,jsonify
 
-from microservices.app.src import tsp
+from . import tsp
 
 #import TSP
 
