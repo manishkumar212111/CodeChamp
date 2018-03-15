@@ -396,6 +396,7 @@ def Idea():
 
     return render_template('TSP3.html', message="successfull entry Done")
 #*************************************CONSUMER****************************************
+# render consumer login template
 @app.route('/consumer')
 def consumer():
     return render_template('consumer/consumer.html')
@@ -408,7 +409,7 @@ def consumer_login():
     except:
         a=0
     if request.method=='POST':
-        random = randint(100000, 999999)
+
         aadhar=request.form['aadhar']
         if len(aadhar) !=12:
             return render_template('consumer/consumer.html',message="Aadhar number must be of 12 digit")
@@ -442,6 +443,7 @@ def consumer_login():
         try:
             url = "https://notify.despairing12.hasura-app.io/v1/send/sms"
             mobile=str(resp.json()[0]['mobile'])
+            random = randint(100000, 999999)
             # This is the json payload for the query
             requestPayload = {
                 "to": str(resp.json()[0]['mobile']),
@@ -461,44 +463,21 @@ def consumer_login():
 
             if 'id' in resp.json():
                 session['aadhar']=aadhar
-                mob=mobile[8:10]
-
-                return render_template('consumer/consumer_otp.html', random=random,mobile=mob)
-            else:
-                return render_template('consumer/consumer.html',message="cluster is sleeping or OTP send limit exceeded"+str(resp.content))
-
-        except IndexError:
-            None
-        return render_template('consumer/consumer.html', message="error occurs")
-
-
-@app.route('/consumer/otp/verify',methods=['POST','GET'])
-def consumer_otp_verify():
-    if request.method=='POST':
-        random=request.form['random']
-        otp=request.form['otp']
-
-        if len(otp) !=6:
-            return render_template('consumer/consumer_otp.html',message="OTP MUST BE OF 6 digit")
-        if otp == random:
-            if 'aadhar' in session:
+                session['id']=resp.json()['id']
                 url = "https://data.despairing12.hasura-app.io/v1/query"
 
                 # This is the json payload for the query
                 requestPayload = {
-                    "type": "select",
+                    "type": "insert",
                     "args": {
-                        "table": "central",
-                        "columns": [
-                            "mobile",
-                            "comp_name",
-                            "LSA"
-                        ],
-                        "where": {
-                            "aadhar_no": {
-                                "$eq": session['aadhar']
+                        "table": "temp_otp",
+                        "objects": [
+                            {
+                                "ID":resp.json()['id'],
+                                "aadhar": aadhar,
+                                "OTP": random
                             }
-                        }
+                        ]
                     }
                 }
 
@@ -511,12 +490,94 @@ def consumer_otp_verify():
                 # Make the query and store response in resp
                 resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
-                if len(resp.json()) == 0:
-                    return render_template('consumer/consumer_success.html',empty="No record found")
-                else:
-                    return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
-        else:
-            return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp",random=random)
+                mob=mobile[8:10]
+
+
+                return render_template('consumer/consumer_otp.html',mobile=mob)
+            else:
+                return render_template('consumer/consumer.html',message="cluster is sleeping or OTP send limit exceeded"+str(resp.content))
+
+        except IndexError:
+            None
+        return render_template('consumer/consumer.html', message="error occurs")
+
+
+@app.route('/consumer/otp/verify',methods=['POST','GET'])
+def consumer_otp_verify():
+    if request.method=='POST':
+
+        otp=request.form['otp']
+
+        if len(otp) !=6:
+            return render_template('consumer/consumer_otp.html',message="OTP MUST BE OF 6 digit")
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "select",
+            "args": {
+                "table": "temp_otp",
+                "columns": [
+                    "OTP"
+                ],
+                "where": {
+                    "ID": {
+                        "$eq": session['id']
+                    }
+                }
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        if len(resp.json())==0:
+            return render_template('consumer/consumer_otp.html', message="Internal error")
+        try:
+            if otp == resp.json()[0]['OTP']:
+                if 'aadhar' in session:
+                    url = "https://data.despairing12.hasura-app.io/v1/query"
+
+                    # This is the json payload for the query
+                    requestPayload = {
+                        "type": "select",
+                        "args": {
+                            "table": "central",
+                            "columns": [
+                            "mobile",
+                            "comp_name",
+                            "LSA"
+                        ],
+                        "where": {
+                            "aadhar_no": {
+                                "$eq": session['aadhar']
+                            }
+                        }
+                    }
+                    }
+
+                # Setting headers
+                    headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+                    }
+
+                # Make the query and store response in resp
+                    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+                    if len(resp.json()) == 0:
+                        return render_template('consumer/consumer_success.html',empty="No record found")
+                    else:
+                        return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
+            else:
+                return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp")
+        except:
+            return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp")
 
     return render_template('consumer/consumer_otp.html', message="Error")
 

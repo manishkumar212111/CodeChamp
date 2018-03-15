@@ -15,11 +15,11 @@ def b64decode(s, altchars=None):
        return False
 
 
-
+# login DOT
 def login(username,password):
     p1 = str.encode(password)
     pas = b64encode(p1)
-
+    # Call Data api to compare username and password
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
     # This is the json payload for the query
@@ -56,8 +56,10 @@ def login(username,password):
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
     try:
+        # if username or password not match
         if len(resp.json()) == 0:
             return False
+        # match
         elif 'username' in resp.json()[0]:
             return True
         else:
@@ -67,10 +69,10 @@ def login(username,password):
 
 
 
-
+# when DOT logged in go to home page
 def home(username):
     url = "https://data.despairing12.hasura-app.io/v1/query"
-
+    # Select aadhar number with their count
     # This is the json payload for the query
     requestPayload = {
         "type": "run_sql",
