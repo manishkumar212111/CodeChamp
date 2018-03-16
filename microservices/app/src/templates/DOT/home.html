@@ -197,9 +197,9 @@ input[type=submit]:hover {
                 {%endif%}
                 <table border="1"><tr><th>Aadhar Number</th><th>No of sim</th></tr>
                 {% for i in result['list'] %}
-                <td>{{i[0]}}</td>
+                <tr><td>{{i[0]}}</td>
                     <td>{{i[1]}}</td>
-
+                    </tr>
                 {% endfor%}
                  {% set result=''%}
                 </table>
