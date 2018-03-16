@@ -735,11 +735,11 @@ def login_DOT():
                 session['DOT_username']=username
                 return redirect(url_for('DOT_home'))
             else:
-                return render_template('DOT/login/html',"unknown error")
+                return render_template('DOT/login.html',"unknown error")
         except:
-            return render_template('DOT/login/html',message="Incorrect Username and password")
+            return render_template('DOT/login.html',message="Incorrect Username and password")
 
-    return render_template('DOT/login/html',message="error")
+    return render_template('DOT/login.html',message="error")
 
 # DOT HOME WITH SIM more than 9 and search bar
 @app.route('/DOT/home')
