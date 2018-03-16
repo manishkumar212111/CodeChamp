@@ -737,7 +737,7 @@ def login_DOT():
             else:
                 return render_template('DOT/login/html',"unknown error")
         except:
-            return render_template('DOT/login/html',message=resp.json())
+            return render_template('DOT/login/html',message="Incorrect Username and password")
 
     return render_template('DOT/login/html',message="error")
 
