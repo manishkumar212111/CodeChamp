@@ -1070,7 +1070,7 @@ def api_dot_login():
         js = json.loads(json.dumps(content))
         resp=DOT.login(js['data']['username'],js['data']['password'])
         if resp==True:
-            return api_aadhar()
+            return DOT.api_home()
 
         else:
             return "false"

@@ -173,7 +173,7 @@ def api_home():
         list = []
         try:
             if len(resp.json()['result']) == 1:
-                return render_template('DOT/home.html', message="Data not found")
+                return "login"
 
             for i in range(1, len(resp.json()['result'])):
                 if int(resp.json()['result'][i][1]) > 1:
@@ -186,7 +186,7 @@ def api_home():
             if len(list) == 0:
                 return "0"
 
-            return data
+            return jsonify(data=data)
         except:
             return "Exception Occured"
 
