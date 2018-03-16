@@ -182,15 +182,15 @@ input[type=submit]:hover {
         <div class="containerer-fluid">
         <div class="row">
             <div class="col-sm-10" style="background-color:lavender;">
-        <h2>TSP LOGIN</h2><br>
+        <center><h2>TSP LOGIN</h2><br>
                 {% if message %}
                 <font color="red">{{message}}</font>
                 {% endif %}
-
+        </center>
   <form action="https://app.despairing12.hasura-app.io/login/TSP" method="post">
     <div class="row">
       <div class="col-25">
-        <label for="username">USERNAME::</label>
+        &nbsp&nbsp&nbsp&nbsp<label for="username">USERNAME::</label>
       </div>
       <div class="col-75">
         <input type="text" id="username" name="username" value="{{username}}" required>
@@ -198,7 +198,7 @@ input[type=submit]:hover {
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="lname">PASSWORD::</label>
+        &nbsp&nbsp&nbsp&nbsp<label for="lname">PASSWORD::</label>
       </div>
       <div class="col-75">
         <input type="password" id="lname" name="password" value="{{password}}" required>
