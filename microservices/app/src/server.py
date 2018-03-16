@@ -1063,6 +1063,27 @@ def api_consumer_otp():
         }
     return jsonify(data=data)
 
+@app.route('/api/DOT/login')
+def api_dot_login():
+    if request.method=='POST':
+        content = request.get_json(force=True)
+        js = json.loads(json.dumps(content))
+        resp=DOT.login(js['data']['username'],js['data']['password'])
+        if resp==True:
+            return api_aadhar()
+
+        else:
+            return "false"
+
+
+
+@app.route('/api/DOT/search')
+def api_dot_search():
+    if request.method=='POST':
+        content=request.get_json(force=True)
+        js=json.loads(json.dumps(content))
+
+        return api_dot_search(js['data']['aadhar'])
 #*********************************************************************************************************************
 
 if  __name__ == '__main__':
