@@ -1063,7 +1063,7 @@ def api_consumer_otp():
         }
     return jsonify(data=data)
 
-@app.route('/api/DOT/login')
+@app.route('/api/DOT/login',methods=['POST','GET'])
 def api_dot_login():
     if request.method=='POST':
         content = request.get_json(force=True)
@@ -1074,6 +1074,7 @@ def api_dot_login():
 
         else:
             return "false"
+    return "Post method required"
 
 
 
