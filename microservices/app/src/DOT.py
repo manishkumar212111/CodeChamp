@@ -173,10 +173,10 @@ def api_home():
         list = []
         try:
             if len(resp.json()['result']) == 1:
-                return "login"
+                return "0"
 
             for i in range(1, len(resp.json()['result'])):
-                if int(resp.json()['result'][i][1]) > 5:
+                if int(resp.json()['result'][i][1]) > 1:
                     list.append([resp.json()['result'][i][0], resp.json()['result'][i][1]])
             data = {
 
