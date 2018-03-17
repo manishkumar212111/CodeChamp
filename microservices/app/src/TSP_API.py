@@ -173,8 +173,8 @@ def API_status_count_push(username,secret_code,aadhar,comp_name,LSA,mobile):
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
-            if int(resp.json()['count']) >= 9:
-                return "False"
+            if int(resp.json()['count']) >= 2:
+                return "Max limit exceeded"
             else:
                 url = "https://data.despairing12.hasura-app.io/v1/query"
 
