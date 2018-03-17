@@ -1114,7 +1114,7 @@ def api_TSP_status_count_push_data():
         aadhar=js['aadhar']
         if len(aadhar) != 12:
             return "Aadhar number is incorrect"
-        comp_name=['comp_name']
+        comp_name=js['comp_name']
         LSA=js['LSA']
         mobile=js['mobile']
 

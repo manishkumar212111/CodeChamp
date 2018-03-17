@@ -1,8 +1,11 @@
 import json,requests
-url = "https://app.despairing12.hasura-app.io/api/TSP/status_count"
+url = "https://app.despairing12.hasura-app.io/api/TSP/status_count/push_data"
 requestPayload = {
     "username":"TSP0",
-    "aadhar":"875643234312",
+    "aadhar": "875643234312",
+    "mobile": "9987674345",
+    "comp_name": "Airtel",
+    "LSA":"Rajasthan",
     "secret_code":"5VXK8zhs859tCGcf"
 
 }
