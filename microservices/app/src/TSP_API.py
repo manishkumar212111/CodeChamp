@@ -42,6 +42,8 @@ def generete_code(email,username):
 
 
 def API_STATUS_COUNT(username,secret_code,aadhar):
+    if len(aadhar)!=12:
+        return "Aadhar number is incorrect"
     url = "https://data.despairing12.hasura-app.io/v1/query"
     requestPayload = {
         "type": "select",
@@ -100,7 +102,7 @@ def API_STATUS_COUNT(username,secret_code,aadhar):
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
-            if resp.json()['count']>=9:
+            if int(resp.json()['count']) >=9:
                 return "False"
             else:
                 return "True"
