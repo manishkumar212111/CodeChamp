@@ -101,9 +101,9 @@ def API_STATUS_COUNT(username,secret_code,aadhar):
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
             if resp.json()['count']>=9:
-                return False
+                return "False"
             else:
-                return True
+                return "True"
         except:
             return "aadhar Not Found"
 
