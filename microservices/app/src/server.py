@@ -1119,7 +1119,7 @@ def api_TSP_status_count_push_data():
         mobile=js['mobile']
 
         return TSP_API.API_status_count_push(username,secret_code,aadhar,comp_name,LSA,mobile)
-
+    return "get method accepted"
 
 
 if  __name__ == '__main__':
