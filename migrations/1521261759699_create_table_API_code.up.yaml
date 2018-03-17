@@ -1,0 +1,7 @@
+- args:
+    sql: CREATE TABLE "API_code"("username" text NOT NULL, "secret_code" text NOT
+      NULL, PRIMARY KEY ("username","secret_code") )
+  type: run_sql
+- args:
+    name: API_code
+  type: add_existing_table_or_view

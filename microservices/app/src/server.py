@@ -16,8 +16,8 @@ from flask import render_template,Flask,request,url_for,redirect,session,jsonify
 from . import tsp
 from . import DOT
 from . import consumer
-
-
+from . import TSP_API
+#import tsp,consumer,DOT,TSP_API
 
 
 # from flask import jsonify
@@ -37,7 +37,7 @@ def b64decode(s, altchars=None):
    except:
        return False
 
-def id_generator(size=11, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
+def id_generator(size, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
 def email_send(toaddr, sub, body):
         fromaddr = "t68pf1@gmail.com"
@@ -775,7 +775,7 @@ def DOTTSP():
         username=request.form['username']
         email=request.form['email']
 
-        p=id_generator()
+        p=id_generator(11)
         pa=p
         p1=str.encode(p)
         pas=b64encode(p1)
@@ -1086,6 +1086,22 @@ def api_dot_search():
 
         return api_dot_search(js['data']['aadhar'])
 #*********************************************************************************************************************
+
+
+#***************************************************TSP API EXTENDED FEATURE******************************************
+
+@app.route('/api/TSP/status_count',methods=['POST','GET'])
+def api_TSP_status_count():
+    if request.method=='POST':
+
+        content = request.get_json(force=True)
+        js = json.loads(json.dumps(content))
+        aadhar=js['aadhar']
+        username=js['username']
+        secret_code=js['secret_code']
+        return TSP_API.API_STATUS_COUNT(username, secret_code, aadhar)
+    return "Get method"
+
 
 if  __name__ == '__main__':
     app.run(debug=True)
