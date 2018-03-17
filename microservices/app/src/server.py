@@ -1097,10 +1097,29 @@ def api_TSP_status_count():
         content = request.get_json(force=True)
         js = json.loads(json.dumps(content))
         aadhar=js['aadhar']
+        if len(aadhar) != 12:
+            return "Aadhar number is incorrect"
         username=js['username']
         secret_code=js['secret_code']
         return TSP_API.API_STATUS_COUNT(username, secret_code, aadhar)
     return "Get method"
+
+@app.route('/api/TSP/status_count/push_data',methods=['POST','GET'])
+def api_TSP_status_count_push_data():
+    if request.method=='POST':
+        content = request.get_json(force=True)
+        js = json.loads(json.dumps(content))
+        username=js['username']
+        secret_code=js['secret_code']
+        aadhar=js['aadhar']
+        if len(aadhar) != 12:
+            return "Aadhar number is incorrect"
+        comp_name=['comp_name']
+        LSA=js['LSA']
+        mobile=js['mobile']
+
+        return TSP_API.API_status_count_push(username,secret_code,aadhar,comp_name,LSA,mobile)
+
 
 
 if  __name__ == '__main__':
