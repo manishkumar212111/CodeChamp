@@ -203,7 +203,7 @@ def API_status_count_push(username,secret_code,aadhar,comp_name,LSA,mobile):
                 # Make the query and store response in resp
                 resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
                 if 'affected_rows' in resp.json():
-                    return "Data returned"
+                    return "Data successfully inserted"
                 else:
                     return resp.content
         except:
