@@ -124,6 +124,7 @@ html, body {
             <div class="col-sm-2" style="background-color:lavenderblush;overflow-x: hidden;"><a href="#"><img src="/static/Images/faqs.jpg" alt="1234" class="img-responsive" width="100%" height="auto"></a></div>
         </div>
     </div>
+    <!--
     <footer class="page-footer font-small unique-color-dark pt-0">
         <div class="footer-copyright py-3 text-center">
             © 2018 Copyright:
@@ -131,7 +132,8 @@ html, body {
             </a>
         </div>
     </footer>
-
+-->
+    {% include 'footer.html' ignore missing %}
   <script type="text/javascript">
         {% if logout %}
         alert("{{logout}}");
