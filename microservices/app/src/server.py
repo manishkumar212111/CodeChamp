@@ -470,16 +470,16 @@ def consumer_login():
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
-            if 'message' in resp.json()['data']:
+            if 'message' in resp.json()['data'][0]:
                 return render_template('consumer/consumer.html',message=resp.json()['data']['message'])
-            elif 'ID' in resp.json()['data']:
+            elif 'ID' in resp.json()['data'][0]:
                 session['id'] = resp.json()['data']['ID']
                 session['aadhar'] = aadhar
                 em=resp.json()['data']['email']
                 mob = em[0:5]
                 return render_template('consumer/consumer_otp.html', mobile=mob)
             else:
-                return render_template('consumer/consumer.html', message=resp.json())
+                return render_template('consumer/consumer.html', message="some problem")
         except:
             return render_template('consumer/consumer.html', message="Unknown error")
 
