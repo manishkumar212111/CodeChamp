@@ -479,7 +479,7 @@ def consumer_login():
                 mob = em[0:5]
                 return render_template('consumer/consumer_otp.html', mobile=mob)
             else:
-                return render_template('consumer/consumer.html', message="some problem")
+                return render_template('consumer/consumer.html', message=resp.json())
         except:
             return render_template('consumer/consumer.html', message="Unknown error")
 
