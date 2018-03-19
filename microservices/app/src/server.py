@@ -474,10 +474,10 @@ def consumer_login():
                 return render_template('consumer/consumer.html',message=resp.json()['data']['message'])
             if 'ID' in resp.json()['data'][0]:
                 session['id'] = resp.json()['data'][0]['ID']
-                session['aadhar'] = aadhar
+                session['aadhar_test'] = aadhar
                 em=resp.json()['data'][1]['email']
                 mob = em[0:5]
-                return render_template('consumer/consumer_otp.html', mobile=mob)
+                return render_template('consumer/consumer_otp.html', mobile=mob,aadhar=aadhar)
             else:
                 return render_template('consumer/consumer.html', message="unknown error")
         except:
@@ -516,7 +516,9 @@ def consumer_otp_verify():
 
         if 'data' in resp.json():
             if 'success' in resp.json()['data']:
-                    return render_template('consumer/consumer_success.html', message="No result found")
+                session['aadhar']=session['aadhar_test']
+                session.pop('session_test',None)
+                return render_template('consumer/consumer_success.html', message="No result found")
 
             else:
                     return render_template('consumer/consumer_success.html',empty="Plzz enter correct otp")

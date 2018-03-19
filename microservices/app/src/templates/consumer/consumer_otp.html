@@ -135,7 +135,7 @@ html, body {
           <div class="box">
             <center>
              <p> Six digit OTP sent to <br>
-                 Mobile No.::   {{mobile}}***@gmail.com
+                 Email ID.::   {{mobile}}***@gmail.com
              </p>
                 <form action="https://app.despairing12.hasura-app.io/consumer/otp/verify" method="post">
           <h1>Enter OTP:</h1>
@@ -145,8 +145,11 @@ html, body {
             <br><br>
              <input type="submit" value="Submit">
           </form>
-              <br>
-              <font color="red">NOTE:</font> Not Your Mobile no. or Not recieved OTP  <a href="https://uidai.gov.in/" style="text-decoration:none;color=blue; text-color:blue;"target="_blank">click here</a>
+              <br><form action="https://app.despairing12.hasura-app.io/consumer/consumer/login_otp" method="post">
+                <input type="number" name="aadhar" value={{aadhar}} disabled>
+               <b>Not recieved OTP</b><input type="submit" value="RESEND OTP">
+                </form>
+              <font color="red">NOTE:</font> Not Your Email ID. <a href="https://uidai.gov.in/" style="text-decoration:none;color=blue; text-color:blue;"target="_blank">click here</a>
               <br><br><br>
             </center>
           </div>
