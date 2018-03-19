@@ -1,7 +1,8 @@
 from . import hashing
 from . import server
-
-import json,requests
+#import hashing
+#import server
+#import json,requests
 
 
 def generete_code(email,username):

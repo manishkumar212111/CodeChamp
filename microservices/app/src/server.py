@@ -79,7 +79,7 @@ def schedule():
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
 
-
+'''
 if __name__ == '__main__':
     scheduler = BackgroundScheduler()
     scheduler.add_job(schedule, 'interval', hours=24)
@@ -92,6 +92,7 @@ if __name__ == '__main__':
     except (KeyboardInterrupt, SystemExit):
         # Not strictly necessary if daemonic mode is enabled but should be done if possible
         scheduler.shutdown()
+        '''
 #****************************************************************************
 @app.route('/')
 def home():

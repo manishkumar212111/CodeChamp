@@ -5,50 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Aadhaar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Shark@JNU</title>
+
+
 </head>
 <style>
 html, body {
         max-width: 100%;
         overflow-x: hidden;
     }
-    .navbar {
-        background-color: #0f3f6a;
 
-        margin-top: 0;
-    }
-
-    a {
-        color: white;
-    }
-
-    #img2 {
-        margin-top: 10px;
-    }
-
-    #leftnav {
-        float: left !important;
-        overflow-x: hidden;
-    }
-
-    .footer-copyright {
-        background-color: black;
-        font-size: 20px;
-    }
-
+li.a1
+{
+background-color:#ebebe0;
+}
+li.a2
+{
+background-color:white;
+}
+.bod {
+    width: auto;
+    padding: auto;
+    border: 0px solid blue;
+    margin: 10px;
+    margin-left: 7px;
+    margin-top: 7px;
+}
+ .white{
+background-color:white;
+}
 </style>
 
 <body>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
-                <img src="/static/Images/JNU1.png" class="pull-left img-responsive" alt="NO image">
+                <img src="static/Images/JNU1.png" class="pull-left img-responsive" alt="NO image">
             </div>
             <div class="col-lg-6" id="img2">
-                <img src="/static/Images/DOT.jpg" class="pull-right img-responsive" alt="NO image">
+                <img src="static/Images/DOT.jpg" class="pull-right img-responsive" alt="NO image">
             </div>
         </div>
     </div>
@@ -61,31 +62,33 @@ html, body {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://app.despairing12.hasura-app.io/">Home</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">UIDAI
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">HOME
                         </a>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">DOT
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">FAQs
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us
-                        </a>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">UIDAI
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">DOT
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">FAQs
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us
+                            </a>
 
-                    </li>
-                    <li class="dropdown" id="leftnav">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us
-                        </a>
-                    </li>
+                        </li>
+                        <li class="dropdown" id="leftnav">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us
+                            </a>
+                        </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
@@ -111,36 +114,127 @@ html, body {
             </div>
         </div>
     </nav>
+
     <div class="container-fluid" id="banner">
-        <img src="/static/Images/55.jpeg" alt="1234" class="img-responsive" width="100%" height="auto">
+        <img src="static/Images/55.jpeg" alt="1234" class="img-responsive" width="100%" height="auto">
     </div>
-    <div>
-    <marquee height="10%" bgcolor="red" width="100%">Shark@JNU welcomes You</marquee>Total Visit:: 10023
+
+    <div class="marq">
+        <marquee height="50px" bgcolor="red" width="100%" >
+            <h3 style="margin-bottom: 0;">Shark@JNU welcomes You</h3>
+        </marquee>
 
     </div>
-        <div class="containerer-fluid">
+
+    </div>
+    <div class="containerer-fluid" id="table">
         <div class="row">
-            <div class="col-sm-10" style="background-color:lavender;overflow-x: hidden;"><br><br><br><br>BODY<br><br><br><br><br><br></div>
-            <div class="col-sm-2" style="background-color:lavenderblush;overflow-x: hidden;"> {% include 'sidebar.html' %} </div>
+            <div class="col-sm-10" style="background-color:lavender;overflow-x: hidden;">
+
+                <div class="bod">
+                <ul >
+                    <div >
+                        <h2><b><mark>DOT guidelines and Notifications regarding mobile connections and TSP</mark></b></h2>
+                    </div>
+                    <div><br>
+                    <li class="a1">Use of 'Aadhaar' e-KYC service of Unique Identity Authority of India (UIDAI) for
+                    issuing mobile connections to subscribers <a href="http://www.dot.gov.in/access-services/subscriber-verification#" target="_blank">View Source</a><br>
+                    </li ><br></div>
+                    <div>
+                    <li class="a2">List of Acceptable Documents as PoI/PoA for issuing mobile connection (as on October, 2016)<a href="http://www.dot.gov.in/access-services/subscriber-verification#" target="_blank">View Source</a><br>
+                    </li><br></div>
+                    <div >
+                    <li class="a1">Implementation of Hon'ble Supreme Court orders regarding 100% E-KYC based re-verification of all existing subscribers<a href="http://www.dot.gov.in/access-services/subscriber-verification#" target="_blank">View Source</a><br>
+                    </li><br></div>
+                    <div>
+                        <li class="a2">
+                    Use of Aadhaar e-KYC service of UIDAI for issuing new mobile connection to outstation customers and
+                        re-verification of existing outstation subscribers<a href="http://www.dot.gov.in/access-services/subscriber-verification#" target="_blank">View Source</a></li><br><br>
+
+                    </div>
+                    <div >
+                    <li class="a1">Use of Aadhaar e-KYC service of Unique Identity Authority of India (UIDAI) for issuing new mobile connections and
+                        re-verification of existing subscribers-OTP based authentication reg.<a href="http://www.dot.gov.in/access-services/subscriber-verification#" target="_blank">View Source</a><br>
+                    </li>
+                        <br></div>
+                    <div>
+                    <li class="a2">Procedure for re-verification of mobile connections in respect of Subscribers of foreign nationality/Non-resident
+                        Indians (NRIs)/Senior citizens/ Physically Challenged persons and IVRS based OTP authentication process-reg<a href="http://www.dot.gov.in/access-services/subscriber-verification#" target="_blank">View Source</a><br>
+                    </li>
+                        <br></div>
+                </ul>
+</div>
+
+
+            </div>
+            <div class="col-sm-2"  style="background-color:lavenderblush;overflow-x: hidden; height:auto;">
+               {% include 'sidebar.html' %}
+            </div>
         </div>
     </div>
-    <!--
-    <footer class="page-footer font-small unique-color-dark pt-0">
-        <div class="footer-copyright py-3 text-center">
-            © 2018 Copyright:
-            <a href="#"><strong> JNU@shark.com</strong>
+
+    <div class="container" id="slider">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="static/Images/banner18.jpg" alt="Los Angeles" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="static/Images/banner18.jpg" alt="Chicago" style="width:100%;">
+                </div>
+
+                <div class="item">
+                    <img src="static/Images/banner18.jpg" alt="New york" style="width:100%;">
+                </div>
+            </div>
+
+
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
             </a>
         </div>
-    </footer>
--->
-    {% include 'footer.html' ignore missing %}
-  <script type="text/javascript">
-        {% if logout %}
-        alert("{{logout}}");
-            {% set logout=None %}
-               {% endif %}
+    </div>
 
+    <div class="container-fluid" id="form">
+        <h1 style="text-align:center;">Get In Touch With Us:</h1>
+        <div class="contact-form">
+            <form method="post" role="form">
+                <div class="controls">
+                    <div class="form-group">
+                        <h4 style="color:black;">Full Name</h4>
+                        <input type="text" name="name" class="form-input-text form-control" required="required">
+                    </div>
 
-</script>
+                    <div class="form-group">
+                        <h4 style="color:black;">Email</h4>
+                        <input type="email" name="email" class="form-input-text form-control" required="required">
+                    </div>
+
+                    <div class="form-group">
+                        <h4 style="color:black;">Message</h4>
+                        <textarea name="message" class="form-input-text form-control" rows="4" required="required"></textarea>
+                    </div>
+                    <div class="send-button bottom-margin">
+                        <button type="submit" class="btn btn-send send-msg">SEND MESSAGE</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {% include 'footer.html'%}
 </body>
+
 </html>
