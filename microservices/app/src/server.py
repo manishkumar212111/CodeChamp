@@ -513,7 +513,6 @@ def consumer_otp_verify():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         if len(resp.json())==0:
             return render_template('consumer/consumer_otp.html', message="Internal error")
-        try:
 
             if 'data' in resp.json():
                 if 'success' in resp.json()['data']:
@@ -524,8 +523,6 @@ def consumer_otp_verify():
             else:
                 session.pop('id',None)
                 return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
-        except:
-            return render_template('consumer/consumer_otp.html', message=resp.json())
 
     return render_template('consumer/consumer_otp.html', message="Error")
 
