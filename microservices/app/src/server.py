@@ -472,14 +472,14 @@ def consumer_login():
         try:
             if 'message' in resp.json()['data']:
                 return render_template('consumer/consumer.html',message=resp.json()['data']['message'])
-            elif 'ID' in resp.json()['data']:
+            if 'ID' in resp.json()['data'][0]:
                 session['id'] = resp.json()['data'][0]['ID']
                 session['aadhar'] = aadhar
-                em=resp.json()['data'][0]['email']
+                em=resp.json()['data'][1]['email']
                 mob = em[0:5]
                 return render_template('consumer/consumer_otp.html', mobile=mob)
             else:
-                return render_template('consumer/consumer.html', message=resp.json())
+                return render_template('consumer/consumer.html', message="unknown error")
         except:
             return render_template('consumer/consumer.html', message="Unknown error")
 
