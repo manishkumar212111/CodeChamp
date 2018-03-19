@@ -514,15 +514,15 @@ def consumer_otp_verify():
         if len(resp.json())==0:
             return render_template('consumer/consumer_otp.html', message="Internal error")
 
-            if 'data' in resp.json():
-                if 'success' in resp.json()['data']:
+        if 'data' in resp.json():
+            if 'success' in resp.json()['data']:
                     return render_template('consumer/consumer_success.html', message="No result found")
 
-                else:
-                    return render_template('consumer/consumer_success.html',empty="Plzz enter correct otp")
             else:
-                session.pop('id',None)
-                return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
+                    return render_template('consumer/consumer_success.html',empty="Plzz enter correct otp")
+        else:
+            session.pop('id',None)
+            return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
 
     return render_template('consumer/consumer_otp.html', message="Error")
 
