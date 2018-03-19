@@ -1,20 +1,26 @@
+import csv
 import json,requests
-url = "https://app.despairing12.hasura-app.io/api/TSP/status_count/push_data"
-requestPayload = {
-    "username":"TSP0",
-    "aadhar": "875643234312",
-    "mobile": "9987674345",
-    "comp_name": "Airtel",
-    "LSA":"Rajasthan",
-    "secret_code":"5VXK8zhs859tCGcf"
 
-}
+def csv_dict_reader(file_obj):
+    """
+    Read a CSV file using csv.DictReader
+    """
+    count=0;
+    list = []
+    reader = csv.DictReader(file_obj, delimiter=',')
+    for line in reader:
+        try:
+            list.append({"aadhar_no":line["aadhar_no"],"mobile":line["mobile"],"comp_name":line["comp_name"],"LSA":line['LSA']})
+        except:
+            print "hii"
+        count=count+1;
+    return list
 
-# Setting headers
-headers = {
-        "Content-Type": "application/json",
-}
+with open("test.csv") as f_obj:
+    print csv_dict_reader(f_obj)
 
-# Make the query and store response in resp
-resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-print resp.content
+
+
+
+
+

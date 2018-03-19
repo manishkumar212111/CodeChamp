@@ -452,98 +452,38 @@ def consumer_login():
         if len(aadhar) !=12:
             return render_template('consumer/consumer.html',message="Aadhar number must be of 12 digit")
 
-        url = "https://data.despairing12.hasura-app.io/v1/query"
+        url = "https://app.despairing12.hasura-app.io/api/aadhar"
 
         # This is the json payload for the query
         requestPayload = {
-            "type": "select",
-            "args": {
-                "table": "Aadhar",
-                "columns": ["mobile"],
-                "where": {
-                    "aadhar_no": {
-                        "$eq": aadhar
-                    }
-                }
-            }
+           "data":
+               {
+                   "aadhar":aadhar
+               }
         }
 
         # Setting headers
         headers = {
             "Content-Type": "application/json",
-            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-        }
+         }
 
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-        if len(resp.json()) == 0:
-            return render_template('consumer/consumer.html',message="Not Found")
         try:
-            url = "https://notify.despairing12.hasura-app.io/v1/send/sms"
-            mobile=str(resp.json()[0]['mobile'])
-            random = randint(100000, 999999)
-            # This is the json payload for the query
-            requestPayload = {
-                "to": str(resp.json()[0]['mobile']),
-                "countryCode": "91",
-
-                "message": "OTP For Aadhar verification at Shark@JNU is  " +str(random)
-            }
-
-            # Setting headers
-            headers = {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-            }
-
-            # Make the query and store response in resp
-            resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
-            if 'id' in resp.json():
-                session['aadhar']=aadhar
-
-                url = "https://data.despairing12.hasura-app.io/v1/query"
-
-                # This is the json payload for the query
-                requestPayload = {
-                    "type": "insert",
-                    "args": {
-                        "table": "temp_otp",
-                        "objects": [
-                            {
-
-                                "aadhar": aadhar,
-                                "OTP": random
-                            }
-                        ],
-                        "returning": [
-                            "ID"
-                        ]
-                    }
-                }
-
-                # Setting headers
-                headers = {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-                }
-
-                # Make the query and store response in resp
-                resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-                try:
-                    if resp.json()['returning'][0]['ID']:
-                        session['id'] = resp.json()['returning'][0]['ID']
-                        mob=mobile[8:10]
-                        return render_template('consumer/consumer_otp.html',mobile=mob)
-                except:
-                    return render_template('consumer/consumer.html', message="please try agin after some time")
-
+            if 'message' in resp.json()['data']:
+                return render_template('consumer/consumer.html',message=resp.json()['data']['message'])
+            elif 'ID' in resp.json()['data']:
+                session['id'] = resp.json()['data']['ID']
+                session['aadhar'] = aadhar
+                em=resp.json()['data']['email']
+                mob = em[0:5]
+                return render_template('consumer/consumer_otp.html', mobile=mob)
             else:
-                return render_template('consumer/consumer.html',message="cluster is sleeping or OTP send limit exceeded"+str(resp.content))
+                return render_template('consumer/consumer.html', message=resp.json())
+        except:
+            return render_template('consumer/consumer.html', message="Unknown error")
 
-        except IndexError:
-            None
-        return render_template('consumer/consumer.html', message="error occurs")
+    return render_template('consumer/consumer.html', message="error occurs")
 
 
 @app.route('/consumer/otp/verify',methods=['POST','GET'])
@@ -554,28 +494,19 @@ def consumer_otp_verify():
 
         if len(otp) !=6:
             return render_template('consumer/consumer_otp.html',message="OTP MUST BE OF 6 digit")
-        url = "https://data.despairing12.hasura-app.io/v1/query"
+        url = "https://app.despairing12.hasura-app.io/api/consumer_otp"
 
         # This is the json payload for the query
         requestPayload = {
-            "type": "select",
-            "args": {
-                "table": "temp_otp",
-                "columns": [
-                    "OTP"
-                ],
-                "where": {
-                    "ID": {
-                        "$eq": session['id']
-                    }
-                }
+            "data":{
+                "ID":session['ID'],
+                "OTP":otp
             }
         }
 
         # Setting headers
         headers = {
             "Content-Type": "application/json",
-            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
         }
 
         # Make the query and store response in resp
@@ -583,43 +514,13 @@ def consumer_otp_verify():
         if len(resp.json())==0:
             return render_template('consumer/consumer_otp.html', message="Internal error")
         try:
-            if str(otp) == str(resp.json()[0]['OTP']):
+            if 'message' in resp.json()['data']:
+                return render_template('consumer/consumer_otp.html', message="Plzz enter Correct OTP")
 
-                    url = "https://data.despairing12.hasura-app.io/v1/query"
-
-                    # This is the json payload for the query
-                    requestPayload = {
-                        "type": "select",
-                        "args": {
-                            "table": "central",
-                            "columns": [
-                            "mobile",
-                            "comp_name",
-                            "LSA"
-                        ],
-                        "where": {
-                            "aadhar_no": {
-                                "$eq": session['aadhar']
-                            }
-                        }
-                    }
-                    }
-
-                # Setting headers
-                    headers = {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-                    }
-
-                # Make the query and store response in resp
-                    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
-                    if len(resp.json()) == 0:
-                        return render_template('consumer/consumer_success.html',empty="No record found")
-                    else:
-                        return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
+            elif 'success' in resp.json()['data']:
+                return render_template('consumer/consumer_success.html',empty="No record found")
             else:
-                return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp")
+                return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
         except:
             return render_template('consumer/consumer_otp.html', message="Plzz enter correct otp")
 
