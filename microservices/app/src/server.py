@@ -481,7 +481,7 @@ def consumer_login():
             else:
                 return render_template('consumer/consumer.html', message="unknown error")
         except:
-            return render_template('consumer/consumer.html', message="Unknown error")
+            return render_template('consumer/consumer.html', message="Unknown exception")
 
     return render_template('consumer/consumer.html', message="error occurs")
 
