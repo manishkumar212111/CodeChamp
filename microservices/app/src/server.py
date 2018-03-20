@@ -19,7 +19,7 @@ from . import consumer
 from . import TSP_API
 #import tsp,consumer,DOT,TSP_API
 
-
+count = 0
 # from flask import jsonify
 app=Flask(__name__)
 app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
@@ -98,6 +98,12 @@ if __name__ == '__main__':
 def home():
 
     return render_template('index.html')
+
+@app.route('/count',methods=['GET'])
+def make_count():
+    value=count
+    return jsonify(count=value)
+
 #*************************************CONSUMER****************************************
 # render consumer login template
 @app.route('/consumer')
@@ -695,5 +701,11 @@ def api_TSP_status_count_push_data():
     return "get method accepted"
 
 
+def count():
+    global count
+    count=count+1
+    return count
+
 if  __name__ == '__main__':
+    count()
     app.run(debug=True)

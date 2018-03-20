@@ -16,7 +16,7 @@
 <!--<div class="col-sm-2" id="box" style="background-color:lavenderblush;overflow-x: hidden; height:auto;">
 -->
 
-<p><br>            <b>Total Visit: 1002</b>
+<p><br>            <b>Total Visit: <ul id="ul1"><ulbody></ulbody></ul></b>
 </p>
  <div style="background-color:#6e6e45;">
 <pr><b>NOTE: </b><font color="white">This is demo application to check registered mobile with aadhar</font> </pr>
@@ -24,4 +24,28 @@
      <a href="">
 <img src="/static/Images/faqs.jpg" alt="FAQs" width="100%" height="auto"></a>
 </body>
+<script>
+var url = "https://app.despairing12.hasura-app.io/count";
+
+var requestOptions = {
+    "method": "GET",
+    "headers": {
+        "Content-Type": "application/json"
+    }
+};
+
+fetch(url, requestOptions)
+.then(function(response) {
+	return response.json();
+})
+.then(function(result) {
+	console.log(result);
+     $(ul1 > ulbody').append(result);
+
+})
+.catch(function(error) {
+	console.log('Request Failed:' + error);
+});
+
+</script>
 </html>
