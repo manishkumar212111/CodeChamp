@@ -186,8 +186,7 @@ input[type=submit]:hover {
                  {% set result=''%}
                 </table>
                 {%endif%}
-                <br>
-                <hr>
+
         </div>
         </div>
         <div class="modal-footer">
@@ -303,6 +302,39 @@ input[type=submit]:hover {
 
 
         }
+
+
+       // Javascript fetch to get no. of sim to each
+
+
+    var url = "https://app.despairing12.hasura-app.io/DOT/home";
+
+    var requestOptions = {
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json"
+    }
+    };
+
+    var body = {
+
+
+    };
+
+    requestOptions.body = JSON.stringify(body);
+
+    fetch(url, requestOptions)
+    .then(function(response) {
+    	return response.json();
+    })
+    .then(function(result) {
+	console.log(result);
+
+
+})
+.catch(function(error) {
+	console.log('Request Failed:' + error);
+});
     </script>
 
 

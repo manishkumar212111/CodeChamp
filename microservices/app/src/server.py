@@ -310,7 +310,7 @@ def login_DOT():
     return render_template('DOT/login.html',message="error")
 
 # DOT HOME WITH SIM more than 9 and search bar
-@app.route('/DOT/home')
+@app.route('/DOT/home',methods=['POST','GET'])
 def DOT_home():
     try:
         username=session['DOT_username']
