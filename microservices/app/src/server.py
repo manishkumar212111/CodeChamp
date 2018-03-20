@@ -705,8 +705,7 @@ def api_TSP_status_count_push_data():
 count_visit=0
 def count():
     global count_visit
-    if count_visit==0:
-        count_visit.function_initialize()
+    
     count_visit=count_visit+1
     return count_visit
 
