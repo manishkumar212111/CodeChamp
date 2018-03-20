@@ -168,10 +168,28 @@ input[type=submit]:hover {
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title">List Of Aadhar with more than 9 SIM card</h4>
         </div>
         <div class="modal-body">
-          <p>This is a large modal.</p>
+
+                {% if result %}
+                <mark>Detail of consumer having more than 1 registered SIM</mark>
+               <br> {% if message %}
+                <p>{{message}}</p>
+                {%endif%}
+                <table border="1"><tr><th>Aadhar Number</th><th>No of sim</th></tr>
+                {% for i in result['list'] %}
+                <tr><td>{{i[0]}}</td>
+                    <td>{{i[1]}}</td>
+                    </tr>
+                {% endfor%}
+                 {% set result=''%}
+                </table>
+                {%endif%}
+                <br>
+                <hr>
+
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -212,25 +230,7 @@ input[type=submit]:hover {
                     {% endif%}
                     <!-- for search result END-->
 
-                <!--
-                {% if result %}
-                <mark>Detail of consumer having more than 1 registered SIM</mark>
-               <br> {% if message %}
-                <p>{{message}}</p>
-                {%endif%}
-                <table border="1"><tr><th>Aadhar Number</th><th>No of sim</th></tr>
-                {% for i in result['list'] %}
-                <tr><td>{{i[0]}}</td>
-                    <td>{{i[1]}}</td>
-                    </tr>
-                {% endfor%}
-                 {% set result=''%}
-                </table>
-                {%endif%}
-                <br>
-                <hr>
-                -->
-                <h3>
+                                <h3>
                    <mark> Search For Aadhar Number</mark>
                 </h3>
                 <div class="container-fluid">
@@ -241,7 +241,7 @@ input[type=submit]:hover {
             <br>
              <input type="submit" value="Show Detail">
           </form>
-            <br><br><br>
+            <br><br><br><br><br><hr>
             </div>
 
             </div>
