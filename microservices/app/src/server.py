@@ -79,8 +79,6 @@ def schedule():
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
 # To count no of views
-class Count:
-    Count_visit = 0
 '''
 if __name__ == '__main__':
     scheduler = BackgroundScheduler()
@@ -98,16 +96,8 @@ if __name__ == '__main__':
 #****************************************************************************
 @app.route('/')
 def home():
-    Count.Count_visit += 1
     return render_template('index.html')
 
-@app.route('/count',methods=['GET'])
-def make_count():
-    value=Count.Count_visit
-    data={
-        "count":value
-    }
-    return jsonify(data=data)
 
 #*************************************CONSUMER****************************************
 # render consumer login template
