@@ -301,23 +301,23 @@ def login_DOT():
                 return render_template('DOT/login/html',message="UserId and password does not match")
             elif resp==True:
                 session['DOT_username']=username
-                return redirect(url_for('DOT_home'))
+                return render_template('DOT/home.html')
             else:
-                return render_template('DOT/login.html',"unknown error")
+                return render_template('DOT/login.html',message="unknown error")
         except:
             return render_template('DOT/login.html',message="Incorrect Username and password")
 
     return render_template('DOT/login.html',message="error")
 
 # DOT HOME WITH SIM more than 9 and search bar
-@app.route('/DOT/home',methods=['POST','GET'])
-def DOT_home():
+'''@app.route('/DOT/home',methods=['POST','GET'])
+#def DOT_home():
     try:
         username=session['DOT_username']
         return DOT.home(username)
     except:
         return render_template('DOT/login.html', result="error")
-
+'''
 @app.route('/DOT/SIM/count', methods=['POST', 'GET'])
 def DOT_sim_count():
 

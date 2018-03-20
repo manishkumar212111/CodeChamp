@@ -185,7 +185,12 @@ input[type=submit]:hover {
                 {% endfor%}
                  {% set result=''%}
                 </table>
+
                 {%endif%}
+            <table id="table1" border="1" width="100%">
+
+                <tbody></tbody>
+            </table>
 
         </div>
         </div>
@@ -323,12 +328,14 @@ fetch(url, requestOptions)
 .then(function(result) {
 	console.log(result);
 
+     $('#table1 > tbody').append('<tr><th>Aadhar Number</th><th>No of sim</th></tr>');
+for (i=0 ; i<result['data']['list'].length;i++)
+	{
+     $('#table1 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td></tr>');
 
-	/*for (i=0;i<=result.length;i++) {
+}
+$('#table1 > tbody').append('<tr><th>Total Count</th><th>'+result['data']['list'].length +'</th></tr>');
 
-      $('#table > tbody').append('<tr valign="middle"><td><input type="checkbox" name="addfriend" value="'+result[i]['username']+'"></td> <td valign="center">' + result[i]['username'] +  '</td></tr>');
-
-}*/
 })
 .catch(function(error) {
 	console.log('Request Failed:' + error);
