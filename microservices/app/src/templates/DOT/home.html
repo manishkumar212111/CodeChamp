@@ -155,13 +155,34 @@ input[type=submit]:hover {
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <button class="btn btn-danger navbar-btn">See Aadhar with more than 9 SIM</button>
+                  <button class="btn btn-danger navbar-btn" data-toggle="modal" data-target="#myModal">See Aadhar with more than 9 SIM</button>
                     <font color="white"> {{session['DOT_username']}} &nbsp&nbsp||</font>
                     <a href="https://app.despairing12.hasura-app.io/DOT/logout">LOGOUT</a>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- POPUP BOX SCREEN -->
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>This is a large modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- End Of modal -->
+
+
         <div class="containerer-fluid">
         <div class="row">
             <div class="col-sm-10" style="background-color:lavender;">
@@ -209,18 +230,18 @@ input[type=submit]:hover {
                 <br>
                 <hr>
                 -->
-                <h1>
+                <h3>
                    <mark> Search For Aadhar Number</mark>
-                </h1>
+                </h3>
                 <div class="container-fluid">
           <div class="box">
             <form action="https://app.despairing12.hasura-app.io/DOT/search" method="post">
-          <h1>Enter Your Aadhaar Number:</h1>
+          <h4>Enter Aadhaar Number:</h4>
               <input type="text" name="aadhar" class="credit" required>{%if error %}<font color="red">{{error}}{%set error='' %}</font>{%endif%}
             <br>
              <input type="submit" value="Show Detail">
           </form>
-
+            <br><br><br>
             </div>
 
             </div>
