@@ -19,7 +19,7 @@ from . import consumer
 from . import TSP_API
 #import tsp,consumer,DOT,TSP_API
 
-count = 0
+count_visit = 0
 # from flask import jsonify
 app=Flask(__name__)
 app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
@@ -101,9 +101,9 @@ def home():
 
 @app.route('/count',methods=['GET'])
 def make_count():
-    value=count
+    value=count_visit
     data={
-        "message":value
+        "count":value
     }
     return jsonify(data=data)
 
@@ -705,9 +705,9 @@ def api_TSP_status_count_push_data():
 
 
 def count():
-    global count
-    count=count+1
-    return count
+    global count_visit
+    count=count_visit+1
+    return count_visit
 
 if  __name__ == '__main__':
     count()
