@@ -145,6 +145,7 @@ input[type=submit] {
                 <form action="https://app.despairing12.hasura-app.io/consumer/otp/verify" method="post">
           <h1>Enter OTP:</h1>
               <input type="text" name="otp" class="credit" required/>
+                    <input type="number" name="aadhar" value={{aadhar}} hidden>
 
                     {%if message %}<font color="red">{{message}}{%set message='' %}</font>{%endif%}
             <br><br>

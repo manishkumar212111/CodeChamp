@@ -140,7 +140,7 @@ def consumer_login():
                 return render_template('consumer/consumer.html',message=resp.json()['data']['message'])
             if 'ID' in resp.json()['data'][0]:
                 session['id'] = resp.json()['data'][0]['ID']
-                session['aadhar_test'] = aadhar
+
                 em=resp.json()['data'][1]['email']
                 mob = em[0:5]
                 return render_template('consumer/consumer_otp.html', mobile=mob,aadhar=aadhar)
@@ -157,7 +157,7 @@ def consumer_otp_verify():
     if request.method=='POST':
 
         otp=request.form['otp']
-
+        aadhar=request.form['aadhar']
         if len(otp) !=6:
             return render_template('consumer/consumer_otp.html',message="OTP MUST BE OF 6 digit")
         url = "https://app.despairing12.hasura-app.io/api/consumer_otp"
@@ -182,7 +182,7 @@ def consumer_otp_verify():
 
         if 'data' in resp.json():
             if 'success' in resp.json()['data']:
-                session['aadhar']=session['aadhar_test']
+                session['aadhar']=aadhar
                 session.pop('session_test',None)
                 return render_template('consumer/consumer_success.html', message="No result found")
 
