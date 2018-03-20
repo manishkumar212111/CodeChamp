@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/DOT.py" afterPath="$PROJECT_DIR$/microservices/app/src/DOT.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="318" column="32" lean-forward="true" selection-start-line="318" selection-start-column="32" selection-end-line="318" selection-end-column="32" />
+            <state relative-caret-position="454">
+              <caret line="316" column="24" lean-forward="false" selection-start-line="316" selection-start-column="24" selection-end-line="316" selection-end-column="24" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#732#876#0" expanded="false" />
@@ -75,22 +74,22 @@
                 <element signature="e#9114#9303#0" expanded="false" />
                 <element signature="e#9553#9593#0" expanded="false" />
                 <element signature="e#9687#10377#0" expanded="false" />
-                <element signature="e#10740#10906#0" expanded="false" />
-                <element signature="e#10967#11156#0" expanded="false" />
-                <element signature="e#11323#12732#0" expanded="false" />
-                <element signature="e#12819#13960#0" expanded="false" />
-                <element signature="e#14127#17920#0" expanded="false" />
-                <element signature="e#18005#20927#0" expanded="false" />
-                <element signature="e#21006#21327#0" expanded="false" />
-                <element signature="e#21387#21555#0" expanded="false" />
-                <element signature="e#21887#22277#0" expanded="false" />
-                <element signature="e#22390#22897#0" expanded="false" />
+                <element signature="e#10741#10907#0" expanded="false" />
+                <element signature="e#10968#11157#0" expanded="false" />
+                <element signature="e#11324#12733#0" expanded="false" />
+                <element signature="e#12820#13961#0" expanded="false" />
+                <element signature="e#14128#17921#0" expanded="false" />
+                <element signature="e#18006#20928#0" expanded="false" />
+                <element signature="e#21007#21328#0" expanded="false" />
+                <element signature="e#21388#21556#0" expanded="false" />
+                <element signature="e#21888#22278#0" expanded="false" />
+                <element signature="e#22391#22898#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DOT.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DOT.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/DOT.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="529">
@@ -237,8 +236,8 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_otp.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/sidebar.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
-        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/DOT.py" />
+        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
       </list>
     </option>
   </component>
@@ -1124,10 +1123,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/DOT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="150" column="18" lean-forward="false" selection-start-line="150" selection-start-column="18" selection-end-line="150" selection-end-column="18" />
+          <folding>
+            <element signature="e#136#280#0" expanded="false" />
+            <element signature="e#317#471#0" expanded="false" />
+            <element signature="e#517#1910#0" expanded="false" />
+            <element signature="e#1971#3342#0" expanded="false" />
+            <element signature="e#4560#5717#0" expanded="false" />
+            <element signature="e#5751#6538#0" expanded="false" />
+            <element signature="e#6680#7913#0" expanded="false" />
+            <element signature="e#7944#8900#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="318" column="32" lean-forward="true" selection-start-line="318" selection-start-column="32" selection-end-line="318" selection-end-column="32" />
+        <state relative-caret-position="454">
+          <caret line="316" column="24" lean-forward="false" selection-start-line="316" selection-start-column="24" selection-end-line="316" selection-end-column="24" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#732#876#0" expanded="false" />
@@ -1148,33 +1164,16 @@
             <element signature="e#9114#9303#0" expanded="false" />
             <element signature="e#9553#9593#0" expanded="false" />
             <element signature="e#9687#10377#0" expanded="false" />
-            <element signature="e#10740#10906#0" expanded="false" />
-            <element signature="e#10967#11156#0" expanded="false" />
-            <element signature="e#11323#12732#0" expanded="false" />
-            <element signature="e#12819#13960#0" expanded="false" />
-            <element signature="e#14127#17920#0" expanded="false" />
-            <element signature="e#18005#20927#0" expanded="false" />
-            <element signature="e#21006#21327#0" expanded="false" />
-            <element signature="e#21387#21555#0" expanded="false" />
-            <element signature="e#21887#22277#0" expanded="false" />
-            <element signature="e#22390#22897#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/DOT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="150" column="18" lean-forward="false" selection-start-line="150" selection-start-column="18" selection-end-line="150" selection-end-column="18" />
-          <folding>
-            <element signature="e#136#280#0" expanded="false" />
-            <element signature="e#317#471#0" expanded="false" />
-            <element signature="e#517#1910#0" expanded="false" />
-            <element signature="e#1971#3342#0" expanded="false" />
-            <element signature="e#4560#5717#0" expanded="false" />
-            <element signature="e#5751#6538#0" expanded="false" />
-            <element signature="e#6680#7913#0" expanded="false" />
-            <element signature="e#7944#8900#0" expanded="false" />
+            <element signature="e#10741#10907#0" expanded="false" />
+            <element signature="e#10968#11157#0" expanded="false" />
+            <element signature="e#11324#12733#0" expanded="false" />
+            <element signature="e#12820#13961#0" expanded="false" />
+            <element signature="e#14128#17921#0" expanded="false" />
+            <element signature="e#18006#20928#0" expanded="false" />
+            <element signature="e#21007#21328#0" expanded="false" />
+            <element signature="e#21388#21556#0" expanded="false" />
+            <element signature="e#21888#22278#0" expanded="false" />
+            <element signature="e#22391#22898#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -314,7 +314,7 @@ def login_DOT():
 def DOT_home():
     try:
         username=session['DOT_username']
-        return DOT.home(username)
+        return DOT.home1(username)
     except:
         return render_template('DOT/login.html', result="error")
 
