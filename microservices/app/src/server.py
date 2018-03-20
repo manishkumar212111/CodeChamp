@@ -702,12 +702,13 @@ def api_TSP_status_count_push_data():
 
         return TSP_API.API_status_count_push(username,secret_code,aadhar,comp_name,LSA,mobile)
     return "get method accepted"
-
-
+count_visit
 def count():
     global count_visit
-    count=count_visit+1
+    count_visit=count_visit+1
     return count_visit
+
+
 
 if  __name__ == '__main__':
 
