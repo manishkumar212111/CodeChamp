@@ -316,7 +316,7 @@ def DOT_home():
         username=session['DOT_username']
         return DOT.home1(username)
     except:
-        return render_template('DOT/login.html', result="error")
+        return "error"
 
 
 # dot can search
