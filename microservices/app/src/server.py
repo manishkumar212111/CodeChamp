@@ -12,7 +12,7 @@ import time
 import os
 import requests
 from flask import render_template,Flask,request,url_for,redirect,session,jsonify
-count_visit=0
+
 from . import tsp
 from . import DOT
 from . import consumer
@@ -78,7 +78,9 @@ def schedule():
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
-
+# To count no of views
+class Count:
+    Count_visit = 0
 '''
 if __name__ == '__main__':
     scheduler = BackgroundScheduler()
@@ -96,12 +98,12 @@ if __name__ == '__main__':
 #****************************************************************************
 @app.route('/')
 def home():
-    count()
+    Count.Count_visit += 1
     return render_template('index.html')
 
 @app.route('/count',methods=['GET'])
 def make_count():
-    value=count_visit
+    value=Count.Count_visit
     data={
         "count":value
     }
@@ -703,11 +705,6 @@ def api_TSP_status_count_push_data():
         return TSP_API.API_status_count_push(username,secret_code,aadhar,comp_name,LSA,mobile)
     return "get method accepted"
 
-def count():
-    global count_visit
-
-    count_visit=count_visit+1
-    return count_visit
 
 
 
