@@ -110,7 +110,7 @@ def home(username):
         return render_template('DOT/home.html', Message="Error retrieving data")
     return render_template('DOT/home.html', result="error")
 
-def home1(username):
+def home1():
     url = "https://data.despairing12.hasura-app.io/v1/query"
     # Select aadhar number with their count
     # This is the json payload for the query

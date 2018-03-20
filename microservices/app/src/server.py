@@ -313,8 +313,8 @@ def login_DOT():
 @app.route('/DOT/home',methods=['POST','GET'])
 def DOT_home():
     try:
-        username=session['DOT_username']
-        return DOT.home1(username)
+        #username=session['DOT_username']
+        return DOT.home1()
     except:
         return "error"
 
