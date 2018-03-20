@@ -171,7 +171,7 @@ input[type=submit]:hover {
           <h4 class="modal-title">List Of Aadhar with more than 9 SIM card</h4>
         </div>
         <div class="modal-body">
-
+        < div id="printablediv">
                 {% if result %}
                 <mark>Detail of consumer having more than 1 registered SIM</mark>
                <br> {% if message %}
@@ -188,10 +188,10 @@ input[type=submit]:hover {
                 {%endif%}
                 <br>
                 <hr>
-
-
+        </div>
         </div>
         <div class="modal-footer">
+            <input type="button" value="Print " onclick="javascript:printDiv('printablediv')" />
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -282,9 +282,29 @@ input[type=submit]:hover {
 
 
 
-  <script type="text/javascript">
+
+<script language="javascript" type="text/javascript">
+        function printDiv(divID) {
+            //Get the HTML of div
+            var divElements = document.getElementById(divID).innerHTML;
+            //Get the HTML of whole page
+            var oldPage = document.body.innerHTML;
+
+            //Reset the page's HTML with div's HTML only
+            document.body.innerHTML =
+              "<html><head><title></title></head><body>" +
+              divElements + "</body>";
+
+            //Print Page
+            window.print();
+
+            //Restore orignal HTML
+            document.body.innerHTML = oldPage;
 
 
-</script>
+        }
+    </script>
+
+
 </body>
 </html>
