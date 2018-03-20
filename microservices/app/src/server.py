@@ -102,7 +102,10 @@ def home():
 @app.route('/count',methods=['GET'])
 def make_count():
     value=count
-    return jsonify(count=value)
+    data={
+        "message":value
+    }
+    return jsonify(data=data)
 
 #*************************************CONSUMER****************************************
 # render consumer login template
