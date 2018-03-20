@@ -254,6 +254,7 @@ input[type=submit]:hover {
 
      {% include 'footer.html'%}
 
+</body>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="/static/credit.js"></script>
@@ -303,40 +304,39 @@ input[type=submit]:hover {
 
         }
 
+    </script>
+    <script>       // Javascript fetch to get no. of sim to each
 
-       // Javascript fetch to get no. of sim to each
+       var url = "https://app.despairing12.hasura-app.io/DOT/home";
 
-
-    var url = "https://app.despairing12.hasura-app.io/DOT/home";
-
-    var requestOptions = {
+var requestOptions = {
     "method": "POST",
     "headers": {
         "Content-Type": "application/json"
     }
-    };
+};
 
-    var body = {
-
-
-    };
-
-    requestOptions.body = JSON.stringify(body);
-
-    fetch(url, requestOptions)
-    .then(function(response) {
-    	return response.json();
-    })
-    .then(function(result) {
+fetch(url, requestOptions)
+.then(function(response) {
+	return response.json();
+})
+.then(function(result) {
 	console.log(result);
 
 
+	/*for (i=0;i<=result.length;i++) {
+
+      $('#table > tbody').append('<tr valign="middle"><td><input type="checkbox" name="addfriend" value="'+result[i]['username']+'"></td> <td valign="center">' + result[i]['username'] +  '</td></tr>');
+
+}*/
 })
 .catch(function(error) {
 	console.log('Request Failed:' + error);
 });
-    </script>
 
 
-</body>
+
+</script>
+
+
 </html>
