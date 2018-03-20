@@ -20,8 +20,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="194" column="82" lean-forward="true" selection-start-line="194" selection-start-column="82" selection-end-line="194" selection-end-column="82" />
+            <state relative-caret-position="357">
+              <caret line="179" column="41" lean-forward="false" selection-start-line="179" selection-start-column="41" selection-end-line="179" selection-end-column="41" />
               <folding>
                 <element signature="e#4908#4915#0" expanded="true" />
               </folding>
@@ -1151,8 +1151,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="194" column="82" lean-forward="true" selection-start-line="194" selection-start-column="82" selection-end-line="194" selection-end-column="82" />
+        <state relative-caret-position="357">
+          <caret line="179" column="41" lean-forward="false" selection-start-line="179" selection-start-column="41" selection-end-line="179" selection-end-column="41" />
           <folding>
             <element signature="e#4908#4915#0" expanded="true" />
           </folding>

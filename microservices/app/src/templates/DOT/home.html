@@ -177,7 +177,7 @@ input[type=submit]:hover {
                <br> {% if message %}
                 <p>{{message}}</p>
                 {%endif%}
-                <table border="1"><tr><th>Aadhar Number</th><th>No of sim</th></tr>
+                <table border="1" width="100%"><tr><th>Aadhar Number</th><th>No of sim</th></tr>
                 {% for i in result['list'] %}
                 <tr><td>{{i[0]}}</td>
                     <td>{{i[1]}}</td>
