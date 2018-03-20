@@ -11,14 +11,18 @@
     <title>Shark@JNU</title>
 </head>
 <body>
+{% if session['DOT_username'] %}
+<button>Aadhar with more than 9 SIM </button>
+{% else %}
  <img src="/static/Images/logo.jpg" alt="FAQs" width="100%" height="auto">
+{%endif%}
 <!--<div class="col-sm-2" id="box" style="background-color:lavenderblush;overflow-x: hidden; height:auto;">
 -->
 
 <p><br>            <b>Total Visit: 1002</b>
 </p>
- <div style="background-color:grey;">
-<pr><b>NOTE: </b> This is demo application to check registered mobile with aadhar</pr>
+ <div style="background-color:#6e6e45;">
+<pr><b>NOTE: </b><font color="white">This is demo application to check registered mobile with aadhar</font> </pr>
 </div>
      <a href="">
 <img src="/static/Images/faqs.jpg" alt="FAQs" width="100%" height="auto"></a>
