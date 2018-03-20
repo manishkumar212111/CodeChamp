@@ -96,7 +96,7 @@ if __name__ == '__main__':
 #****************************************************************************
 @app.route('/')
 def home():
-
+    count()
     return render_template('index.html')
 
 @app.route('/count',methods=['GET'])
@@ -710,5 +710,5 @@ def count():
     return count_visit
 
 if  __name__ == '__main__':
-    count()
+
     app.run(debug=True)
