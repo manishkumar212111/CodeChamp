@@ -12,7 +12,7 @@ import time
 import os
 import requests
 from flask import render_template,Flask,request,url_for,redirect,session,jsonify
-
+count_visit=0
 from . import tsp
 from . import DOT
 from . import consumer
@@ -702,10 +702,10 @@ def api_TSP_status_count_push_data():
 
         return TSP_API.API_status_count_push(username,secret_code,aadhar,comp_name,LSA,mobile)
     return "get method accepted"
-count_visit=0
+
 def count():
     global count_visit
-    
+
     count_visit=count_visit+1
     return count_visit
 
