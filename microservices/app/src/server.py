@@ -313,10 +313,15 @@ def login_DOT():
 @app.route('/DOT/home',methods=['POST','GET'])
 def DOT_home():
     try:
-        #username=session['DOT_username']
-        return DOT.home1()
+        username=session['DOT_username']
+        return DOT.home(username)
     except:
-        return "error"
+        return render_template('DOT/login.html', result="error")
+
+@app.route('/DOT/SIM/count', methods=['POST', 'GET'])
+def DOT_sim_count():
+
+    return DOT.DOT_API_WEB()
 
 
 # dot can search

@@ -110,46 +110,6 @@ def home(username):
         return render_template('DOT/home.html', Message="Error retrieving data")
     return render_template('DOT/home.html', result="error")
 
-def home1():
-    url = "https://data.despairing12.hasura-app.io/v1/query"
-    # Select aadhar number with their count
-    # This is the json payload for the query
-    requestPayload = {
-        "type": "run_sql",
-        "args": {
-            "sql": "SELECT aadhar_no, COUNT(*) FROM central GROUP BY aadhar_no ORDER BY aadhar_no"
-        }
-    }
-
-    # Setting headers
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-    }
-
-    # Make the query and store response in resp
-    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-    list=[]
-    try:
-        if len(resp.json()['result'])==1:
-            return "Data not found"
-
-        for i in range(1, len(resp.json()['result'])):
-            if int(resp.json()['result'][i][1]) > 1:
-                list.append([resp.json()['result'][i][0], resp.json()['result'][i][1]])
-        data={
-
-        "list":list
-
-        }
-        if len(list) ==0:
-            return "Currently no user is using more than 1 sim"
-        else:
-            return data
-    except:
-        return "Error retrieving data"
-    return "error"
-
 
 def search(aadhar):
     if len(aadhar) != 12:
@@ -259,6 +219,53 @@ def api_home():
             return jsonify(data=data)
         except:
             return "Exception Occured"
+
+
+def DOT_API_WEB():
+
+
+    url = "https://data.despairing12.hasura-app.io/v1/query"
+        # Select aadhar number with their count
+        # This is the json payload for the query
+    requestPayload = {
+            "type": "run_sql",
+            "args": {
+                "sql": "SELECT aadhar_no, COUNT(*) FROM central GROUP BY aadhar_no ORDER BY aadhar_no"
+            }
+    }
+
+    # Setting headers
+    headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+    list = []
+    try:
+        if len(resp.json()['result']) == 1:
+            data={"message":"No result found"}
+            return jsonify(data=data)
+
+        for i in range(1, len(resp.json()['result'])):
+            if int(resp.json()['result'][i][1]) > 1:
+                list.append([resp.json()['result'][i][0], resp.json()['result'][i][1]])
+
+        data = {
+
+                "list": list
+
+        }
+        if len(list) == 0:
+            data = {"message": "No result found"}
+            return jsonify(data=data)
+
+        else:
+            return jsonify(data=data)
+    except:
+        data = {"message": "Exception occurred"}
+        return jsonify(data=data)
 
 
 def api_search(aadhar):
