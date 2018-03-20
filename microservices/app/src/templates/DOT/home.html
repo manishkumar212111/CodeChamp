@@ -213,19 +213,23 @@ input[type=submit]:hover {
                 </h1>
                 <div class="container-fluid">
           <div class="box">
-            <center><form action="https://app.despairing12.hasura-app.io/DOT/search" method="post">
+            <form action="https://app.despairing12.hasura-app.io/DOT/search" method="post">
           <h1>Enter Your Aadhaar Number:</h1>
               <input type="text" name="aadhar" class="credit" required>{%if error %}<font color="red">{{error}}{%set error='' %}</font>{%endif%}
             <br>
              <input type="submit" value="Show Detail">
           </form>
 
-            </center>
+            </div>
 
             </div>
-                <br><br><br><br><br><br></div>
+    </center>
+               </div>
             <div class="col-sm-2" style="background-color:lavenderblush;"> {% include 'sidebar.html' %}</div>
 
+
+        </div>
+    </div>
 
      {% include 'footer.html'%}
 
