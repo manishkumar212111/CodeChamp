@@ -19,7 +19,7 @@ from . import consumer
 from . import TSP_API
 #import tsp,consumer,DOT,TSP_API
 
-count_visit = 0
+
 # from flask import jsonify
 app=Flask(__name__)
 app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
