@@ -144,8 +144,8 @@ def home1():
         }
         if len(list) ==0:
             return "Currently no user is using more than 1 sim"
-
-        return data
+        else:
+            return data
     except:
         return "Error retrieving data"
     return "error"
