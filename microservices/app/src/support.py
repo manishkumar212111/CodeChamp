@@ -1,11 +1,9 @@
 from . import hashing
-from flask import Flask,render_template,session
+from flask import render_template
 import json,requests
-app=Flask(__name__)
-app.secret_key="287tdw8d7we6554rrtrgdweyt26etedgdge45"
 
 
-def login_support(username,password,user):
+def login_support(username,password):
     # This is the url to which the query is made
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
@@ -34,24 +32,21 @@ def login_support(username,password,user):
 
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+
     try:
-        if len(resp.json())==0:
-            return render_template('support/login.html',message="Username and password mismatched",username=user)
-        elif 'password' in resp.json()[0]:
-            result=hashing.check_password(resp.json()[0]['password'],password)
-            if result== True:
-                session['support_user']=user
-                return render_template('support/home.html')
-
+    # if username or password not match
+        if len(resp.json()) == 0:
+            return False
+    # match
+        elif 'username' in resp.json()[0]:
+            if hashing.check_password(resp.json()[0]['password'], password):
+                return True
             else:
-                return render_template('support/login.html', message="Username and password mismatched",username=user)
-
+                return False
         else:
-            return render_template('support/login.html', message="Can't Login this time", username=user)
-
+            return False
     except:
-        return render_template('support/login.html', message="username and password is incorrect", username=user)
-
-    return resp.content
+        return False
 
 

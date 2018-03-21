@@ -303,7 +303,7 @@ def login_DOT():
         resp=DOT.login(username_new,passowrd)
         try:
             if resp==False:
-                return render_template('DOT/login/html',message="UserId and password does not match")
+                return render_template('DOT/login.html',message="UserId and password does not match")
             elif resp==True:
                 session['DOT_username']=username
                 return render_template('DOT/home.html')
@@ -359,7 +359,19 @@ def Support_login_submit():
         username=request.form['username']
         password=request.form['password']
         username_new="SUPP_"+username
-        return support.login_support(username_new,password,username)
+        resp= support.login_support(username_new,password)
+        try:
+            if resp==False:
+                return render_template('support/login.html',message="UserId and password does not match")
+            elif resp==True:
+                session['support_user']=username
+                return render_template('support/home.html')
+            else:
+                return render_template('support/login.html',message="unknown error")
+        except:
+            return render_template('support/login.html',message=resp)
+
+
     return render_template('support/login.html',message="Get method expected")
 
 @app.route('/support/logout')
