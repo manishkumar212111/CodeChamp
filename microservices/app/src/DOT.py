@@ -41,8 +41,10 @@ def login(username,password):
             return False
         # match
         elif 'username' in resp.json()[0]:
-            if hashing.check_password(resp.json()[0],password):
+            if hashing.check_password(resp.json()[0]['password'],password):
                 return True
+            else:
+                return False
         else:
             return False
     except:
