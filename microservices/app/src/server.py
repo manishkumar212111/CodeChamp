@@ -364,7 +364,16 @@ def Support_login_submit():
         return support.login_support(username_new,password,username)
     return render_template('support/login.html',message="Get method expected")
 
-@app.route('/')
+@app.route('/support/logout')
+def support_logout():
+    if 'support_user' in session:
+        session.pop('support_user',None)
+        return render_template('index.html',message="Logout Successfully")
+    else:
+        return render_template('support/login.html', message="login first")
+    return return render_template('index.html',message="Logout Error")
+
+
 
 @app.route('/register/DOTTSP',methods=['POST','GET'])
 def DOTTSP():

@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/tsp.py" afterPath="$PROJECT_DIR$/microservices/app/src/tsp.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="312" column="64" lean-forward="false" selection-start-line="312" selection-start-column="64" selection-end-line="312" selection-end-column="64" />
+            <state relative-caret-position="324">
+              <caret line="373" column="68" lean-forward="false" selection-start-line="373" selection-start-column="68" selection-end-line="373" selection-end-column="68" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#754#898#0" expanded="false" />
@@ -40,20 +42,21 @@
                 <element signature="e#8941#9108#0" expanded="false" />
                 <element signature="e#9166#9355#0" expanded="false" />
                 <element signature="e#9605#9645#0" expanded="false" />
+                <element signature="e#9739#10452#0" expanded="false" />
                 <element signature="e#10501#10732#1" expanded="false" />
                 <element signature="e#10813#10837#0" expanded="false" />
                 <element signature="e#10928#11094#0" expanded="false" />
                 <element signature="e#11155#11344#0" expanded="false" />
                 <element signature="e#11609#11653#0" expanded="false" />
                 <element signature="e#11740#12036#0" expanded="false" />
-                <element signature="e#12127#13536#0" expanded="false" />
-                <element signature="e#13717#14858#0" expanded="false" />
-                <element signature="e#15025#18818#0" expanded="false" />
-                <element signature="e#18903#21825#0" expanded="false" />
-                <element signature="e#21904#22225#0" expanded="false" />
-                <element signature="e#22285#22453#0" expanded="false" />
-                <element signature="e#22785#23175#0" expanded="false" />
-                <element signature="e#23288#23795#0" expanded="false" />
+                <element signature="e#12472#13881#0" expanded="false" />
+                <element signature="e#14062#15203#0" expanded="false" />
+                <element signature="e#15370#19163#0" expanded="false" />
+                <element signature="e#19248#22170#0" expanded="false" />
+                <element signature="e#22249#22570#0" expanded="false" />
+                <element signature="e#22630#22798#0" expanded="false" />
+                <element signature="e#23130#23520#0" expanded="false" />
+                <element signature="e#23633#24140#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -77,25 +80,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tsp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tsp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/tsp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="46" column="66" lean-forward="false" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
+            <state relative-caret-position="102">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <element signature="e#1681#2992#0" expanded="false" />
+                <element signature="e#149#1524#0" expanded="false" />
+                <element signature="e#1551#2862#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="172" column="93" lean-forward="false" selection-start-line="172" selection-start-column="93" selection-end-line="172" selection-end-column="93" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -122,27 +116,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="114" column="32" lean-forward="false" selection-start-line="114" selection-start-column="32" selection-end-line="114" selection-end-column="32" />
-              <folding>
-                <element signature="n#style#0;n#h5#0;n#marquee#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h1#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#form#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h4#0;n#div#2;n#div#0;n#form#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/test.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -156,11 +129,34 @@
       <file leaf-file-name="support.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/support.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+            <state relative-caret-position="375">
+              <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="37" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#215#1841#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="160" column="21" lean-forward="true" selection-start-line="160" selection-start-column="21" selection-end-line="160" selection-end-column="21" />
+              <folding>
+                <element signature="e#4912#4919#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="331" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="348" selection-end-column="7" />
+              <folding>
+                <element signature="e#4908#4915#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -228,7 +224,6 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/footer.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/support/login.html" />
-        <option value="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/login.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html" />
@@ -236,9 +231,10 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_otp.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/support.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/test.py" />
-        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/DOT.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/tsp.py" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
       </list>
     </option>
   </component>
@@ -382,36 +378,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hello-python-flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hello-python-flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="microservices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="consumer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -951,13 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5627">
-          <caret line="331" column="10" lean-forward="false" selection-start-line="331" selection-start-column="10" selection-end-line="331" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1008,14 +967,6 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="27" lean-forward="false" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1080,62 +1031,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/support.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#215#1841#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="312" column="64" lean-forward="false" selection-start-line="312" selection-start-column="64" selection-end-line="312" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#754#898#0" expanded="false" />
-            <element signature="e#935#1086#0" expanded="false" />
-            <element signature="e#1184#1241#0" expanded="false" />
-            <element signature="e#1285#1814#0" expanded="false" />
-            <element signature="e#1835#2389#0" expanded="false" />
-            <element signature="e#2414#2884#1" expanded="false" />
-            <element signature="e#3198#3246#0" expanded="false" />
-            <element signature="e#3332#4887#0" expanded="false" />
-            <element signature="e#4979#6459#0" expanded="false" />
-            <element signature="e#6488#7665#0" expanded="false" />
-            <element signature="e#7725#7910#0" expanded="false" />
-            <element signature="e#8161#8201#0" expanded="false" />
-            <element signature="e#8286#8853#0" expanded="false" />
-            <element signature="e#8941#9108#0" expanded="false" />
-            <element signature="e#9166#9355#0" expanded="false" />
-            <element signature="e#9605#9645#0" expanded="false" />
-            <element signature="e#10501#10732#1" expanded="false" />
-            <element signature="e#10813#10837#0" expanded="false" />
-            <element signature="e#10928#11094#0" expanded="false" />
-            <element signature="e#11155#11344#0" expanded="false" />
-            <element signature="e#11609#11653#0" expanded="false" />
-            <element signature="e#11740#12036#0" expanded="false" />
-            <element signature="e#12127#13536#0" expanded="false" />
-            <element signature="e#13717#14858#0" expanded="false" />
-            <element signature="e#15025#18818#0" expanded="false" />
-            <element signature="e#18903#21825#0" expanded="false" />
-            <element signature="e#21904#22225#0" expanded="false" />
-            <element signature="e#22285#22453#0" expanded="false" />
-            <element signature="e#22785#23175#0" expanded="false" />
-            <element signature="e#23288#23795#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1157,11 +1057,83 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/tsp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="46" column="66" lean-forward="false" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
+        <state relative-caret-position="102">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <element signature="e#1681#2992#0" expanded="false" />
+            <element signature="e#149#1524#0" expanded="false" />
+            <element signature="e#1551#2862#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="331" column="10" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="348" selection-end-column="7" />
+          <folding>
+            <element signature="e#4908#4915#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="160" column="21" lean-forward="true" selection-start-line="160" selection-start-column="21" selection-end-line="160" selection-end-column="21" />
+          <folding>
+            <element signature="e#4912#4919#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/support.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="373" column="68" lean-forward="false" selection-start-line="373" selection-start-column="68" selection-end-line="373" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#754#898#0" expanded="false" />
+            <element signature="e#935#1086#0" expanded="false" />
+            <element signature="e#1184#1241#0" expanded="false" />
+            <element signature="e#1285#1814#0" expanded="false" />
+            <element signature="e#1835#2389#0" expanded="false" />
+            <element signature="e#2414#2884#1" expanded="false" />
+            <element signature="e#3198#3246#0" expanded="false" />
+            <element signature="e#3332#4887#0" expanded="false" />
+            <element signature="e#4979#6459#0" expanded="false" />
+            <element signature="e#6488#7665#0" expanded="false" />
+            <element signature="e#7725#7910#0" expanded="false" />
+            <element signature="e#8161#8201#0" expanded="false" />
+            <element signature="e#8286#8853#0" expanded="false" />
+            <element signature="e#8941#9108#0" expanded="false" />
+            <element signature="e#9166#9355#0" expanded="false" />
+            <element signature="e#9605#9645#0" expanded="false" />
+            <element signature="e#9739#10452#0" expanded="false" />
+            <element signature="e#10501#10732#1" expanded="false" />
+            <element signature="e#10813#10837#0" expanded="false" />
+            <element signature="e#10928#11094#0" expanded="false" />
+            <element signature="e#11155#11344#0" expanded="false" />
+            <element signature="e#11609#11653#0" expanded="false" />
+            <element signature="e#11740#12036#0" expanded="false" />
+            <element signature="e#12472#13881#0" expanded="false" />
+            <element signature="e#14062#15203#0" expanded="false" />
+            <element signature="e#15370#19163#0" expanded="false" />
+            <element signature="e#19248#22170#0" expanded="false" />
+            <element signature="e#22249#22570#0" expanded="false" />
+            <element signature="e#22630#22798#0" expanded="false" />
+            <element signature="e#23130#23520#0" expanded="false" />
+            <element signature="e#23633#24140#0" expanded="false" />
           </folding>
         </state>
       </provider>

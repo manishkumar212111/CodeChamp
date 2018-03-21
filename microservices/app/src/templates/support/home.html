@@ -1,1 +1,349 @@
-{{session['support_user']}}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Shark@JNU</title>
+</head>
+<style>
+html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        background-color: #0f3f6a;
+
+        margin-top: 0;
+    }
+
+    a {
+        color: white;
+    }
+
+    #img2 {
+        margin-top: 10px;
+    }
+
+    #leftnav {
+        float: left !important;
+    }
+
+    .footer-copyright {
+        background-color: black;
+        font-size: 20px;
+    }
+    #banner{
+        border-bottom-style: solid;
+        border-bottom-color: red;
+        border-width: 10px;
+    }* {
+    box-sizing: border-box;
+}
+
+input[type=text],input[type=password], select, textarea {
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="/static/Images/JNU1.png" class="pull-left img-responsive" alt="NO image">
+            </div>
+            <div class="col-lg-6" id="img2">
+                <img src="/static/Images/DOT.jpg" class="pull-right img-responsive" alt="NO image">
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://app.despairing12.hasura-app.io/">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">UIDAI
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">DOT
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">FAQs
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us
+                        </a>
+
+                    </li>
+                    <li class="dropdown" id="leftnav">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <button class="btn btn-danger navbar-btn" data-toggle="modal" data-target="#myModal">See Aadhar with more than 9 SIM</button>
+                    <font color="white"> {{session['support-user']}} &nbsp&nbsp||</font>
+                    <a href="https://app.despairing12.hasura-app.io/support/logout">LOGOUT</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- POPUP BOX SCREEN -->
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">List Of Aadhar with more than 9 SIM card</h4>
+        </div>
+        <div class="modal-body">
+        <div id="printablediv">
+                {% if result %}
+                <mark>Detail of consumer having more than 1 registered SIM</mark>
+               <br> {% if message %}
+                <p>{{message}}</p>
+                {%endif%}
+                <table border="1" width="100%"><tr><th>Aadhar Number</th><th>No of sim</th></tr>
+                {% for i in result['list'] %}
+                <tr><td>{{i[0]}}</td>
+                    <td>{{i[1]}}</td>
+                    </tr>
+                {% endfor%}
+                 {% set result=''%}
+                </table>
+
+                {%endif%}
+            <table id="table1" border="1" width="100%">
+
+                <tbody></tbody>
+            </table>
+
+        </div>
+        </div>
+        <div class="modal-footer">
+            <input type="button" value="Print " onclick="javascript:printDiv('printablediv')">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- End Of modal -->
+
+
+        <div class="containerer-fluid">
+        <div class="row">
+            <div class="col-sm-10" style="background-color:lavender;">
+<center>
+                <h2>Support and Maintainance </h2>
+                <br>
+    <!-- for search result-->
+
+                {% if search %}
+                <p>Aadhar number::{{aadhar}}</p>
+                <p>Registered SIM::{{count}}</p>
+
+
+                 {% if res %}
+                <table border="1">
+                <tr><th>MOBILE Number</th><th>Comp_name</th><th>Service Area</th></tr>
+                {% for i in res %}
+                <tr><td>{{i['mobile']}}</td>
+                <td>{{i['comp_name']}}</td>
+                <td>{{i['LSA']}}</td>
+                </tr>
+
+                {% endfor  %}
+                </table>
+
+                  {%endif%}
+                    {% endif%}
+                    <!-- for search result END-->
+
+                                <h3>
+                   <mark> Search For Aadhar Number</mark>
+                </h3>
+                <div class="container-fluid">
+          <div class="box">
+            <form action="https://app.despairing12.hasura-app.io/DOT/search" method="post">
+          <h4>Enter Aadhaar Number:</h4>
+              <input type="text" name="aadhar" class="credit" required>{%if error %}<font color="red">{{error}}{%set error='' %}</font>{%endif%}
+            <br>
+             <input type="submit" value="Show Detail">
+          </form>
+            <br><br><br><br><br><hr>
+            </div>
+
+            </div>
+    </center>
+               </div>
+            <div class="col-sm-2" style="background-color:lavenderblush;"> {% include 'sidebar.html' %}</div>
+
+
+        </div>
+    </div>
+
+     {% include 'footer.html'%}
+
+</body>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/credit.js"></script>
+    <script type="text/javascript">
+        jQuery(function ($) {
+            $(".credit").credit();
+        });
+    </script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+                '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+
+
+
+<script language="javascript" type="text/javascript">
+        function printDiv(divID) {
+            //Get the HTML of div
+            var divElements = document.getElementById(divID).innerHTML;
+            //Get the HTML of whole page
+            var oldPage = document.body.innerHTML;
+
+            //Reset the page's HTML with div's HTML only
+            document.body.innerHTML =
+              "<html><head><title></title></head><body>" +
+              divElements + "</body>";
+
+            //Print Page
+            window.print();
+
+            //Restore orignal HTML
+            document.body.innerHTML = oldPage;
+
+
+        }
+
+    </script>
+    <script>       // Javascript fetch to get no. of sim to each
+
+       var url = "https://app.despairing12.hasura-app.io/DOT/SIM/count";
+
+var requestOptions = {
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json"
+    }
+};
+
+fetch(url, requestOptions)
+.then(function(response) {
+	return response.json();
+})
+.then(function(result) {
+	console.log(result);
+
+     $('#table1 > tbody').append('<tr><th>Aadhar Number</th><th>No of sim</th></tr>');
+for (i=0 ; i<result['data']['list'].length;i++)
+	{
+     $('#table1 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td></tr>');
+
+}
+$('#table1 > tbody').append('<tr><th>Total Count</th><th>'+result['data']['list'].length +'</th></tr>');
+
+})
+.catch(function(error) {
+	console.log('Request Failed:' + error);
+});
+
+
+
+</script>
+
+
+</html>
