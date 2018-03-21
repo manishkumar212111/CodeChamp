@@ -38,8 +38,8 @@ def login_support(username,password,user):
         elif 'password' in resp.json()[0]:
             result=hashing.check_password(resp.json()[0]['password'],password)
             if result== True:
-                #session['support_user']=user
-                render_template('support/home.html')
+                session['support_user']=user
+                return render_template('support/home.html')
 
             else:
                 return render_template('support/login.html', message="Username and password mismatched",username=user)
