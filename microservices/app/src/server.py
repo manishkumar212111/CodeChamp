@@ -389,65 +389,41 @@ def TSP_register():
 
         username_new="TSP_"+username;
 
-        resp=support.TSP_Register(username_new,password,email)
+        resp=support.TSPDOT_Register(username_new,password,email)
         if resp==True:
             body="Login Ceredential for TSP USERNAME:: "+ username+" Password::"+password
             sub="login ceredential"
             if email_send(email,sub,body):
-                return render_template('support/home.html',login_status="Login ceredential has been sent to provided email")
+                return redirect(url_for('TSP_register'))
             else:
                 return render_template('support/home.html',login_status="Problem in email sending")
         else:
             return render_template('support/home.html',login_status="Login failed, Check if this username has already been assigned")
-    return render_template('support/home.html',login_status="Login failed")
+    return render_template('support/home.html', login_status="Login ceredential has been sent to provided email")
 
 
-@app.route('/register/DOTTSP',methods=['POST','GET'])
-def DOTTSP():
+@app.route('/DOT/create/account',methods=['POST','GET'])
+def DOT_register():
     if request.method=='POST':
         username=request.form['username']
         email=request.form['email']
+        password = id_generator(11)
 
-        p=id_generator(11)
-        pa=p
-        p1=str.encode(p)
-        pas=b64encode(p1)
-        if pas is False:
-            return "error occurs"
-        url = "https://data.despairing12.hasura-app.io/v1/query"
+        username_new="DOT_"+username;
 
-        # This is the json payload for the query
-        requestPayload = {
-            "type": "insert",
-            "args": {
-                "table": "login_ceredential",
-                "objects": [
-                    {
-                        "username": username,
-                        "password": json.dumps(pas.decode('utf-8'))
-                    }
-                ]
-            }
-        }
-
-        # Setting headers
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-        }
-
-        # Make the query and store response in resp
-        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
-        if 'affected_rows' in resp.json():
-            to=email
-            sub="SHARK@JNU LOGIN CEREDENTIAL "
-            body="your login ceredential ::  USERNAME:: "+str(username)+ "    Password:: "+str(pa)
-            b=email_send(to,sub,body)
-            return resp.content
+        resp=support.TSPDOT_Register(username_new,password,email)
+        if resp==True:
+            body="Login Ceredential for DOT USERNAME:: "+ username+" Password::"+password
+            sub="login ceredential"
+            if email_send(email,sub,body):
+                return redirect(url_for('DOT_register'))
+            else:
+                return render_template('support/home.html',login_status="Problem in email sending")
         else:
-            return resp.content
-    return "okay"
+            return render_template('support/home.html',login_status="Login failed, Check if this username has already been assigned")
+    return render_template('support/home.html', login_status="Login ceredential has been sent to provided email")
+
+
 
 #********************************END******************************************************
 

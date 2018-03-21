@@ -49,7 +49,7 @@ def login_support(username,password):
     except:
         return False
 
-def TSP_Register(username,password,email):
+def TSPDOT_Register(username,password,email):
     pa=hashing.hash_password(password)
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
