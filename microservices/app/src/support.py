@@ -33,7 +33,7 @@ def login_support(username,password,user):
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
     try:
-        if len(resp.json()):
+        if len(resp.json())==0:
             return render_template('support/login.html',message="Username and password mismatched",username=user)
         elif password in resp.json()[0]:
             result=hashing.check_password(resp.json()[0]['password'],password)
@@ -48,6 +48,6 @@ def login_support(username,password,user):
             return render_template('support/login.html', message="Can't Login this time", username=user)
 
     except:
-        return render_template('support/login.html', message="Exception occured", username=user)
+        return render_template('support/login.html', message="username and password is incorrect", username=user)
 
 
