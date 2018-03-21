@@ -362,7 +362,7 @@ def Support_login_submit():
         password=request.form['password']
         username_new="SUPP_"+username
         return support.login_support(username_new,password,username)
-    return "Get method required"
+    return render_template('support/login.html',message="Get method expected")
 #********************************END******************************************************
 
 @app.route('/register/DOTTSP',methods=['POST','GET'])

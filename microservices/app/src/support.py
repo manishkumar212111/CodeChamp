@@ -50,4 +50,4 @@ def login_support(username,password,user):
     except:
         return render_template('support/login.html', message="username and password is incorrect", username=user)
 
-
+    return resp.content
