@@ -17,6 +17,7 @@ from . import tsp
 from . import DOT
 from . import consumer
 from . import TSP_API
+from . import support
 #import tsp,consumer,DOT,TSP_API
 
 
@@ -252,9 +253,10 @@ def login_TSP():
     if request.method=='POST':
         username = request.form['username']
         passowrd = request.form['password']
+        username_new= "TSP_"+username
         #LOGIN TSP BY CALLING LOGIN FUNCTION IN TSP.py
 
-        resp= tsp.login(username, passowrd)
+        resp= tsp.login(username_new, passowrd)
 
         if resp==False:
             return render_template('TSP/login.html', message="Username password didn't match")
@@ -297,7 +299,8 @@ def login_DOT():
     if request.method=='POST':
         username=request.form['username']
         passowrd=request.form['password']
-        resp=DOT.login(username,passowrd)
+        username_new="DOT_"+username
+        resp=DOT.login(username_new,passowrd)
         try:
             if resp==False:
                 return render_template('DOT/login/html',message="UserId and password does not match")
@@ -344,6 +347,24 @@ def dot_logout():
 
 
 #*******************************END*******************************************************
+
+#*******************************SUPPORT***************************************************
+
+@app.route('/support/login',methods=['POST','GET'])
+def support_login():
+    return render_template('support/login.html')
+
+
+@app.route('/login/support',methods=['POST','GET'])
+def Support_login_submit():
+    if request.method=='POST':
+        username=request.form['username']
+        password=request.form['password']
+        username_new="SUPP_"+username
+        return support.login_support(username_new,password,username)
+    return "Get method required"
+#********************************END******************************************************
+
 @app.route('/register/DOTTSP',methods=['POST','GET'])
 def DOTTSP():
     if request.method=='POST':
