@@ -237,7 +237,7 @@ def consumer_home():
 def consumer_logout():
     if 'aadhar' in session:
         session.pop('aadhar',None)
-        return render_template('index.html',logout="successfully logout")
+        return render_template('index.html',message="successfully logout")
     return render_template('consumer/consumer.html')
 
 #*****************************************XXXXXXXXXXXXX*********************************
@@ -280,7 +280,7 @@ def tsp_search():
 def TSp_logout():
     if 'TSP_username' in session:
         session.pop('TSP_username',None)
-        return render_template('index.html',logout="successfully logout")
+        return render_template('index.html',message="successfully logout")
     return render_template('TSP/login.html')
 
 #********************************END*****************************************************
@@ -341,7 +341,7 @@ def DOT_search():
 def dot_logout():
     if 'DOT_username' in session:
         session.pop('DOT_username',None)
-        return render_template('index.html',logout="successfully logout")
+        return render_template('index.html',message="successfully logout")
     return render_template('DOT/login.html')
 
 
