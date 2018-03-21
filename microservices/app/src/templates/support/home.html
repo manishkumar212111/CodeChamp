@@ -241,7 +241,7 @@ input[type=submit]:hover {
           <div class="box">
             <form action="https://app.despairing12.hasura-app.io/DOT/search" method="post">
           <h4>Enter Aadhaar Number:</h4>
-              <input type="text" name="aadhar" class="credit" required>{%if error %}<font color="red">{{error}}{%set error='' %}</font>{%endif%}
+              <input type="text" name="aadhar" class="credit" required> {%if message %}<font color="red">{{message}}{%set message='' %}</font>{%endif%}
             <br>
              <input type="submit" value="Show Detail">
           </form>
