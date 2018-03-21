@@ -366,12 +366,9 @@ def Support_login_submit():
 
 @app.route('/support/logout')
 def support_logout():
-    if 'support_user' in session:
-        session.pop('support_user',None)
-        return render_template('index.html',message="Logout Successfully")
-    else:
-        return render_template('support/login.html', message="login first")
-    return render_template('index.html',message="Logout Error")
+
+    session.pop('support_user',None)
+    return render_template('index.html',message="Logout Successfully")
 
 
 
