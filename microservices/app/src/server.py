@@ -371,7 +371,7 @@ def support_logout():
         return render_template('index.html',message="Logout Successfully")
     else:
         return render_template('support/login.html', message="login first")
-    return return render_template('index.html',message="Logout Error")
+    return render_template('index.html',message="Logout Error")
 
 
 
