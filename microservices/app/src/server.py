@@ -675,7 +675,8 @@ def api_dot_login():
     if request.method=='POST':
         content = request.get_json(force=True)
         js = json.loads(json.dumps(content))
-        resp=DOT.login(js['data']['username'],js['data']['password'])
+        username="DOT_"+js['data']['username']
+        resp=DOT.login(username,js['data']['password'])
         if resp==True:
             return DOT.api_home()
 
