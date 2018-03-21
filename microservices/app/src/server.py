@@ -380,6 +380,26 @@ def support_logout():
     session.pop('support_user',None)
     return render_template('index.html',message="Logout Successfully")
 
+@app.route('/TSP/create/account',methods=['POST','GET'])
+def TSP_register():
+    if request.method=='POST':
+        username=request.form['username']
+        email=request.form['email']
+        password = id_generator(11)
+
+        username_new="TSP_"+username;
+
+        resp=support.TSP_Register(username_new,password,email)
+        if resp==True:
+            body="Login Ceredential for TSP USERNAME:: "+ username+" Password::"+password
+            sub="login ceredential"
+            if email_send(email,sub,body):
+                return render_template('support/home.html',login_status="Login ceredential has been sent to provided email")
+            else:
+                return render_template('support/home.html',login_status="Problem in email sending")
+        else:
+            return render_template('support/home.html',login_status="Login failed, Check if this username has already been assigned")
+    return render_template('support/home.html',login_status="Login failed")
 
 
 @app.route('/register/DOTTSP',methods=['POST','GET'])
