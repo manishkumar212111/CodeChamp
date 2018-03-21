@@ -1,25 +1,15 @@
 import json,requests
 import binascii,base64
+from . import hashing
 from flask import Flask,jsonify,render_template,session
-def b64encode(s, altchars=None):
-   encoded = binascii.b2a_base64(s)[:-1]
-   if altchars is not None:
-      return (encoded, {'+': altchars[0], '/': altchars[1]})
-   return encoded
-def b64decode(s, altchars=None):
-   if altchars is not None:
-      s = (s, {altchars[0]: '+', altchars[1]: '/'})
-   try:
-      return binascii.a2b_base64(s)
-   except:
-       return False
-
 
 # login DOT
 def login(username,password):
-    p1 = str.encode(password)
-    pas = b64encode(p1)
+
     # Call Data api to compare username and password
+    url = "https://data.despairing12.hasura-app.io/v1/query"
+
+    # This is the json payload for the query
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
     # This is the json payload for the query
@@ -28,21 +18,13 @@ def login(username,password):
         "args": {
             "table": "login_ceredential",
             "columns": [
-                "username"
+                "username",
+                "password"
             ],
             "where": {
-                "$and": [
-                    {
-                        "username": {
-                            "$eq": username
-                        }
-                    },
-                    {
-                        "password": {
-                            "$eq": json.dumps(pas.decode('utf-8'))
-                        }
-                    }
-                ]
+                "username": {
+                    "$eq": username
+                }
             }
         }
     }
@@ -55,13 +37,16 @@ def login(username,password):
 
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+
     try:
         # if username or password not match
         if len(resp.json()) == 0:
             return False
         # match
         elif 'username' in resp.json()[0]:
-            return True
+            if hashing.check_password(resp.json()[0],password):
+                return True
         else:
             return False
     except:

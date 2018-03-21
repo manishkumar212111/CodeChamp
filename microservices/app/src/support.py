@@ -3,6 +3,8 @@ from flask import Flask,render_template,session
 import json,requests
 app=Flask(__name__)
 app.secret_key="287tdw8d7we6554rrtrgdweyt26etedgdge45"
+
+
 def login_support(username,password,user):
     # This is the url to which the query is made
     url = "https://data.despairing12.hasura-app.io/v1/query"
@@ -51,3 +53,5 @@ def login_support(username,password,user):
         return render_template('support/login.html', message="username and password is incorrect", username=user)
 
     return resp.content
+
+

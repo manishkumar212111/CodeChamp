@@ -363,7 +363,8 @@ def Support_login_submit():
         username_new="SUPP_"+username
         return support.login_support(username_new,password,username)
     return render_template('support/login.html',message="Get method expected")
-#********************************END******************************************************
+
+@app.route('/')
 
 @app.route('/register/DOTTSP',methods=['POST','GET'])
 def DOTTSP():
@@ -411,6 +412,10 @@ def DOTTSP():
         else:
             return resp.content
     return "okay"
+
+#********************************END******************************************************
+
+
 
 @app.route('/TSP/aadhar_search',methods=['POST','GET'])
 def tsp_aadhar_search():

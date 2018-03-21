@@ -1,72 +1,55 @@
 import json,requests
 import binascii,base64
 from flask import jsonify,render_template
-def b64encode(s, altchars=None):
-   encoded = binascii.b2a_base64(s)[:-1]
-   if altchars is not None:
-      return (encoded, {'+': altchars[0], '/': altchars[1]})
-   return encoded
-def b64decode(s, altchars=None):
-   if altchars is not None:
-      s = (s, {altchars[0]: '+', altchars[1]: '/'})
-   try:
-      return binascii.a2b_base64(s)
-   except:
-       return False
-
+from . import hashing
 
 def login(username,password):
-    p1 = str.encode(password)
-    pas = b64encode(p1)
+    def login(username, password):
 
-    url = "https://data.despairing12.hasura-app.io/v1/query"
+        # Call Data api to compare username and password
+        url = "https://data.despairing12.hasura-app.io/v1/query"
 
-    # This is the json payload for the query
-    requestPayload = {
-        "type": "select",
-        "args": {
-            "table": "login_ceredential",
-            "columns": [
-                "username"
-            ],
-            "where": {
-                "$and": [
-                    {
-                        "username": {
-                            "$eq": username
-                        }
-                    },
-                    {
-                        "password": {
-                            "$eq": json.dumps(pas.decode('utf-8'))
-                        }
+        # This is the json payload for the query
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "select",
+            "args": {
+                "table": "login_ceredential",
+                "columns": [
+                    "username",
+                    "password"
+                ],
+                "where": {
+                    "username": {
+                        "$eq": username
                     }
-                ]
+                }
             }
         }
-    }
 
-    # Setting headers
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-    }
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
 
-    # Make the query and store response in resp
-    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
-    try:
-        if len(resp.json()) == 0:
+        try:
+            # if username or password not match
+            if len(resp.json()) == 0:
+                return False
+            # match
+            elif 'username' in resp.json()[0]:
+                if hashing.check_password(resp.json()[0], password):
+                    return True
+            else:
+                return False
+        except:
             return False
-        elif 'cluster' in resp.json():
-            return "cluster"
-        elif 'username' in resp.json()[0]:
-
-            return True
-        else:
-            return False
-    except:
-        return False
 
 
 def search(aadhar):
