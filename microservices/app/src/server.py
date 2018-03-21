@@ -339,10 +339,8 @@ def DOT_search():
 #logout DOT
 @app.route('/DOT/logout')
 def dot_logout():
-    if 'DOT_username' in session:
-        session.pop('DOT_username',None)
-        return render_template('index.html',message="successfully logout")
-    return render_template('DOT/login.html')
+    session.pop('DOT_username',None)
+    return render_template('index.html',message="successfully logout")
 
 
 

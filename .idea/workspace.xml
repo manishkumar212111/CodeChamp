@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="343" column="51" lean-forward="false" selection-start-line="343" selection-start-column="51" selection-end-line="343" selection-end-column="51" />
+            <state relative-caret-position="290">
+              <caret line="343" column="0" lean-forward="true" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#754#898#0" expanded="false" />
@@ -45,17 +44,17 @@
                 <element signature="e#10503#10734#1" expanded="false" />
                 <element signature="e#10815#10839#0" expanded="false" />
                 <element signature="e#10930#11096#0" expanded="false" />
-                <element signature="e#11612#11656#0" expanded="false" />
-                <element signature="e#11743#12039#0" expanded="false" />
-                <element signature="e#12277#13686#0" expanded="false" />
-                <element signature="e#13867#15008#0" expanded="false" />
-                <element signature="e#15175#18968#0" expanded="false" />
-                <element signature="e#19053#21975#0" expanded="false" />
-                <element signature="e#22054#22408#0" expanded="false" />
-                <element signature="e#22468#22636#0" expanded="false" />
-                <element signature="e#22968#23358#0" expanded="false" />
-                <element signature="e#23471#23978#0" expanded="false" />
-                <marker date="1521651697213" expanded="false" signature="12092:12201" ph="..." />
+                <element signature="e#11525#11569#0" expanded="false" />
+                <element signature="e#11656#11952#0" expanded="false" />
+                <element signature="e#12011#12114#0" expanded="false" />
+                <element signature="e#12190#13599#0" expanded="false" />
+                <element signature="e#13780#14921#0" expanded="false" />
+                <element signature="e#15088#18881#0" expanded="false" />
+                <element signature="e#18966#21888#0" expanded="false" />
+                <element signature="e#21967#22321#0" expanded="false" />
+                <element signature="e#22381#22549#0" expanded="false" />
+                <element signature="e#22881#23271#0" expanded="false" />
+                <element signature="e#23384#23891#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -149,11 +148,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="285" column="0" lean-forward="true" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="133" column="64" lean-forward="true" selection-start-line="133" selection-start-column="64" selection-end-line="133" selection-end-column="64" />
               <folding>
                 <element signature="e#4984#4991#0" expanded="true" />
               </folding>
@@ -243,9 +242,9 @@
         <option value="$PROJECT_DIR$/microservices/app/src/test.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/DOT.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/tsp.py" />
-        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
       </list>
     </option>
   </component>
@@ -359,126 +358,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hello-python-flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hello-python-flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="microservices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hello-python-flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hello-python-flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="microservices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="consumer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hello-python-flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hello-python-flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="microservices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TSP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hello-python-flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hello-python-flask" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="microservices" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DOT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1136,47 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="343" column="51" lean-forward="false" selection-start-line="343" selection-start-column="51" selection-end-line="343" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#754#898#0" expanded="false" />
-            <element signature="e#935#1086#0" expanded="false" />
-            <element signature="e#1184#1241#0" expanded="false" />
-            <element signature="e#1285#1814#0" expanded="false" />
-            <element signature="e#1835#2389#0" expanded="false" />
-            <element signature="e#2414#2884#1" expanded="false" />
-            <element signature="e#3198#3246#0" expanded="false" />
-            <element signature="e#3332#4887#0" expanded="false" />
-            <element signature="e#4979#6459#0" expanded="false" />
-            <element signature="e#6488#7665#0" expanded="false" />
-            <element signature="e#7725#7911#0" expanded="false" />
-            <element signature="e#8162#8202#0" expanded="false" />
-            <element signature="e#8287#8854#0" expanded="false" />
-            <element signature="e#8942#9109#0" expanded="false" />
-            <element signature="e#9167#9357#0" expanded="false" />
-            <element signature="e#9607#9647#0" expanded="false" />
-            <element signature="e#9741#10454#0" expanded="false" />
-            <element signature="e#10503#10734#1" expanded="false" />
-            <element signature="e#10815#10839#0" expanded="false" />
-            <element signature="e#10930#11096#0" expanded="false" />
-            <element signature="e#11612#11656#0" expanded="false" />
-            <element signature="e#11743#12039#0" expanded="false" />
-            <element signature="e#12277#13686#0" expanded="false" />
-            <element signature="e#13867#15008#0" expanded="false" />
-            <element signature="e#15175#18968#0" expanded="false" />
-            <element signature="e#19053#21975#0" expanded="false" />
-            <element signature="e#22054#22408#0" expanded="false" />
-            <element signature="e#22468#22636#0" expanded="false" />
-            <element signature="e#22968#23358#0" expanded="false" />
-            <element signature="e#23471#23978#0" expanded="false" />
-            <marker date="1521651697213" expanded="false" signature="12092:12201" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2032">
@@ -1233,10 +1071,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="285" column="0" lean-forward="true" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="133" column="64" lean-forward="true" selection-start-line="133" selection-start-column="64" selection-end-line="133" selection-end-column="64" />
           <folding>
             <element signature="e#4984#4991#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="343" column="0" lean-forward="true" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#754#898#0" expanded="false" />
+            <element signature="e#935#1086#0" expanded="false" />
+            <element signature="e#1184#1241#0" expanded="false" />
+            <element signature="e#1285#1814#0" expanded="false" />
+            <element signature="e#1835#2389#0" expanded="false" />
+            <element signature="e#2414#2884#1" expanded="false" />
+            <element signature="e#3198#3246#0" expanded="false" />
+            <element signature="e#3332#4887#0" expanded="false" />
+            <element signature="e#4979#6459#0" expanded="false" />
+            <element signature="e#6488#7665#0" expanded="false" />
+            <element signature="e#7725#7911#0" expanded="false" />
+            <element signature="e#8162#8202#0" expanded="false" />
+            <element signature="e#8287#8854#0" expanded="false" />
+            <element signature="e#8942#9109#0" expanded="false" />
+            <element signature="e#9167#9357#0" expanded="false" />
+            <element signature="e#9607#9647#0" expanded="false" />
+            <element signature="e#9741#10454#0" expanded="false" />
+            <element signature="e#10503#10734#1" expanded="false" />
+            <element signature="e#10815#10839#0" expanded="false" />
+            <element signature="e#10930#11096#0" expanded="false" />
+            <element signature="e#11525#11569#0" expanded="false" />
+            <element signature="e#11656#11952#0" expanded="false" />
+            <element signature="e#12011#12114#0" expanded="false" />
+            <element signature="e#12190#13599#0" expanded="false" />
+            <element signature="e#13780#14921#0" expanded="false" />
+            <element signature="e#15088#18881#0" expanded="false" />
+            <element signature="e#18966#21888#0" expanded="false" />
+            <element signature="e#21967#22321#0" expanded="false" />
+            <element signature="e#22381#22549#0" expanded="false" />
+            <element signature="e#22881#23271#0" expanded="false" />
+            <element signature="e#23384#23891#0" expanded="false" />
           </folding>
         </state>
       </provider>
