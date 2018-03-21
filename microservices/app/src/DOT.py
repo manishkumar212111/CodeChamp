@@ -5,10 +5,6 @@ from flask import Flask,jsonify,render_template,session
 
 # login DOT
 def login(username,password):
-
-    # Call Data api to compare username and password
-    url = "https://data.despairing12.hasura-app.io/v1/query"
-
     # This is the json payload for the query
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
