@@ -3,6 +3,11 @@ html, body {
         max-width: 100%;
         overflow-x: hidden;
     }
+.navbar {
+        background-color: #0f3f6a;
+
+        margin-top: 0;
+ }
 
 
 #banner {
