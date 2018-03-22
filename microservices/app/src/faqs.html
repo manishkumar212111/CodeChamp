@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/static/Images/logo.ico" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   // <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>TSP login</title>
+</head>
+<style>
+html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        background-color: #0f3f6a;
+
+        margin-top: 0;
+    }
+
+    a {
+        color: white;
+    }
+
+    #img2 {
+        margin-top: 10px;
+    }
+
+    #leftnav {
+        float: left !important;
+    }
+
+    .footer-copyright {
+        background-color: black;
+        font-size: 20px;
+    }
+    #banner{
+        border-bottom-style: solid;
+        border-bottom-color: red;
+        border-width: 10px;
+    }* {
+    box-sizing: border-box;
+}
+
+input[type=text],input[type=password], select, textarea {
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+div.a{
+background-color:#e6ffe6 ;
+font-family: oblique;
+}
+
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="/static/Images/JNU1.png" class="pull-left img-responsive" alt="NO image">
+            </div>
+            <div class="col-lg-6" id="img2">
+                <img src="/static/Images/DOT.jpg" class="pull-right img-responsive" alt="NO image">
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="https://app.despairing12.hasura-app.io/">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">UIDAI
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">DOT
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">FAQs
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us
+                        </a>
+
+                    </li>
+                    <li class="dropdown" id="leftnav">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                {% if session['support_user'] %}
+                <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModalTSP">Create TSP Account</button>
+                    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModalDOT">Create DOT Account</button>
+
+                    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal">See Aadhar with more than 9 SIM</button>
+                    <font color="white"> {{session['support_user']}} &nbsp&nbsp||</font>
+                    <a href="https://app.despairing12.hasura-app.io/support/logout">LOGOUT</a>
+                {% elif session['TSP_username'] %}
+                 <a href="#">{{session['TSP_username']}}</a>&nbsp&nbsp ||  <a href="https://app.despairing12.hasura-app.io/TSP/logout">logout
+                    </a>
+                  {% elif session['DOT_username'] %}
+                    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal">See Aadhar with more than 9 SIM</button>
+                    <font color="white"> {{session['DOT_username']}} &nbsp&nbsp||</font>
+                    <a href="https://app.despairing12.hasura-app.io/DOT/logout">LOGOUT</a>
+                    {% elif session[''aadhar'] %}
+                    <a href="https://app.despairing12.hasura-app.io/consumer/logout">logout
+                    </a>
+                    {% else %}
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="https://app.despairing12.hasura-app.io/consumer">Consumer</a>
+                            </li>
+                            <li>
+                                <a href="https://app.despairing12.hasura-app.io/login_DOT">DOT</a>
+                            </li>
+                            <li>
+                                <a href="https://app.despairing12.hasura-app.io/login_TSP">TSP</a>
+                            </li>
+                            <li>
+                                <a href="https://app.despairing12.hasura-app.io/support/login">Support</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <div class="containerer-fluid">
+            <div class="row">
+
+                <div class="container">
+                    <h2>Frequently asked Question</h2>
+                        <a href="#demo0" class="btn btn-info" data-toggle="collapse">How user can check his/her Aadhar detail?</a>
+                            <div id="demo0" class="collapse">
+                              <div class="a">   Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+                              </div></div><br><br>
+                        <a href="#demo1" class="btn btn-info" data-toggle="collapse">What to do if aadhar detail is incorrect? </a>
+                            <div id="demo1" class="collapse">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div><br><br>
+                            <a href="#demo2" class="btn btn-info" data-toggle="collapse">how to get username and password for DOT and TSP?</a>
+                            <div id="demo2" class="collapse">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div><br><br>
+                            <a href="#demo3" class="btn btn-info" data-toggle="collapse">Where OTP will be sent?</a>
+                            <div id="demo3" class="collapse">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div><br><br>
+                            <a href="#demo4" class="btn btn-info" data-toggle="collapse">What information will TSP see?</a>
+                            <div id="demo4" class="collapse">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div><br><br>
+                            <a href="#demo5" class="btn btn-info" data-toggle="collapse">How secure information is on this portal?</a>
+                            <div id="demo6" class="collapse">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                        </div>
+
+
+        </div>
+    </div>
+
+     {% include 'footer.html'%}
+<style>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+
+</style>
+
+</body>
+</html>

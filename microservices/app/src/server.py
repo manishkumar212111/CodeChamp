@@ -692,7 +692,7 @@ def api_dot_login():
 
 
 
-@app.route('/api/DOT/search')
+@app.route('/api/DOT/search',methods=['POST','GET'])
 def api_dot_search():
     if request.method=='POST':
         content=request.get_json(force=True)
