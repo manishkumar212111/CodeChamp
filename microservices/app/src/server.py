@@ -698,7 +698,7 @@ def api_dot_search():
         content=request.get_json(force=True)
         js=json.loads(json.dumps(content))
 
-        return api_dot_search(js['data']['aadhar'])
+        return DOT.api_search(js['data']['aadhar'])
 #*********************************************************************************************************************
 
 
