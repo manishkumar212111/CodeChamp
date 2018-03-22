@@ -282,10 +282,12 @@ def api_search(aadhar):
 
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
-    if len(resp.json()) == 0:
-        return "not_found"
-    elif 'mobile' in resp.json():
-         return resp.content
-    else:
-        return 'aadhar_error'
+    try:
+        if len(resp.json()) == 0:
+            return "not_found"
+        elif 'mobile' in resp.json()[0]:
+            return resp.content
+        else:
+            return 'aadhar_error'
+    except:
+        return "Not found"
