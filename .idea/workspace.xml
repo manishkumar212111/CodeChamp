@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/DOT/login.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/DOT/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/TSP/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/TSP/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_otp.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_otp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/index.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/support/login.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/support/login.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="183">
-              <caret line="58" column="37" lean-forward="false" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+              <caret line="58" column="54" lean-forward="false" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -1188,7 +1179,7 @@
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
-          <caret line="58" column="37" lean-forward="false" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+          <caret line="58" column="54" lean-forward="false" selection-start-line="58" selection-start-column="54" selection-end-line="58" selection-end-column="54" />
           <folding />
         </state>
       </provider>
