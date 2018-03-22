@@ -253,7 +253,7 @@ def DOT_API_WEB():
 
 def api_search(aadhar):
     if len(aadhar) != 12:
-        return "length"
+        return "length of aadhar must be 12 digit"
 
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
