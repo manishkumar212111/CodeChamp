@@ -169,22 +169,22 @@ font-family: oblique;
                     <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal">See Aadhar with more than 9 SIM</button>
                     <font color="white"> {{session['support_user']}} &nbsp&nbsp||</font>
                     <a href="https://app.despairing12.hasura-app.io/support/logout">LOGOUT</a>
-                   {% endif %}
-                {% if session['TSP_username'] %}
+
+                {% elif session['TSP_username'] %}
                  <a href="#">{{session['TSP_username']}}</a>&nbsp&nbsp ||  <a href="https://app.despairing12.hasura-app.io/TSP/logout">logout
                     </a>
-                  {% if session['DOT_username'] %}
+                  {% elif session['DOT_username'] %}
                     <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal">See Aadhar with more than 9 SIM</button>
                     <font color="white"> {{session['DOT_username']}} &nbsp&nbsp||</font>
                     <a href="https://app.despairing12.hasura-app.io/DOT/logout">LOGOUT</a>
-                    {% endif %}
-                    {% if session['aadhar'] %}
+
+                    {% elif session['aadhar'] %}
                     <a href="https://app.despairing12.hasura-app.io/consumer/logout">logout
                     </a>
-                    {% endif %}
+                    {% else %}
 
 
-                    <!--
+
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login
                             <span class="caret"></span>
@@ -204,7 +204,7 @@ font-family: oblique;
                             </li>
                         </ul>
                     </li>
-                    -->
+                   {%endif%}
 
                 </ul>
             </div>
