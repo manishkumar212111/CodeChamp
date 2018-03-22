@@ -686,7 +686,7 @@ def api_dot_login():
         username="DOT_"+js['data']['username']
         resp=DOT.login(username,js['data']['password'])
         if resp==True:
-            return DOT.api_home()
+            return "true"
 
         else:
             return "false"
@@ -701,6 +701,13 @@ def api_dot_search():
         js=json.loads(json.dumps(content))
 
         return DOT.api_search(js['data']['aadhar'])
+
+
+@app.route('/api/DOT/sim/count',methods=['POST','GET'])
+def api_dot_sim_count():
+    if request.method=='POST':
+        return DOT.api_home()
+
 #*********************************************************************************************************************
 
 
