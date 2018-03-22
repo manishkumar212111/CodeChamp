@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/faqs.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/faqs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/index.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +17,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="faqs.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="faqs.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/faqs.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
@@ -27,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="85" column="105" lean-forward="true" selection-start-line="85" selection-start-column="105" selection-end-line="85" selection-end-column="105" />
+            <state relative-caret-position="239">
+              <caret line="89" column="55" lean-forward="false" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -58,8 +58,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="308" column="44" lean-forward="true" selection-start-line="308" selection-start-column="44" selection-end-line="308" selection-end-column="44" />
+            <state relative-caret-position="291">
+              <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#754#898#0" expanded="false" />
@@ -190,7 +190,6 @@
         <option value="$PROJECT_DIR$/microservices/app/src/tsp.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/support.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/faqs.html" />
-        <option value="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/static/Aadhaar.css" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/TSP/home.html" />
@@ -205,6 +204,7 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/faqs.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
       </list>
     </option>
   </component>
@@ -1007,14 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="85" column="105" lean-forward="true" selection-start-line="85" selection-start-column="105" selection-end-line="85" selection-end-column="105" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1056,10 +1048,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/faqs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="238" column="45" lean-forward="false" selection-start-line="238" selection-start-column="45" selection-end-line="238" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="308" column="44" lean-forward="true" selection-start-line="308" selection-start-column="44" selection-end-line="308" selection-end-column="44" />
+        <state relative-caret-position="291">
+          <caret line="205" column="0" lean-forward="true" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#754#898#0" expanded="false" />
@@ -1099,10 +1099,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/faqs.html">
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="238" column="45" lean-forward="false" selection-start-line="238" selection-start-column="45" selection-end-line="238" selection-end-column="45" />
+        <state relative-caret-position="239">
+          <caret line="89" column="55" lean-forward="false" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="55" />
           <folding />
         </state>
       </provider>
