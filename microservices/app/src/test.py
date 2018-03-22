@@ -1,7 +1,16 @@
-import hashing
+import json,requests
+url = "https://app.despairing12.hasura-app.io/api/DOT/sim/count"
+# Select aadhar number with their count
+# This is the json payload for the query
+requestPayload = {
+}
 
-password="man12345"
-username= "SUPP_"+"manish7297"
+# Setting headers
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+}
 
-a=hashing.hash_password("xfuhkOGfG23")
-print a
+# Make the query and store response in resp
+resp = requests.request("POST", url,  headers=headers)
+print resp.content

@@ -106,6 +106,9 @@ def faqs():
 # render consumer login template
 @app.route('/consumer')
 def consumer():
+    if 'aadhar' in session:
+       return redirect(url_for('consumer_home'))
+
     return render_template('consumer/consumer.html')
 
 @app.route('/consumer/login_otp',methods= ['POST','GET'])
@@ -247,11 +250,16 @@ def consumer_logout():
 # show login Page of TSP
 @app.route('/login_TSP')
 def TSP_LOGIN():
+    if 'TSP_username' in session:
+       return render_template('TSP/home.html')
     return render_template('TSP/login.html')
 
 # Login Logic
 @app.route('/login/TSP',methods=['POST','GET'])
 def login_TSP():
+    if 'TSP_username' in session:
+        return render_template('TSP/home.html')
+
     if request.method=='POST':
         username = request.form['username']
         passowrd = request.form['password']
@@ -271,6 +279,9 @@ def login_TSP():
 #search result
 @app.route('/TSP/search',methods=['POST','GET'])
 def tsp_search():
+    if 'TSP_username' not in session:
+        return render_template('TSP/login.html',message="login First")
+
     if request.method== 'POST':
         aadhar=request.form['aadhar']
         return tsp.search(aadhar)
@@ -292,12 +303,18 @@ def TSp_logout():
 # login Page render
 @app.route('/login_DOT')
 def DOT_login():
+    if 'DOT_username' in session:
+        return render_template('DOT/home.html')
+
     return render_template('DOT/login.html')
 
 
 # login Logic for DOT
 @app.route('/login/DOT',methods=['POST','GET'])
 def login_DOT():
+    if 'DOT_username' in session:
+        return render_template('DOT/home.html')
+
     if request.method=='POST':
         username=request.form['username']
         passowrd=request.form['password']
@@ -327,6 +344,8 @@ def login_DOT():
 '''
 @app.route('/DOT/SIM/count', methods=['POST', 'GET'])
 def DOT_sim_count():
+    if 'DOT_username' not in session:
+        return render_template('DOT/login.html')
 
     return DOT.DOT_API_WEB()
 
@@ -334,6 +353,9 @@ def DOT_sim_count():
 # dot can search
 @app.route('/DOT/search',methods=['POST','GET'])
 def DOT_search():
+    if 'DOT_username' not in session:
+        return render_template('DOT/login.html',message="login first")
+
     if request.method== 'POST':
         aadhar=request.form['aadhar']
         return DOT.search(aadhar)
@@ -352,11 +374,15 @@ def dot_logout():
 
 @app.route('/support/login',methods=['POST','GET'])
 def support_login():
+    if 'support_user' in session:
+        render_template('support/home.html')
     return render_template('support/login.html')
 
 
 @app.route('/login/support',methods=['POST','GET'])
 def Support_login_submit():
+    if 'support_user' in session:
+        render_template('support/home.html')
     if request.method=='POST':
         username=request.form['username']
         password=request.form['password']
@@ -378,12 +404,16 @@ def Support_login_submit():
 
 @app.route('/support/logout')
 def support_logout():
+    if 'support_user' not in session:
+        render_template('support/login.html', message="login first")
 
     session.pop('support_user',None)
     return render_template('index.html',message="Logout Successfully")
 
 @app.route('/TSP/create/account',methods=['POST','GET'])
 def TSP_register():
+    if 'support_user' not in session:
+        render_template('support/login.html', message="login first")
     if request.method=='POST':
         username=request.form['username']
         email=request.form['email']
@@ -406,6 +436,8 @@ def TSP_register():
 
 @app.route('/DOT/create/account',methods=['POST','GET'])
 def DOT_register():
+    if 'support_user' not in session:
+        render_template('support/login.html', message="login first")
     if request.method=='POST':
         username=request.form['username']
         email=request.form['email']
@@ -707,6 +739,7 @@ def api_dot_search():
 def api_dot_sim_count():
     if request.method=='POST':
         return DOT.api_home()
+    return "get method expected"
 
 #*********************************************************************************************************************
 
