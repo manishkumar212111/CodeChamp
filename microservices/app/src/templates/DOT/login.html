@@ -204,6 +204,7 @@ input[type=submit]:hover {
       </div>
       <div class="col-75">
         <input type="password" id="lname" name="password" value="{{password}}" required>
+      <br><br><h5><input type="checkbox" onclick="myFunction()"> &nbsp&nbspShow Password</h5>
       </div>
     </div>
         <br>
@@ -221,8 +222,15 @@ input[type=submit]:hover {
     {% include 'footer.html'%}
 </div>
     </a>
-  <script type="text/javascript">
-
+   <script >
+function myFunction() {
+    var x = document.getElementById("lname");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
 
 </script>
 </body>
