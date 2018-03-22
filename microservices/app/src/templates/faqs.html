@@ -140,26 +140,23 @@ font-family: oblique;
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">UIDAI
-                        </a>
+                         <a class="dropdown-toggle"  href="https://app.despairing12.hasura-app.io/about_us">About Us
+                            </a>
+                        </li>
+                    <li class="dropdown">
+                            <a class="dropdown-toggle"  href="https://uidai.gov.in/" target="_blank">UIDAI website
+                            </a>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">DOT
-                        </a>
-                    </li>
+                            <a class="dropdown-toggle"  href="http://www.dot.gov.in/" target="_blank">DOT website
+                            </a>
+                        </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">FAQs
-                        </a>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#contact">Contact Us
                         </a>
 
                     </li>
-                    <li class="dropdown" id="leftnav">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us
-                        </a>
-                    </li>
+
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                 {% if session['support_user'] %}
@@ -261,7 +258,11 @@ font-family: oblique;
         </div>
     </div>
 
-     {% include 'footer.html'%}
+     <a name="contact"><div id="contact">
+
+    {% include 'footer.html'%}
+</div>
+    </a>
 
 </body>
 </html>
