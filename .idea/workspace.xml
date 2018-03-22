@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/static/Aadhaar.css" afterPath="$PROJECT_DIR$/microservices/app/src/static/Aadhaar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/index.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,21 +27,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="218" column="33" lean-forward="false" selection-start-line="218" selection-start-column="33" selection-end-line="218" selection-end-column="33" />
+            <state relative-caret-position="136">
+              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Aadhaar.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Aadhaar.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Aadhaar.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -191,8 +190,8 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/support/login.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/login.html" />
-        <option value="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/static/Aadhaar.css" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
       </list>
     </option>
   </component>
@@ -1169,18 +1168,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Aadhaar.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="218" column="33" lean-forward="false" selection-start-line="218" selection-start-column="33" selection-end-line="218" selection-end-column="33" />
+        <state relative-caret-position="170">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Aadhaar.css">
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state relative-caret-position="136">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding />
         </state>
       </provider>
