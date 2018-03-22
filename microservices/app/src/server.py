@@ -99,7 +99,9 @@ if __name__ == '__main__':
 def home():
     return render_template('index.html')
 
-
+@app.route('/faqs')
+def faqs():
+    return render_template('faqs.html')
 #*************************************CONSUMER****************************************
 # render consumer login template
 @app.route('/consumer')
