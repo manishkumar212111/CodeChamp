@@ -375,14 +375,14 @@ def dot_logout():
 @app.route('/support/login',methods=['POST','GET'])
 def support_login():
     if 'support_user' in session:
-        render_template('support/home.html')
+        return render_template('support/home.html')
     return render_template('support/login.html')
 
 
 @app.route('/login/support',methods=['POST','GET'])
 def Support_login_submit():
     if 'support_user' in session:
-        render_template('support/home.html')
+        return render_template('support/home.html')
     if request.method=='POST':
         username=request.form['username']
         password=request.form['password']
@@ -405,7 +405,7 @@ def Support_login_submit():
 @app.route('/support/logout')
 def support_logout():
     if 'support_user' not in session:
-        render_template('support/login.html', message="login first")
+        return render_template('support/login.html', message="login first")
 
     session.pop('support_user',None)
     return render_template('index.html',message="Logout Successfully")
@@ -413,7 +413,7 @@ def support_logout():
 @app.route('/TSP/create/account',methods=['POST','GET'])
 def TSP_register():
     if 'support_user' not in session:
-        render_template('support/login.html', message="login first")
+        return render_template('support/login.html', message="login first")
     if request.method=='POST':
         username=request.form['username']
         email=request.form['email']
