@@ -446,11 +446,11 @@ def view_complain():
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
     try:
         if len(resp.json()[0])==0:
-            return render_template('support/notification.html',message="No new messages found",value="good1")
+            return render_template('support/notification.html',message="No new messages found")
         else:
-            return render_template('support/notification.html',result=resp.json()[0],value="Good2")
+            return render_template('support/notification.html',value=resp.json()[0])
     except:
-        return render_template('support/notification.html', message="no notification found",value="good3")
+        return render_template('support/notification.html', message="no notification found")
 
 
 @app.route('/support/logout')
