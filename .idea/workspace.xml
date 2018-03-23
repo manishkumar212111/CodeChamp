@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/support/notification.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/support/notification.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
-              <caret line="450" column="85" lean-forward="false" selection-start-line="450" selection-start-column="85" selection-end-line="450" selection-end-column="85" />
+              <caret line="452" column="103" lean-forward="false" selection-start-line="452" selection-start-column="103" selection-end-line="452" selection-end-column="103" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#754#898#0" expanded="false" />
@@ -58,15 +59,15 @@
                 <element signature="e#12223#12353#0" expanded="false" />
                 <element signature="e#12440#13288#0" expanded="false" />
                 <element signature="e#13369#13653#0" expanded="false" />
-                <element signature="e#15042#15260#0" expanded="false" />
-                <element signature="e#15343#16332#0" expanded="false" />
-                <element signature="e#16416#17398#0" expanded="false" />
-                <element signature="e#17701#18973#0" expanded="false" />
-                <element signature="e#19143#22936#0" expanded="false" />
-                <element signature="e#23021#25943#0" expanded="false" />
-                <element signature="e#26022#26368#0" expanded="false" />
-                <element signature="e#27129#27519#0" expanded="false" />
-                <element signature="e#27632#28139#0" expanded="false" />
+                <element signature="e#15081#15299#0" expanded="false" />
+                <element signature="e#15382#16371#0" expanded="false" />
+                <element signature="e#16455#17437#0" expanded="false" />
+                <element signature="e#17740#19012#0" expanded="false" />
+                <element signature="e#19182#22975#0" expanded="false" />
+                <element signature="e#23060#25982#0" expanded="false" />
+                <element signature="e#26061#26407#0" expanded="false" />
+                <element signature="e#27168#27558#0" expanded="false" />
+                <element signature="e#27671#28178#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -85,8 +86,8 @@
       <file leaf-file-name="notification.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/notification.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="313" column="19" lean-forward="false" selection-start-line="313" selection-start-column="19" selection-end-line="313" selection-end-column="19" />
+            <state relative-caret-position="197">
+              <caret line="312" column="25" lean-forward="false" selection-start-line="312" selection-start-column="25" selection-end-line="312" selection-end-column="25" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1098,7 +1099,7 @@
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="450" column="85" lean-forward="false" selection-start-line="450" selection-start-column="85" selection-end-line="450" selection-end-column="85" />
+          <caret line="452" column="103" lean-forward="false" selection-start-line="452" selection-start-column="103" selection-end-line="452" selection-end-column="103" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#754#898#0" expanded="false" />
@@ -1125,23 +1126,23 @@
             <element signature="e#12223#12353#0" expanded="false" />
             <element signature="e#12440#13288#0" expanded="false" />
             <element signature="e#13369#13653#0" expanded="false" />
-            <element signature="e#15042#15260#0" expanded="false" />
-            <element signature="e#15343#16332#0" expanded="false" />
-            <element signature="e#16416#17398#0" expanded="false" />
-            <element signature="e#17701#18973#0" expanded="false" />
-            <element signature="e#19143#22936#0" expanded="false" />
-            <element signature="e#23021#25943#0" expanded="false" />
-            <element signature="e#26022#26368#0" expanded="false" />
-            <element signature="e#27129#27519#0" expanded="false" />
-            <element signature="e#27632#28139#0" expanded="false" />
+            <element signature="e#15081#15299#0" expanded="false" />
+            <element signature="e#15382#16371#0" expanded="false" />
+            <element signature="e#16455#17437#0" expanded="false" />
+            <element signature="e#17740#19012#0" expanded="false" />
+            <element signature="e#19182#22975#0" expanded="false" />
+            <element signature="e#23060#25982#0" expanded="false" />
+            <element signature="e#26061#26407#0" expanded="false" />
+            <element signature="e#27168#27558#0" expanded="false" />
+            <element signature="e#27671#28178#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/notification.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="313" column="19" lean-forward="false" selection-start-line="313" selection-start-column="19" selection-end-line="313" selection-end-column="19" />
+        <state relative-caret-position="197">
+          <caret line="312" column="25" lean-forward="false" selection-start-line="312" selection-start-column="25" selection-end-line="312" selection-end-column="25" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
