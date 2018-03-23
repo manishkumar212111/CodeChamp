@@ -30,8 +30,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="450" column="78" lean-forward="false" selection-start-line="450" selection-start-column="78" selection-end-line="450" selection-end-column="78" />
+            <state relative-caret-position="512">
+              <caret line="450" column="70" lean-forward="true" selection-start-line="450" selection-start-column="70" selection-end-line="450" selection-end-column="70" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#754#898#0" expanded="false" />
@@ -85,8 +85,8 @@
       <file leaf-file-name="notification.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/notification.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="321" column="27" lean-forward="false" selection-start-line="321" selection-start-column="27" selection-end-line="321" selection-end-column="27" />
+            <state relative-caret-position="154">
+              <caret line="312" column="20" lean-forward="false" selection-start-line="312" selection-start-column="20" selection-end-line="312" selection-end-column="20" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1097,8 +1097,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="450" column="78" lean-forward="false" selection-start-line="450" selection-start-column="78" selection-end-line="450" selection-end-column="78" />
+        <state relative-caret-position="512">
+          <caret line="450" column="70" lean-forward="true" selection-start-line="450" selection-start-column="70" selection-end-line="450" selection-end-column="70" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
             <element signature="e#754#898#0" expanded="false" />
@@ -1140,8 +1140,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/notification.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="321" column="27" lean-forward="false" selection-start-line="321" selection-start-column="27" selection-end-line="321" selection-end-column="27" />
+        <state relative-caret-position="154">
+          <caret line="312" column="20" lean-forward="false" selection-start-line="312" selection-start-column="20" selection-end-line="312" selection-end-column="20" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
