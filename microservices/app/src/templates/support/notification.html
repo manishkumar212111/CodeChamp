@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/credit.css" />
-    <title>DOT home</title>
+    <title> support Home</title>
 </head>
 <style>
 html, body {
@@ -48,7 +48,7 @@ html, body {
     box-sizing: border-box;
 }
 
-input[type=text],input[type=password], select, textarea {
+input[type=text],input[type=password],input[type=email], select, textarea {
     width: 60%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -130,7 +130,7 @@ input[type=submit]:hover {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://app.despairing12.hasura-app.io/">Home</a>
+                <a class="navbar-brand" href="#">Home</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
@@ -142,7 +142,6 @@ input[type=submit]:hover {
                             <a class="dropdown-toggle"  href="http://www.dot.gov.in/" target="_blank">DOT website
                             </a>
                         </li>
-
                     <li class="dropdown">
                         <a class="dropdown-toggle"  href="https://app.despairing12.hasura-app.io/faqs">FAQs
                         </a>
@@ -153,25 +152,119 @@ input[type=submit]:hover {
 
                     </li>
                     <li class="dropdown" id="leftnav">
-                        <a class="dropdown-toggle"  href="https://app.despairing12.hasura-app.io/about_us">About Us
+                        <a class="dropdown-toggle"  href="https://app.despairing12.hasura-app.io/view_complain">View Complain
                         </a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal">See Aadhar with more than 9 SIM</button>
-                    <font color="white"> {{session['DOT_username']}} &nbsp&nbsp||</font>
-                    <a href="https://app.despairing12.hasura-app.io/DOT/logout">LOGOUT</a>
+                  <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModalTSP">Create TSP Account</button>
+                    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModalDOT">Create DOT Account</button>
+
+                    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal">See Aadhar with more than 9 SIM</button>
+                    <font color="white"> {{session['support_user']}} &nbsp&nbsp||</font>
+                    <a href="https://app.despairing12.hasura-app.io/support/logout">LOGOUT</a>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- POPUP BOX SCREEN -->
+    <!--POPUP FOR TSP ACCOUNT CREATION-->
+
+    <div class="modal fade" id="myModalTSP" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">Create TSP Account</h4></center>
+        </div>
+        <div class="modal-body">
+
+            <form action="https://app.despairing12.hasura-app.io/TSP/create/account" method="post">
+            <div class="row">
+                <div class="col-25">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label for="username">USERNAME::</label>
+                </div>
+                <div class="col-75">
+                <input type="text" id="username" name="username"  placeholder="enter username here" required>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-25">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label for="lname">Email::</label>
+                </div>
+                <div class="col-75">
+                <input type="email" id="lname" name="email"  placeholder="enter email here" required>
+                </div>
+                 </div>
+                    <br>
+                 <center>
+                 <input type="submit" value="LOGIN"></center>
+
+                    </form>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!--POPUP FOR DOT ACCOUNT CREATION-->
+
+    <div class="modal fade" id="myModalDOT" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <center><h3 class="modal-title">Create DOT Account</h3></center>
+        </div>
+        <div class="modal-body">
+
+            <form action="https://app.despairing12.hasura-app.io/DOT/create/account" method="post">
+            <div class="row">
+                <div class="col-25">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label for="username1">USERNAME::</label>
+                </div>
+                <div class="col-75">
+                <input type="text" id="username1" name="username"  placeholder="enter username here" required>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-25">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label for="lname1">Email::</label>
+                </div>
+                <div class="col-75">
+                <input type="email" id="lname1" name="email"  placeholder="enter email here" required>
+                </div>
+                 </div>
+                    <br>
+                 <center>
+                 <input type="submit" value="LOGIN"></center>
+
+                    </form>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+    <!-- POPUP BOX SCREEN FOR LIST OF AADHAR-->
     <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">List Of Aadhar with more than 9 SIM card</h4>
+          <center><h3 class="modal-title">List Of Aadhar with more than 9 SIM card</h3></center>
         </div>
         <div class="modal-body">
         <div id="printablediv">
@@ -211,52 +304,33 @@ input[type=submit]:hover {
         <div class="containerer-fluid">
         <div class="row">
             <div class="col-sm-10" style="background-color:lavender;">
-<center>
-                <h2>DEPARTMENT OF TELECOMMUNICATION</h2>
-                <br>
-    <!-- for search result-->
+        <center>
+            <h2>Messages and Complains</h2>
 
-                {% if search %}
-                <p>Aadhar number::{{aadhar}}</p>
-                <p>Registered SIM::{{count}}</p>
-
-
-                 {% if res %}
-                <table border="1">
-                <tr><th>MOBILE Number</th><th>Comp_name</th><th>Service Area</th></tr>
-                {% for i in res %}
-                <tr><td>{{i['mobile']}}</td>
-                <td>{{i['comp_name']}}</td>
-                <td>{{i['LSA']}}</td>
+                {%if message%}
+            {{message}}
+            {% endif%}
+           {%if result%}
+            <table border="1">
+                <tr><th>ID</th><th>Name</th><th>Email</th></th><th>messages</th></tr>
+                {% for i in result %}
+                <tr><td>{{i['ID']}}</td>
+                <td>{{i['name']}}</td>
+                <td>{{i['email']}}</td>
+                    <td>{{i['message']}}</td>
                 </tr>
 
                 {% endfor  %}
                 </table>
 
-                  {%endif%}
-                    {% endif%}
-                    <!-- for search result END-->
+            {% endif %}
 
-                                <h3>
-                   <mark> Search For Aadhar Number</mark>
-                </h3>
-                <div class="container-fluid">
-          <div class="box">
-            <form action="https://app.despairing12.hasura-app.io/DOT/search" method="post">
-          <h4>Enter Aadhaar Number:</h4>
-              <input type="text" name="aadhar" class="credit" required>{%if error %}<font color="red">{{error}}{%set error='' %}</font>{%endif%}
-            <br>
-             <input type="submit" value="Show Detail">
-          </form>
-            <br><br><br><br><br><hr>
+        </center>
             </div>
-
-            </div>
-    </center>
-               </div>
             <div class="col-sm-2" style="background-color:lavenderblush;"> {% include 'sidebar.html' %}</div>
 
         </div>
+
         </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -284,13 +358,12 @@ input[type=submit]:hover {
     </script>
 
     <a name="contact"><div id="contact">
-    {% include 'notification.html'%}
+
     {% include 'footer.html'%}
 </div>
     </a>
 
 </body>
-
 
 
 
@@ -352,5 +425,12 @@ $('#table1 > tbody').append('<tr><th>Total Count</th><th>'+result['data']['list'
 
 </script>
 
+
+{% if login_status %}
+ <script type="text/javascript">
+        alert("{{login_status}}");
+            </script>
+{% set login_status='' %}
+{%endif%}
 
 </html>

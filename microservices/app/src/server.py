@@ -409,6 +409,47 @@ def support_search():
         return DOT.search(aadhar)
     return render_template('support/home.html',result="unknown error")
 
+@app.route('/view_complain')
+def view_complain():
+    if 'support_user' not in session:
+        return render_template('support/login.html', message="login first")
+
+    url = "https://data.despairing12.hasura-app.io/v1/query"
+
+    # This is the json payload for the query
+    requestPayload = {
+        "type": "select",
+        "args": {
+            "table": "message",
+            "columns": [
+                "ID",
+                "name",
+                "email",
+                "message"
+            ],
+            "order_by": [
+                {
+                    "column": "ID",
+                    "order": "desc"
+                }
+            ]
+        }
+    }
+
+    # Setting headers
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+    if len(resp.json())==0:
+        return render_template('support/notification.html',message="No new messages found")
+    else:
+        return render_template('support/notification.html',result=resp.json())
+
 
 @app.route('/support/logout')
 def support_logout():
