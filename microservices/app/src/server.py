@@ -478,11 +478,39 @@ def messages():
         name=request.form['name']
         email=request.form['email']
         message=request.form['message']
-        return name+email+message
-    return "ok"
+        # This is the url to which the query is made
+        url = "https://data.despairing12.hasura-app.io/v1/query"
 
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "insert",
+            "args": {
+                "table": "message",
+                "objects": [
+                    {
+                        "email": email,
+                        "name": name,
+                        "message": message
+                    }
+                ]
+            }
+        }
 
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        }
 
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+        if 'affected_rows' in resp.json():
+            return redirect(url_for('messages'))
+        else:
+            return render_template('index.html', message="problem with server")
+
+    return render_template('index.html', message="Your Message successfully recorded")
 
 
 #************************************************ANDROID API *********************************
