@@ -468,42 +468,21 @@ def DOT_register():
 
 
 #********************************END******************************************************
+#********************************Extraaa**************************************************
+
+# To store the messages and complain from user
+
+@app.route('/messages',methods=['POST','GET'])
+def messages():
+    if request.method == 'POST':
+        name=request.form['name']
+        email=request.form['form']
+        message=request.form['message']
+        return name+email+messages
+    return "ok"
 
 
 
-@app.route('/TSP/aadhar_search',methods=['POST','GET'])
-def tsp_aadhar_search():
-    if request.method=='POST':
-        aadhar=request.form['aadhar']
-        if len(aadhar) !=12:
-            return render_template('TSP/home.html',message="Aadhar number must be of 12 digits")
-        url = "https://data.despairing12.hasura-app.io/v1/query"
-
-        # This is the json payload for the query
-        requestPayload = {
-            "type": "count",
-            "args": {
-                "table": "central",
-                "where": {
-                    "aadhar_no": {
-                        "$eq": aadhar
-                    }
-                }
-            }
-        }
-
-        # Setting headers
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-        }
-
-        # Make the query and store response in resp
-        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-        if 'count' in resp.json():
-            return render_template('/TSP/search.html',aadhar=aadhar,count=resp.json())
-        else:
-            return render_template('/TSP/home.html',message="Something wrong")
 
 
 #************************************************ANDROID API *********************************
