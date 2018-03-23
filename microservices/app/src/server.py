@@ -472,11 +472,11 @@ def DOT_register():
 
 # To store the messages and complain from user
 
-@app.route('/messages',methods=['POST','GET'])
+@app.route('/messages', methods=['POST','GET'])
 def messages():
     if request.method == 'POST':
         name=request.form['name']
-        email=request.form['form']
+        email=request.form['email']
         message=request.form['message']
         return name+email+messages
     return "ok"
