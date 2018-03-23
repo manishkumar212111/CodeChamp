@@ -81,4 +81,42 @@ def TSPDOT_Register(username,password,email):
     else:
         return False
 
+def search(aadhar):
+    if len(aadhar) != 12:
+        return render_template('support/home.html', error="Aadhar must be 12 digit" + str(aadhar))
+
+    url = "https://data.despairing12.hasura-app.io/v1/query"
+
+    # This is the json payload for the query
+    requestPayload = {
+        "type": "select",
+        "args": {
+            "table": "central",
+            "columns": [
+                "mobile",
+                "comp_name",
+                "LSA"
+            ],
+            "where": {
+                "aadhar_no": {
+                    "$eq": aadhar
+                }
+            }
+        }
+    }
+
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+    if len(resp.json()) == 0:
+            return render_template('support/home.html', search="not found",empty="No record found",aadhar=aadhar,count="Not found")
+    else:
+            return render_template('support/home.html',aadhar=aadhar, search="found", count=len(resp.json()),res=resp.json())
+
+
 

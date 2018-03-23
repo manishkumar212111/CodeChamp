@@ -399,6 +399,17 @@ def Support_login_submit():
 
     return render_template('support/login.html',message="Get method expected")
 
+@app.route('/support/search',methods=['POST','GET'])
+def support_search():
+    if 'support_user' not in session:
+        return render_template('support/login.html',message="login first")
+
+    if request.method== 'POST':
+        aadhar=request.form['aadhar']
+        return DOT.search(aadhar)
+    return render_template('support/home.html',result="unknown error")
+
+
 @app.route('/support/logout')
 def support_logout():
     if 'support_user' not in session:
