@@ -478,7 +478,7 @@ def messages():
         name=request.form['name']
         email=request.form['email']
         message=request.form['message']
-        return name+email+messages
+        return name+email+message
     return "ok"
 
 
