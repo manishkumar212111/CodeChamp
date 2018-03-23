@@ -448,7 +448,7 @@ def view_complain():
         if len(resp.json()[0])==0:
             return render_template('support/notification.html',message="No new messages found")
         else:
-            return render_template('support/notification.html',value=resp.json()[0])
+            return render_template('support/notification.html',value=resp.json())
     except:
         return render_template('support/notification.html', message="no notification found")
 

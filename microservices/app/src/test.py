@@ -1,16 +1,11 @@
-import json,requests
-url = "https://app.despairing12.hasura-app.io/api/DOT/sim/count"
-# Select aadhar number with their count
-# This is the json payload for the query
-requestPayload = {
-}
-
-# Setting headers
-headers = {
-    "Content-Type": "application/json",
-    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
-}
-
-# Make the query and store response in resp
-resp = requests.request("POST", url,  headers=headers)
-print resp.content
+value=[
+    {
+        "ID": 1,
+        "name": "Manish Kumar",
+        "email": "manish.kumar212111@gmail.com",
+        "message": "Your website is not working fine"
+    }
+]
+print value[0]
+for i in value:
+    print i['ID']
