@@ -1,0 +1,7 @@
+- args:
+    sql: CREATE TABLE "message"("ID" bigserial NOT NULL, "name" text NOT NULL, "email"
+      text NOT NULL, "message" text NOT NULL, PRIMARY KEY ("ID") )
+  type: run_sql
+- args:
+    name: message
+  type: add_existing_table_or_view
