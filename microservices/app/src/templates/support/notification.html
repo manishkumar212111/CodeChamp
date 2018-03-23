@@ -310,11 +310,12 @@ input[type=submit]:hover {
                 {%if message%}
             {{message}}
             {% endif%}
+
            {%if result%}
             <table border="1">
                 <tr><th>ID</th><th>Name</th><th>Email</th></th><th>messages</th></tr>
                 {% for i in result %}
-                <tr><td>{{i['ID']}}</td>
+                <tr><td>{{i['ID']}}m</td>
                 <td>{{i['name']}}</td>
                 <td>{{i['email']}}</td>
                     <td>{{i['message']}}</td>

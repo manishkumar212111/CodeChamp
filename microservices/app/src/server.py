@@ -448,7 +448,7 @@ def view_complain():
     if len(resp.json())==0:
         return render_template('support/notification.html',message="No new messages found")
     else:
-        return render_template('support/notification.html',result=resp.json())
+        return render_template('support/notification.html',result=resp.content)
 
 
 @app.route('/support/logout')
