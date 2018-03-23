@@ -316,10 +316,10 @@ input[type=submit]:hover {
                 <tr><th>ID</th><th>Name</th><th>Email</th></th><th>messages</th></tr>
 
                 {% for i in value %}
-                <tr><td>{{i['ID']}}</td>
-                <td>{{i['name']}}</td>
-                <td>{{i['email']}}</td>
-                    <td>{{i['message']}}</td>
+                <tr><td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                    <td>{{i[3]}}</td>
                 </tr>
                 {% endfor  %}
 
