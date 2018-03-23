@@ -444,11 +444,13 @@ def view_complain():
 
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
-    if len(resp.json())==0:
-        return render_template('support/notification.html',message="No new messages found")
-    else:
-        return render_template('support/notification.html',result=resp.content)
+    try:
+        if len(resp.json()[0])==0:
+            return render_template('support/notification.html',message="No new messages found")
+        else:
+            return render_template('support/notification.html',result=resp.json()[0])
+    except:
+        return render_template('support/notification.html', message="no notification found")
 
 
 @app.route('/support/logout')
