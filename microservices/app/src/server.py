@@ -344,9 +344,6 @@ def login_DOT():
 '''
 @app.route('/DOT/SIM/count', methods=['POST', 'GET'])
 def DOT_sim_count():
-    if 'DOT_username' not in session:
-        return render_template('DOT/login.html')
-
     return DOT.DOT_API_WEB()
 
 
