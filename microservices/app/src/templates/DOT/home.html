@@ -110,7 +110,7 @@ input[type=submit]:hover {
 
 </style>
 
-<body>
+<body onafterprint="afterPrint()">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
@@ -198,8 +198,8 @@ input[type=submit]:hover {
         </div>
         </div>
         <div class="modal-footer">
-            <input type="button" value="Print " onclick="javascript:printDiv('printablediv')">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default"  onclick="javascript:printDiv('printablediv')">Print </button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -289,7 +289,7 @@ input[type=submit]:hover {
 </div>
     </a>
 
-</body>
+
 
 
 
@@ -310,14 +310,17 @@ input[type=submit]:hover {
             //Print Page
             window.print();
 
+              window.location = 'https://app.despairing12.hasura-app.io/login/DOT';
             //Restore orignal HTML
             document.body.innerHTML = oldPage;
 
 
         }
 
-    </script>
-    <script>       // Javascript fetch to get no. of sim to each
+        function afterPrint() {
+            alert("This document is now being printed");
+        }
+     // Javascript fetch to get no. of sim to each
 
        var url = "https://app.despairing12.hasura-app.io/DOT/SIM/count";
 
@@ -352,5 +355,5 @@ $('#table1 > tbody').append('<tr><th>Total Count</th><th>'+result['data']['list'
 
 </script>
 
-
+</body>
 </html>
