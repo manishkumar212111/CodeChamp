@@ -320,16 +320,14 @@ def login_DOT():
         passowrd=request.form['password']
         username_new="DOT_"+username
         resp=DOT.login(username_new,passowrd)
-        try:
-            if resp==False:
+
+        if resp == False:
                 return render_template('DOT/login.html',message="UserId and password does not match")
-            elif resp==True:
-                session['DOT_username']=username
-                return render_template('DOT/home.html')
-            else:
-                return render_template('DOT/login.html',message="unknown error")
-        except:
-            return render_template('DOT/login.html',message=resp)
+        elif resp == True:
+            session['DOT_username']=username
+            return render_template('DOT/home.html')
+        else:
+            return render_template('DOT/login.html',message="unknown error")
 
     return render_template('DOT/login.html',message="error")
 
