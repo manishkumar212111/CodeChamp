@@ -404,7 +404,7 @@ def support_search():
 
     if request.method== 'POST':
         aadhar=request.form['aadhar']
-        return DOT.search(aadhar)
+        return support.search(aadhar)
     return render_template('support/home.html',result="unknown error")
 
 @app.route('/view_complain')
