@@ -321,9 +321,9 @@ def login_DOT():
         username_new="DOT_"+username
         resp=DOT.login(username_new,passowrd)
 
-        if not resp :
+        if resp is False :
                 return render_template('DOT/login.html',message="UserId and password does not match")
-        elif resp:
+        elif resp is True:
             session['DOT_username']=username
             return render_template('DOT/home.html')
         else:
