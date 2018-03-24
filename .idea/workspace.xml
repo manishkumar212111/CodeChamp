@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="313" column="12" lean-forward="true" selection-start-line="312" selection-start-column="14" selection-end-line="313" selection-end-column="12" />
+            <state relative-caret-position="503">
+              <caret line="314" column="14" lean-forward="false" selection-start-line="314" selection-start-column="14" selection-end-line="314" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -135,7 +134,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="235">
@@ -239,8 +238,8 @@
         <option value="$PROJECT_DIR$/microservices/app/src/test.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/support/notification.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
-        <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
       </list>
     </option>
   </component>
@@ -1116,14 +1115,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="313" column="12" lean-forward="true" selection-start-line="312" selection-start-column="14" selection-end-line="313" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -1137,6 +1128,14 @@
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#8623#8630#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="314" column="14" lean-forward="false" selection-start-line="314" selection-start-column="14" selection-end-line="314" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
