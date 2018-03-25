@@ -1,0 +1,7 @@
+- args:
+    sql: CREATE TABLE "push_request"("sn" bigserial NOT NULL, "month" text NOT NULL,
+      "year" bigint NOT NULL, PRIMARY KEY ("sn") )
+  type: run_sql
+- args:
+    name: push_request
+  type: add_existing_table_or_view
