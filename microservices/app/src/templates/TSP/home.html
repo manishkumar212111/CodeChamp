@@ -59,7 +59,7 @@ html, body {
         </div>
     </div>
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -71,6 +71,10 @@ html, body {
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
+                    <li class="dropdown" id="leftnav">
+                        <a class="dropdown-toggle"  href="https://app.despairing12.hasura-app.io/about_us">About Us
+                        </a>
+                    </li>
                     <li class="dropdown">
                             <a class="dropdown-toggle"  href="https://uidai.gov.in/" target="_blank">UIDAI website
                             </a>
@@ -90,10 +94,7 @@ html, body {
                         </a>
 
                     </li>
-                    <li class="dropdown" id="leftnav">
-                        <a class="dropdown-toggle"  href="https://app.despairing12.hasura-app.io/about_us">About Us
-                        </a>
-                    </li>
+
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <a href="#">{{session['TSP_username']}}</a>&nbsp&nbsp ||  <a href="https://app.despairing12.hasura-app.io/TSP/logout">logout
