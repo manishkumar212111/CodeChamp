@@ -46,6 +46,9 @@ background-color:white;
 <body>
 
     <div class="container-fluid">
+        <div style="background-color:black;";>
+        <p id="date"></p><t></t>m
+        </div>
         <div class="row">
             <div class="col-lg-6">
                 <img src="/static/Images/JNU1.png" class="pull-left img-responsive" alt="NO image">
@@ -277,4 +280,8 @@ background-color:white;
 {% set message='' %}
 {%endif%}
 
+<script>
+    var d = new Date();
+document.getElementById("date").innerHTML = d;
+</script>
 </html>
