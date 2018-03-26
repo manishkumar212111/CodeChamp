@@ -1,0 +1,3 @@
+- args:
+    sql: DROP TABLE "push_request"
+  type: run_sql
