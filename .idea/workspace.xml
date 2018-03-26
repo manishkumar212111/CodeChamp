@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/microservices/app/src/static/Images/DOT.jpg" afterPath="$PROJECT_DIR$/microservices/app/src/static/DOT.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/microservices/app/src/static/DOT.jpg" afterPath="$PROJECT_DIR$/microservices/app/src/static/Images/DOT1.jpg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,43 +89,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="55.jpeg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Images/55.jpeg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Images/2.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adhar-banner.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Images/adhar-banner.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="banner18.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Images/banner18.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="faqs.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Images/faqs.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DOT.jpg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/static/DOT.jpg">
+      <file leaf-file-name="DOT1.jpg" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Images/DOT1.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
           </provider>
@@ -483,11 +448,11 @@
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\software\Git\hello-python-flask\microservices\app\src\static\Images" />
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src\static" />
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src\templates" />
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src" />
       <recent name="E:\software\Git\hello-python-flask\microservices" />
-      <recent name="E:\software\Git\hello-python-flask\microservices\app" />
     </key>
   </component>
   <component name="RunManager" selected="Python.test">
@@ -1128,25 +1093,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/top_strip.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Images/55.jpeg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Images/2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Images/adhar-banner.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -1161,7 +1113,20 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/static/DOT.jpg">
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Images/adhar-banner.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/top_strip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/static/Images/DOT1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
