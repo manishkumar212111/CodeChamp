@@ -283,56 +283,7 @@ def tsp_search():
 
     return render_template('TSP/home.html',result="Unknown error")
 
-# Upload CSV format on A/C to rule
 
-@app.route('/csv_file/upload',methods=['POST','GET'])
-def csv_file_upload():
-    if request.method == 'POST':
-        # check if the post request has the file part
-        if 'file' not in request.files:
-            flash('No file part')
-            return render_template('update_profile.html')
-        file = request.files['file']
-        # if user does not select file, browser also
-        # submit a empty part without filename
-        if file.filename == '':
-            flash('No selected file')
-            return render_template('update_profile.html')
-        if file and allowed_file(file.filename):
-            #filename = secure_filename(file.filename)
-            url = "https://filestore.octagon58.hasura-app.io/v1/file/"+str(session['hasura_id'])
-
-            # This is the json payload for the query
-            # Setting headers
-            headers = {
-            "Authorization":"Bearer bbaa14a4678aa95b48f009258441ea4dd383b90231cbb544"
-            }
-
-            # Make the query and store response in resp
-            resp = requests.request("DELETE", url, headers=headers)
-
-            #file.filename=str(session['hasura_id'])+'.jpg'
-            #file.save(file.filename)
-            url = "https://filestore.octagon58.hasura-app.io/v1/file/"+str(session['hasura_id'])
-
-            # Setting headers
-            headers = {
-                 "Content-Type": "image / png",
-                "Authorization": "Bearer bbaa14a4678aa95b48f009258441ea4dd383b90231cbb544"
-            }
-
-            # Open the file and make the query
-            #with open(file.filename, 'rb') as file_image:
-            resp = requests.put(url, data=file, headers=headers)
-
-            flash('Profile picture changes successfully')
-            return render_template('main.html')
-
-        else:
-            flash('Something wrong')
-            return render_template('update_profile.html')
-    flash('Something wrong')
-    return render_template('update_profile.html')
 
 #logout
 @app.route('/TSP/logout')
