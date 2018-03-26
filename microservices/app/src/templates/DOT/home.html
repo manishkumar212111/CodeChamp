@@ -179,11 +179,11 @@ input[type=submit]:hover {
         <div class="modal-body">
         <div id="printablediv">
 
-            <div id="content">
+            <div id="download">
             <table id="table1" border="1" width="100%">
-                <tbody>
+
                 <tbody></tbody>
-                </tbody>
+
             </table>
         </div>
         </div>
@@ -356,7 +356,7 @@ var specialElementHandlers = {
 };
 
 $('#cmd').click(function () {
-    doc.fromHTML($('#content').html(), 15, 15, {
+    doc.fromHTML($('#download').html(), 15, 15, {
         'width': 170,
             'elementHandlers': specialElementHandlers
     });
@@ -371,7 +371,7 @@ var specialElementHandlers = {
 };
 
 $('#cmd').click(function () {
-    doc.fromHTML($('#content').html(), 15, 15, {
+    doc.fromHTML($('#download').html(), 15, 15, {
         'width': 170,
             'elementHandlers': specialElementHandlers
     });
