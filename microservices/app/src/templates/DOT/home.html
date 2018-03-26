@@ -110,7 +110,7 @@ input[type=submit]:hover {
 
 </style>
 
-<body onafterprint="afterPrint()">
+<body >
     <div class="container-fluid">
         <!-- include top strip-->
          {% include 'top_strip.html'%}
@@ -178,31 +178,18 @@ input[type=submit]:hover {
         </div>
         <div class="modal-body">
         <div id="printablediv">
-                {% if result %}
-                <mark>Detail of consumer having more than 1 registered SIM</mark>
-               <br> {% if message %}
-                <p>{{message}}</p>
-                {%endif%}
-                <!--<table border="1" width="100%"><tr><th>Aadhar Number</th><th>No of sim</th></tr>
-                {% for i in result['list'] %}
-                <tr><td>{{i[0]}}</td>
-                    <td>{{i[1]}}</td>
-                    </tr>
-                {% endfor%}
-                 {% set result=''%}
-                </table>-->
 
-                {%endif%}
             <div id="content">
             <table id="table1" border="1" width="100%">
-
+                <tbody>
                 <tbody></tbody>
+                </tbody>
             </table>
         </div>
         </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" id="cmd">Download PDF </button>
+            <button type="button" class="btn btn-default" id="cmd"> Download PDF </button>
 
             <button type="button" class="btn btn-default"  onclick="javascript:printDiv('printablediv')">Print </button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
