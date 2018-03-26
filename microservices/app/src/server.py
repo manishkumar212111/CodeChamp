@@ -28,13 +28,17 @@ ALLOWED_EXTENSIONS = set(['csv'])
 
 
 #********************************FUNCTION***********************************
+#allowed file for upload
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-
+# generete random code
 def id_generator(size, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
+
+#email send  function
+
 def email_send(toaddr, sub, body):
         fromaddr = "t68pf1@gmail.com"
         # toaddr = "manish.kumar212111@gmail.com"
@@ -53,6 +57,8 @@ def email_send(toaddr, sub, body):
         resp = server.sendmail(fromaddr, toaddr, text)
         server.quit()
         return True
+
+# scheduled function to delete temp_data for OTP store for every 24 hours
 def schedule():
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
@@ -105,6 +111,8 @@ def consumer():
        return redirect(url_for('consumer_home'))
 
     return render_template('consumer/consumer.html')
+
+#Login Logic for consumer
 
 @app.route('/consumer/login_otp',methods= ['POST','GET'])
 def consumer_login():
