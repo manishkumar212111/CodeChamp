@@ -272,7 +272,7 @@ def login_TSP():
         resp= tsp.login(username_new, passowrd)
 
         if resp==False:
-            return render_template('TSP/login.html', message="Username password didn't match")
+            return render_template('TSP/login.html', message="Username password didn't match",username=username)
         else:
             session['TSP_username']=username
             return render_template('TSP/home.html',username=username)
@@ -327,12 +327,12 @@ def login_DOT():
         resp=DOT.login(username_new,passowrd)
 
         if resp is False :
-                return render_template('DOT/login.html',message="UserId and password does not match")
+                return render_template('DOT/login.html',message="UserId and password does not match",username=username)
         elif resp is True:
             session['DOT_username']=username
             return render_template('DOT/home.html')
         else:
-            return render_template('DOT/login.html',message="unknown error")
+            return render_template('DOT/login.html',message="unknown error",username=username)
 
     return render_template('DOT/login.html',message="error")
 
@@ -395,12 +395,12 @@ def Support_login_submit():
                 session['support_user']=username
                 return render_template('support/home.html')
             else:
-                return render_template('support/login.html',message="unknown error")
+                return render_template('support/login.html',message="unknown error",username=username)
         except:
-            return render_template('support/login.html',message=resp)
+            return render_template('support/login.html',message=resp,username=username)
 
 
-    return render_template('support/login.html',message="Get method expected")
+    return render_template('support/login.html',message="Get method expected",username=username)
 
 @app.route('/support/search',methods=['POST','GET'])
 def support_search():
