@@ -558,6 +558,12 @@ def messages():
 
     return render_template('index.html', message="Your Message successfully recorded")
 
+# about section
+
+app.route('/about_us')
+def about_us():
+    return render_template('about.html')
+
 
 #************************************************ANDROID API *********************************
 
