@@ -327,7 +327,7 @@ input[type=submit]:hover {
                 </table>
                   {%endif%}
                     </div>
-                <input type="button" value="Print " onclick="javascript:printDiv('printdetail')">
+                <input type="button" value="Print " onclick="javascript:printDiv1('printdetail')">
 
                     {% endif%}
                     <!-- for search result END-->
@@ -406,7 +406,30 @@ input[type=submit]:hover {
             window.print();
 
             // Automatically refresh page after printing
-            window.location = 'https://app.despairing12.hasura-app.io/login/DOT';
+            window.location = 'https://app.despairing12.hasura-app.io/login/support';
+
+
+            //Restore orignal HTML
+            document.body.innerHTML = oldPage;
+
+
+        }
+
+        // Print result for consumer aadhar search
+          function printDiv1(divID) {
+            //Get the HTML of div
+            var divElements = document.getElementById(divID).innerHTML;
+            //Get the HTML of whole page
+            var oldPage = document.body.innerHTML;
+
+            //Reset the page's HTML with div's HTML only
+            document.body.innerHTML =
+              "<html><head><title></title></head><body>" +
+              divElements + "</body>";
+
+            //Print Page
+            window.print();
+
 
 
             //Restore orignal HTML

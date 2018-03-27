@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/DOT.py" afterPath="$PROJECT_DIR$/microservices/app/src/DOT.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/TSP_API.py" afterPath="$PROJECT_DIR$/microservices/app/src/TSP_API.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/consumer.py" afterPath="$PROJECT_DIR$/microservices/app/src/consumer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/csv_export.py" afterPath="$PROJECT_DIR$/microservices/app/src/csv_export.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/support.py" afterPath="$PROJECT_DIR$/microservices/app/src/support.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/tsp.py" afterPath="$PROJECT_DIR$/microservices/app/src/tsp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,6 +55,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="398" column="0" lean-forward="true" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
+              <folding>
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#5981#5988#0" expanded="true" />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#7571#7578#0" expanded="true" />
+                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#9176#9183#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="tsp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/tsp.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -71,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TSP_API.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TSP_API.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/TSP_API.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -84,8 +96,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="851" column="23" lean-forward="true" selection-start-line="851" selection-start-column="23" selection-end-line="851" selection-end-column="23" />
+            <state relative-caret-position="161">
+              <caret line="381" column="12" lean-forward="true" selection-start-line="381" selection-start-column="12" selection-end-line="381" selection-end-column="26" />
               <folding>
                 <element signature="e#817#913#0" expanded="false" />
                 <element signature="e#1034#1091#0" expanded="false" />
@@ -143,16 +155,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="537">
               <caret line="52" column="85" lean-forward="false" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="204" column="26" lean-forward="true" selection-start-line="204" selection-start-column="26" selection-end-line="204" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -219,7 +221,6 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/top_strip.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/test.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/support/notification.html" />
-        <option value="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_otp.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html" />
@@ -239,6 +240,7 @@
         <option value="$PROJECT_DIR$/microservices/app/src/support.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/tsp.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/TSP_API.py" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
       </list>
     </option>
   </component>
@@ -793,6 +795,31 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30884808" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24302496" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
@@ -944,21 +971,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="143" column="107" lean-forward="true" selection-start-line="143" selection-start-column="107" selection-end-line="143" selection-end-column="122" />
-          <folding>
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#5981#5988#0" expanded="true" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#7571#7578#0" expanded="true" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#9176#9183#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/notification.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3826">
@@ -1079,50 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="851" column="23" lean-forward="true" selection-start-line="851" selection-start-column="23" selection-end-line="851" selection-end-column="23" />
-          <folding>
-            <element signature="e#817#913#0" expanded="false" />
-            <element signature="e#1034#1091#0" expanded="false" />
-            <element signature="e#1159#1688#0" expanded="false" />
-            <element signature="e#1784#2338#0" expanded="false" />
-            <element signature="e#2363#2833#1" expanded="false" />
-            <element signature="e#2944#2980#0" expanded="false" />
-            <element signature="e#3018#3053#0" expanded="false" />
-            <element signature="e#3218#3344#0" expanded="false" />
-            <element signature="e#5104#6584#0" expanded="false" />
-            <element signature="e#7850#8036#0" expanded="false" />
-            <element signature="e#8287#8408#0" expanded="false" />
-            <element signature="e#8493#9161#0" expanded="false" />
-            <element signature="e#9249#9526#0" expanded="false" />
-            <element signature="e#9586#9776#0" expanded="false" />
-            <element signature="e#10026#10149#0" expanded="false" />
-            <element signature="e#10243#10962#0" expanded="false" />
-            <element signature="e#11011#11242#1" expanded="false" />
-            <element signature="e#11322#11346#0" expanded="false" />
-            <element signature="e#11437#11713#0" expanded="false" />
-            <element signature="e#11774#11877#0" expanded="false" />
-            <element signature="e#12142#12272#0" expanded="false" />
-            <element signature="e#12359#13243#0" expanded="false" />
-            <element signature="e#13668#14938#0" expanded="false" />
-            <element signature="e#14997#15215#0" expanded="false" />
-            <element signature="e#15298#16287#0" expanded="false" />
-            <element signature="e#16371#17353#0" expanded="false" />
-            <element signature="e#17656#18928#0" expanded="false" />
-            <element signature="e#18991#19027#0" expanded="false" />
-            <element signature="e#19197#22990#0" expanded="false" />
-            <element signature="e#23075#25997#0" expanded="false" />
-            <element signature="e#26076#26422#0" expanded="false" />
-            <element signature="e#26505#26672#0" expanded="false" />
-            <element signature="e#26760#26849#0" expanded="false" />
-            <element signature="e#27183#27573#0" expanded="false" />
-            <element signature="e#27686#28193#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/consumer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -1186,6 +1154,65 @@
         <state relative-caret-position="68">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="381" column="12" lean-forward="true" selection-start-line="381" selection-start-column="12" selection-end-line="381" selection-end-column="26" />
+          <folding>
+            <element signature="e#817#913#0" expanded="false" />
+            <element signature="e#1034#1091#0" expanded="false" />
+            <element signature="e#1159#1688#0" expanded="false" />
+            <element signature="e#1784#2338#0" expanded="false" />
+            <element signature="e#2363#2833#1" expanded="false" />
+            <element signature="e#2944#2980#0" expanded="false" />
+            <element signature="e#3018#3053#0" expanded="false" />
+            <element signature="e#3218#3344#0" expanded="false" />
+            <element signature="e#5104#6584#0" expanded="false" />
+            <element signature="e#7850#8036#0" expanded="false" />
+            <element signature="e#8287#8408#0" expanded="false" />
+            <element signature="e#8493#9161#0" expanded="false" />
+            <element signature="e#9249#9526#0" expanded="false" />
+            <element signature="e#9586#9776#0" expanded="false" />
+            <element signature="e#10026#10149#0" expanded="false" />
+            <element signature="e#10243#10962#0" expanded="false" />
+            <element signature="e#11011#11242#1" expanded="false" />
+            <element signature="e#11322#11346#0" expanded="false" />
+            <element signature="e#11437#11713#0" expanded="false" />
+            <element signature="e#11774#11877#0" expanded="false" />
+            <element signature="e#12142#12272#0" expanded="false" />
+            <element signature="e#12359#13243#0" expanded="false" />
+            <element signature="e#13668#14938#0" expanded="false" />
+            <element signature="e#14997#15215#0" expanded="false" />
+            <element signature="e#15298#16287#0" expanded="false" />
+            <element signature="e#16371#17353#0" expanded="false" />
+            <element signature="e#17656#18928#0" expanded="false" />
+            <element signature="e#18991#19027#0" expanded="false" />
+            <element signature="e#19197#22990#0" expanded="false" />
+            <element signature="e#23075#25997#0" expanded="false" />
+            <element signature="e#26076#26422#0" expanded="false" />
+            <element signature="e#26505#26672#0" expanded="false" />
+            <element signature="e#26760#26849#0" expanded="false" />
+            <element signature="e#27183#27573#0" expanded="false" />
+            <element signature="e#27686#28193#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="398" column="0" lean-forward="true" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#5981#5988#0" expanded="true" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#7571#7578#0" expanded="true" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#9176#9183#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
