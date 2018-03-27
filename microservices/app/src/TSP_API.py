@@ -2,7 +2,7 @@ from . import hashing
 from . import server
 #import hashing
 #import server
-#import json,requests
+import json,requests
 
 
 def generete_code(email,username):
@@ -27,7 +27,7 @@ def generete_code(email,username):
     # Setting headers
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
         }
 
     # Make the query and store response in resp
@@ -64,7 +64,7 @@ def API_STATUS_COUNT(username,secret_code,aadhar):
     # Setting headers
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
     }
 
     # Make the query and store response in resp
@@ -96,7 +96,7 @@ def API_STATUS_COUNT(username,secret_code,aadhar):
         # Setting headers
         headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
         }
 
         # Make the query and store response in resp
@@ -136,7 +136,7 @@ def API_status_count_push(username,secret_code,aadhar,comp_name,LSA,mobile):
     # Setting headers
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
     }
 
     # Make the query and store response in resp
@@ -168,7 +168,7 @@ def API_status_count_push(username,secret_code,aadhar,comp_name,LSA,mobile):
         # Setting headers
         headers = {
             "Content-Type": "application/json",
-            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+            "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
         }
 
         # Make the query and store response in resp
@@ -198,7 +198,7 @@ def API_status_count_push(username,secret_code,aadhar,comp_name,LSA,mobile):
                 # Setting headers
                 headers = {
                     "Content-Type": "application/json",
-                    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+                    "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
                 }
 
                 # Make the query and store response in resp

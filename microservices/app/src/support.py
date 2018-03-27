@@ -27,7 +27,7 @@ def login_support(username,password):
     # Setting headers
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
     }
 
     # Make the query and store response in resp
@@ -71,7 +71,7 @@ def TSPDOT_Register(username,password,email):
     # Setting headers
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
     }
 
     # Make the query and store response in resp
@@ -107,7 +107,7 @@ def search(aadhar):
 
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
     }
 
     # Make the query and store response in resp
