@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="" />
+    <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microservices/app/src/static/Images/ab.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microservices/app/src/static/Images/d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/about.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/about.html" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +29,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="160">
               <caret line="560" column="15" lean-forward="true" selection-start-line="560" selection-start-column="15" selection-end-line="560" selection-end-column="15" />
               <folding>
                 <element signature="e#817#913#0" expanded="false" />
@@ -57,19 +61,26 @@
                 <element signature="e#12305#13153#0" expanded="false" />
                 <element signature="e#13234#13522#0" expanded="false" />
                 <element signature="e#13578#14848#0" expanded="false" />
+                <element signature="e#14907#15125#0" expanded="false" />
                 <element signature="e#15208#16197#0" expanded="false" />
                 <element signature="e#16281#17263#0" expanded="false" />
                 <element signature="e#17566#18838#0" expanded="false" />
+                <element signature="e#19107#22900#0" expanded="false" />
+                <element signature="e#22985#25907#0" expanded="false" />
+                <element signature="e#25986#26332#0" expanded="false" />
+                <element signature="e#26415#26582#0" expanded="false" />
+                <element signature="e#27093#27483#0" expanded="false" />
+                <element signature="e#27596#28103#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+            <state relative-caret-position="204">
+              <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -216,8 +227,8 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/footer.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/sidebar.html" />
-        <option value="$PROJECT_DIR$/microservices/app/src/templates/about.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/about.html" />
       </list>
     </option>
   </component>
@@ -393,6 +404,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-python-flask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-python-flask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="microservices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-python-flask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-python-flask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="microservices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -407,8 +474,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\software\Git\hello-python-flask\microservices\app\src\templates" />
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src\static\Images" />
+      <recent name="E:\software\Git\hello-python-flask\microservices\app\src\templates" />
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src\static" />
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src" />
       <recent name="E:\software\Git\hello-python-flask\microservices\app\src\templates\consumer" />
@@ -1015,17 +1082,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="7" lean-forward="true" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="160">
           <caret line="560" column="15" lean-forward="true" selection-start-line="560" selection-start-column="15" selection-end-line="560" selection-end-column="15" />
           <folding>
             <element signature="e#817#913#0" expanded="false" />
@@ -1054,10 +1113,25 @@
             <element signature="e#12305#13153#0" expanded="false" />
             <element signature="e#13234#13522#0" expanded="false" />
             <element signature="e#13578#14848#0" expanded="false" />
+            <element signature="e#14907#15125#0" expanded="false" />
             <element signature="e#15208#16197#0" expanded="false" />
             <element signature="e#16281#17263#0" expanded="false" />
             <element signature="e#17566#18838#0" expanded="false" />
+            <element signature="e#19107#22900#0" expanded="false" />
+            <element signature="e#22985#25907#0" expanded="false" />
+            <element signature="e#25986#26332#0" expanded="false" />
+            <element signature="e#26415#26582#0" expanded="false" />
+            <element signature="e#27093#27483#0" expanded="false" />
+            <element signature="e#27596#28103#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
