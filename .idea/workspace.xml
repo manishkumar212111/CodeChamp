@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/DOT/login.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/DOT/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/about.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +17,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="332">
@@ -98,16 +97,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faqs.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/faqs.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2227">
-              <caret line="131" column="37" lean-forward="true" selection-start-line="131" selection-start-column="37" selection-end-line="131" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -124,8 +113,18 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="200" column="75" lean-forward="false" selection-start-line="200" selection-start-column="75" selection-end-line="200" selection-end-column="75" />
+            <state relative-caret-position="511">
+              <caret line="204" column="26" lean-forward="true" selection-start-line="204" selection-start-column="26" selection-end-line="204" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="200" column="77" lean-forward="true" selection-start-line="200" selection-start-column="77" selection-end-line="200" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -218,7 +217,6 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/test.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/support/notification.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
-        <option value="$PROJECT_DIR$/microservices/app/src/templates/support/login.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_otp.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html" />
@@ -228,9 +226,10 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/footer.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/sidebar.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
-        <option value="$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/about.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/login.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/support/login.html" />
       </list>
     </option>
   </component>
@@ -373,6 +372,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="support" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-python-flask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hello-python-flask" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="microservices" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TSP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -974,14 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="138" column="122" lean-forward="false" selection-start-line="138" selection-start-column="122" selection-end-line="138" selection-end-column="122" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/notification.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3826">
@@ -1106,14 +1127,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="200" column="75" lean-forward="false" selection-start-line="200" selection-start-column="75" selection-end-line="200" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1136,6 +1149,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="199" column="64" lean-forward="false" selection-start-line="199" selection-start-column="64" selection-end-line="199" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/TSP/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="204" column="26" lean-forward="true" selection-start-line="204" selection-start-column="26" selection-end-line="204" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="200" column="77" lean-forward="true" selection-start-line="200" selection-start-column="77" selection-end-line="200" selection-end-column="77" />
           <folding />
         </state>
       </provider>
