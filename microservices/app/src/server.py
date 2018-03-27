@@ -74,7 +74,7 @@ def schedule():
     # Setting headers
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
     }
 
     # Make the query and store response in resp
@@ -144,20 +144,19 @@ def consumer_login():
 
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        try:
+            if 'message' in resp.json()['data']:
+                return render_template('consumer/consumer.html',message=resp.json()['data']['message'])
+            if 'ID' in resp.json()['data'][0]:
+                session['id'] = resp.json()['data'][0]['ID']
 
-        if 'message' in resp.json()['data']:
-            return render_template('consumer/consumer.html',message=resp.json()['data']['message'])
-        if 'ID' in resp.json()['data'][0]:
-            session['id'] = resp.json()['data'][0]['ID']
-
-            em=resp.json()['data'][1]['email']
-            mob = em[0:5]
-            return render_template('consumer/consumer_otp.html', mobile=mob,aadhar=aadhar)
-        else:
-
-            return render_template('consumer/consumer.html', message="unknown error")
-
-        return render_template('consumer/consumer.html', message="Unknown Exception")
+                em=resp.json()['data'][1]['email']
+                mob = em[0:5]
+                return render_template('consumer/consumer_otp.html', mobile=mob,aadhar=aadhar)
+            else:
+                return render_template('consumer/consumer.html', message="unknown error")
+        except:
+            return render_template('consumer/consumer.html', message="Unknown exception")
 
     return render_template('consumer/consumer.html', message="error occurs")
 
@@ -231,7 +230,7 @@ def consumer_home():
 
     headers = {
                     "Content-Type": "application/json",
-                    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+                    "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
         }
 
     # Make the query and store response in resp
@@ -443,7 +442,7 @@ def view_complain():
     # Setting headers
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
     }
 
     # Make the query and store response in resp
@@ -546,7 +545,7 @@ def messages():
         # Setting headers
         headers = {
             "Content-Type": "application/json",
-            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+            "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
         }
 
         # Make the query and store response in resp
@@ -598,7 +597,7 @@ def api_aadhar():
         # Setting headers
         headers = {
             "Content-Type": "application/json",
-            "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+            "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
         }
 
         # Make the query and store response in resp
@@ -643,7 +642,7 @@ def api_aadhar():
                     # Setting headers
                     headers = {
                         "Content-Type": "application/json",
-                        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+                        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
                     }
 
                     # Make the query and store response in resp
@@ -717,7 +716,7 @@ def api_consumer_otp():
         # Setting headers
         headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
         }
 
         # Make the query and store response in resp
@@ -752,7 +751,7 @@ def api_consumer_otp():
                 # Setting headers
                 headers = {
                     "Content-Type": "application/json",
-                    "Authorization": "Bearer 4f3156a40c12394198aaa87dacd0b53ebf32d1d3ee4271b8"
+                    "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
                 }
 
                 # Make the query and store response in resp
