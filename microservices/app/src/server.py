@@ -144,19 +144,20 @@ def consumer_login():
 
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-        try:
-            if 'message' in resp.json()['data']:
-                return render_template('consumer/consumer.html',message=resp.json()['data']['message'])
-            if 'ID' in resp.json()['data'][0]:
-                session['id'] = resp.json()['data'][0]['ID']
 
-                em=resp.json()['data'][1]['email']
-                mob = em[0:5]
-                return render_template('consumer/consumer_otp.html', mobile=mob,aadhar=aadhar)
-            else:
-                return render_template('consumer/consumer.html', message="unknown error")
-        except:
-            return render_template('consumer/consumer.html', message="Unknown exception")
+        if 'message' in resp.json()['data']:
+            return render_template('consumer/consumer.html',message=resp.json()['data']['message'])
+        if 'ID' in resp.json()['data'][0]:
+            session['id'] = resp.json()['data'][0]['ID']
+
+            em=resp.json()['data'][1]['email']
+            mob = em[0:5]
+            return render_template('consumer/consumer_otp.html', mobile=mob,aadhar=aadhar)
+        else:
+
+            return render_template('consumer/consumer.html', message="unknown error")
+
+        return render_template('consumer/consumer.html', message="Unknown Exception")
 
     return render_template('consumer/consumer.html', message="error occurs")
 
