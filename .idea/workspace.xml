@@ -58,15 +58,15 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="398" column="0" lean-forward="true" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
+            <state relative-caret-position="414">
+              <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
               <folding>
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#5981#5988#0" expanded="true" />
+                <element signature="e#5601#5608#0" expanded="true" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#7571#7578#0" expanded="true" />
+                <element signature="e#7191#7198#0" expanded="true" />
                 <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#9176#9183#0" expanded="true" />
+                <element signature="e#8796#8803#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,6 +139,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2439">
+              <caret line="142" column="122" lean-forward="false" selection-start-line="142" selection-start-column="122" selection-end-line="142" selection-end-column="122" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="consumer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/consumer.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -155,16 +165,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="537">
               <caret line="52" column="85" lean-forward="false" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="200" column="77" lean-forward="true" selection-start-line="200" selection-start-column="77" selection-end-line="200" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -998,14 +998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="142" column="122" lean-forward="false" selection-start-line="142" selection-start-column="122" selection-end-line="142" selection-end-column="122" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/faqs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2227">
@@ -1201,17 +1193,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2439">
+          <caret line="142" column="122" lean-forward="false" selection-start-line="142" selection-start-column="122" selection-end-line="142" selection-end-column="122" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="398" column="0" lean-forward="true" selection-start-line="398" selection-start-column="0" selection-end-line="398" selection-end-column="0" />
+        <state relative-caret-position="414">
+          <caret line="155" column="0" lean-forward="true" selection-start-line="155" selection-start-column="0" selection-end-line="155" selection-end-column="0" />
           <folding>
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#5981#5988#0" expanded="true" />
+            <element signature="e#5601#5608#0" expanded="true" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#7571#7578#0" expanded="true" />
+            <element signature="e#7191#7198#0" expanded="true" />
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#9176#9183#0" expanded="true" />
+            <element signature="e#8796#8803#0" expanded="true" />
           </folding>
         </state>
       </provider>
