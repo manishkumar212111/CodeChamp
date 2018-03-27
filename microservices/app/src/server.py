@@ -560,7 +560,7 @@ def messages():
 
 # about section
 
-app.route('/about_us')
+@app.route('/about_us')
 def about_us():
     return render_template('about.html')
 
