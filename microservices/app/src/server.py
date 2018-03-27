@@ -400,7 +400,7 @@ def Support_login_submit():
             return render_template('support/login.html',message=resp,username=username)
 
 
-    return render_template('support/login.html',message="Get method expected",username=username)
+    return render_template('support/login.html',message="Get method expected")
 
 @app.route('/support/search',methods=['POST','GET'])
 def support_search():
