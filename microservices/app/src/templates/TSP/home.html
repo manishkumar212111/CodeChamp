@@ -124,6 +124,10 @@ html, body {
                 <br><br>
                 {% if result %}
                 <b>No. Of issued SIM:: </b> {{result }}
+                {% if response %}
+                <font color="red"> {{response}}</font>
+                {%endif%}
+
                 <br><br><br><mark>Search Another</mark>
                 {%endif%}
                  <div class="container-fluid">

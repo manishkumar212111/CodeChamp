@@ -216,6 +216,9 @@ input[type=submit]:hover {
                 <p>Aadhar number::{{aadhar}}</p>
                 <p>Registered SIM::{{count}}</p>
 
+                {% if response%}
+                <font color="red"> {{response}}</font>
+                {%endif%}
 
                  {% if res %}
                 <table border="1">

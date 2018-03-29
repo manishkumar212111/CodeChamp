@@ -129,7 +129,10 @@ def search(aadhar):
     if len(resp.json()) == 0:
             return render_template('DOT/home.html', search="not found",empty="No record found",aadhar=aadhar,count="Not found")
     else:
-            return render_template('DOT/home.html',aadhar=aadhar, search="found", count=len(resp.json()),res=resp.json())
+        count = len(resp.json())
+        if count > 9:
+            response = "The consumer has exhausted total SIM quata allocated"
+        return render_template('DOT/home.html',aadhar=aadhar, response=response,search="found", count=len(resp.json()),res=resp.json())
 
 
 def mobile_search(mobile):
@@ -232,7 +235,7 @@ def DOT_API_WEB():
             return jsonify(data=data)
 
         for i in range(1, len(resp.json()['result'])):
-            if int(resp.json()['result'][i][1]) > 1:
+            if int(resp.json()['result'][i][1]) > 8:
                 list.append([resp.json()['result'][i][0], resp.json()['result'][i][1]])
 
         data = {

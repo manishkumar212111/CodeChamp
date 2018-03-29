@@ -200,7 +200,10 @@ def consumer_otp_verify():
         else:
             session.pop('id',None)
             session['aadhar'] = aadhar
-            return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
+            count = len(resp.json())
+            if count > 9:
+                response = "The consumer has exhausted total SIM quata allocated"
+            return render_template('consumer/consumer_success.html', result=resp.json(),response=response,count=len(resp.json()))
 
     return render_template('consumer/consumer_otp.html', message="Error")
 
@@ -371,6 +374,7 @@ def dot_logout():
 #*******************************END*******************************************************
 
 #*******************************SUPPORT***************************************************
+
 
 @app.route('/support/login',methods=['POST','GET'])
 def support_login():
@@ -566,7 +570,7 @@ def about_us():
 
 
 #************************************************ANDROID API *********************************
-
+# to validate and send otp code
 @app.route('/api/aadhar',methods=['POST','GET'])
 def api_aadhar():
     if request.method=='POST':
@@ -681,6 +685,7 @@ def api_aadhar():
 
     return jsonify(data=data)
 
+# To validate OTP
 @app.route('/api/consumer_otp',methods=['POST','GET'])
 def api_consumer_otp():
     if request.method=='POST':
@@ -777,6 +782,7 @@ def api_consumer_otp():
         }
     return jsonify(data=data)
 
+# DOT will login
 @app.route('/api/DOT/login',methods=['POST','GET'])
 def api_dot_login():
     if request.method=='POST':
@@ -792,6 +798,7 @@ def api_dot_login():
     return "Post method required"
 
 
+# DOT will search
 
 @app.route('/api/DOT/search',methods=['POST','GET'])
 def api_dot_search():
