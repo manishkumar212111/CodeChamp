@@ -66,10 +66,19 @@ def search(aadhar):
         "args": {
             "table": "central",
             "where": {
-                "aadhar_no": {
-                    "$eq": str(aadhar)
+            "$and": [
+                {
+                    "aadhar_no": {
+                        "$eq": str(aadhar)
+                    }
+                },
+                {
+                    "status": {
+                        "$eq": "Active"
+                    }
                 }
-            }
+            ]
+        }
         }
     }
 

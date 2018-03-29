@@ -98,10 +98,19 @@ def search(aadhar):
                 "LSA"
             ],
             "where": {
-                "aadhar_no": {
-                    "$eq": aadhar
+            "$and": [
+                {
+                    "aadhar_no": {
+                        "$eq": aadhar
+                    }
+                },
+                {
+                    "status": {
+                        "$eq": "Active"
+                    }
                 }
-            }
+            ]
+        }
         }
     }
 
