@@ -107,8 +107,6 @@ def faqs():
 # render consumer login template
 @app.route('/consumer')
 def consumer():
-    if 'aadhar' in session:
-       return redirect(url_for('consumer_home'))
 
     return render_template('consumer/consumer.html')
 

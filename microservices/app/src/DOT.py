@@ -111,10 +111,19 @@ def search(aadhar):
                 "LSA"
             ],
             "where": {
-                "aadhar_no": {
-                    "$eq": aadhar
+            "$and": [
+                {
+                    "aadhar_no": {
+                        "$eq": aadhar
+                    }
+                },
+                {
+                    "status": {
+                        "$eq": "Active"
+                    }
                 }
-            }
+            ]
+        }
         }
     }
 
@@ -216,7 +225,7 @@ def DOT_API_WEB():
     requestPayload = {
             "type": "run_sql",
             "args": {
-                "sql": "SELECT aadhar_no, COUNT(*) FROM central GROUP BY aadhar_no ORDER BY aadhar_no"
+                "sql": "SELECT aadhar_no, COUNT(*) FROM central  where status='Active' GROUP BY aadhar_no ORDER BY aadhar_no"
             }
     }
 
@@ -271,10 +280,19 @@ def api_search(aadhar):
                 "LSA"
             ],
             "where": {
-                "aadhar_no": {
-                    "$eq": aadhar
+            "$and": [
+                {
+                    "aadhar_no": {
+                        "$eq": aadhar
+                    }
+                },
+                {
+                    "status": {
+                        "$eq": "Active"
+                    }
                 }
-            }
+            ]
+        }
         }
     }
 
