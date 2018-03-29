@@ -304,7 +304,9 @@ input[type=submit]:hover {
                 <div id="printdetail">
                 <p>Aadhar number::{{aadhar}}</p>
                 <p>Registered SIM::{{count}}</p>
-
+                 {% if response%}
+                <font color="red"> {{response}}</font>
+                {%endif%}
 
                  {% if res %}
 
