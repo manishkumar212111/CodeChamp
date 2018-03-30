@@ -103,5 +103,5 @@ def search(aadhar):
                 return render_template('TSP/home.html', response=response,aadhar=aadhar, result=resp.json()['count'])
             return render_template('TSP/home.html', result=resp.json(), count=len(resp.json()))
     except:
-        return render_template('TSP/home.html', aadhar=aadhar, result="server busy")
+        return render_template('TSP/home.html', aadhar=aadhar, result=resp.json()['count'])
     return render_template('TSP/home.html', aadhar=aadhar, result="Server busy")

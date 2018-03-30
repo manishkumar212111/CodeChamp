@@ -24,7 +24,7 @@ from . import support
 # from flask import jsonify
 app=Flask(__name__)
 app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
-ALLOWED_EXTENSIONS = set(['csv'])
+#ALLOWED_EXTENSIONS = set(['csv'])
 
 
 #********************************FUNCTION***********************************
@@ -96,10 +96,12 @@ if __name__ == '__main__':
         scheduler.shutdown()
         '''
 #****************************************************************************
+# Application Home page
 @app.route('/')
 def home():
     return render_template('index.html')
 
+# frequently asked question
 @app.route('/faqs')
 def faqs():
     return render_template('faqs.html')
@@ -158,7 +160,7 @@ def consumer_login():
 
     return render_template('consumer/consumer.html', message="error occurs")
 
-
+# Verify OTP for consumer throug API calling
 @app.route('/consumer/otp/verify',methods=['POST','GET'])
 def consumer_otp_verify():
     if request.method=='POST':
@@ -207,7 +209,7 @@ def consumer_otp_verify():
     return render_template('consumer/consumer_otp.html', message="Error")
 
 
-
+#consumer home with detail
 def consumer_home():
     url = "https://data.despairing12.hasura-app.io/v1/query"
 
@@ -242,7 +244,7 @@ def consumer_home():
             return render_template('consumer/consumer_success.html',empty="No record found")
     else:
           return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
-
+# Logout consumer
 @app.route('/consumer/logout')
 def consumer_logout():
     if 'aadhar' in session:
