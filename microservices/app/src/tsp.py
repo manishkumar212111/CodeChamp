@@ -96,7 +96,7 @@ def search(aadhar):
             return render_template('TSP/home.html', aadhar=aadhar, result="Not found any detail")
         # detail found
         else:
-            count = len(resp.json()['count'])
+            count = len(resp.json())
             if count > 8:
                 response = "The consumer has exhausted total SIM quata allocated"
 
