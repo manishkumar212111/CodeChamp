@@ -202,7 +202,7 @@ def consumer_otp_verify():
             session['aadhar'] = aadhar
             count = len(resp.json())
             if count > 9:
-                response = "The consumer has exhausted total SIM quata allocated"
+                response = "The consumer has exhausted total SIM quota allocated"
                 return render_template('consumer/consumer_success.html', result=resp.json(),response=response,count=len(resp.json()))
             return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
 
@@ -851,6 +851,11 @@ def api_TSP_status_count_push_data():
 
         return TSP_API.API_status_count_push(username,secret_code,aadhar,comp_name,LSA,mobile)
     return "get method accepted"
+
+
+
+#**************************DOT HOMEAGE**************************
+
 
 
 

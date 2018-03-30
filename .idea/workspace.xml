@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/DOT.py" afterPath="$PROJECT_DIR$/microservices/app/src/DOT.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/support.py" afterPath="$PROJECT_DIR$/microservices/app/src/support.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/tsp.py" afterPath="$PROJECT_DIR$/microservices/app/src/tsp.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DOT.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DOT.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/DOT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="144" column="136" lean-forward="false" selection-start-line="144" selection-start-column="136" selection-end-line="144" selection-end-column="136" />
+            <state relative-caret-position="1105">
+              <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
               <folding>
                 <element signature="e#169#1369#0" expanded="false" />
                 <element signature="e#1430#2801#0" expanded="false" />
@@ -63,8 +67,8 @@
       <file leaf-file-name="support.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/support.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="131" column="79" lean-forward="false" selection-start-line="131" selection-start-column="79" selection-end-line="131" selection-end-column="79" />
+            <state relative-caret-position="850">
+              <caret line="129" column="66" lean-forward="false" selection-start-line="129" selection-start-column="66" selection-end-line="129" selection-end-column="66" />
               <folding>
                 <element signature="e#121#1314#0" expanded="false" />
                 <element signature="e#1366#2222#0" expanded="false" />
@@ -77,7 +81,7 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="255">
               <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
               <folding>
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -94,18 +98,18 @@
       <file leaf-file-name="tsp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/tsp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="105" column="81" lean-forward="false" selection-start-line="105" selection-start-column="81" selection-end-line="105" selection-end-column="81" />
+            <state relative-caret-position="1649">
+              <caret line="100" column="68" lean-forward="false" selection-start-line="100" selection-start-column="68" selection-end-line="100" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="293" column="18" lean-forward="false" selection-start-line="293" selection-start-column="18" selection-end-line="293" selection-end-column="18" />
+            <state relative-caret-position="359">
+              <caret line="857" column="0" lean-forward="true" selection-start-line="857" selection-start-column="0" selection-end-line="857" selection-end-column="0" />
               <folding>
                 <element signature="e#818#914#0" expanded="false" />
                 <element signature="e#1035#1092#0" expanded="false" />
@@ -117,6 +121,7 @@
                 <element signature="e#3272#3320#0" expanded="false" />
                 <element signature="e#3433#4988#0" expanded="false" />
                 <element signature="e#5124#6883#0" expanded="false" />
+                <element signature="e#6938#8116#0" expanded="false" />
                 <element signature="e#8192#8378#0" expanded="false" />
                 <element signature="e#8629#8750#0" expanded="false" />
                 <element signature="e#8835#9503#0" expanded="false" />
@@ -136,11 +141,11 @@
                 <element signature="e#17999#19271#0" expanded="false" />
                 <element signature="e#19334#19370#0" expanded="false" />
                 <element signature="e#19571#23364#0" expanded="false" />
+                <element signature="e#23467#26389#0" expanded="false" />
                 <element signature="e#26485#26831#0" expanded="false" />
                 <element signature="e#27187#27276#0" expanded="false" />
                 <element signature="e#27610#28000#0" expanded="false" />
                 <element signature="e#28113#28620#0" expanded="false" />
-                <marker date="1522384828124" expanded="false" signature="6933:8115" ph="..." />
               </folding>
             </state>
           </provider>
@@ -159,7 +164,7 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/TSP/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
+            <state relative-caret-position="2125">
               <caret line="125" column="59" lean-forward="false" selection-start-line="125" selection-start-column="59" selection-end-line="125" selection-end-column="59" />
               <folding />
             </state>
@@ -244,18 +249,19 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer_success.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/support/home.html" />
-        <option value="$PROJECT_DIR$/microservices/app/src/support.py" />
-        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
-        <option value="$PROJECT_DIR$/microservices/app/src/tsp.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/TSP/home.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/support.py" />
+        <option value="$PROJECT_DIR$/microservices/app/src/tsp.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/DOT.py" />
+        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1370" />
-    <option name="height" value="735" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -272,7 +278,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -513,7 +519,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -776,7 +782,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -787,7 +793,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="FAQ Robot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24298376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24082232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Project Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Job Explorer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="MaxCompute Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1059,7 +1065,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1547">
           <caret line="91" column="122" lean-forward="false" selection-start-line="91" selection-start-column="122" selection-end-line="91" selection-end-column="122" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1067,7 +1072,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2006">
           <caret line="118" column="28" lean-forward="false" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,7 +1101,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/support/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="255">
           <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding>
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1107,6 +1111,22 @@
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#8795#8802#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/TSP/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="125" column="59" lean-forward="false" selection-start-line="125" selection-start-column="59" selection-end-line="125" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/tsp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="100" column="68" lean-forward="false" selection-start-line="100" selection-start-column="68" selection-end-line="100" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1124,8 +1144,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/support.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="131" column="79" lean-forward="false" selection-start-line="131" selection-start-column="79" selection-end-line="131" selection-end-column="79" />
+        <state relative-caret-position="850">
+          <caret line="129" column="66" lean-forward="false" selection-start-line="129" selection-start-column="66" selection-end-line="129" selection-end-column="66" />
           <folding>
             <element signature="e#121#1314#0" expanded="false" />
             <element signature="e#1366#2222#0" expanded="false" />
@@ -1134,10 +1154,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/DOT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+          <folding>
+            <element signature="e#169#1369#0" expanded="false" />
+            <element signature="e#1430#2801#0" expanded="false" />
+            <element signature="e#3631#3765#0" expanded="false" />
+            <element signature="e#5447#6680#0" expanded="false" />
+            <element signature="e#6708#8074#0" expanded="false" />
+            <element signature="e#7435#7979#0" expanded="false" />
+            <element signature="e#8000#8074#0" expanded="false" />
+            <element signature="e#8105#9372#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="293" column="18" lean-forward="false" selection-start-line="293" selection-start-column="18" selection-end-line="293" selection-end-column="18" />
+        <state relative-caret-position="359">
+          <caret line="857" column="0" lean-forward="true" selection-start-line="857" selection-start-column="0" selection-end-line="857" selection-end-column="0" />
           <folding>
             <element signature="e#818#914#0" expanded="false" />
             <element signature="e#1035#1092#0" expanded="false" />
@@ -1149,6 +1186,7 @@
             <element signature="e#3272#3320#0" expanded="false" />
             <element signature="e#3433#4988#0" expanded="false" />
             <element signature="e#5124#6883#0" expanded="false" />
+            <element signature="e#6938#8116#0" expanded="false" />
             <element signature="e#8192#8378#0" expanded="false" />
             <element signature="e#8629#8750#0" expanded="false" />
             <element signature="e#8835#9503#0" expanded="false" />
@@ -1168,44 +1206,11 @@
             <element signature="e#17999#19271#0" expanded="false" />
             <element signature="e#19334#19370#0" expanded="false" />
             <element signature="e#19571#23364#0" expanded="false" />
+            <element signature="e#23467#26389#0" expanded="false" />
             <element signature="e#26485#26831#0" expanded="false" />
             <element signature="e#27187#27276#0" expanded="false" />
             <element signature="e#27610#28000#0" expanded="false" />
             <element signature="e#28113#28620#0" expanded="false" />
-            <marker date="1522384828124" expanded="false" signature="6933:8115" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/tsp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="105" column="81" lean-forward="false" selection-start-line="105" selection-start-column="81" selection-end-line="105" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/TSP/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="125" column="59" lean-forward="false" selection-start-line="125" selection-start-column="59" selection-end-line="125" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/DOT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="144" column="136" lean-forward="false" selection-start-line="144" selection-start-column="136" selection-end-line="144" selection-end-column="136" />
-          <folding>
-            <element signature="e#169#1369#0" expanded="false" />
-            <element signature="e#1430#2801#0" expanded="false" />
-            <element signature="e#3631#3765#0" expanded="false" />
-            <element signature="e#5447#6680#0" expanded="false" />
-            <element signature="e#6708#8074#0" expanded="false" />
-            <element signature="e#7435#7979#0" expanded="false" />
-            <element signature="e#8000#8074#0" expanded="false" />
-            <element signature="e#8105#9372#0" expanded="false" />
           </folding>
         </state>
       </provider>

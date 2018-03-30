@@ -127,7 +127,7 @@ def search(aadhar):
     else:
             count=len(resp.json())
             if count >8:
-                response="The consumer has exhausted total SIM quata allocated"
+                response="The consumer has exhausted total SIM quota allocated"
                 return render_template('support/home.html',aadhar=aadhar, response=response,search="found", count=len(resp.json()),res=resp.json())
             return render_template('support/home.html', aadhar=aadhar, search="found", count=len(resp.json()), res=resp.json())
 

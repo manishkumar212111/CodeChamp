@@ -98,7 +98,7 @@ def search(aadhar):
         else:
             count = int((resp.json()['count']))
             if count > 8:
-                response = "The consumer has exhausted total SIM quata allocated"
+                response = "The consumer has exhausted total SIM quota allocated"
 
                 return render_template('TSP/home.html', response=response,aadhar=aadhar, result=resp.json()['count'])
             return render_template('TSP/home.html', result=resp.json()['count'], count=len(resp.json()))
