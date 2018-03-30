@@ -92,7 +92,7 @@ def search(aadhar):
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
     try:
         #if no detail found
-        if len(resp.json()['count']) == 0:
+        if resp.json()['count'] == 0:
             return render_template('TSP/home.html', aadhar=aadhar, result="Not found any detail")
         # detail found
         else:
@@ -103,5 +103,5 @@ def search(aadhar):
                 return render_template('TSP/home.html', response=response,aadhar=aadhar, result=resp.json()['count'])
             return render_template('TSP/home.html', result=resp.json()['count'], count=len(resp.json()))
     except:
-        return render_template('TSP/home.html', aadhar=aadhar, result=resp.json())
+        return render_template('TSP/home.html', aadhar=aadhar, result=resp.json()['count'])
     return render_template('TSP/home.html', aadhar=aadhar, result="Server busy")
