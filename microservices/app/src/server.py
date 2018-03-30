@@ -201,7 +201,8 @@ def consumer_otp_verify():
             count = len(resp.json())
             if count > 9:
                 response = "The consumer has exhausted total SIM quata allocated"
-            return render_template('consumer/consumer_success.html', result=resp.json(),response=response,count=len(resp.json()))
+                return render_template('consumer/consumer_success.html', result=resp.json(),response=response,count=len(resp.json()))
+            return render_template('consumer/consumer_success.html', result=resp.json(),count=len(resp.json()))
 
     return render_template('consumer/consumer_otp.html', message="Error")
 
