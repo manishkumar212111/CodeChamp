@@ -142,7 +142,7 @@ def search(aadhar):
         if count > 9:
             response = "The consumer has exhausted total SIM quata allocated"
             return render_template('DOT/home.html',aadhar=aadhar, response=response,search="found", count=len(resp.json()),res=resp.json())
-        return render_template('DOT/home.html', result=resp.json(), count=len(resp.json()))
+        return render_template('DOT/home.html', result=resp.json()['count'], count=len(resp.json()))
 
 def mobile_search(mobile):
     # This is the url to which the query is made
