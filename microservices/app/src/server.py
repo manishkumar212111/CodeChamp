@@ -248,8 +248,7 @@ def mobile_otp():
 
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-    print resp.content
-
+    
 #consumer home with detail
 def consumer_home():
     url = "https://data.despairing12.hasura-app.io/v1/query"
