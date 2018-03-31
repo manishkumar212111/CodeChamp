@@ -29,10 +29,6 @@ app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
 
 #********************************FUNCTION***********************************
 #allowed file for upload
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
 # generete random code
 def id_generator(size, chars=string.ascii_uppercase+string.ascii_lowercase + string.digits):
    return ''.join(random.choice(chars) for _ in range(size))
@@ -116,7 +112,7 @@ def consumer():
 
 # Mobile otp Send
 
-def mobile_otp():
+#def mobile_otp():
 
 
     # This is the url to which the query is made
@@ -233,6 +229,26 @@ def consumer_otp_verify():
 
     return render_template('consumer/consumer_otp.html', message="Error")
 
+def mobile_otp():
+    import json, requests
+    url = "https://notify.despairing12.hasura-app.io/v1/send/sms"
+
+    # This is the json payload for the query
+    requestPayload = {
+        "to": "7297899599",
+        "countryCode": "91",
+        "message": "Demo OTP"
+    }
+
+    # Setting headers
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+    print resp.content
 
 #consumer home with detail
 def consumer_home():
@@ -643,6 +659,12 @@ def api_aadhar():
             }
             return jsonify(data=data)
         try:
+            if resp.json()[0]['email']=='NULL':
+                data = {
+                    "message": "Email not registered"
+                }
+
+                return jsonify(data=data)
             if len(resp.json()[0]['email']):
                 otp=randint(100000,999999)
                 em=resp.json()[0]['email']

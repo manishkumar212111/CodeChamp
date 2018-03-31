@@ -91,7 +91,6 @@ def home(username):
         return render_template('DOT/home.html',result=data)
     except:
         return render_template('DOT/home.html', Message="Error retrieving data")
-    return render_template('DOT/home.html', result="error")
 
 
 def search(aadhar):
