@@ -1252,6 +1252,52 @@ def DOT_search_filter():
     return render_template('DOT/home.html', message="Getmethod expected")
 
 
+@app.route('/api/aadhar/TSP')
+def api_aadhar_tsp():
+    url = "https://data.despairing12.hasura-app.io/v1/query"
+    # Select aadhar number with their count
+    # This is the json payload for the query
+    requestPayload = {
+        "type": "run_sql",
+        "args": {
+            "sql": "SELECT aadhar_no ,\"LSA\",COUNT(*) FROM central  GROUP BY aadhar_no,\"LSA\" ORDER BY aadhar_no"
+        }
+    }
+
+    # Setting headers
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+    list = []
+    try:
+        if len(resp.json()['result']) == 1:
+            data = {"message": "No result found"}
+            return jsonify(data=data)
+
+        for i in range(1, len(resp.json()['result'])):
+            if int(resp.json()['result'][i][2]) > 9:
+                list.append([resp.json()['result'][i][0], resp.json()['result'][i][1],resp.json()['result'][i][2]])
+
+        data = {
+
+            "list": list
+
+        }
+        if len(list) == 0:
+            data = {"message": "No result found"}
+            return jsonify(data=data)
+
+        else:
+            return jsonify(data=data)
+    except:
+        data = {"message": "Exception occurred"}
+        return jsonify(data=data)
+
+
 
 
 if  __name__ == '__main__':
