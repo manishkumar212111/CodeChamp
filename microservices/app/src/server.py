@@ -177,7 +177,7 @@ def consumer_login():
             else:
                 return render_template('consumer/consumer.html', message="unknown error")
         except:
-            return render_template('consumer/consumer.html', message="Unknown exception")
+            return render_template('consumer/consumer.html', message="Email not registered with aadhar number")
 
     return render_template('consumer/consumer.html', message="error occurs")
 
