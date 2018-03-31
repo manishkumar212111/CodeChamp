@@ -1,0 +1,3 @@
+- args:
+    sql: select * from central;
+  type: run_sql

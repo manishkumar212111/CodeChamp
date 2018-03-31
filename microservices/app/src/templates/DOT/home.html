@@ -19,8 +19,13 @@
 html, body {
         max-width: 100%;
         overflow-x: hidden;
-    }
-
+}
+div.scrollbox {
+    background-color: lightblue;
+    width: 100%;
+    height: 300px;
+    overflow: scroll;
+}
     .navbar {
         background-color: #0f3f6a;
 
@@ -51,19 +56,18 @@ html, body {
     box-sizing: border-box;
 }
 
-input[type=text],input[type=password], select, textarea {
-    width: 60%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-}
 
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
 }
-
+input[type=text] {
+    width: 25%;
+    height:2%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
 input[type=submit] {
     background-color: #4CAF50;
     color: white;
@@ -74,9 +78,7 @@ input[type=submit] {
 
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
-}
+
 
 .container {
     border-radius: 5px;
@@ -135,12 +137,12 @@ input[type=submit]:hover {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="https://app.despairing12.hasura-app.io/">Home</a>
+                <a class="navbar-brand" href="http://127.0.0.1:5000/">Home</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                      <li class="dropdown" id="leftnav">
-                        <a class="dropdown-toggle"  href="https://app.despairing12.hasura-app.io/about_us" target="_blank">About Us
+                        <a class="dropdown-toggle"  href="http://127.0.0.1:5000/about_us" target="_blank">About Us
                         </a>
                     </li>
                     <li class="dropdown">
@@ -153,7 +155,7 @@ input[type=submit]:hover {
                         </li>
 
                     <li class="dropdown">
-                        <a class="dropdown-toggle"  href="https://app.despairing12.hasura-app.io/faqs">FAQs
+                        <a class="dropdown-toggle"  href="http://127.0.0.1:5000/faqs">FAQs
                         </a>
                     </li>
                     <li class="dropdown">
@@ -166,7 +168,7 @@ input[type=submit]:hover {
                 <ul class="nav navbar-nav navbar-right">
                   <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal">See Aadhar with more than 9 SIM</button>
                     <font color="white"> {{session['DOT_username']}} &nbsp&nbsp||</font>
-                    <a href="https://app.despairing12.hasura-app.io/DOT/logout">LOGOUT</a>
+                    <a href="http://127.0.0.1:5000/DOT/logout">LOGOUT</a>
                 </ul>
             </div>
         </div>
@@ -207,51 +209,81 @@ input[type=submit]:hover {
         <div class="containerer-fluid">
         <div class="row">
             <div class="col-sm-10" style="background-color:lavender;">
-<center>
-                <h2>DEPARTMENT OF TELECOMMUNICATION</h2>
-                <br>
-    <!-- for search result-->
+                <center>
+<div class="search-wrap"><div role="search" method="post" id="searchform" action="/sih2018-search">
+<label>Search By :</label>
+<div class="form-search">
+    <!--<input placeholder="Search #tag or Title" name="key" id="s" type="text" value="">-->
+    <form action="http://127.0.0.1:5000/DOT/search/filter" method ="post">
+    <input type="text" name="aadhar" value="00">
+    <select name="TSP" style="width:20% ;padding: 12px 20px;margin: 8px 0;box-sizing: border-box">
 
-                {% if search %}
-                <p>Aadhar number::{{aadhar}}</p>
-                <p>Registered SIM::{{count}}</p>
+        <option value="no" selected>Select TSP</option>
+        <option value="Airtel">Airtel</option>
+        <option value="JIO">JIO</option>
+           <option value="Vodafone">Vodafone</option>
 
-                {% if response%}
-                <font color="red"> {{response}}</font>
-                {%endif%}
+    </select>
+    <select name="LSA" style="width:20% ;padding: 12px 20px;margin: 8px 0;box-sizing: border-box">
+         <option value="no" selected>Select LSA</option>
+        <option value="Rajasthan">Rajasthan</option>
+        <option value="Delhi">Delhi</option>
+           <option value="MP">Madhya Pradesh</option>
 
-                 {% if res %}
-                <table border="1">
-                <tr><th>MOBILE Number</th><th>Comp_name</th><th>Service Area</th></tr>
-                {% for i in res %}
-                <tr><td>{{i['mobile']}}</td>
-                <td>{{i['comp_name']}}</td>
-                <td>{{i['LSA']}}</td>
+
+  <input type="submit">
+
+
+</form>
+</div>
+    <br>
+    {% if message%}
+    {{message}}
+    {%endif%}
+    <div style="background-color:cyan; padding:auto;">
+    Aadhar Number:: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{aadhar}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TSP Name:: &nbsp;&nbsp;{{TSP}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LSA:: &nbsp;&nbsp;{{LSA}}<br><br>
+    </div>
+        {% if count%}
+    <br>
+    Total No. Of SIM allocated:: {{count}}<br>
+    {%endif%}
+     {{result}}
+    {%if res%}
+    <div id="download1">
+    <div class="scrollbox">
+
+    <table border="1">
+        <tr><th>Aadhar Number</th><th>Mobile number</th><th>Company Name</th><th>LSA</th></tr>
+    {% for i in res %}
+        <tr><td>{{i['aadhar_no']}}</td>
+
+    <td>{{i['mobile']}}</td>
+        <td>{{i['comp_name']}}</td>
+        <td>{{i['LSA']}}</td>
                 </tr>
 
                 {% endfor  %}
+
                 </table>
+        {% if data %}
+            {{data}}
 
-                  {%endif%}
-                    {% endif%}
-                    <!-- for search result END-->
+        {% endif%}
 
-                                <h3>
-                   <mark> Search For Aadhar Number</mark>
-                </h3>
-                <div class="container-fluid">
-          <div class="box">
-            <form action="https://app.despairing12.hasura-app.io/DOT/search" method="post">
-          <h4>Enter Aadhaar Number:</h4>
-              <input type="text" name="aadhar" class="credit" required>{%if error %}<font color="red">{{error}}{%set error='' %}</font>{%endif%}
-            <br>
-             <input type="submit" value="Show Detail">
-          </form>
-            <br><br><br><br><br><hr>
+            </div>
+
+    </div>
+    <button type="button" class="btn btn-info" id="cmd1"> Download PDF </button>
+    {%endif%}
+
+
             </div>
 
             </div>
     </center>
+                <br><br>
                </div>
             <div class="col-sm-2" style="background-color:lavenderblush;"> {% include 'sidebar.html' %}</div>
 
@@ -283,7 +315,7 @@ input[type=submit]:hover {
     </script>
 
     <a name="contact"><div id="contact">
-    {% include 'message.html'%}
+
     {% include 'footer.html'%}
 </div>
     </a>
@@ -304,7 +336,7 @@ input[type=submit]:hover {
             //Print Page
             window.print();
 
-            window.location = 'https://app.despairing12.hasura-app.io/login/DOT';
+            window.location = 'http://127.0.0.1:5000/login/DOT';
             //Restore orignal HTML
             document.body.innerHTML = oldPage;
 
@@ -316,7 +348,7 @@ input[type=submit]:hover {
         }
      // Javascript fetch to get no. of sim to each
 
-       var url = "https://app.despairing12.hasura-app.io/DOT/SIM/count";
+       var url = "http://127.0.0.1:5000/DOT/SIM/count";
 
 var requestOptions = {
     "method": "POST",
@@ -378,6 +410,40 @@ $('#cmd').click(function () {
     });
     doc.save('Aadhar_more_NINE_connection.pdf');
 });
+
+// Download search result
+
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#cmd1').click(function () {
+    doc.fromHTML($('#download1').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('Aadhar_connection.pdf');
+});
+
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#cmd1').click(function () {
+    doc.fromHTML($('#download1').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('Aadhar_more_connection.pdf');
+});
+
+
 
 </script>
 

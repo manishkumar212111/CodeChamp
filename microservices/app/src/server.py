@@ -114,6 +114,31 @@ def consumer():
 
 #Login Logic for consumer
 
+# Mobile otp Send
+
+def mobile_otp():
+
+
+    # This is the url to which the query is made
+    url = "https://notify.despairing12.hasura-app.io/v1/send/sms"
+
+    # This is the json payload for the query
+    requestPayload = {
+        "to": "9876543210",
+        "countryCode": "917297899599",
+        "message": "This is the body of SMS"
+    }
+
+    # Setting headers
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+
 @app.route('/consumer/login_otp',methods= ['POST','GET'])
 def consumer_login():
     try:
@@ -856,6 +881,375 @@ def api_TSP_status_count_push_data():
 
 #**************************DOT HOMEAGE**************************
 
+
+
+@app.route('/DOT/search/filter', methods=['POST','GET'])
+def DOT_search_filter():
+    if request.method == 'POST':
+        aadhar= request.form['aadhar']
+        TSP = request.form['TSP']
+        LSA = request.form['LSA']
+
+        # Search for single aadhar
+        if aadhar != '00' and TSP=='no' and LSA=='no':
+            # search for aadhar only
+            url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+            requestPayload = {
+                "type": "select",
+                "args": {
+                    "table": "central",
+                    "columns": [
+                        "mobile",
+                        "comp_name",
+                        "LSA",
+                        "aadhar_no"
+                    ],
+                    "where": {
+                        "aadhar_no": {
+                            "$eq": str(aadhar)
+                        }
+                    }
+                }
+            }
+
+            # Setting headers
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
+            }
+
+            # Make the query and store response in resp
+            resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+            try:
+                if len(resp.json())==0:
+                    return render_template('DOT/home.html',message="No result found")
+                return render_template('DOT/home.html',res=resp.json(),count=len(resp.json()),aadhar=aadhar,TSP="ALL",LSA="ALL")
+            except:
+                return render_template('DOT/home.html', message="exception occured")
+
+
+
+        # search for Liscence service area
+        elif aadhar =='00' and LSA!='no' and TSP=='no' :
+            url = "https://data.despairing12.hasura-app.io/v1/query"
+
+            # This is the json payload for the query
+            requestPayload = {
+                "type": "select",
+                "args": {
+                    "table": "central",
+                    "columns": [
+                        "mobile",
+                        "comp_name",
+                        "LSA",
+                        "aadhar_no"
+                    ],
+                    "where": {
+                        "LSA": {
+                            "$eq": LSA
+                        }
+                    }
+                }
+            }
+
+            # Setting headers
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
+            }
+
+            # Make the query and store response in resp
+            resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+            try:
+                if len(resp.json())==0:
+                    return render_template('DOT/home.html',message="No result found")
+                return render_template('DOT/home.html',res=resp.json(),aadhar="All",TSP="ALL",LSA=LSA)
+            except:
+                return render_template('DOT/home.html', message="exception occured")
+
+        # Search  TSP wise
+        elif aadhar == '00' and LSA == 'no' and TSP != 'no':
+            url = "https://data.despairing12.hasura-app.io/v1/query"
+
+            # This is the json payload for the query
+            requestPayload = {
+                "type": "select",
+                "args": {
+                    "table": "central",
+                    "columns": [
+                        "mobile",
+                        "comp_name",
+                        "LSA",
+                        "aadhar_no"
+                    ],
+                    "where": {
+                        "comp_name": {
+                            "$eq": TSP
+                        }
+                    }
+                }
+            }
+
+            # Setting headers
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
+            }
+
+            # Make the query and store response in resp
+            resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+            try:
+                if len(resp.json())==0:
+                    return render_template('DOT/home.html',message="No result found")
+                return render_template('DOT/home.html',res=resp.json(),aadhar="All",TSP=TSP,LSA="ALL")
+            except:
+                return render_template('DOT/home.html', message="exception occured")
+
+
+        # Search for aadhar and TSP
+        elif aadhar != '00' and TSP != 'no' and LSA == 'no':
+            url = "https://data.despairing12.hasura-app.io/v1/query"
+
+            # This is the json payload for the query
+            requestPayload = {
+                "type": "select",
+                "args": {
+                    "table": "central",
+                    "columns": [
+                        "mobile",
+                        "comp_name",
+                        "LSA",
+                        "aadhar_no"
+                    ],
+                    "where": {
+                        "$and": [
+                            {
+                                "aadhar_no": {
+                                    "$eq": aadhar
+                                }
+                            },
+                            {
+                                "comp_name": {
+                                    "$eq": TSP
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+
+            # Setting headers
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
+            }
+
+            # Make the query and store response in resp
+            resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+            try:
+                if len(resp.json())==0:
+                    return render_template('DOT/home.html',message="No result found")
+                return render_template('DOT/home.html',res=resp.json(),aadhar=aadhar,TSP=TSP,LSA="ALL")
+            except:
+                return render_template('DOT/home.html', message="exception occured")
+
+
+        #Search for Aadhar and LSA
+        elif aadhar != '00' and LSA != 'no' and TSP == 'no':
+            url = "https://data.despairing12.hasura-app.io/v1/query"
+
+            # This is the json payload for the query
+            requestPayload = {
+            "type": "select",
+            "args": {
+                "table": "central",
+                "columns": [
+                    "mobile",
+                    "comp_name",
+                    "LSA",
+                    "aadhar_no"
+                ],
+                "where": {
+                    "$and": [
+                        {
+                            "aadhar_no": {
+                                "$eq": aadhar
+                            }
+                        },
+                        {
+                            "LSA": {
+                                "$eq": LSA
+                            }
+                        }
+                    ]
+                }
+            }
+            }
+
+            # Setting headers
+            headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
+            }
+
+            # Make the query and store response in resp
+            resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+            try:
+                if len(resp.json())==0:
+                    return render_template('DOT/home.html',message="No result found")
+                return render_template('DOT/home.html',res=resp.json(),aadhar=aadhar,TSP=TSP,LSA="ALL")
+            except:
+                return render_template('DOT/home.html', message="exception occured")
+
+
+        #Search for LSA and TSP
+        elif aadhar == '00' and LSA != 'no' and TSP != 'no':
+            url = "https://data.despairing12.hasura-app.io/v1/query"
+
+            # This is the json payload for the query
+            requestPayload = {
+                "type": "select",
+                "args": {
+                    "table": "central",
+                    "columns": [
+                        "mobile",
+                        "comp_name",
+                        "LSA",
+                        "aadhar_no"
+                    ],
+                    "where": {
+                        "$and": [
+                            {
+                                "comp_name": {
+                                    "$eq": TSP
+                                }
+                            },
+                            {
+                                "LSA": {
+                                    "$eq": LSA
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+
+            # Setting headers
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
+            }
+
+            # Make the query and store response in resp
+            resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+            try:
+                if len(resp.json())==0:
+                    return render_template('DOT/home.html',message="No result found")
+                return render_template('DOT/home.html',res=resp.json(),aadhar="All",TSP=TSP,LSA=LSA)
+            except:
+                return render_template('DOT/home.html', message="exception occured")
+
+        # Search for Aadhar and TSP and LSA
+        elif aadhar!='00' and TSP!='no' and LSA!='no':
+            url = "https://data.despairing12.hasura-app.io/v1/query"
+
+            # This is the json payload for the query
+            requestPayload = {
+                "type": "select",
+                "args": {
+                    "table": "central",
+                    "columns": [
+                        "mobile",
+                        "comp_name",
+                        "LSA",
+                        "aadhar_no"
+                    ],
+                    "where": {
+                        "$and": [
+                            {
+                                "comp_name": {
+                                    "$eq": TSP
+                                }
+                            },
+                            {
+                                "$and": [
+                                    {
+                                        "LSA": {
+                                            "$eq": LSA
+                                        }
+                                    },
+                                    {
+                                        "aadhar_no": {
+                                            "$eq": aadhar
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+
+            # Setting headers
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
+            }
+
+            # Make the query and store response in resp
+            resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+            try:
+                if len(resp.json()) == 0:
+                    return render_template('DOT/home.html', message="No result found")
+                return render_template('DOT/home.html', res=resp.json(),aadhar=aadhar,TSP=TSP,LSA=LSA)
+            except:
+                return render_template('DOT/home.html', message="exception occured")
+
+
+
+        # Show all detail
+        elif aadhar == '00' and TSP == 'no' and LSA == 'no':
+
+            url = "https://data.despairing12.hasura-app.io/v1/query"
+
+            # This is the json payload for the query
+            requestPayload = {
+                "type": "select",
+                "args": {
+                    "table": "central",
+                    "columns": [
+                        "mobile",
+                        "comp_name",
+                        "LSA",
+                        "aadhar_no"
+                    ],
+                    "where": {}
+                }
+            }
+
+            # Setting headers
+            headers = {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
+            }
+
+            # Make the query and store response in resp
+            resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+            try:
+                if len(resp.json())==0:
+                    return render_template('DOT/home.html',message="No result found")
+                return render_template('DOT/home.html',res=resp.json(),aadhar="ALL",TSP="ALL",LSA="ALL")
+            except:
+                return render_template('DOT/home.html', message="exception occured")
+            #return render_template('DOT/search.html', aadhar=aadhar, message="Plzz enter valid data in search field")
+    return render_template('DOT/home.html', message="Get method expected")
+
+        #*****************************************************COUNT ***************************************************************
+
+    return render_template('DOT/home.html', message="Getmethod expected")
 
 
 

@@ -1,0 +1,4 @@
+- args:
+    sql: SELECT aadhar_no, COUNT(*) FROM central where "LSA"='Rajasthan' GROUP BY
+      aadhar_no ORDER BY aadhar_no
+  type: run_sql
