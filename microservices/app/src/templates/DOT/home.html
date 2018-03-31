@@ -267,6 +267,37 @@ input[type=submit] {
     </div>
   </div>
 
+    <!--LSA+TSP-->
+    <div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">List Of Aadhar with more than 9 SIM card</h4>
+        </div>
+        <div class="modal-body">
+        <div id="printablediv4">
+
+            <div id="download4">
+            <table id="table4" border="1" width="100%">
+
+                <tbody></tbody>
+
+            </table>
+        </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="cmd4"> Download PDF </button>
+
+            <button type="button" class="btn btn-default"  onclick="javascript:printDiv('printablediv')">Print </button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
         <div class="containerer-fluid">
         <div class="row">
@@ -441,7 +472,7 @@ $('#table1 > tbody').append('<tr><th>Total Count</th><th>'+result['data']['list'
 
 //AAdhar+LSA+Count
 
-var url = "https://app.despairing12.hasura-app.io/api/aadhar/TSP";
+var url = "https://app.despairing12.hasura-app.io/api/aadhar/LSA";
 
 var requestOptions = {
     "method": "POST",
@@ -488,13 +519,44 @@ fetch(url, requestOptions)
 .then(function(result) {
 	console.log(result);
 
-     $('#table1 > tbody').append('<tr><th>Aadhar Number</th><th>No of sim</th></tr>');
+     $('#table1 > tbody').append('<tr><th>Aadhar Number</th><th>TSP</th><th>No of sim</th></tr>');
 for (i=0 ; i<result['data']['list'].length;i++)
 	{
-     $('#table3 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td></tr>');
+     $('#table3 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td><td>'+result['data']['list'][i][2] +'</td></tr>');
 
 }
-$('#table3 > tbody').append('<tr><th>Total Count</th><th>'+result['data']['list'].length +'</th></tr>');
+
+})
+.catch(function(error) {
+	console.log('Request Failed:' + error);
+});
+
+
+// TSP+LSA
+
+
+var url = "https://app.despairing12.hasura-app.io/api/LSA/TSP";
+
+var requestOptions = {
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json"
+    }
+};
+
+fetch(url, requestOptions)
+.then(function(response) {
+	return response.json();
+})
+.then(function(result) {
+	console.log(result);
+
+     $('#table4 > tbody').append('<tr><th>LSA</th><th>TSP</th><th>No of sim</th></tr>');
+for (i=0 ; i<result['data']['list'].length;i++)
+	{
+     $('#table3 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td><td>'+result['data']['list'][i][2] +'</td></tr>');
+
+}
 
 })
 .catch(function(error) {
