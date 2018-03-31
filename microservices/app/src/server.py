@@ -248,7 +248,7 @@ def mobile_otp():
 
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-    
+
 #consumer home with detail
 def consumer_home():
     url = "https://data.despairing12.hasura-app.io/v1/query"
@@ -855,7 +855,7 @@ def api_dot_search():
 
         return DOT.api_search(js['data']['aadhar'])
 
-
+# API  for DOT SIM COUNT
 @app.route('/api/DOT/sim/count',methods=['POST','GET'])
 def api_dot_sim_count():
     if request.method=='POST':
@@ -867,6 +867,7 @@ def api_dot_sim_count():
 
 #***************************************************TSP API EXTENDED FEATURE******************************************
 
+#api for TSP Count
 @app.route('/api/TSP/status_count',methods=['POST','GET'])
 def api_TSP_status_count():
     if request.method=='POST':
@@ -881,6 +882,7 @@ def api_TSP_status_count():
         return TSP_API.API_STATUS_COUNT(username, secret_code, aadhar)
     return "Get method"
 
+# TSP Status count
 @app.route('/api/TSP/status_count/push_data',methods=['POST','GET'])
 def api_TSP_status_count_push_data():
     if request.method=='POST':
@@ -902,8 +904,49 @@ def api_TSP_status_count_push_data():
 
 #**************************DOT HOMEAGE**************************
 
+# more than 9 sim  detail
+@app.route('/more/nine/sim',methods=['POST','GET'])
+def more_nine_sim():
+    aadhar = request.args.get('aadhar')
+    url = "https://data.despairing12.hasura-app.io/v1/query"
+
+    # This is the json payload for the query
+    requestPayload = {
+        "type": "select",
+        "args": {
+            "table": "central",
+            "columns": [
+                "mobile",
+                "comp_name",
+                "LSA",
+                "aadhar_no"
+            ],
+            "where": {
+                "aadhar_no": {
+                    "$eq": str(aadhar)
+                }
+            }
+        }
+    }
+
+    # Setting headers
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 5dd53ad731ff1c7dc1c0b74f14052d66699239d69280bf7a"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+    try:
+        if len(resp.json()) == 0:
+            return render_template('DOT/home.html', message="No result found")
+        return render_template('DOT/home.html', res=resp.json(), count=len(resp.json()), aadhar=aadhar, TSP="ALL",
+                               LSA="ALL")
+    except:
+        return render_template('DOT/home.html', message="exception occured")
 
 
+#DOT SEArch filter
 @app.route('/DOT/search/filter', methods=['POST','GET'])
 def DOT_search_filter():
     if request.method == 'POST':
@@ -1272,6 +1315,7 @@ def DOT_search_filter():
 
     return render_template('DOT/home.html', message="Getmethod expected")
 
+#aadhar Lsa filter
 
 @app.route('/api/aadhar/LSA',methods=['POST','GET'])
 def api_aadhar_LSA():
@@ -1321,7 +1365,7 @@ def api_aadhar_LSA():
             return jsonify(data=data)
     return "Get method expected"
 
-
+# Aadhar TSP filter
 
 @app.route('/api/aadhar/TSP',methods=['POST','GET'])
 def api_aadhar_TSP():
@@ -1370,7 +1414,7 @@ def api_aadhar_TSP():
             data = {"message": "Exception occurred"}
             return jsonify(data=data)
     return "Get method expected"
-
+#LSA and TSP
 @app.route('/api/LSA/TSP',methods=['POST','GET'])
 def api_LSA_TSP():
     if request.method=='POST':
