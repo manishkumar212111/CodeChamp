@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,56 +112,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="433" column="163" lean-forward="true" selection-start-line="433" selection-start-column="163" selection-end-line="433" selection-end-column="163" />
+            <state relative-caret-position="17">
+              <caret line="472" column="0" lean-forward="true" selection-start-line="472" selection-start-column="0" selection-end-line="472" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#select#0;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#1;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#9055#9061#0" expanded="true" />
-                <element signature="e#9061#9067#0" expanded="true" />
-                <element signature="e#9067#9073#0" expanded="true" />
-                <element signature="e#9073#9079#0" expanded="true" />
-                <element signature="e#9079#9085#0" expanded="true" />
-                <element signature="e#9095#9101#0" expanded="true" />
-                <element signature="e#9101#9107#0" expanded="true" />
-                <element signature="e#9107#9113#0" expanded="true" />
-                <element signature="e#9113#9119#0" expanded="true" />
-                <element signature="e#9119#9125#0" expanded="true" />
-                <element signature="e#9130#9136#0" expanded="true" />
-                <element signature="e#9136#9142#0" expanded="true" />
-                <element signature="e#9142#9148#0" expanded="true" />
-                <element signature="e#9148#9154#0" expanded="true" />
-                <element signature="e#9154#9160#0" expanded="true" />
-                <element signature="e#9171#9177#0" expanded="true" />
-                <element signature="e#9177#9183#0" expanded="true" />
-                <element signature="e#9190#9196#0" expanded="true" />
-                <element signature="e#9196#9202#0" expanded="true" />
-                <element signature="e#9202#9208#0" expanded="true" />
-                <element signature="e#9208#9214#0" expanded="true" />
-                <element signature="e#9214#9220#0" expanded="true" />
-                <element signature="e#9220#9226#0" expanded="true" />
-                <element signature="e#9226#9232#0" expanded="true" />
-                <element signature="e#9237#9243#0" expanded="true" />
-                <element signature="e#9243#9249#0" expanded="true" />
-                <element signature="e#9249#9255#0" expanded="true" />
-                <element signature="e#9255#9261#0" expanded="true" />
-                <element signature="e#9261#9267#0" expanded="true" />
-                <element signature="e#9273#9279#0" expanded="true" />
-                <element signature="e#9279#9285#0" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#1;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#10057#10063#0" expanded="true" />
+                <element signature="e#10063#10069#0" expanded="true" />
+                <element signature="e#10069#10075#0" expanded="true" />
+                <element signature="e#10075#10081#0" expanded="true" />
+                <element signature="e#10081#10087#0" expanded="true" />
+                <element signature="e#10097#10103#0" expanded="true" />
+                <element signature="e#10103#10109#0" expanded="true" />
+                <element signature="e#10109#10115#0" expanded="true" />
+                <element signature="e#10115#10121#0" expanded="true" />
+                <element signature="e#10121#10127#0" expanded="true" />
+                <element signature="e#10132#10138#0" expanded="true" />
+                <element signature="e#10138#10144#0" expanded="true" />
+                <element signature="e#10144#10150#0" expanded="true" />
+                <element signature="e#10150#10156#0" expanded="true" />
+                <element signature="e#10156#10162#0" expanded="true" />
+                <element signature="e#10173#10179#0" expanded="true" />
+                <element signature="e#10179#10185#0" expanded="true" />
+                <element signature="e#10192#10198#0" expanded="true" />
+                <element signature="e#10198#10204#0" expanded="true" />
+                <element signature="e#10204#10210#0" expanded="true" />
+                <element signature="e#10210#10216#0" expanded="true" />
+                <element signature="e#10216#10222#0" expanded="true" />
+                <element signature="e#10222#10228#0" expanded="true" />
+                <element signature="e#10228#10234#0" expanded="true" />
+                <element signature="e#10239#10245#0" expanded="true" />
+                <element signature="e#10245#10251#0" expanded="true" />
+                <element signature="e#10251#10257#0" expanded="true" />
+                <element signature="e#10257#10263#0" expanded="true" />
+                <element signature="e#10263#10269#0" expanded="true" />
+                <element signature="e#10275#10281#0" expanded="true" />
+                <element signature="e#10281#10287#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="1352" column="0" lean-forward="true" selection-start-line="1352" selection-start-column="0" selection-end-line="1352" selection-end-column="0" />
+            <state relative-caret-position="257">
+              <caret line="1400" column="0" lean-forward="true" selection-start-line="1400" selection-start-column="0" selection-end-line="1400" selection-end-column="0" />
               <folding>
                 <element signature="e#818#914#0" expanded="false" />
                 <element signature="e#1035#1092#0" expanded="false" />
@@ -287,8 +288,8 @@
         <option value="$PROJECT_DIR$/microservices/app/src/tsp.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/DOT.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/test.py" />
-        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
       </list>
     </option>
   </component>
@@ -1098,10 +1099,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="472" column="0" lean-forward="true" selection-start-line="472" selection-start-column="0" selection-end-line="472" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#10057#10063#0" expanded="true" />
+            <element signature="e#10063#10069#0" expanded="true" />
+            <element signature="e#10069#10075#0" expanded="true" />
+            <element signature="e#10075#10081#0" expanded="true" />
+            <element signature="e#10081#10087#0" expanded="true" />
+            <element signature="e#10097#10103#0" expanded="true" />
+            <element signature="e#10103#10109#0" expanded="true" />
+            <element signature="e#10109#10115#0" expanded="true" />
+            <element signature="e#10115#10121#0" expanded="true" />
+            <element signature="e#10121#10127#0" expanded="true" />
+            <element signature="e#10132#10138#0" expanded="true" />
+            <element signature="e#10138#10144#0" expanded="true" />
+            <element signature="e#10144#10150#0" expanded="true" />
+            <element signature="e#10150#10156#0" expanded="true" />
+            <element signature="e#10156#10162#0" expanded="true" />
+            <element signature="e#10173#10179#0" expanded="true" />
+            <element signature="e#10179#10185#0" expanded="true" />
+            <element signature="e#10192#10198#0" expanded="true" />
+            <element signature="e#10198#10204#0" expanded="true" />
+            <element signature="e#10204#10210#0" expanded="true" />
+            <element signature="e#10210#10216#0" expanded="true" />
+            <element signature="e#10216#10222#0" expanded="true" />
+            <element signature="e#10222#10228#0" expanded="true" />
+            <element signature="e#10228#10234#0" expanded="true" />
+            <element signature="e#10239#10245#0" expanded="true" />
+            <element signature="e#10245#10251#0" expanded="true" />
+            <element signature="e#10251#10257#0" expanded="true" />
+            <element signature="e#10257#10263#0" expanded="true" />
+            <element signature="e#10263#10269#0" expanded="true" />
+            <element signature="e#10275#10281#0" expanded="true" />
+            <element signature="e#10281#10287#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="1352" column="0" lean-forward="true" selection-start-line="1352" selection-start-column="0" selection-end-line="1352" selection-end-column="0" />
+        <state relative-caret-position="257">
+          <caret line="1400" column="0" lean-forward="true" selection-start-line="1400" selection-start-column="0" selection-end-line="1400" selection-end-column="0" />
           <folding>
             <element signature="e#818#914#0" expanded="false" />
             <element signature="e#1035#1092#0" expanded="false" />
@@ -1140,49 +1184,6 @@
             <element signature="e#28265#28655#0" expanded="false" />
             <element signature="e#28768#29275#0" expanded="false" />
             <element signature="e#29433#43150#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="433" column="163" lean-forward="true" selection-start-line="433" selection-start-column="163" selection-end-line="433" selection-end-column="163" />
-          <folding>
-            <element signature="n#style#0;n#select#0;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#9055#9061#0" expanded="true" />
-            <element signature="e#9061#9067#0" expanded="true" />
-            <element signature="e#9067#9073#0" expanded="true" />
-            <element signature="e#9073#9079#0" expanded="true" />
-            <element signature="e#9079#9085#0" expanded="true" />
-            <element signature="e#9095#9101#0" expanded="true" />
-            <element signature="e#9101#9107#0" expanded="true" />
-            <element signature="e#9107#9113#0" expanded="true" />
-            <element signature="e#9113#9119#0" expanded="true" />
-            <element signature="e#9119#9125#0" expanded="true" />
-            <element signature="e#9130#9136#0" expanded="true" />
-            <element signature="e#9136#9142#0" expanded="true" />
-            <element signature="e#9142#9148#0" expanded="true" />
-            <element signature="e#9148#9154#0" expanded="true" />
-            <element signature="e#9154#9160#0" expanded="true" />
-            <element signature="e#9171#9177#0" expanded="true" />
-            <element signature="e#9177#9183#0" expanded="true" />
-            <element signature="e#9190#9196#0" expanded="true" />
-            <element signature="e#9196#9202#0" expanded="true" />
-            <element signature="e#9202#9208#0" expanded="true" />
-            <element signature="e#9208#9214#0" expanded="true" />
-            <element signature="e#9214#9220#0" expanded="true" />
-            <element signature="e#9220#9226#0" expanded="true" />
-            <element signature="e#9226#9232#0" expanded="true" />
-            <element signature="e#9237#9243#0" expanded="true" />
-            <element signature="e#9243#9249#0" expanded="true" />
-            <element signature="e#9249#9255#0" expanded="true" />
-            <element signature="e#9255#9261#0" expanded="true" />
-            <element signature="e#9261#9267#0" expanded="true" />
-            <element signature="e#9273#9279#0" expanded="true" />
-            <element signature="e#9279#9285#0" expanded="true" />
           </folding>
         </state>
       </provider>

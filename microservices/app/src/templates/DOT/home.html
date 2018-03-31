@@ -166,9 +166,9 @@ input[type=submit] {
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal2">See Aadhar with > 9 SIM</button>
-                    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal3">See Aadhar with > 9 SIM</button>
-                    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal4">See Aadhar with > 9 SIM</button>
+                    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal2">See Aadhar+LSA > 9 SIM</button>
+                    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal3">See Aadhar+TSP > 9 SIM</button>
+                    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal4">See LSA+TSP > 9 SIM</button>
                   <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal">See Aadhar with > 9 SIM</button>
                     <font color="white"> {{session['DOT_username']}} &nbsp&nbsp||</font>
                     <a href="https://app.despairing12.hasura-app.io/DOT/logout">LOGOUT</a>
@@ -237,6 +237,35 @@ input[type=submit] {
     </div>
   </div>
 
+<!-- AAdhar+TSP-->
+    <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">List Of Aadhar with more than 9 SIM card</h4>
+        </div>
+        <div class="modal-body">
+        <div id="printablediv3">
+
+            <div id="download3">
+            <table id="table3" border="1" width="100%">
+
+                <tbody></tbody>
+
+            </table>
+        </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="cmd3"> Download PDF </button>
+
+            <button type="button" class="btn btn-default"  onclick="javascript:printDiv('printablediv')">Print </button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
         <div class="containerer-fluid">
@@ -381,7 +410,7 @@ input[type=submit] {
         }
      // Javascript fetch to get no. of sim to each for aadhar across India
 
-       var url = "https://app.despairing12.hasura-app.io/DOT/SIM/count";
+var url = "https://app.despairing12.hasura-app.io/DOT/SIM/count";
 
 var requestOptions = {
     "method": "POST",
@@ -434,15 +463,43 @@ for (i=0 ; i<result['data']['list'].length;i++)
      $('#table2 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td><td>'+result['data']['list'][i][2]+'</td></tr>');
 
 }
-$('#table2 > tbody').append('<tr><th>Total Count</th><th>'+result['data']['list'].length +'</th></tr>');
 
 })
 .catch(function(error) {
 	console.log('Request Failed:' + error);
 });
 
+//AAdhar+TSP+count
 
 
+var url = "https://app.despairing12.hasura-app.io/api/aadhar/TSP";
+
+var requestOptions = {
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json"
+    }
+};
+
+fetch(url, requestOptions)
+.then(function(response) {
+	return response.json();
+})
+.then(function(result) {
+	console.log(result);
+
+     $('#table1 > tbody').append('<tr><th>Aadhar Number</th><th>No of sim</th></tr>');
+for (i=0 ; i<result['data']['list'].length;i++)
+	{
+     $('#table3 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td></tr>');
+
+}
+$('#table3 > tbody').append('<tr><th>Total Count</th><th>'+result['data']['list'].length +'</th></tr>');
+
+})
+.catch(function(error) {
+	console.log('Request Failed:' + error);
+});
 
 
 
