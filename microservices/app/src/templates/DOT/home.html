@@ -431,7 +431,7 @@ fetch(url, requestOptions)
      $('#table2 > tbody').append('<tr><th>Aadhar Number</th><th>LSA</th><th>No of sim</th></tr>');
 for (i=0 ; i<result['data']['list'].length;i++)
 	{
-     $('#table2 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td><td>'+result['data']['list'][i][2]</td></tr>');
+     $('#table2 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td><td>'+result['data']['list'][i][2]+'</td></tr>');
 
 }
 $('#table2 > tbody').append('<tr><th>Total Count</th><th>'+result['data']['list'].length +'</th></tr>');
@@ -440,6 +440,9 @@ $('#table2 > tbody').append('<tr><th>Total Count</th><th>'+result['data']['list'
 .catch(function(error) {
 	console.log('Request Failed:' + error);
 });
+
+
+
 
 
 
