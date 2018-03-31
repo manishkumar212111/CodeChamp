@@ -519,7 +519,7 @@ fetch(url, requestOptions)
 .then(function(result) {
 	console.log(result);
 
-     $('#table1 > tbody').append('<tr><th>Aadhar Number</th><th>TSP</th><th>No of sim</th></tr>');
+     $('#table3 > tbody').append('<tr><th>Aadhar Number</th><th>TSP</th><th>No of sim</th></tr>');
 for (i=0 ; i<result['data']['list'].length;i++)
 	{
      $('#table3 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td><td>'+result['data']['list'][i][2] +'</td></tr>');
@@ -554,7 +554,7 @@ fetch(url, requestOptions)
      $('#table4 > tbody').append('<tr><th>LSA</th><th>TSP</th><th>No of sim</th></tr>');
 for (i=0 ; i<result['data']['list'].length;i++)
 	{
-     $('#table3 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td><td>'+result['data']['list'][i][2] +'</td></tr>');
+     $('#table4 > tbody').append('<tr><td>'+result['data']['list'][i][0]+'</td><td>'+result['data']['list'][i][1]+'</td><td>'+result['data']['list'][i][2] +'</td></tr>');
 
 }
 
