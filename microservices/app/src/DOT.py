@@ -201,7 +201,7 @@ def api_home():
                 return "0"
 
             for i in range(1, len(resp.json()['result'])):
-                if int(resp.json()['result'][i][1]) > 1:
+                if int(resp.json()['result'][i][1]) > 9:
                     list.append([resp.json()['result'][i][0], resp.json()['result'][i][1]])
             data = {
 
