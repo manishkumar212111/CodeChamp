@@ -694,7 +694,7 @@ def api_aadhar():
                             return resp.content
                     except IndexError :
                         data = {
-                            "message": "No email found"
+                            "message": "No email found for this aadhar"
                         }
                         return jsonify(data=data)
 
@@ -702,7 +702,7 @@ def api_aadhar():
 
         except IndexError:
             data = {
-                "message": "Uknown error"
+                "message": "No email found for this Aadhar"
             }
             return jsonify(data=data)
     data= {
