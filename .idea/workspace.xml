@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/DOT.py" afterPath="$PROJECT_DIR$/microservices/app/src/DOT.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -105,8 +103,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="698" column="32" lean-forward="true" selection-start-line="698" selection-start-column="32" selection-end-line="698" selection-end-column="32" />
+            <state relative-caret-position="359">
+              <caret line="1401" column="0" lean-forward="true" selection-start-line="1401" selection-start-column="0" selection-end-line="1401" selection-end-column="0" />
               <folding>
                 <element signature="e#818#914#0" expanded="false" />
                 <element signature="e#1035#1092#0" expanded="false" />
@@ -138,15 +136,16 @@
                 <element signature="e#17369#18351#0" expanded="false" />
                 <element signature="e#18654#19926#0" expanded="false" />
                 <element signature="e#19989#20025#0" expanded="false" />
+                <element signature="e#20226#24053#0" expanded="false" />
                 <element signature="e#24156#27078#0" expanded="false" />
                 <element signature="e#27174#27520#0" expanded="false" />
+                <element signature="e#27621#27788#0" expanded="false" />
                 <element signature="e#27876#27965#0" expanded="false" />
                 <element signature="e#28299#28689#0" expanded="false" />
                 <element signature="e#28802#29309#0" expanded="false" />
                 <element signature="e#29467#43184#0" expanded="false" />
                 <element signature="e#43266#44822#0" expanded="false" />
                 <element signature="e#44905#46465#0" expanded="false" />
-                <element signature="e#46540#48096#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1189,8 +1188,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="698" column="32" lean-forward="true" selection-start-line="698" selection-start-column="32" selection-end-line="698" selection-end-column="32" />
+        <state relative-caret-position="359">
+          <caret line="1401" column="0" lean-forward="true" selection-start-line="1401" selection-start-column="0" selection-end-line="1401" selection-end-column="0" />
           <folding>
             <element signature="e#818#914#0" expanded="false" />
             <element signature="e#1035#1092#0" expanded="false" />
@@ -1222,15 +1221,16 @@
             <element signature="e#17369#18351#0" expanded="false" />
             <element signature="e#18654#19926#0" expanded="false" />
             <element signature="e#19989#20025#0" expanded="false" />
+            <element signature="e#20226#24053#0" expanded="false" />
             <element signature="e#24156#27078#0" expanded="false" />
             <element signature="e#27174#27520#0" expanded="false" />
+            <element signature="e#27621#27788#0" expanded="false" />
             <element signature="e#27876#27965#0" expanded="false" />
             <element signature="e#28299#28689#0" expanded="false" />
             <element signature="e#28802#29309#0" expanded="false" />
             <element signature="e#29467#43184#0" expanded="false" />
             <element signature="e#43266#44822#0" expanded="false" />
             <element signature="e#44905#46465#0" expanded="false" />
-            <element signature="e#46540#48096#0" expanded="false" />
           </folding>
         </state>
       </provider>

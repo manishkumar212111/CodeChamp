@@ -1360,7 +1360,7 @@ def api_LSA_TSP():
         requestPayload = {
             "type": "run_sql",
             "args": {
-            "sql": "SELECT comp_name ,\"LSA\",COUNT(*) FROM central  GROUP BY comp_name,\"LSA\" ORDER BY aadhar_no"
+            "sql": "SELECT comp_name ,\"LSA\",COUNT(*) FROM central  GROUP BY comp_name,\"LSA\" ORDER BY comp_name"
             }
         }
 
