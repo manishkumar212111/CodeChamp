@@ -114,8 +114,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="323" column="0" lean-forward="true" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+            <state relative-caret-position="231">
+              <caret line="382" column="62" lean-forward="false" selection-start-line="382" selection-start-column="62" selection-end-line="382" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#select#0;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#select#1;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1146,8 +1146,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="323" column="0" lean-forward="true" selection-start-line="323" selection-start-column="0" selection-end-line="323" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="382" column="62" lean-forward="false" selection-start-line="382" selection-start-column="62" selection-end-line="382" selection-end-column="62" />
           <folding>
             <element signature="n#style#0;n#select#0;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#select#1;n#form#0;n#div#0;n#div#0;n#div#0;n#center#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
