@@ -105,13 +105,15 @@ input[type=submit] {
     clear: both;
 }
 
-/* Responsive layout -= en the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
         width: 100%;
         margin-top: 0;
     }
-= </style>
+}
+
+</style>
 
 <body >
     <div class="container-fluid">
@@ -121,7 +123,7 @@ input[type=submit] {
             <div class="col-lg-6">
                 <img src="/static/Images/JNU1.png" class="pull-left img-responsive" alt="NO image">
             </div>
-            = v class="col-lg-6" id="img2">
+            <div class="col-lg-6" id="img2">
                 <img src="/static/Images/DOT.jpg" class="pull-right img-responsive" alt="NO image">
             </div>
         </div>
@@ -137,13 +139,23 @@ input[type=submit] {
                 </button>
                 <a class="navbar-brand" href="https://app.despairing12.hasura-app.io/">Home</a>
             </div>
-            <div class="collapse navbar-collapse" id="myNavbar" ><ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
                      <li class="dropdown" id="leftnav">
-                        <a class="dropLSAn-toggle"  href="https://app.despairing12.hasura-app.io/about_us" target="_blank">About Us
+                        <a class="dropdown-toggle"  href="https://app.despairing12.hasura-app.io/about_us" target="_blank">About Us
                         </a>
+                    </li>
+                    <li class="dropdown">
+                            <a class="dropdown-toggle"  href="https://uidai.gov.in/" target="_blank">UIDAI website
+                            </a>
+                    </li>
+                    <li class="dropdown">
+                            <a class="dropdown-toggle"  href="http://www.dot.gov.in/" target="_blank">DOT website
+                            </a>
+                        </li>
 
                     <li class="dropdown">
-                LSA     <a class="dropdown-toggle"  href="https://app.despairing12.hasura-app.io/faqs">FAQs
+                        <a class="dropdown-toggle"  href="https://app.despairing12.hasura-app.io/faqs">FAQs
                         </a>
                     </li>
                     <li class="dropdown">
@@ -159,7 +171,7 @@ input[type=submit] {
                     <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal4">See Aadhar with > 9 SIM</button>
                   <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal">See Aadhar with > 9 SIM</button>
                     <font color="white"> {{session['DOT_username']}} &nbsp&nbsp||</font>
-                    <a href="htLSA://app.despairing12.hasura-app.io/DOT/logout">LOGOUT</a>
+                    <a href="https://app.despairing12.hasura-app.io/DOT/logout">LOGOUT</a>
                 </ul>
             </div>
         </div>
@@ -185,7 +197,7 @@ input[type=submit] {
         </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" id="cmd2"> Download PDF </button>
+            <button type="button" class="btn btn-default" id="cmd"> Download PDF </button>
 
             <button type="button" class="btn btn-default"  onclick="javascript:printDiv('printablediv')">Print </button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -196,7 +208,7 @@ input[type=submit] {
 
     <!-- End Of modal -->
 <!-- Aadhar+TSP+count-->
-          <div class="modal fade" id="myModal2" role="dialog">
+      <div class="modal fade" id="myModal2" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -216,7 +228,7 @@ input[type=submit] {
         </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" id="cmd"> Download PDF </button>
+            <button type="button" class="btn btn-default" id="cmd2"> Download PDF </button>
 
             <button type="button" class="btn btn-default"  onclick="javascript:printDiv('printablediv')">Print </button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -224,6 +236,8 @@ input[type=submit] {
       </div>
     </div>
   </div>
+
+
 
         <div class="containerer-fluid">
         <div class="row">
@@ -233,7 +247,7 @@ input[type=submit] {
 <label>Search By :</label>
 <div class="form-search">
     <!--<input placeholder="Search #tag or Title" name="key" id="s" type="text" value="">-->
-    <form action="https://app.despairing12.hLSAra-app.io/DOT/search/filter" method ="post">
+    <form action="https://app.despairing12.hasura-app.io/DOT/search/filter" method ="post">
     <input type="text" name="aadhar" value="00">
     <select name="TSP" style="width:20% ;padding: 12px 20px;margin: 8px 0;box-sizing: border-box">
 
@@ -253,7 +267,7 @@ input[type=submit] {
   <input type="submit">
 
 
-        </form>
+</form>
 </div>
     <br>
     {% if message%}
@@ -316,8 +330,26 @@ input[type=submit] {
             $(".credit").credit();
         });
     </script>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
 
-    <a name="contact"><div id="contact"> {% include 'footer.html'%}
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') +
+                '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    <a name="contact"><div id="contact">
+
+    {% include 'footer.html'%}
 </div>
     </a>
 
@@ -380,7 +412,7 @@ $('#table1 > tbody').append('<tr><th>Total Count</th><th>'+result['data']['list'
 
 //AAdhar+LSA+Count
 
-var url = "https://app.despairing12.hasura-app.io/api/aadhar/LSA";
+var url = "https://app.despairing12.hasura-app.io/api/aadhar/TSP";
 
 var requestOptions = {
     "method": "POST",
