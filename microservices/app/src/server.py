@@ -53,7 +53,7 @@ def login_department():
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
-            if resp.json()['department']:
+            if resp.json()[0]['department']:
                 return "Success"
             else:
                 return "INcorrect credential"
