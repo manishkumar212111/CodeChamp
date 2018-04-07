@@ -96,8 +96,9 @@ def view_data_entry():
             return render_template('DataEntryDetail.html', address=address,date=resp.json()[0]['date'],im_id=resp.json()[0]['im_id'],p_id=p_id)
     except:
 
-        return render_template('DbEntry.html',res=resp.json())
-
+        address = getlocation(resp.json()[0]['latitude'], resp.json()[0]['longitude'])
+        return render_template('DataEntryDetail.html', address=address, date=resp.json()[0]['date'],
+                               im_id=resp.json()[0]['im_id'], p_id=p_id)
 
 
 @app.route('/login/department',methods=['POST','GET'])
