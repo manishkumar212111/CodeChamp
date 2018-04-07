@@ -143,6 +143,8 @@ def problem_submit():
 
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        return resp.content
+
         try:
             if resp.json()['affected_rows']:
                 data={
