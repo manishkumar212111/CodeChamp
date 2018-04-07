@@ -54,8 +54,8 @@
       <file leaf-file-name="DbEntry.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DbEntry.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="77" column="174" lean-forward="false" selection-start-line="77" selection-start-column="174" selection-end-line="77" selection-end-column="174" />
+            <state relative-caret-position="35">
+              <caret line="75" column="47" lean-forward="false" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -864,8 +864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DbEntry.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="77" column="174" lean-forward="false" selection-start-line="77" selection-start-column="174" selection-end-line="77" selection-end-column="174" />
+        <state relative-caret-position="35">
+          <caret line="75" column="47" lean-forward="false" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
           <folding />
         </state>
       </provider>
