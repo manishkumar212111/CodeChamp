@@ -81,7 +81,7 @@
           <th>View Image</th>
       </tr>
     {% for i in res %}
-        <tr><td>{{i['p_id']}}</td><td>{{i['p_st']}}</td><td>{{i['status']}}</td><td>{{i['address']}}</td><td><img src="https://filestore.despairing12.hasura-app.io/v1/file/{{i['im_id']}}" download>Download Image</a></td></tr>
+        <tr><td>{{i['p_id']}}</td><td>{{i['p_st']}}</td><td>{{i['status']}}</td><td>{{i['address']}}</td><td><a href="https://filestore.despairing12.hasura-app.io/v1/file/{{i['im_id']}}" download>Download Image</a></td></tr>
       {%endfor%}
 
     </thead>

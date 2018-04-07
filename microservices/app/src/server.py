@@ -231,7 +231,8 @@ def login_department():
                             "p_st",
                             "sub_date",
                             "address",
-                            "status"
+                            "status",
+                            "im_id"
                         ],
                         "where": {
                             "p_category": {
