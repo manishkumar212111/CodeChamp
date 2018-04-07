@@ -101,6 +101,16 @@ def view_data_entry():
                                im_id=resp.json()[0]['im_id'], p_id=p_id)
 
 
+@app.route('/submit/Data',methods=['POST','GET'])
+def submit_data():
+    if request.method=='POST':
+        p_id=request.form['p_id']
+        date=request.form['date']
+        address=request.form['address']
+        im_id=request.form['im_id']
+
+
+
 @app.route('/login/department',methods=['POST','GET'])
 def login_department():
     if request.method=='POST':
