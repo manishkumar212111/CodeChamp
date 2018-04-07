@@ -296,7 +296,74 @@ def login_department():
 
     return render_template('login.html', message="POST method expected")
 
+@app.route('/change/status',methods=['POST','GET'])
+def change_status():
+    if request.method=='POST':
+        p_id=request.form['p_id']
+        status=request.form['status']
+        department=request.form['department']
+        url = "https://data.despairing12.hasura-app.io/v1/query"
 
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "update",
+            "args": {
+                "table": "problem_db",
+                "where": {
+                    "p_id": {
+                        "$eq": p_id
+                    }
+                },
+                "$set": {
+                    "status": status
+                }
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        try:
+            if resp.json()['affected_rows']:
+                url = "https://data.despairing12.hasura-app.io/v1/query"
+
+                # This is the json payload for the query
+                requestPayload = {
+                    "type": "select",
+                    "args": {
+                        "table": "problem_db",
+                        "columns": [
+                            "p_id",
+                            "p_st",
+                            "sub_date",
+                            "sol_date",
+                            "address",
+                            "status"
+                        ],
+                        "where": {
+                            "p_category": {
+                                "$eq": department
+                            }
+                        }
+                    }
+                }
+
+                # Setting headers
+                headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+                }
+
+                # Make the query and store response in resp
+                resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+                return render_template('home.html',res=resp.json(),value="Status successfully changed")
+        except:
+            return render_template('home.html',value="Status successfully changed")
 #**********************************android API**********************************
 
 @app.route('/image/upload',methods=['POST','GET'])
