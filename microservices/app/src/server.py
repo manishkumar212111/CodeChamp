@@ -59,16 +59,11 @@ def login_department():
             if resp.json()[0]['department']:
                 return render_template('home.html',head=resp.json[0]['department'])
             else:
-                return render_template('home.html',message="Please enter correct email and password")
+                return render_template('login.html',message="Please enter correct email and password")
         except:
-            return resp.content
-    return "Get method expected"
+            return render_template('login.html', message="Please enter correct email and password")
 
-
-
-
-
-
+    return render_template('login.html', message="POST method expected")
 
 
 #**********************************android API**********************************
@@ -89,7 +84,7 @@ def image_upload():
 
         # Setting headers
         headers = {
-            "Content-Type": "image / png",
+            "Content-Type": "image / jpg",
             "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
         }
 
@@ -97,7 +92,7 @@ def image_upload():
         # with open(file.filename, 'rb') as file_image:
         resp = requests.put(url, data=image_binary, headers=headers)
 
-        return resp.content
+        return resp.json()
     return "POST method expected"
 
 
