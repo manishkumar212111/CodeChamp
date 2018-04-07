@@ -59,7 +59,5 @@ def login_department():
     return "Get method expected"
 
 
-if __name__:
-    app.run(debug=True)
 
 
