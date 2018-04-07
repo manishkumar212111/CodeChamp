@@ -57,7 +57,7 @@ def data_entry():
 def getlocation(lati,lon):
     return "Sardar Vallabhbhai Engineering College Rd, SVNIT Campus, Athwa, Surat, Gujarat 395007, India"
 
-@app.route('view/Data/Entry',methods=['POST','GET'])
+@app.route('/view/Data/Entry',methods=['POST','GET'])
 def view_data_entry():
     p_id=request.args.get('p_id')
     url = "https://data.despairing12.hasura-app.io/v1/query"

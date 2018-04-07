@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/microservices/app/src/templates/DataEntryDetail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
                 <element signature="e#565#601#0" expanded="false" />
@@ -63,7 +62,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataEntryDetail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataEntryDetail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DataEntryDetail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -175,8 +174,8 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/home.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/test.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DbEntry.html" />
-        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DataEntryDetail.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
       </list>
     </option>
   </component>
@@ -856,19 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#63#0" expanded="true" />
-            <element signature="e#565#601#0" expanded="false" />
-            <element signature="e#652#1415#0" expanded="false" />
-            <element signature="e#1448#1549#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DbEntry.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -882,6 +868,19 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+            <element signature="e#565#601#0" expanded="false" />
+            <element signature="e#652#1415#0" expanded="false" />
+            <element signature="e#1448#1549#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
