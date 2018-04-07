@@ -58,7 +58,7 @@ def login_department():
             else:
                 return "INcorrect credential"
         except:
-            return resp.json()
+            return resp.content
     return "Get method expected"
 
 
