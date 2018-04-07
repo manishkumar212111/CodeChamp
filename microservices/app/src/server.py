@@ -76,6 +76,10 @@ def image_upload():
         decoded = base64.b64decode(js['data']['image'])
 
         image_binary = base64.decodestring(decoded)
+        imgdata = base64.b64decode(js['data']['image'])
+        filename = 'some_image.jpg'  # I assume you have a way of picking unique filenames
+        with open(filename, 'wb') as f:
+            f.write(imgdata)
 
         # Make the query and store response in resp
         #resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
@@ -90,7 +94,7 @@ def image_upload():
 
         # Open the file and make the query
         # with open(file.filename, 'rb') as file_image:
-        resp = requests.request("POST",url, data=image_binary, headers=headers)
+        resp = requests.request("POST",url, data=f, headers=headers)
 
         return resp.content
     return "POST method expected"
