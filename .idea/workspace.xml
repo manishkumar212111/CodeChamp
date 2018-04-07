@@ -69,11 +69,9 @@
       <file leaf-file-name="DataEntryDetail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DataEntryDetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="108" column="6" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#center#0;n#tr#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="90" column="117" lean-forward="false" selection-start-line="90" selection-start-column="117" selection-end-line="90" selection-end-column="117" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -888,11 +886,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DataEntryDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="108" column="6" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#center#0;n#tr#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="18">
+          <caret line="90" column="117" lean-forward="false" selection-start-line="90" selection-start-column="117" selection-end-line="90" selection-end-column="117" />
+          <folding />
         </state>
       </provider>
     </entry>
