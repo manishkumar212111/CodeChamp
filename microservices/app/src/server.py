@@ -92,7 +92,7 @@ def data_entry():
 def getlocation(lati,lon):
     return "Sardar Vallabhbhai Engineering College Rd, SVNIT Campus, Athwa, Surat, Gujarat 395007, India"
 
-@app.route('/view/Data/Entry',methods=['POST','GET'])
+
 def view_data_entry():
     p_id=request.args.get('p_id')
     url = "https://data.despairing12.hasura-app.io/v1/query"
@@ -253,7 +253,10 @@ def login_department():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
             if resp.json()[0]:
+
                 response=resp.json()[0]['department']
+                if response=='support':
+                    return redirect(url_for('view_data_entry'))
                 url = "https://data.despairing12.hasura-app.io/v1/query"
 
                 # This is the json payload for the query
