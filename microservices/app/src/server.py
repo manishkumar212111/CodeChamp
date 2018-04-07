@@ -60,7 +60,7 @@ def login_department():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
             if resp.json()['department']:
-                return render_template('home.html',head=resp.json[0]['department'])
+                return render_template('home.html',head=resp.json()['department'])
             else:
                 return render_template('login.html',message="Please enter correct email and password")
         except:
