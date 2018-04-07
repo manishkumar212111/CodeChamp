@@ -59,8 +59,8 @@ def login_department():
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
-            if resp.json()['department']:
-                return render_template('home.html',head=resp.json()['department'])
+            if resp.json()[0]:
+                return render_template('home.html',head=resp.json()[0]['department'])
             else:
                 return render_template('login.html',message="Please enter correct email and password")
         except:
