@@ -46,6 +46,43 @@ def data_entry():
 
     return render_template('DbEntry.html',res=resp.json())
 
+@app.route('view/Data/Entry',methods=['POST','GET'])
+def view_data_entry():
+    p_id=request.args.get('p_id')
+    url = "https://data.despairing12.hasura-app.io/v1/query"
+
+    # This is the json payload for the query
+    requestPayload = {
+        "type": "select",
+        "args": {
+            "table": "problem_dummy",
+            "columns": [
+                "longitude",
+                "latitude",
+                "date",
+                "im_id",
+                "p_id"
+            ],
+            "where": {
+                "p_id": {
+                    "$eq": p_id
+                }
+            }
+        }
+    }
+
+    # Setting headers
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+    return render_template('DbEntry.html',res=resp.json())
+
+
 
 @app.route('/login/department',methods=['POST','GET'])
 def login_department():
