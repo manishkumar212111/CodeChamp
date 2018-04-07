@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "problem_db"("p_id" bigserial NOT NULL, "p_st" text NOT NULL,
+      "p_category" text NOT NULL, "sub_date" date NOT NULL, "sol_date" date NOT NULL,
+      "address" text NOT NULL, "status" text NOT NULL, PRIMARY KEY ("p_id") )
+  type: run_sql
+- args:
+    name: problem_db
+  type: add_existing_table_or_view
