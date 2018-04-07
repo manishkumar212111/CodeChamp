@@ -77,9 +77,7 @@ def image_upload():
 
         image_binary = base64.decodestring(decoded)
 
-        f = open("temp.png", "w")
-        f.write(image_binary)
-        f.close()
+        file.save(decoded)
         # Make the query and store response in resp
         #resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
