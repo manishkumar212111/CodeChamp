@@ -123,7 +123,7 @@ def submit_data():
                         "p_category": category,
                         "sub_date": date,
                         "sol_date": json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
-                        "address": address,
+                        "address": getlocation("lati","long"),
                         "status": "pending",
                         "im_id":im_id
                     }
@@ -140,7 +140,40 @@ def submit_data():
 
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-        return resp.content
+        try:
+            if resp.json()['affected_rows']:
+                url = "https://data.despairing12.hasura-app.io/v1/query"
+
+                # This is the json payload for the query
+                requestPayload = {
+                "type": "delete",
+                "args": {
+                    "table": "problem_dummy",
+                    "where": {
+                        "p_id": {
+                        "$eq": p_id
+                        }
+                    }
+                    }
+                }
+
+                # Setting headers
+                headers = {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+                }
+
+                # Make the query and store response in resp
+                resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+                try:
+                    if resp.json()['affected_rows']:
+                        return render_template('DbEntry.html',value="Value Successfully entered")
+                except:
+                    return render_template('DbEntry.html', value="Exception occurred1")
+
+        except:
+            return render_template('DbEntry.html', value="Exception occurred")
+
 
 @app.route('/login/department',methods=['POST','GET'])
 def login_department():
