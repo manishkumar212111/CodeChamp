@@ -106,9 +106,38 @@ def submit_data():
     if request.method=='POST':
         p_id=request.form['p_id']
         date=request.form['date']
+        category=request.form['department']
+        p_st=request.form['p_st']
         address=request.form['address']
         im_id=request.form['im_id']
+        url = "https://data.despairing12.hasura-app.io/v1/query"
 
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "insert",
+            "args": {
+                "table": "problem_db",
+                "objects": [
+                    {
+                        "p_st": p_st,
+                        "p_category": category,
+                        "sub_date": date,
+                        "sol_date": json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
+                        "address": address,
+                        "status": "pending",
+                        "im_id":im_id
+                    }
+                ]
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
 
 @app.route('/login/department',methods=['POST','GET'])
