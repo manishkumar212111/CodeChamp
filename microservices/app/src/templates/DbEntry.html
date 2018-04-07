@@ -75,7 +75,7 @@
 
      <tr><th>Problem ID</th><th>View Image</th><th>Action</th></tr>
 {% for i in res %}
-      <tr><td>{{i['p_id']}}</td><td><img src="https://filestore.despairing12.hasura-app.io/v1/file/{{i['im_id']}}" width="350px",height="40px"></td><td><a href="https://app.despairing12.hasura-app.io/view/Data/Entry?p_id={{i['p_id']}}"> View_Detail </a> </td></tr>
+      <tr><td>{{i['p_id']}}</td><td><img src="https://filestore.despairing12.hasura-app.io/v1/file/{{i['im_id']}}" width="35",height="40"></td><td><a href="https://app.despairing12.hasura-app.io/view/Data/Entry?p_id={{i['p_id']}}"> View_Detail </a> </td></tr>
  <br>
       {%endfor%}
  </table>

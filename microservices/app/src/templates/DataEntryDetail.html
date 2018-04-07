@@ -30,6 +30,23 @@
       color: white;
       padding: 15px;
     }
+    input[type=text] {
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    }
+    input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
 
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
@@ -75,7 +92,13 @@
         <br>
             Address:: {{address}}<br>
             Date:: {{date}}<br>
-
+            <form >
+                <input type="text" name="p_id",value={{p_id}} hidden>
+                <input type="text" name="address",value={{address}} hidden>
+                <input type="text" name="address",value={{date}} hidden>
+                Summarize problem:: <input type="text" name="p_st" >
+                <input type="submit">Send to department
+            </form>
         </center>
 
     </div>
