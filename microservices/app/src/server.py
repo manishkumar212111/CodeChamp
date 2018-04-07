@@ -64,7 +64,7 @@ def login_department():
             else:
                 return render_template('login.html',message="Please enter correct email and password")
         except:
-            return render_template('login.html', message="Please enter correct email and password")
+            return render_template('login.html', message=resp.content)
 
     return render_template('login.html', message="POST method expected")
 
