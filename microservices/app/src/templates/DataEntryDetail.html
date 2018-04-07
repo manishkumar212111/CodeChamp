@@ -92,12 +92,12 @@
         <br><br>
             Address:: {{address}}<br>
             Date of Submission:: {{date}}<br>
-            <form ><br>
+            <form action="https://app.despairing12.hasura-app.io/submit/Data" method="POST"><br>
                 <input type="text" name="p_id",value={{p_id}} hidden>
                 <input type="text" name="address",value={{address}} hidden>
                 <input type="text" name="address",value={{date}} hidden>
                 Summarize problem:: <input type="text" name="p_st" value="None"><br>
-                <input type="Send to department">
+                <input type="submit" value="Send to department">
             </form>
         </center>
 

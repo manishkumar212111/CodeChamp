@@ -20,8 +20,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+            <state relative-caret-position="228">
+              <caret line="103" column="24" lean-forward="false" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="24" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
                 <element signature="e#265#424#0" expanded="false" />
@@ -69,9 +69,11 @@
       <file leaf-file-name="DataEntryDetail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DataEntryDetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="90" column="118" lean-forward="false" selection-start-line="90" selection-start-column="118" selection-end-line="90" selection-end-column="118" />
-              <folding />
+            <state relative-caret-position="324">
+              <caret line="108" column="6" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#center#0;n#tr#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -859,10 +861,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DbEntry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="78" column="138" lean-forward="false" selection-start-line="78" selection-start-column="138" selection-end-line="78" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
+        <state relative-caret-position="228">
+          <caret line="103" column="24" lean-forward="false" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="24" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
             <element signature="e#265#424#0" expanded="false" />
@@ -876,19 +886,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DbEntry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="78" column="138" lean-forward="false" selection-start-line="78" selection-start-column="138" selection-end-line="78" selection-end-column="138" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DataEntryDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="90" column="118" lean-forward="false" selection-start-line="90" selection-start-column="118" selection-end-line="90" selection-end-column="118" />
-          <folding />
+        <state relative-caret-position="324">
+          <caret line="108" column="6" lean-forward="true" selection-start-line="108" selection-start-column="6" selection-end-line="108" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#center#0;n#tr#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
