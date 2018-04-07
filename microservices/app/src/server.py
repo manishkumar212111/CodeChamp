@@ -81,22 +81,22 @@ def image_upload():
         with open(filename, 'wb') as f:
             f.write(imgdata)
 
-        # Make the query and store response in resp
-        #resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+            # Make the query and store response in resp
+            #resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
-        url = "https://filestore.despairing12.hasura-app.io/v1/file"
+            url = "https://filestore.despairing12.hasura-app.io/v1/file"
 
         # Setting headers
-        headers = {
+            headers = {
             "Content-Type": "image / png",
             "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
-        }
+            }
 
-        # Open the file and make the query
-        # with open(file.filename, 'rb') as file_image:
-        resp = requests.request("POST",url, data=f, headers=headers)
+            # Open the file and make the query
+            # with open(file.filename, 'rb') as file_image:
+            resp = requests.put(url, data=f, headers=headers)
 
-        return resp.content
+            return resp.content
     return "POST method expected"
 
 
