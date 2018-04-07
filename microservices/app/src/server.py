@@ -1,8 +1,11 @@
-from flask import Flask,render_template,request,jsonify
+from flask import Flask,render_template,request,jsonify,session
 import requests,json
 import base64
+import datetime
 
 app=Flask(__name__)
+
+app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
 
 @app.route('/')
 def index():
@@ -108,5 +111,48 @@ def image_upload():
 
 
 
+@app.route('/problem/submit',methods=['POST','GET'])
+def problem_submit():
+    if request.method=='POST':
+        content = request.get_json(force=True)
+        js = json.loads(json.dumps(content))
+        url = "https://data.despairing12.hasura-app.io/v1/query"
 
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "insert",
+            "args": {
+                "table": "problem_dummy",
+                "objects": [
+                    {
+                        "longitude": js['data']['longitude'],
+                        "date": json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
+                        "latitude": js['data']['longitude'],
+                        "im_id": js['data']['ID'],
+
+                    }
+                ]
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        try:
+            if resp.json()['affected_rows']:
+                data={
+                    "message":"success"
+                }
+                return jsonify(data=data)
+        except:
+            data={
+                "error":"Unable to push now"
+            }
+            return jsonify(data=data)
+    return "POST method expected"
 
