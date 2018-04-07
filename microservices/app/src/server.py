@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,jsonify,session
+from flask import Flask,render_template,request,jsonify,session,redirect,url_for
 import requests,json
 import base64
 import datetime
@@ -285,7 +285,7 @@ def login_department():
 
                 # Make the query and store response in resp
                 resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-
+                session['user']=response
                 return render_template('home.html',res=resp.json(),head=response)
 
 
@@ -295,6 +295,15 @@ def login_department():
             return render_template('login.html', message=resp.content)
 
     return render_template('login.html', message="POST method expected")
+
+@app.route('/logout')
+def logout():
+    if 'user' in session:
+        return render_template('login.html',message="Login First")
+    session.pop('user',None)
+    return redirect(url_for('index'))
+
+
 
 @app.route('/change/status',methods=['POST','GET'])
 def change_status():
@@ -364,6 +373,7 @@ def change_status():
                 return render_template('home.html',res=resp.json(),value="Status successfully changed",head=department)
         except:
             return render_template('home.html',value="Status successfully changed")
+
 #**********************************android API**********************************
 
 @app.route('/image/upload',methods=['POST','GET'])
