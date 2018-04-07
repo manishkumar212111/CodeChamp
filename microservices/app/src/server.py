@@ -70,7 +70,7 @@ def login_department():
 
 #**********************************android API**********************************
 
-@app.route('image/upload',methods=['POST','GET'])
+@app.route('/image/upload',methods=['POST','GET'])
 def image_upload():
     if request.methods=='POST':
         content = request.get_json(force=True)
