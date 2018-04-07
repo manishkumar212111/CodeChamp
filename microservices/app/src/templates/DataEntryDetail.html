@@ -88,16 +88,16 @@
     <tr class="col-sm-9 text-left">
 <h1>Current pending solution</h1>
 
-        <center><img src="https://filestore.despairing12.hasura-app.io/v1/file/{{im_id}}" width="350px",height="100px">
-        <br>
+        <center><img src="https://filestore.despairing12.hasura-app.io/v1/file/{{im_id}}" width="350",height="100">
+        <br><br>
             Address:: {{address}}<br>
-            Date:: {{date}}<br>
-            <form >
+            Date of Submission:: {{date}}<br>
+            <form ><br>
                 <input type="text" name="p_id",value={{p_id}} hidden>
                 <input type="text" name="address",value={{address}} hidden>
                 <input type="text" name="address",value={{date}} hidden>
-                Summarize problem:: <input type="text" name="p_st" >
-                <input type="submit">Send to department
+                Summarize problem:: <input type="text" name="p_st" value="None"><br>
+                <input type="Send to department">
             </form>
         </center>
 
