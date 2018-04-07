@@ -2,4 +2,5 @@ flask
 requests
 gunicorn
 apscheduler
+geopy
 # add new packages one per each line

@@ -2,13 +2,13 @@ from flask import flash,Flask,render_template,request,jsonify,session,redirect,u
 import requests,json
 import base64
 import datetime
-#from geopy.geocoders import GoogleV3
+from geopy.geocoders import GoogleV3
 app=Flask(__name__)
 
 app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
 
 def getLocation(lati,longi):
-    geocoder = "a"
+    geocoder = GoogleV3()
     location_list = geocoder.reverse((21.1673500, 72.7850900))
     location = location_list[0]
     address = location.address
