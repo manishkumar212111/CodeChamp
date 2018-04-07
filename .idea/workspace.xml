@@ -20,8 +20,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+            <state relative-caret-position="427">
+              <caret line="104" column="68" lean-forward="false" selection-start-line="104" selection-start-column="68" selection-end-line="104" selection-end-column="68" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -816,8 +816,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="74" column="21" lean-forward="false" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+        <state relative-caret-position="427">
+          <caret line="104" column="68" lean-forward="false" selection-start-line="104" selection-start-column="68" selection-end-line="104" selection-end-column="68" />
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>
