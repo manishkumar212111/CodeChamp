@@ -92,7 +92,7 @@ def image_upload():
         # with open(file.filename, 'rb') as file_image:
         resp = requests.put(url, data=image_binary, headers=headers)
 
-        return resp.json()
+        return resp.content
     return "POST method expected"
 
 
