@@ -149,6 +149,8 @@ def problem_submit():
                     "message":"success"
                 }
                 return jsonify(data=data)
+            else:
+                return resp.content
         except:
             data={
                 "error":"Unable to push now"
