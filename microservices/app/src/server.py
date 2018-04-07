@@ -2,10 +2,18 @@ from flask import Flask,render_template,request,jsonify,session
 import requests,json
 import base64
 import datetime
-
+from geopy.geocoders import GoogleV3
 app=Flask(__name__)
 
 app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
+
+def getLocation(lati,longi):
+    geocoder = GoogleV3()
+    location_list = geocoder.reverse((21.1673500, 72.7850900))
+    location = location_list[0]
+    address = location.address
+    return address
+
 
 @app.route('/')
 def index():
@@ -46,6 +54,9 @@ def data_entry():
 
     return render_template('DbEntry.html',res=resp.json())
 
+def getlocation(lati,lon):
+    return "Sardar Vallabhbhai Engineering College Rd, SVNIT Campus, Athwa, Surat, Gujarat 395007, India"
+
 @app.route('view/Data/Entry',methods=['POST','GET'])
 def view_data_entry():
     p_id=request.args.get('p_id')
@@ -79,8 +90,13 @@ def view_data_entry():
 
     # Make the query and store response in resp
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+    try:
+        if resp.json()[0]:
+            address=getlocation(resp.json()[0]['latitude'],resp.json()[0]['longitude'])
+            return render_template('DbEntry.html', address=address,date=resp.json()[0]['date'],im_id=resp.json()[0]['im_id'],p_id=p_id)
+    except:
 
-    return render_template('DbEntry.html',res=resp.json())
+        return render_template('DbEntry.html',res=resp.json())
 
 
 
