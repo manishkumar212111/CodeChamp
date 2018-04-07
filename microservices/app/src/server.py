@@ -218,6 +218,7 @@ def login_department():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
             if resp.json()[0]:
+                response=resp.json()[0]['department']
                 url = "https://data.despairing12.hasura-app.io/v1/query"
 
                 # This is the json payload for the query
@@ -234,7 +235,7 @@ def login_department():
                         ],
                         "where": {
                             "p_category": {
-                                "$eq": resp.json()[0]['department']
+                                "$eq": response
                             }
                         }
                     }
@@ -249,7 +250,7 @@ def login_department():
                 # Make the query and store response in resp
                 resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
-                return render_template('home.html',res=resp.json(),head=resp.json()[0]['department'])
+                return render_template('home.html',res=resp.json(),head=response)
 
 
             else:
