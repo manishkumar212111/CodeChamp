@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Smart2Detect</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,7 +13,12 @@
       margin-bottom: 0;
       border-radius: 0;
     }
-
+   table
+  {
+    table-layout: fixed;
+    width: 100px;
+    word-wrap:break-word;
+  }
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 450px}
 
@@ -71,15 +76,30 @@
     <div class="col-sm-9 text-left">
 
   <table class="table table-striped">
+    {% if res %}
     <thead>
       <tr>
         <th>P_ID</th>
-        <th>Problem</th>
+        <th>Problem Statement</th>
         <th>Department</th>
-          <th>Status</th>
+          <th>Sub Date</th>
+        <th>Sol Date</th>
+        <th>address</th>
+        <th>status</th>
       </tr>
-    </thead>
+    {% for i in res %}
+      <tr><td>{{i['p_id']}}</td>
+      <td>{{i['p_st']}}</td>
+      <td>{{i['p_category']}}</td>
+      <td>{{i['sub_date']}}</td>
+      <td>{{i['sol_date']}}</td>
+      <td>{{i['address']}}</td>
+      <td>{{i['status']}}</td>
+        </tr>
+      {% endfor %}
 
+    </thead>
+    {%endif%}
   </table>
     </div>
     <div class="col-sm-3 sidenav">
