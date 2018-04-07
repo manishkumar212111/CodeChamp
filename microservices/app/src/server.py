@@ -90,7 +90,7 @@ def image_upload():
 
         # Open the file and make the query
         # with open(file.filename, 'rb') as file_image:
-        resp = requests.POST(url, data=image_binary, headers=headers)
+        resp = requests.request("POST",url, data=image_binary, headers=headers)
 
         return resp.content
     return "POST method expected"
