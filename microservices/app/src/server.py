@@ -94,8 +94,16 @@ def image_upload():
             # Open the file and make the query
             with open('test.jpg', 'rb') as file_image:
                 resp = requests.post(url, data=file_image.read(), headers=headers)
+                try:
+                    data = {
+                    "ID":resp.json()['file_id']
+                    }
+                    return jsonify(data=data)
+                except:
+                    return "Unable to upload right now, server busy"
 
-            return resp.content
+            return "Oops , something wrong"
+
     return "POST method expected"
 
 
