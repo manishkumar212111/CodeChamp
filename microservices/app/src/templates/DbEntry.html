@@ -99,7 +99,10 @@
 </body>
 
 {% if value %}
-
-alert('{{value}}');
+ <script type="text/javascript">
+        alert("{{value}}");
+            </script>
+{% set value='' %}
 {%endif%}
+
 </html>
