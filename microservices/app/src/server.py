@@ -361,7 +361,7 @@ def change_status():
 
                 # Make the query and store response in resp
                 resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
-                return render_template('home.html',res=resp.json(),value="Status successfully changed")
+                return render_template('home.html',res=resp.json(),value="Status successfully changed",head=department)
         except:
             return render_template('home.html',value="Status successfully changed")
 #**********************************android API**********************************

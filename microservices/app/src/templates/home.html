@@ -98,7 +98,7 @@
             <option value="Under_Process">Under process</option>
             <option value="Completed">Completed</option>
             </select>
-              <input type="submit" value="Change status">
+            <br>  <input type="submit" value="Change status">
           </form>
 
         </td>
@@ -126,6 +126,12 @@
 </body>
 <script>
 
+{% if value %}
+ <script type="text/javascript">
+        alert("{{value}}");
+            </script>
+{% set value='' %}
+{%endif%}
 
 </script>
 
