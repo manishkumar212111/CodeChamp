@@ -68,11 +68,47 @@
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal">Admin Login</button>
           <li><a href="https://app.despairing12.hasura-app.io/login"><span class="glyphicon glyphicon-log-in"></span> <font color="white"> Departmental_Login</font></a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">Enter Security Key</h4></center>
+        </div>
+        <div class="modal-body">
+
+            <form action="https://app.despairing.hasura-app.io/Data/Entry" method="post">
+            <div class="row">
+                <div class="col-25">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label for="username"></label>
+                </div>
+                <div class="col-75">
+                <input type="password" id="username" name="password"  placeholder="enter passcode here" required>
+                </div>
+                </div>
+                    <br>
+                 <center>
+                 <input type="submit" value="Login"></center>
+
+                    </form>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
 <div class="container-fluid text-center">
   <div class="row content">

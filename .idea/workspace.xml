@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/index.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,23 +21,22 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="289" column="16" lean-forward="true" selection-start-line="289" selection-start-column="16" selection-end-line="289" selection-end-column="16" />
+            <state relative-caret-position="299">
+              <caret line="72" column="28" lean-forward="true" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
               <folding>
-                <element signature="e#0#80#0" expanded="true" />
-                <element signature="e#282#441#0" expanded="false" />
-                <element signature="e#477#1445#0" expanded="false" />
-                <element signature="e#1508#1544#0" expanded="false" />
-                <element signature="e#1595#2358#0" expanded="false" />
-                <element signature="e#2391#2492#0" expanded="false" />
-                <element signature="e#2522#3915#0" expanded="false" />
-                <element signature="e#3422#3641#0" expanded="false" />
-                <element signature="e#3663#3915#0" expanded="false" />
-                <element signature="e#3991#6541#0" expanded="false" />
-                <element signature="e#9584#9646#0" expanded="false" />
-                <element signature="e#12314#13673#0" expanded="false" />
-                <element signature="e#13756#15265#0" expanded="false" />
-                <marker date="1523139026736" expanded="false" signature="9722:12155" ph="..." />
+                <element signature="e#0#86#0" expanded="true" />
+                <element signature="e#288#447#0" expanded="false" />
+                <element signature="e#483#1451#0" expanded="false" />
+                <element signature="e#1514#1550#0" expanded="false" />
+                <element signature="e#2691#2792#0" expanded="false" />
+                <element signature="e#2875#4268#0" expanded="false" />
+                <element signature="e#3775#3994#0" expanded="false" />
+                <element signature="e#4016#4268#0" expanded="false" />
+                <element signature="e#4344#6894#0" expanded="false" />
+                <element signature="e#10025#10087#0" expanded="false" />
+                <element signature="e#12755#14114#0" expanded="false" />
+                <element signature="e#14197#15706#0" expanded="false" />
+                <marker date="1523139788406" expanded="false" signature="10163:12596" ph="..." />
               </folding>
             </state>
           </provider>
@@ -105,11 +105,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="60" />
+            <state relative-caret-position="34">
+              <caret line="86" column="73" lean-forward="false" selection-start-line="86" selection-start-column="73" selection-end-line="86" selection-end-column="73" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,11 +193,11 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/consumer/consumer.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DOT/home.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/test.py" />
-        <option value="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/login.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DataEntryDetail.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DbEntry.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/home.html" />
+        <option value="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
       </list>
     </option>
@@ -859,17 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -912,25 +901,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="86" column="73" lean-forward="false" selection-start-line="86" selection-start-column="73" selection-end-line="86" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="289" column="16" lean-forward="true" selection-start-line="289" selection-start-column="16" selection-end-line="289" selection-end-column="16" />
+        <state relative-caret-position="299">
+          <caret line="72" column="28" lean-forward="true" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
           <folding>
-            <element signature="e#0#80#0" expanded="true" />
-            <element signature="e#282#441#0" expanded="false" />
-            <element signature="e#477#1445#0" expanded="false" />
-            <element signature="e#1508#1544#0" expanded="false" />
-            <element signature="e#1595#2358#0" expanded="false" />
-            <element signature="e#2391#2492#0" expanded="false" />
-            <element signature="e#2522#3915#0" expanded="false" />
-            <element signature="e#3422#3641#0" expanded="false" />
-            <element signature="e#3663#3915#0" expanded="false" />
-            <element signature="e#3991#6541#0" expanded="false" />
-            <element signature="e#9584#9646#0" expanded="false" />
-            <element signature="e#12314#13673#0" expanded="false" />
-            <element signature="e#13756#15265#0" expanded="false" />
-            <marker date="1523139026736" expanded="false" signature="9722:12155" ph="..." />
+            <element signature="e#0#86#0" expanded="true" />
+            <element signature="e#288#447#0" expanded="false" />
+            <element signature="e#483#1451#0" expanded="false" />
+            <element signature="e#1514#1550#0" expanded="false" />
+            <element signature="e#2691#2792#0" expanded="false" />
+            <element signature="e#2875#4268#0" expanded="false" />
+            <element signature="e#3775#3994#0" expanded="false" />
+            <element signature="e#4016#4268#0" expanded="false" />
+            <element signature="e#4344#6894#0" expanded="false" />
+            <element signature="e#10025#10087#0" expanded="false" />
+            <element signature="e#12755#14114#0" expanded="false" />
+            <element signature="e#14197#15706#0" expanded="false" />
+            <marker date="1523139788406" expanded="false" signature="10163:12596" ph="..." />
           </folding>
         </state>
       </provider>
