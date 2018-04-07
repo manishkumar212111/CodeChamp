@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="" />
+    <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/templates/home.html" afterPath="$PROJECT_DIR$/microservices/app/src/templates/home.html" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/home.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="229">
-              <caret line="83" column="96" lean-forward="true" selection-start-line="83" selection-start-column="96" selection-end-line="83" selection-end-column="96" />
+              <caret line="83" column="192" lean-forward="true" selection-start-line="83" selection-start-column="192" selection-end-line="83" selection-end-column="192" />
               <folding />
             </state>
           </provider>
@@ -891,7 +893,7 @@
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
-          <caret line="83" column="96" lean-forward="true" selection-start-line="83" selection-start-column="96" selection-end-line="83" selection-end-column="96" />
+          <caret line="83" column="192" lean-forward="true" selection-start-line="83" selection-start-column="192" selection-end-line="83" selection-end-column="192" />
           <folding />
         </state>
       </provider>
