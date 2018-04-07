@@ -94,10 +94,11 @@
           <form action="https://app.despairing12.hasura-app.io/change/status" method="post">
             <input type="text" name="p_id" value={{i['p_id']}} hidden>
             <input type="text" name="department" value={{head}} hidden>
-            <input type="select" name="status">
+            <select name="status">
             <option value="Under_Process">Under process</option>
             <option value="Completed">Completed</option>
-            <input type="submit" value="Change status">
+            </select>
+              <input type="submit" value="Change status">
           </form>
 
         </td>
