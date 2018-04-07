@@ -102,7 +102,7 @@ def image_upload():
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
-        url = "https://filestore.octagon58.hasura-app.io/v1/decoded/"
+        url = "https://filestore.octagon58.hasura-app.io/v1/file"
 
         # Setting headers
         headers = {
@@ -112,7 +112,7 @@ def image_upload():
 
         # Open the file and make the query
         # with open(file.filename, 'rb') as file_image:
-        resp = requests.put(url, data=file, headers=headers)
+        resp = requests.put(url, data=decoded, headers=headers)
 
         return resp.content
     return "POST method expected"
