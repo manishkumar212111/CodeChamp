@@ -7,6 +7,9 @@ app=Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/login',methods=['POST','GET'])
+def login():
+    return render_template('login.html')
 
 @app.route('/login/department',methods=['POST','GET'])
 def login_department():
