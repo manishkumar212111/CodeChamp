@@ -77,24 +77,23 @@ def image_upload():
 
         image_binary = base64.decodestring(decoded)
         imgdata = base64.b64decode(js['data']['image'])
-        filename = 'some_image.jpg'  # I assume you have a way of picking unique filenames
-        with open(filename, 'wb') as f:
-            f.write(imgdata)
+        filename = 'test.jpg'  # I assume you have a way of picking unique filenames
+        with open(filename, 'wb') as file:
+            file.write(imgdata)
 
             # Make the query and store response in resp
             #resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
             url = "https://filestore.despairing12.hasura-app.io/v1/file"
 
-        # Setting headers
+            # Setting headers
             headers = {
-            "Content-Type": "image / png",
-            "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+                "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
             }
 
             # Open the file and make the query
-            # with open(file.filename, 'rb') as file_image:
-            resp = requests.put(url, data=f, headers=headers)
+            with open('test.png', 'rb') as file_image:
+                resp = requests.post(url, data=file_image.read(), headers=headers)
 
             return resp.content
     return "POST method expected"
