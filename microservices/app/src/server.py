@@ -36,7 +36,7 @@ def index():
             "order_by": [
                 {
                     "column": "status",
-                    "order": "asc"
+                    "order": "desc"
                 }
             ]
         }
