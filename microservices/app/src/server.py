@@ -122,7 +122,7 @@ def submit_data():
                         "p_st": p_st,
                         "p_category": category,
                         "sub_date": date,
-                        "sol_date": json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
+                        #"sol_date": json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
                         "address": getlocation("lati","long"),
                         "status": "pending",
                         "im_id":im_id
