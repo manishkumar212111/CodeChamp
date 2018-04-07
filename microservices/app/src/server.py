@@ -107,7 +107,7 @@ def image_upload():
         # Setting headers
         headers = {
             "Content-Type": "image / png",
-            "Authorization": "Bearer bbaa14a4678aa95b48f009258441ea4dd383b90231cbb544"
+            "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
         }
 
         # Open the file and make the query
