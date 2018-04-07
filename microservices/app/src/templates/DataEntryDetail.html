@@ -92,12 +92,12 @@
         <br><br>
             Address:: {{address}}<br>
             Date of Submission:: {{date}}<br>
-            <form action="https://app.despairing12.hasura-app.io/submit/Data" method="POST"><br>
-                <input type="text" name="p_id",value={{p_id}} hidden>
-                <input type="text" name="address",value={{address}} hidden>
+            <form action="https://app.despairing12.hasura-app.io/submit/Data" method="POST">
+                <input type="text" name="p_id" value={{p_id}} hidden>
+                <input type="text" name="address" value={{address}} hidden>
 
-                <input type="text" name="im_id",value={{im_id}} hidden>
-                <input type="text" name="date",value={{date}} hidden>
+                <input type="text" name="im_id" value={{im_id}} hidden>
+                <input type="text" name="date" value={{date}} hidden>
                 <br>
                 Select Department::
                 <select name="department" required>
