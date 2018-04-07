@@ -72,7 +72,7 @@ def login_department():
 
 @app.route('/image/upload',methods=['POST','GET'])
 def image_upload():
-    if request.methods=='POST':
+    if request.method=='POST':
         content = request.get_json(force=True)
         js = json.loads(json.dumps(content))
 
