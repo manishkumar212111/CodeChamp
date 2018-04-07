@@ -218,7 +218,40 @@ def login_department():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
             if resp.json()[0]:
-                return render_template('home.html',head=resp.json()[0]['department'])
+                url = "https://data.despairing12.hasura-app.io/v1/query"
+
+                # This is the json payload for the query
+                requestPayload = {
+                    "type": "select",
+                    "args": {
+                        "table": "problem_db",
+                        "columns": [
+                            "p_id",
+                            "p_st",
+                            "sub_date",
+                            "address",
+                            "status"
+                        ],
+                        "where": {
+                            "p_category": {
+                                "$eq": resp.json()[0]['department']
+                            }
+                        }
+                    }
+                }
+
+                # Setting headers
+                headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+                }
+
+                # Make the query and store response in resp
+                resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+                return render_template('home.html',res=resp.json(),head=resp.json()[0]['department'])
+
+
             else:
                 return render_template('login.html',message="Please enter correct email and password")
         except:

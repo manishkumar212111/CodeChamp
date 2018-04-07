@@ -70,6 +70,7 @@
 
     <div class="col-sm-9 text-left">
     <h1>{{head}}</h1>
+      {% if res %}
     <table class="table table-striped">
       <thead>
         <tr>
@@ -79,10 +80,15 @@
           <th>Address</th>
           <th>View Image</th>
       </tr>
+    {% for i in res %}
+        <tr><td>{{i['p_id']}}</td><td>{{i['p_st']}}</td><td>{{i['status']}}</td><td>{{address}}</td><td><a href="https://filestore.despairing12.hasura-app.io/v1/file/{{i['im_id']}}" download>Download Image</a></td></tr>
+      {%endfor%}
 
     </thead>
 
   </table>
+      {% endif %}
+
     </div>
     <div class="col-sm-3 sidenav">
 
