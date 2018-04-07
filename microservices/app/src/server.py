@@ -76,31 +76,11 @@ def image_upload():
     if request.method=='POST':
         content = request.get_json(force=True)
         js = json.loads(json.dumps(content))
-        decoded = base64.b64decode(js['data']['image'])
-        url = "https://data.despairing12.hasura-app.io/v1/query"
-
-        # This is the json payload for the query
-        requestPayload = {
-            "type": "insert",
-            "args": {
-                "table": "test",
-                "objects": [
-                    {
-                        "Name": js['data']['image'],
-                        "ID": "222"
-                    }
-                ]
-            }
-        }
-
-        # Setting headers
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
-        }
+        image_binary = base64.decodestring(js['data']['image'])
+        #decoded = base64.b64decode(js['data']['image'])
 
         # Make the query and store response in resp
-        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        #resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
         url = "https://filestore.despairing12.hasura-app.io/v1/file"
 
@@ -112,7 +92,7 @@ def image_upload():
 
         # Open the file and make the query
         # with open(file.filename, 'rb') as file_image:
-        resp = requests.put(url, data=decoded, headers=headers)
+        resp = requests.put(url, data=image_binary, headers=headers)
 
         return resp.content
     return "POST method expected"
