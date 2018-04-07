@@ -102,7 +102,7 @@ def image_upload():
         # Make the query and store response in resp
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
-        url = "https://filestore.octagon58.hasura-app.io/v1/file"
+        url = "https://filestore.despairing12.hasura-app.io/v1/file"
 
         # Setting headers
         headers = {
