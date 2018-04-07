@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/requirements.txt" afterPath="$PROJECT_DIR$/microservices/app/src/requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,12 +20,13 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="119">
+              <caret line="359" column="103" lean-forward="false" selection-start-line="359" selection-start-column="103" selection-end-line="359" selection-end-column="103" />
               <folding>
                 <element signature="e#0#86#0" expanded="true" />
+                <element signature="e#489#1458#0" expanded="false" />
                 <element signature="e#1521#1557#0" expanded="false" />
-                <element signature="e#1666#2665#0" expanded="false" />
+                <element signature="e#1631#2665#0" expanded="false" />
                 <element signature="e#2698#2799#0" expanded="false" />
                 <element signature="e#2882#4275#0" expanded="false" />
                 <element signature="e#3782#4001#0" expanded="false" />
@@ -34,9 +34,8 @@
                 <element signature="e#4351#8067#0" expanded="false" />
                 <element signature="e#8153#11156#0" expanded="false" />
                 <element signature="e#11198#11260#0" expanded="false" />
-                <element signature="e#13928#15287#0" expanded="false" />
-                <element signature="e#15370#16879#0" expanded="false" />
-                <marker date="1523142049588" expanded="false" signature="11336:13769" ph="..." />
+                <element signature="e#14033#15392#0" expanded="false" />
+                <element signature="e#15475#16984#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -209,8 +208,8 @@
         <option value="$PROJECT_DIR$/microservices/app/src/templates/index.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DbEntry.html" />
         <option value="$PROJECT_DIR$/microservices/app/src/templates/DataEntryDetail.html" />
-        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
         <option value="$PROJECT_DIR$/microservices/app/src/requirements.txt" />
+        <option value="$PROJECT_DIR$/microservices/app/src/server.py" />
       </list>
     </option>
   </component>
@@ -929,12 +928,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="119">
+          <caret line="359" column="103" lean-forward="false" selection-start-line="359" selection-start-column="103" selection-end-line="359" selection-end-column="103" />
           <folding>
             <element signature="e#0#86#0" expanded="true" />
+            <element signature="e#489#1458#0" expanded="false" />
             <element signature="e#1521#1557#0" expanded="false" />
-            <element signature="e#1666#2665#0" expanded="false" />
+            <element signature="e#1631#2665#0" expanded="false" />
             <element signature="e#2698#2799#0" expanded="false" />
             <element signature="e#2882#4275#0" expanded="false" />
             <element signature="e#3782#4001#0" expanded="false" />
@@ -942,9 +942,8 @@
             <element signature="e#4351#8067#0" expanded="false" />
             <element signature="e#8153#11156#0" expanded="false" />
             <element signature="e#11198#11260#0" expanded="false" />
-            <element signature="e#13928#15287#0" expanded="false" />
-            <element signature="e#15370#16879#0" expanded="false" />
-            <marker date="1523142049588" expanded="false" signature="11336:13769" ph="..." />
+            <element signature="e#14033#15392#0" expanded="false" />
+            <element signature="e#15475#16984#0" expanded="false" />
           </folding>
         </state>
       </provider>

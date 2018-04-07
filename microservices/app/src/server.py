@@ -356,7 +356,8 @@ def change_status():
                     }
                 },
                 "$set": {
-                    "status": status
+                    "status": status,
+                    "sol_date":json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str)
                 }
             }
         }
