@@ -77,22 +77,13 @@ def image_upload():
 
         image_binary = base64.decodestring(decoded)
 
+        f = open("temp.png", "w")
+        f.write(image_binary)
+        f.close()
         # Make the query and store response in resp
         #resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
 
-        url = "https://filestore.despairing12.hasura-app.io/v1/file"
-
-        # Setting headers
-        headers = {
-            "Content-Type": "image / jpg",
-            "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
-        }
-
-        # Open the file and make the query
-        # with open(file.filename, 'rb') as file_image:
-        resp = requests.put(url, data=image_binary, headers=headers)
-
-        return resp.content
+        return "success"
     return "POST method expected"
 
 
