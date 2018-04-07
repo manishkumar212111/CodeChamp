@@ -70,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DataEntryDetail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
-              <caret line="90" column="117" lean-forward="false" selection-start-line="90" selection-start-column="117" selection-end-line="90" selection-end-column="117" />
+              <caret line="90" column="116" lean-forward="false" selection-start-line="90" selection-start-column="116" selection-end-line="90" selection-end-column="116" />
               <folding />
             </state>
           </provider>
@@ -887,7 +887,7 @@
     <entry file="file://$PROJECT_DIR$/microservices/app/src/templates/DataEntryDetail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="90" column="117" lean-forward="false" selection-start-line="90" selection-start-column="117" selection-end-line="90" selection-end-column="117" />
+          <caret line="90" column="116" lean-forward="false" selection-start-line="90" selection-start-column="116" selection-end-line="90" selection-end-column="116" />
           <folding />
         </state>
       </provider>
