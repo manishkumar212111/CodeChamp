@@ -12,6 +12,8 @@ def index():
 def login():
     return render_template('login.html')
 
+
+
 @app.route('/login/department',methods=['POST','GET'])
 def login_department():
     if request.method=='POST':
@@ -55,9 +57,9 @@ def login_department():
         resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
         try:
             if resp.json()[0]['department']:
-                return "Success"
+                return render_template('home.html',head=resp.json[0]['department'])
             else:
-                return "INcorrect credential"
+                return render_template('home.html',message="Please enter correct email and password")
         except:
             return resp.content
     return "Get method expected"
@@ -76,8 +78,9 @@ def image_upload():
     if request.method=='POST':
         content = request.get_json(force=True)
         js = json.loads(json.dumps(content))
-        image_binary = base64.decodestring(js['data']['image'])
-        #decoded = base64.b64decode(js['data']['image'])
+        decoded = base64.b64decode(js['data']['image'])
+
+        image_binary = base64.decodestring(decoded)
 
         # Make the query and store response in resp
         #resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
