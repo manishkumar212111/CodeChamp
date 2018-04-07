@@ -1,0 +1,9 @@
+- args:
+    sql: ALTER TABLE "problem_db" ALTER COLUMN "status" TYPE text;
+  type: run_sql
+- args:
+    sql: ALTER TABLE ONLY "problem_db" ALTER COLUMN "status" SET DEFAULT 'Pending';
+  type: run_sql
+- args:
+    sql: ALTER TABLE "problem_db" ALTER COLUMN "status" SET NOT NULL;
+  type: run_sql

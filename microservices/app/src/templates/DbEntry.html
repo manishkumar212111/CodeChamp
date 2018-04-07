@@ -55,12 +55,12 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-          <li class="active"> <font color="white"><a href="#">Home</a></font></li>
+        <li class="active"><a href="#">Home</a></li>
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-          <a href=""> <font color="white">Logout</font></a>
-             </ul>
+          <li><a href="https://app.despairing12.hasura-app.io/login"><span class="glyphicon glyphicon-log-in"></span> <font color="white"> Departmental_Login</font></a></li>
+      </ul>
     </div>
   </div>
 </nav>
@@ -69,20 +69,18 @@
   <div class="row content">
 
     <div class="col-sm-9 text-left">
-    <h1>{{head}}</h1>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-        <th>P_ID</th>
-        <th>Problem</th>
-          <th>Status</th>
-          <th>Address</th>
-          <th>View Image</th>
-      </tr>
+<h1>Current pending solution</h1>
+{% if res %}
+ <table>
 
-    </thead>
+     <th>Problem ID</th><th>View Image</th></table><th>Action</th>
+{% for i in res %}
+        <tr><td>{{i['p_id']}}</td><img src="https://filestore.despairing12.hasura-app.io/v1/file/{{i['im_id']}}" width="100px",height="100px"></td><td>View_Detail</td></tr>
+ {%endfor%}
+ </table>
 
-  </table>
+ {% endif %}
+
     </div>
     <div class="col-sm-3 sidenav">
 
@@ -95,9 +93,4 @@
 </footer>
 
 </body>
-<script>
-
-
-</script>
-
 </html>
