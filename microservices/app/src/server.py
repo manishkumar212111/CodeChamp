@@ -298,8 +298,6 @@ def login_department():
 
 @app.route('/logout')
 def logout():
-    if 'user' in session:
-        return render_template('login.html',message="Login First")
     session.pop('user',None)
     return redirect(url_for('index'))
 
