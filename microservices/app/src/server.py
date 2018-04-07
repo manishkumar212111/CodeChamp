@@ -125,9 +125,9 @@ def problem_submit():
                 "table": "problem_dummy",
                 "objects": [
                     {
-                        "longitude": js['data']['longitude'],
+                        "longitude": js['data']['long'],
                         "date": json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
-                        "latitude": js['data']['longitude'],
+                        "latitude": js['data']['lat'],
                         "im_id": js['data']['ID'],
 
                     }
