@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,jsonify
 import requests,json
 
 app=Flask(__name__)
@@ -60,6 +60,25 @@ def login_department():
         except:
             return resp.content
     return "Get method expected"
+
+
+
+
+
+
+
+
+#**********************************android API**********************************
+
+@app.route('image/upload',methods=['POST','GET'])
+def image_upload():
+    if request.methods=='POST':
+        content = request.get_json(force=True)
+        js = json.loads(json.dumps(content))
+
+        return jsonify(data=js['data']['image'])
+    return "POST method expected"
+
 
 
 
