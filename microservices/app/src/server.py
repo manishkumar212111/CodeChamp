@@ -292,8 +292,6 @@ def login_department():
             if resp.json()[0]:
 
                 response=resp.json()[0]['department']
-                if response=='support':
-                    return redirect(url_for(''))
                 url = "https://data.despairing12.hasura-app.io/v1/query"
 
                 # This is the json payload for the query
