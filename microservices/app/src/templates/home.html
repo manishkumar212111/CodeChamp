@@ -96,7 +96,7 @@
       </tr>
     {% for i in res %}
         <tr><td>{{i['p_id']}}</td><td>{{i['p_st']}}</td><td>{{i['status']}}</td><td>{{i['address']}}</td>
-          <td><a href="https://filestore.despairing12.hasura-app.io/v1/file/{{i['im_id']}}" download target="_blank">View Image</a></td>
+          <td><a href="https://filestore.despairing12.hasura-app.io/v1/file/{{i['im_id']}}" target="_blank">View Image</a></td>
         <td>
           <form action="https://app.despairing12.hasura-app.io/change/status" method="post">
             <input type="text" name="p_id" value={{i['p_id']}} hidden>
