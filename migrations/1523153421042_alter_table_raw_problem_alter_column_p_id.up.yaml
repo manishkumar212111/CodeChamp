@@ -1,0 +1,9 @@
+- args:
+    sql: ALTER TABLE "raw_problem" ALTER COLUMN "p_id" TYPE bigint;
+  type: run_sql
+- args:
+    sql: ALTER TABLE ONLY "raw_problem" ALTER COLUMN "p_id" SET DEFAULT nextval('raw_problem_p_id_seq'::regclass);
+  type: run_sql
+- args:
+    sql: ALTER TABLE "raw_problem" ALTER COLUMN "p_id" SET NOT NULL;
+  type: run_sql

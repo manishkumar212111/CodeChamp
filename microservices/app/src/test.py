@@ -1,7 +1,22 @@
-from geopy.geocoders import GoogleV3
-geocoder = GoogleV3()
-location_list = geocoder.reverse((21.1673500,72.7850900))
-location = location_list[0]
-address = location.address
-print address
+import json,requests
+url = "https://app.despairing12.hasura-app.io/raw/problem/submit"
 
+# This is the json payload for the query
+requestPayload = {
+    "data":
+        {
+            "p_st":"sghkadsgfjhdsf",
+            "department":"sfhskjfds",
+            "address":"adhjajas"
+        }
+}
+
+# Setting headers
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+}
+
+# Make the query and store response in resp
+resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+print resp.content
