@@ -334,6 +334,45 @@ def login_department():
 
     return render_template('login.html', message="POST method expected")
 
+
+#department login home
+
+@app.route('/login/home')
+def login_home():
+    url = "https://data.despairing12.hasura-app.io/v1/query"
+
+    # This is the json payload for the query
+    requestPayload = {
+        "type": "select",
+        "args": {
+            "table": "problem_db",
+            "columns": [
+                "p_id",
+                "p_st",
+                "sub_date",
+                "address",
+                "status",
+                "im_id"
+            ],
+            "where": {
+                "p_category": {
+                    "$eq": session['user']
+                }
+            }
+        }
+    }
+
+    # Setting headers
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+    return render_template('home.html', res=resp.json(), head=session['user'])
+
+
 # Logout user
 @app.route('/logout')
 def logout():
@@ -412,6 +451,7 @@ def change_status():
         except:
             return render_template('home.html',value="Status successfully changed")
 
+#view query of consumer
 @app.route('/view_query', methods=['POST', 'GET'])
 def view_query():
     dep = request.args.get('dep')
@@ -447,6 +487,7 @@ def view_query():
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
     return render_template('show_query.html',res=resp.json(),head=dep)
 
+# change status of query via consumer
 @app.route('/change/status/query',methods=['POST','GET'])
 def change_status_query():
     if request.method=='POST':
