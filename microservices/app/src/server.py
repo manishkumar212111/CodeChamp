@@ -97,6 +97,37 @@ def data_entry():
 
         return render_template('DbEntry.html',res=resp.json())
 
+@app.route('/admin/home')
+def admin_home():
+    url = "https://data.despairing12.hasura-app.io/v1/query"
+
+    # This is the json payload for the query
+    requestPayload = {
+        "type": "select",
+        "args": {
+            "table": "problem_dummy",
+            "columns": [
+                "p_id",
+                "latitude",
+                "longitude",
+                "im_id",
+                "date"
+            ]
+        }
+    }
+
+    # Setting headers
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+
+    return render_template('DbEntry.html', res=resp.json())
+
+
 def getlocation(lati,lon):
     return "Sardar Vallabhbhai Engineering College Rd, SVNIT Campus, Athwa, Surat, Gujarat 395007, India"
 
