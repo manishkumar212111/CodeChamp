@@ -524,7 +524,7 @@ def raw_problem_submit():
                         "sub_date": json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
                         "p_st": js['data']['p_st'],
                         "department": js['data']['department'],
-                        "address":js['data']['address']
+                        "addresss":js['data']['address']
                     }
                 ]
             }

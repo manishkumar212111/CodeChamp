@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a60a66a6-130b-4746-814b-a7b0c7c4b707" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/server.py" afterPath="$PROJECT_DIR$/microservices/app/src/server.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/microservices/app/src/test.py" afterPath="$PROJECT_DIR$/microservices/app/src/test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="540" column="26" lean-forward="false" selection-start-line="540" selection-start-column="26" selection-end-line="540" selection-end-column="26" />
+            <state relative-caret-position="129">
+              <caret line="526" column="32" lean-forward="false" selection-start-line="526" selection-start-column="32" selection-end-line="526" selection-end-column="32" />
               <folding>
                 <element signature="e#0#86#0" expanded="true" />
                 <element signature="e#357#523#0" expanded="false" />
@@ -37,9 +36,9 @@
                 <element signature="e#11716#14216#0" expanded="false" />
                 <element signature="e#14403#15762#0" expanded="false" />
                 <element signature="e#15861#17370#0" expanded="false" />
-                <element signature="e#18307#18453#0" expanded="false" />
-                <marker date="1523153643827" expanded="false" signature="3105:4503" ph="..." />
-                <marker date="1523153643827" expanded="false" signature="4618:8339" ph="..." />
+                <element signature="e#18308#18454#0" expanded="false" />
+                <marker date="1523153748136" expanded="false" signature="3105:4503" ph="..." />
+                <marker date="1523153748136" expanded="false" signature="4618:8339" ph="..." />
               </folding>
             </state>
           </provider>
@@ -932,8 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservices/app/src/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="540" column="26" lean-forward="false" selection-start-line="540" selection-start-column="26" selection-end-line="540" selection-end-column="26" />
+        <state relative-caret-position="129">
+          <caret line="526" column="32" lean-forward="false" selection-start-line="526" selection-start-column="32" selection-end-line="526" selection-end-column="32" />
           <folding>
             <element signature="e#0#86#0" expanded="true" />
             <element signature="e#357#523#0" expanded="false" />
@@ -948,9 +947,9 @@
             <element signature="e#11716#14216#0" expanded="false" />
             <element signature="e#14403#15762#0" expanded="false" />
             <element signature="e#15861#17370#0" expanded="false" />
-            <element signature="e#18307#18453#0" expanded="false" />
-            <marker date="1523153643827" expanded="false" signature="3105:4503" ph="..." />
-            <marker date="1523153643827" expanded="false" signature="4618:8339" ph="..." />
+            <element signature="e#18308#18454#0" expanded="false" />
+            <marker date="1523153748136" expanded="false" signature="3105:4503" ph="..." />
+            <marker date="1523153748136" expanded="false" signature="4618:8339" ph="..." />
           </folding>
         </state>
       </provider>
