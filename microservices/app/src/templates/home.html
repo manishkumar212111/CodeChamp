@@ -67,10 +67,35 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
           <a href="https://app.despairing12.hasura-app.io/logout"> <font color="white">Logout</font></a>
+    <button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#myModal">Raw Query</button>
+
+
              </ul>
     </div>
   </div>
 </nav>
+
+<div class="modal fade" id="myModalTSP" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title">Query</h4></center>
+        </div>
+        <div class="modal-body">
+        <table id="table">
+          <tbody>
+        </tbody>
+        </table>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <div class="container-fluid text-center">
   <div class="row content">
@@ -125,6 +150,63 @@
 <footer class="container-fluid text-center">
   <center><p>© 2018 Copyright: Smart2Detect.com</p></center>
 </footer>
+<script>
+
+
+
+var url = "https://data.despairing12.hasura-app.io/v1/query";
+
+// If you have the auth token saved in offline storage
+// var authToken = window.localStorage.getItem('HASURA_AUTH_TOKEN');
+// headers = { "Authorization" : "Bearer " + authToken }
+var requestOptions = {
+    "method": "POST",
+    "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+    }
+};
+
+var body = {
+    "type": "select",
+    "args": {
+        "table": "raw_problem",
+        "columns": [
+            "*"
+        ],
+        "where": {
+            "department": {
+                "$eq": {{head}}
+            }
+        }
+    }
+};
+
+requestOptions.body = JSON.stringify(body);
+
+fetch(url, requestOptions)
+.then(function(response) {
+	return response.json();
+})
+.then(function(result) {
+	console.log(result);
+
+	for (i=0;i<=result.length;i++) {
+
+
+      $('#table > tbody').append('<tr valign="middle"><td>'+ result[i]['p_id']+'</td> <td valign="center">' + result[i]['p_st'] +  '</td><td valign="center">' + result[i]['sub_date'] +'<td valign="center">' + result[i]['status'] +'</td></tr>);
+}
+
+
+
+})
+.catch(function(error) {
+	console.log('Request Failed:' + error);
+});
+
+</script>
+
+
 
 </body>
 
