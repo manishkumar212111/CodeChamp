@@ -414,6 +414,42 @@ def change_status():
         except:
             return render_template('home.html',value="Status successfully changed")
 
+@app.route('/view_query', methods=['POST', 'GET'])
+def view_query():
+    dep = request.args.get('dep')
+    url = "https://data.despairing12.hasura-app.io/v1/query"
+
+    # This is the json payload for the query
+    requestPayload = {
+        "type": "select",
+        "args": {
+            "table": "raw_problem",
+            "columns": [
+                "sub_date",
+                "p_st",
+                "p_id",
+                "status",
+                "addresss"
+            ],
+            "where": {
+                "department": {
+                    "$eq": dep
+                }
+            }
+        }
+    }
+
+    # Setting headers
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+    }
+
+    # Make the query and store response in resp
+    resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+    return render_template('show_query.html',res=resp.json(),head=dep)
+
+
 #**********************************android API**********************************
 
 # android API to upload Image
