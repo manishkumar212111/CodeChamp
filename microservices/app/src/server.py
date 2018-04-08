@@ -449,6 +449,76 @@ def view_query():
     resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
     return render_template('show_query.html',res=resp.json(),head=dep)
 
+@app.route('/change/status/query',methods=['POST','GET'])
+def change_status_query():
+    if request.method=='POST':
+        p_id=request.form['p_id']
+        status=request.form['status']
+        department=request.form['department']
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "update",
+            "args": {
+                "table": "raw_problem",
+                "where": {
+                    "p_id": {
+                        "$eq": p_id
+                    }
+                },
+                "$set": {
+                    "status": status,
+                    "sol_date":json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str)
+                }
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        try:
+            if resp.json()['affected_rows']:
+                url = "https://data.despairing12.hasura-app.io/v1/query"
+
+                # This is the json payload for the query
+                requestPayload = {
+                    "type": "select",
+                    "args": {
+                        "table": "raw_problem",
+                        "columns": [
+                            "p_id",
+                            "p_st",
+                            "sub_date",
+                            "sol_date",
+                            "addresss",
+                            "status"
+                        ],
+                        "where": {
+                            "department": {
+                                "$eq": department
+                            }
+                        }
+                    }
+                }
+
+                # Setting headers
+                headers = {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+                }
+
+                # Make the query and store response in resp
+                resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+                return render_template('show_query.html',res=resp.json(),value="Status successfully changed",head=department)
+        except:
+            return render_template('show_query.html',value="Status successfully changed")
+
 
 #**********************************android API**********************************
 

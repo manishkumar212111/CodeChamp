@@ -95,14 +95,13 @@
         <th>Problem</th>
           <th>Status</th>
           <th>Address</th>
-          <th>View Image</th>
           <th>Change Status</th>
       </tr>
     {% for i in res %}
         <tr><td>{{i['p_id']}}</td><td>{{i['p_st']}}</td><td>{{i['status']}}</td><td>{{i['addresss']}}</td>
 
         <td>
-          <form action="https://app.despairing12.hasura-app.io/change/status" method="post">
+          <form action="https://app.despairing12.hasura-app.io/change/status/query" method="post">
             <input type="text" name="p_id" value={{i['p_id']}} hidden>
             <input type="text" name="department" value={{head}} hidden>
             <select name="status">
