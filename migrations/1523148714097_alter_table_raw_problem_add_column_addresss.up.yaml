@@ -1,0 +1,3 @@
+- args:
+    sql: ALTER TABLE "raw_problem" ADD COLUMN "addresss" text NUll
+  type: run_sql

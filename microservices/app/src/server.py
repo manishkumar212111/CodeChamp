@@ -7,6 +7,7 @@ app=Flask(__name__)
 
 app.secret_key = "287tdw8d7we6554rrtrgdweyt26etedgdge45"
 
+# To get Current location of the problem using latitude and longitude
 def getLocation(lati,longi):
     geocoder = GoogleV3()
     location_list = geocoder.reverse((21.1673500, 72.7850900))
@@ -14,7 +15,7 @@ def getLocation(lati,longi):
     address = location.address
     return address
 
-
+# App home
 @app.route('/')
 def index():
     url = "https://data.despairing12.hasura-app.io/v1/query"
@@ -54,11 +55,13 @@ def index():
 
     return render_template('index.html',res=resp.json())
 
+# Login page for different department
 @app.route('/login',methods=['POST','GET'])
 def login():
     return render_template('login.html')
 
 
+# Data show to admin after login from dummy database of problem statement
 @app.route('/Data/Entry',methods=['POST','GET'])
 def data_entry():
     if request.method=='POST':
@@ -97,6 +100,7 @@ def data_entry():
 def getlocation(lati,lon):
     return "Sardar Vallabhbhai Engineering College Rd, SVNIT Campus, Athwa, Surat, Gujarat 395007, India"
 
+# Admin can view data from database
 @app.route('/view/Data/Entry',methods=['POST','GET'])
 def view_data_entry():
     p_id=request.args.get('p_id')
@@ -141,6 +145,7 @@ def view_data_entry():
                                im_id=resp.json()[0]['im_id'], p_id=p_id)
 
 
+# move data from dummy to original database
 @app.route('/submit/Data',methods=['POST','GET'])
 def submit_data():
     if request.method=='POST':
@@ -240,6 +245,7 @@ def submit_data():
         except:
             return render_template('DbEntry.html', value="Exception occurred")
 
+# department login logic
 
 @app.route('/login/department',methods=['POST','GET'])
 def login_department():
@@ -330,13 +336,14 @@ def login_department():
 
     return render_template('login.html', message="POST method expected")
 
+# Logout user
 @app.route('/logout')
 def logout():
     session.pop('user',None)
     return redirect(url_for('index'))
 
 
-
+# to change status of problem
 @app.route('/change/status',methods=['POST','GET'])
 def change_status():
     if request.method=='POST':
@@ -409,6 +416,7 @@ def change_status():
 
 #**********************************android API**********************************
 
+# android API to upload Image
 @app.route('/image/upload',methods=['POST','GET'])
 def image_upload():
     if request.method=='POST':
@@ -448,7 +456,7 @@ def image_upload():
     return "POST method expected"
 
 
-
+# Submit problem
 @app.route('/problem/submit',methods=['POST','GET'])
 def problem_submit():
     if request.method=='POST':
@@ -497,4 +505,48 @@ def problem_submit():
             }
             return jsonify(data=data)
     return "POST method expected"
+
+@app.route('/raw/problem/submit',methods=['POST','GET'])
+def raw_problem_submit():
+    if request.method=='POST':
+        content = request.get_json(force=True)
+        js = json.loads(json.dumps(content))
+        # This is the url to which the query is made
+        url = "https://data.despairing12.hasura-app.io/v1/query"
+
+        # This is the json payload for the query
+        requestPayload = {
+            "type": "insert",
+            "args": {
+                "table": "raw_problem",
+                "objects": [
+                    {
+                        "sub_date": json.dumps(datetime.date.today(), indent=4, sort_keys=True, default=str),
+                        "p_st": js['data']['p_st'],
+                        "department": js['data']['department'],
+                        "address":js['data']['address']
+                    }
+                ]
+            }
+        }
+
+        # Setting headers
+        headers = {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer 8cafc32cc39fe0e17b06bd326a2cfbfbf968110117f29767"
+        }
+
+        # Make the query and store response in resp
+        resp = requests.request("POST", url, data=json.dumps(requestPayload), headers=headers)
+        try:
+            if resp.json()['affected_rows']:
+                data={
+                    "message":"success"
+                }
+                return jsonify(data=data)
+        except:
+            data = {
+                "error": "success"
+            }
+            return jsonify(data=data)
 

@@ -1,0 +1,9 @@
+- args:
+    sql: CREATE TABLE "raw_problem"("p_id" bigserial NOT NULL, "p_st" text NOT NULL,
+      "department" text NOT NULL, "sub_date" date NOT NULL, "sol_date" text NOT NULL
+      DEFAULT 'Not Done Yet', "status" text NOT NULL DEFAULT 'Pending', PRIMARY KEY
+      ("p_id") )
+  type: run_sql
+- args:
+    name: raw_problem
+  type: add_existing_table_or_view
